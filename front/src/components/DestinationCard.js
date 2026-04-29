@@ -1,11 +1,12 @@
 import React from 'react';
 import './DestinationCard.css';
+import SafeImage from './SafeImage';
 
 export default function DestinationCard({ image, title, description }) {
   return (
     <div className="destination-card">
       <div className="destination-image">
-        <img src={image} alt={title} />
+        <SafeImage src={image} alt={title} />
       </div>
       <div className="destination-content">
         <h3>{title}</h3>

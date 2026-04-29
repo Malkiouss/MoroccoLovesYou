@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
+import SafeImage from '../components/SafeImage';
 import './About.css';
 
 export default function About() {
@@ -58,7 +59,7 @@ export default function About() {
             </p>
           </div>
           <div className="story-image">
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop" alt="Morocco landscape" />
+            <SafeImage src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop" alt="Morocco landscape" />
           </div>
         </div>
       </section>
@@ -131,7 +132,7 @@ export default function About() {
             {teamMembers.map(member => (
               <div key={member.id} className="team-member">
                 <div className="member-image">
-                  <img src={member.image} alt={member.name} />
+                  <SafeImage src={member.image} alt={member.name} />
                 </div>
                 <h3>{member.name}</h3>
                 <p className="member-role">{member.role}</p>

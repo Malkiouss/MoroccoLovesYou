@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --mly-green: #0a5c36; /* deeper rich green */
-  --mly-green-light: #168a53;
-  --mly-red: #d32f2f; /* warm red */
-  --mly-red-light: #f75555;
-  --mly-gold: #ffb300; /* warm gold accent */
-  --mly-text: #1f2937;
+  --mly-green: #006233;
+  --mly-green-light: #006233;
+  --mly-red: #c1272d;
+  --mly-red-light: #c1272d;
+  --mly-gold: #f5e6c8;
+  --mly-sky: #4da8da;
+  --mly-atlas: #1f3a5f;
+  --mly-text: #1a1a1a;
   --mly-muted: #6b7280;
-  --mly-bg: #fdfdfc;
-  --mly-bg-alt: #f3f4f6;
+  --mly-bg: #ffffff;
+  --mly-bg-alt: #f8f9fa;
+  --mly-border: #e5e7eb;
   --mly-card: #ffffff;
   --mly-radius: 20px;
   --mly-radius-sm: 12px;
@@ -85,7 +88,7 @@ input, textarea, select {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(10, 92, 54, 0.4);
+  outline: 3px solid rgba(0, 98, 51, 0.4);
   outline-offset: 2px;
 }
 
@@ -109,7 +112,7 @@ input, textarea, select {
 }
 
 ::selection {
-  background-color: rgba(10, 92, 54, 0.2);
+  background-color: rgba(193, 39, 45, 0.2);
   color: var(--mly-text);
 }
 
@@ -161,18 +164,18 @@ input, textarea, select {
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-green-light) 100%);
+  background: linear-gradient(135deg, var(--mly-red) 0%, var(--mly-red-light) 100%);
   color: white;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.2);
+  box-shadow: 0 10px 20px rgba(193, 39, 45, 0.25);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(10, 92, 54, 0.3);
+  box-shadow: 0 15px 30px rgba(193, 39, 45, 0.35);
   color: white;
 }
 
@@ -183,7 +186,7 @@ input, textarea, select {
   padding: 1rem 2rem;
   background: white;
   color: var(--mly-green);
-  border: 2px solid var(--mly-bg-alt);
+  border: 2px solid var(--mly-border);
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;

@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
+import SafeImage from '../components/SafeImage';
 import './Blog.css';
 
 export default function Blog() {
@@ -97,7 +98,7 @@ export default function Blog() {
             {blogPosts.map(post => (
               <article key={post.id} className="blog-card">
                 <div className="blog-image">
-                  <img src={post.image} alt={post.title} />
+                  <SafeImage src={post.image} alt={post.title} />
                   <span className="blog-category">{post.category}</span>
                 </div>
                 <div className="blog-content">
@@ -107,34 +108,10 @@ export default function Blog() {
                     <span className="blog-date">{post.date}</span>
                   </div>
                   <p className="blog-excerpt">{post.excerpt}</p>
-                  <a href="#readmore" className="read-more">Read More →</a>
+                  <a href="#readmore" className="read-more-btn">Read More →</a>
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="categories-section">
-        <div className="categories-container">
-          <h2>Browse by Category</h2>
-          <div className="categories-grid">
-            <div className="category-card">
-              <h3>✈️ Travel Guide</h3>
-              <p>12 Articles</p>
-            </div>
-            <div className="category-card">
-              <h3>🍽️ Food & Culture</h3>
-              <p>8 Articles</p>
-            </div>
-            <div className="category-card">
-              <h3>🥾 Adventure</h3>
-              <p>10 Articles</p>
-            </div>
-            <div className="category-card">
-              <h3>💡 Travel Tips</h3>
-              <p>15 Articles</p>
-            </div>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import HeroSection from '../components/HeroSection';
+import SafeImage from '../components/SafeImage';
 import './Gallery.css';
 
 export default function Gallery() {
@@ -98,7 +99,7 @@ export default function Gallery() {
           <div className="gallery-grid">
             {galleryImages.map(image => (
               <div key={image.id} className="gallery-item">
-                <img
+                <SafeImage
                   src={image.src}
                   alt={image.title}
                   onClick={() => setSelectedImage(image)}
@@ -121,7 +122,7 @@ export default function Gallery() {
         <div className="lightbox" onClick={() => setSelectedImage(null)}>
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
             <button className="lightbox-close" onClick={() => setSelectedImage(null)}>✕</button>
-            <img src={selectedImage.src} alt={selectedImage.title} className="lightbox-img" />
+            <SafeImage src={selectedImage.src} alt={selectedImage.title} className="lightbox-img" />
             <div className="lightbox-info">
               <h3>{selectedImage.title}</h3>
               <p>{selectedImage.category}</p>

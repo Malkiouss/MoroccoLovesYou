@@ -1,11 +1,12 @@
 import React from 'react';
 import './TourCard.css';
+import SafeImage from './SafeImage';
 
 export default function TourCard({ image, title, duration, price, highlights }) {
   return (
     <div className="tour-card">
       <div className="tour-image">
-        <img src={image} alt={title} />
+        <SafeImage src={image} alt={title} />
         <div className="tour-badge">${price}</div>
       </div>
       <div className="tour-content">
