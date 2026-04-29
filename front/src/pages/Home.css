@@ -1,7 +1,7 @@
 .home {
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: var(--mly-bg);
+  background-color: #FAFAFA;
 }
 
 .section-container {
@@ -13,21 +13,21 @@
 /* Featured Destinations Section */
 .featured-destinations {
   padding: 6rem 0;
-  background: white;
+  background: #FFFFFF;
 }
 
 .featured-destinations h2,
 .featured-tours h2,
 .testimonials-preview h2 {
   font-size: 2.75rem;
-  color: var(--mly-text);
+  color: #1A1A1A;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
   text-align: center;
-  color: var(--mly-muted);
+  color: #555555;
   font-size: 1.15rem;
   margin-bottom: 3.5rem;
   max-width: 600px;
@@ -44,7 +44,7 @@
 /* Featured Tours Section */
 .featured-tours {
   padding: 6rem 0;
-  background: var(--mly-bg-alt);
+  background: #F4F6F8;
 }
 
 .tours-grid {
@@ -57,7 +57,7 @@
 /* Testimonials Preview Section */
 .testimonials-preview {
   padding: 6rem 0;
-  background: white;
+  background: #FFFFFF;
 }
 
 .testimonials-grid {
@@ -73,36 +73,36 @@
   width: fit-content;
   margin: 0 auto;
   padding: 1rem 2.5rem;
-  background: var(--mly-green);
-  color: white;
+  background: #C9A227;
+  color: #FFFFFF;
   border-radius: 50px;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.15);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.25);
 }
 
 .view-all-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(10, 92, 54, 0.25);
-  background: var(--mly-green-light);
-  color: white;
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.38);
+  background: #D4AF37;
+  color: #FFFFFF;
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-green-light) 100%);
+  background: linear-gradient(135deg, #0F2A44 0%, #1F3F5B 100%);
   padding: 5rem 2rem;
   text-align: center;
   color: white;
   border-radius: var(--mly-radius);
   margin: 0 auto 5rem;
   max-width: 1200px;
-  box-shadow: 0 20px 40px rgba(10, 92, 54, 0.2);
+  box-shadow: 0 20px 40px rgba(15, 42, 68, 0.25);
 }
 
 .cta-content h2 {
-  color: white;
+  color: #FFFFFF;
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -113,26 +113,27 @@
   opacity: 0.9;
   max-width: 600px;
   margin-inline: auto;
+  color: rgba(255,255,255,0.85);
 }
 
 .cta-btn {
   display: inline-flex;
   padding: 1.2rem 3rem;
-  background-color: var(--mly-gold);
-  color: var(--mly-text);
+  background-color: #C9A227;
+  color: #FFFFFF;
   border-radius: 50px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.3);
 }
 
 .cta-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  color: var(--mly-green);
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.45);
+  background-color: #D4AF37;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {

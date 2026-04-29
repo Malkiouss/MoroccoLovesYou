@@ -1,5 +1,5 @@
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: #0F2A44;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   height: 90px;
@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
   transition: all var(--mly-transition);
 }
 
@@ -24,7 +24,7 @@
 }
 
 .navbar-logo {
-  color: var(--mly-green);
+  color: #C9A227;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.8rem;
@@ -38,7 +38,7 @@
 
 .navbar-logo:hover {
   transform: scale(1.02);
-  color: var(--mly-green-light);
+  color: #D4AF37;
 }
 
 .nav-menu {
@@ -56,7 +56,7 @@
 }
 
 .nav-link {
-  color: var(--mly-text);
+  color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -73,13 +73,13 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--mly-green);
+  background-color: #C9A227;
   transition: width var(--mly-transition);
   border-radius: 2px;
 }
 
 .nav-link:hover {
-  color: var(--mly-green);
+  color: #C9A227;
 }
 
 .nav-link:hover::after {
@@ -87,12 +87,12 @@
 }
 
 .nav-link-btn {
-  background: var(--mly-red);
-  color: white !important;
+  background: #C9A227;
+  color: #FFFFFF !important;
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 10px 20px rgba(193, 39, 45, 0.22);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.3);
   border: 2px solid transparent;
 }
 
@@ -102,10 +102,10 @@
 
 .nav-link-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(193, 39, 45, 0.32);
-  background: white;
-  color: var(--mly-red) !important;
-  border: 2px solid var(--mly-red);
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.4);
+  background: #D4AF37;
+  color: #FFFFFF !important;
+  border: 2px solid transparent;
 }
 
 .hamburger {
@@ -118,7 +118,7 @@
 .hamburger span {
   width: 30px;
   height: 3px;
-  background-color: var(--mly-text);
+  background-color: #FFFFFF;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
@@ -135,9 +135,9 @@
     top: 90px;
     left: 0;
     width: 100%;
-    background: white;
+    background: #0F2A44;
     padding: 2rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
     gap: 2rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;

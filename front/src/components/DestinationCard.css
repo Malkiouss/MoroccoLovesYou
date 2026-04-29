@@ -1,5 +1,5 @@
 .destination-card {
-  background: var(--mly-card);
+  background: #FFFFFF;
   border-radius: var(--mly-radius);
   overflow: hidden;
   box-shadow: var(--mly-shadow-soft);
@@ -9,11 +9,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid transparent;
 }
 
 .destination-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--mly-shadow-hover);
+  border-color: #E6C76E;
 }
 
 .destination-image {
@@ -41,7 +43,7 @@
 }
 
 .destination-content h3 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -49,20 +51,20 @@
 }
 
 .destination-card:hover .destination-content h3 {
-  color: var(--mly-green);
+  color: #C9A227;
 }
 
 .destination-content p {
-  color: var(--mly-muted);
+  color: #555555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
 .explore-btn {
-  background: white;
-  color: var(--mly-green);
-  border: 2px solid var(--mly-bg-alt);
+  background: transparent;
+  color: #C9A227;
+  border: 2px solid #C9A227;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -73,7 +75,7 @@
 }
 
 .destination-card:hover .explore-btn {
-  background: var(--mly-green);
-  color: white;
-  border-color: var(--mly-green);
+  background: #C9A227;
+  color: #FFFFFF;
+  border-color: #C9A227;
 }

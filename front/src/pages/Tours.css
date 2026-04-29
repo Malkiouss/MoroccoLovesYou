@@ -1,11 +1,11 @@
 .tours {
   min-height: 100vh;
-  background-color: var(--mly-bg);
+  background-color: #FAFAFA;
 }
 
 .tours-section {
   padding: 6rem 0;
-  background: var(--mly-bg);
+  background: #FAFAFA;
 }
 
 .tours-container {
@@ -15,7 +15,7 @@
 }
 
 .tours-section h2 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -23,7 +23,7 @@
 
 .tours-intro {
   text-align: center;
-  color: var(--mly-muted);
+  color: #555555;
   font-size: 1.25rem;
   margin-bottom: 4rem;
   max-width: 700px;
@@ -40,7 +40,7 @@
 /* Booking Info Section */
 .booking-info {
   padding: 6rem 2rem;
-  background: var(--mly-bg-alt);
+  background: #F4F6F8;
 }
 
 .booking-container {
@@ -49,7 +49,7 @@
 }
 
 .booking-info h2 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-size: 2.75rem;
   text-align: center;
   margin-bottom: 4rem;
@@ -62,17 +62,19 @@
 }
 
 .step {
-  background: var(--mly-card);
+  background: #FFFFFF;
   padding: 3rem 2rem;
   border-radius: var(--mly-radius);
   text-align: center;
   box-shadow: var(--mly-shadow-soft);
   transition: all var(--mly-transition);
+  border-bottom: 3px solid transparent;
 }
 
 .step:hover {
   transform: translateY(-10px);
   box-shadow: var(--mly-shadow-hover);
+  border-bottom-color: #C9A227;
 }
 
 .step-number {
@@ -81,30 +83,30 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-green-light) 100%);
-  color: white;
+  background: linear-gradient(135deg, #C9A227 0%, #D4AF37 100%);
+  color: #FFFFFF;
   border-radius: 50%;
   font-size: 1.5rem;
   font-weight: 800;
   margin: 0 auto 1.5rem;
   font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.2);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.28);
 }
 
 .step h3 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
 
 .step p {
-  color: var(--mly-muted);
+  color: #555555;
   line-height: 1.6;
 }
 
 /* Contact CTA */
 .contact-cta {
-  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-green-light) 100%);
+  background: linear-gradient(135deg, #0F2A44 0%, #1F3F5B 100%);
   padding: 6rem 2rem;
   text-align: center;
   color: white;
@@ -116,7 +118,7 @@
 }
 
 .contact-cta h2 {
-  color: white;
+  color: #FFFFFF;
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -125,27 +127,28 @@
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
+  color: rgba(255,255,255,0.85);
 }
 
 .contact-button {
   display: inline-flex;
   padding: 1.2rem 3rem;
-  background-color: var(--mly-gold);
-  color: var(--mly-text);
+  background-color: #C9A227;
+  color: #FFFFFF;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.3);
 }
 
 .contact-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  color: var(--mly-green);
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.45);
+  background-color: #D4AF37;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {

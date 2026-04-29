@@ -1,11 +1,11 @@
 .destinations {
   min-height: 100vh;
-  background-color: var(--mly-bg);
+  background-color: #FAFAFA;
 }
 
 .destinations-section {
   padding: 6rem 0;
-  background: var(--mly-bg);
+  background: #FAFAFA;
 }
 
 .destinations-container {
@@ -15,7 +15,7 @@
 }
 
 .destinations-section h2 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -23,7 +23,7 @@
 
 .destinations-intro {
   text-align: center;
-  color: var(--mly-muted);
+  color: #555555;
   font-size: 1.25rem;
   margin-bottom: 4rem;
   max-width: 700px;
@@ -39,7 +39,7 @@
 
 /* Explore CTA */
 .explore-cta {
-  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-green-light) 100%);
+  background: linear-gradient(135deg, #0F2A44 0%, #1F3F5B 100%);
   padding: 6rem 2rem;
   text-align: center;
   color: white;
@@ -52,7 +52,7 @@
 }
 
 .explore-cta h2 {
-  color: white;
+  color: #FFFFFF;
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -61,27 +61,28 @@
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
+  color: rgba(255,255,255,0.85);
 }
 
 .cta-button {
   display: inline-flex;
   padding: 1.2rem 3rem;
-  background-color: var(--mly-gold);
-  color: var(--mly-text);
+  background-color: #C9A227;
+  color: #FFFFFF;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.3);
 }
 
 .cta-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  color: var(--mly-green);
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.45);
+  background-color: #D4AF37;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {

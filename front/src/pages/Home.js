@@ -5,6 +5,7 @@ import DestinationCard from '../components/DestinationCard';
 import TourCard from '../components/TourCard';
 import TestimonialCard from '../components/TestimonialCard';
 import './Home.css';
+import WhatsAppBanner from '../components/WhatsAppBanner';
 
 export default function Home() {
   const featuredDestinations = [
@@ -87,6 +88,7 @@ export default function Home() {
 
   return (
     <div className="home">
+      <WhatsAppBanner />
       <HeroSection
         title="Discover the Beauty of Morocco"
         subtitle="Experience authentic adventures with MoroccoLovesYou - Your gateway to unforgettable memories"

@@ -1,11 +1,11 @@
 .testimonials {
   min-height: 100vh;
-  background-color: var(--mly-bg);
+  background-color: #FAFAFA;
 }
 
 .testimonials-section {
   padding: 6rem 0;
-  background: var(--mly-bg);
+  background: #FAFAFA;
 }
 
 .testimonials-container {
@@ -15,7 +15,7 @@
 }
 
 .testimonials-section h2 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -23,7 +23,7 @@
 
 .testimonials-intro {
   text-align: center;
-  color: var(--mly-muted);
+  color: #555555;
   font-size: 1.25rem;
   margin-bottom: 4rem;
   max-width: 700px;
@@ -33,33 +33,34 @@
 
 /* Overall Rating */
 .overall-rating {
-  background: var(--mly-card);
+  background: #FFFFFF;
   max-width: 800px;
   margin: 0 auto 4rem;
   padding: 3rem;
   border-radius: var(--mly-radius);
   text-align: center;
   box-shadow: var(--mly-shadow-soft);
+  border-top: 4px solid #C9A227;
 }
 
 .rating-number {
   font-size: 4rem;
   font-weight: 800;
-  color: var(--mly-green);
+  color: #0F2A44;
   line-height: 1;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
 }
 
 .rating-stars {
-  color: var(--mly-gold);
+  color: #C9A227;
   font-size: 1.5rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
 }
 
 .overall-rating p {
-  color: var(--mly-muted);
+  color: #555555;
   font-size: 1.1rem;
 }
 
@@ -73,7 +74,7 @@
 /* Submit Review Section */
 .submit-review {
   padding: 6rem 0;
-  background: var(--mly-bg-alt);
+  background: #F4F6F8;
 }
 
 .submit-container {
@@ -83,17 +84,18 @@
 }
 
 .submit-review h2 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
 }
 
 .review-form {
-  background: white;
+  background: #FFFFFF;
   padding: 3rem;
   border-radius: var(--mly-radius);
   box-shadow: var(--mly-shadow-soft);
+  border-top: 4px solid #C9A227;
 }
 
 .rating-select {
@@ -107,7 +109,7 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: #e5e7eb;
+  color: #E8D8B0;
   cursor: pointer;
   transition: all 0.2s ease;
   padding: 0;
@@ -115,7 +117,7 @@
 
 .star-btn:hover,
 .star-btn.active {
-  color: var(--mly-gold);
+  color: #C9A227;
   transform: scale(1.1);
 }
 
@@ -125,7 +127,7 @@
 
 .form-group label {
   display: block;
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
@@ -134,27 +136,28 @@
 .form-group textarea {
   width: 100%;
   padding: 1rem 1.25rem;
-  border: 2px solid var(--mly-bg-alt);
+  border: 2px solid #F4F6F8;
   border-radius: var(--mly-radius-sm);
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
-  background-color: var(--mly-bg-alt);
+  background-color: #F4F6F8;
   transition: all var(--mly-transition);
+  color: #1A1A1A;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--mly-green);
-  background-color: white;
-  box-shadow: 0 0 0 4px rgba(10, 92, 54, 0.1);
+  border-color: #C9A227;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.12);
 }
 
 .submit-btn {
   width: 100%;
   padding: 1.2rem;
-  background: var(--mly-green);
-  color: white;
+  background: #C9A227;
+  color: #FFFFFF;
   border: none;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -163,21 +166,23 @@
   cursor: pointer;
   transition: all var(--mly-transition);
   margin-top: 1rem;
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.25);
 }
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(10, 92, 54, 0.25);
-  background: var(--mly-green-light);
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.38);
+  background: #D4AF37;
 }
 
 .submit-btn:disabled {
   background: #ccc;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .success-message {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(16, 185, 129, 0.08);
   color: #059669;
   padding: 1.25rem;
   border-radius: var(--mly-radius-sm);

@@ -1,11 +1,11 @@
 .gallery {
   min-height: 100vh;
-  background-color: var(--mly-bg);
+  background-color: #FAFAFA;
 }
 
 .gallery-section {
   padding: 6rem 0;
-  background: var(--mly-bg);
+  background: #FAFAFA;
 }
 
 .gallery-container {
@@ -15,7 +15,7 @@
 }
 
 .gallery-section h2 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -23,7 +23,7 @@
 
 .gallery-intro {
   text-align: center;
-  color: var(--mly-muted);
+  color: #555555;
   font-size: 1.25rem;
   margin-bottom: 4rem;
   max-width: 700px;
@@ -41,22 +41,22 @@
 
 .category-btn {
   padding: 0.75rem 2rem;
-  background-color: white;
-  border: 2px solid var(--mly-bg-alt);
+  background-color: #FFFFFF;
+  border: 2px solid rgba(201, 162, 39, 0.3);
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   transition: all var(--mly-transition);
-  color: var(--mly-muted);
+  color: #555555;
 }
 
 .category-btn:hover,
 .category-btn.active {
-  background-color: var(--mly-green);
-  color: white;
-  border-color: var(--mly-green);
-  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.2);
+  background-color: #C9A227;
+  color: #FFFFFF;
+  border-color: #C9A227;
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.25);
   transform: translateY(-2px);
 }
 
@@ -73,6 +73,13 @@
   cursor: pointer;
   box-shadow: var(--mly-shadow-soft);
   height: 300px;
+  border: 2px solid transparent;
+  transition: all var(--mly-transition);
+}
+
+.gallery-item:hover {
+  border-color: #E6C76E;
+  box-shadow: var(--mly-shadow-hover);
 }
 
 .gallery-item img {
@@ -85,7 +92,7 @@
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+  background: linear-gradient(to top, rgba(15, 42, 68, 0.85) 0%, rgba(15, 42, 68, 0) 60%);
   opacity: 0;
   transition: opacity var(--mly-transition);
   display: flex;
@@ -103,7 +110,7 @@
 }
 
 .gallery-overlay h3 {
-  color: white;
+  color: #FFFFFF;
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
   transform: translateY(20px);
@@ -111,7 +118,7 @@
 }
 
 .gallery-overlay p {
-  color: rgba(255,255,255,0.8);
+  color: #E6C76E;
   margin: 0;
   font-size: 1rem;
   transform: translateY(20px);
@@ -127,13 +134,13 @@
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(15, 42, 68, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2000;
   padding: 2rem;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 
 .lightbox-content {
@@ -153,7 +160,7 @@
 }
 
 .lightbox-caption {
-  color: white;
+  color: #E6C76E;
   text-align: center;
   margin-top: 1rem;
   font-size: 1.25rem;
@@ -166,7 +173,7 @@
   right: -40px;
   background: none;
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 3rem;
   cursor: pointer;
   line-height: 1;
@@ -174,16 +181,16 @@
 }
 
 .lightbox-close:hover {
-  color: var(--mly-red);
+  color: #C9A227;
 }
 
 .lightbox-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.1);
-  color: white;
-  border: none;
+  background: rgba(201, 162, 39, 0.15);
+  color: #FFFFFF;
+  border: 2px solid rgba(201, 162, 39, 0.4);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -197,7 +204,8 @@
 }
 
 .lightbox-nav:hover {
-  background: var(--mly-green);
+  background: #C9A227;
+  border-color: #C9A227;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -211,7 +219,7 @@
 
 @media screen and (max-width: 1200px) {
   .lightbox-nav {
-    display: none; /* Hide on smaller screens or adjust position */
+    display: none;
   }
   .lightbox-close {
     top: -40px;

@@ -1,24 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --mly-green: #006233;
-  --mly-green-light: #006233;
-  --mly-red: #c1272d;
-  --mly-red-light: #c1272d;
-  --mly-gold: #f5e6c8;
-  --mly-sky: #4da8da;
-  --mly-atlas: #1f3a5f;
-  --mly-text: #1a1a1a;
-  --mly-muted: #6b7280;
-  --mly-bg: #ffffff;
-  --mly-bg-alt: #f8f9fa;
-  --mly-border: #e5e7eb;
-  --mly-card: #ffffff;
+  /* Primary Colors */
+  --mly-gold: #C9A227;
+  --mly-gold-hover: #D4AF37;
+  --mly-gold-light: #E6C76E;
+  --mly-gold-soft-bg: #F5E6B3;
+  --mly-gold-sand: #E8D8B0;
+
+  /* Navy Colors */
+  --mly-navy: #0F2A44;
+  --mly-navy-soft: #1F3F5B;
+
+  /* Legacy aliases used by components */
+  --mly-green: #C9A227;
+  --mly-green-light: #D4AF37;
+  --mly-red: #C9A227;
+  --mly-sky: #C9A227;
+  --mly-atlas: #0F2A44;
+
+  /* Backgrounds */
+  --mly-bg: #FAFAFA;
+  --mly-bg-alt: #F4F6F8;
+
+  /* Text */
+  --mly-text: #1A1A1A;
+  --mly-muted: #555555;
+
+  /* Cards & Borders */
+  --mly-card: #FFFFFF;
+  --mly-border: rgba(201, 162, 39, 0.25);
+
+  /* Radii & Shadows */
   --mly-radius: 20px;
   --mly-radius-sm: 12px;
-  --mly-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  --mly-shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.04);
-  --mly-shadow-hover: 0 25px 50px rgba(0, 0, 0, 0.12);
+  --mly-shadow: 0 20px 40px rgba(15, 42, 68, 0.10);
+  --mly-shadow-soft: 0 8px 24px rgba(15, 42, 68, 0.07);
+  --mly-shadow-hover: 0 24px 48px rgba(15, 42, 68, 0.15);
   --mly-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -68,13 +86,13 @@ p {
 }
 
 a {
-  color: var(--mly-green);
+  color: var(--mly-gold);
   text-decoration: none;
   transition: color var(--mly-transition);
 }
 
 a:hover {
-  color: var(--mly-red);
+  color: var(--mly-gold-hover);
 }
 
 button {
@@ -88,31 +106,15 @@ input, textarea, select {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(0, 98, 51, 0.4);
+  outline: 3px solid rgba(201, 162, 39, 0.45);
   outline-offset: 2px;
 }
 
 /* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--mly-bg-alt);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--mly-green);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--mly-green-light);
-}
+::-webkit-scrollbar { display: none; }
 
 ::selection {
-  background-color: rgba(193, 39, 45, 0.2);
+  background-color: rgba(201, 162, 39, 0.25);
   color: var(--mly-text);
 }
 
@@ -153,40 +155,43 @@ input, textarea, select {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-red) 100%);
+  background: linear-gradient(135deg, var(--mly-navy) 0%, var(--mly-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Primary Button */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--mly-red) 0%, var(--mly-red-light) 100%);
-  color: white;
+  background: var(--mly-gold);
+  color: #FFFFFF;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(193, 39, 45, 0.25);
+  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.28);
 }
 
 .btn-primary:hover {
+  background: var(--mly-gold-hover);
+  color: #FFFFFF;
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(193, 39, 45, 0.35);
-  color: white;
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.38);
 }
 
+/* Secondary Button */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background: white;
-  color: var(--mly-green);
-  border: 2px solid var(--mly-border);
+  background: transparent;
+  color: var(--mly-gold);
+  border: 2px solid var(--mly-gold);
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
@@ -194,7 +199,7 @@ input, textarea, select {
 }
 
 .btn-secondary:hover {
-  border-color: var(--mly-green);
-  background: var(--mly-bg-alt);
+  background: var(--mly-gold);
+  color: #FFFFFF;
   transform: translateY(-3px);
 }

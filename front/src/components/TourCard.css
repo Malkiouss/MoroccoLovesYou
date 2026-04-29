@@ -1,5 +1,5 @@
 .tour-card {
-  background: var(--mly-card);
+  background: #FFFFFF;
   border-radius: var(--mly-radius);
   overflow: hidden;
   box-shadow: var(--mly-shadow-soft);
@@ -8,11 +8,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid transparent;
 }
 
 .tour-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--mly-shadow-hover);
+  border-color: #E6C76E;
 }
 
 .tour-image {
@@ -36,13 +38,13 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--mly-gold);
-  color: var(--mly-text);
+  background: #C9A227;
+  color: #FFFFFF;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-weight: 700;
   font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(201, 162, 39, 0.35);
   z-index: 2;
   font-family: 'Montserrat', sans-serif;
 }
@@ -55,18 +57,18 @@
 }
 
 .tour-content h3 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   margin-bottom: 0.5rem;
   font-size: 1.4rem;
   transition: color var(--mly-transition);
 }
 
 .tour-card:hover .tour-content h3 {
-  color: var(--mly-green);
+  color: #C9A227;
 }
 
 .tour-duration {
-  color: var(--mly-red);
+  color: #C9A227;
   font-weight: 600;
   margin-bottom: 1.25rem;
   font-size: 0.95rem;
@@ -82,13 +84,14 @@
 .tour-highlights {
   margin-bottom: 1.5rem;
   flex-grow: 1;
-  background: var(--mly-bg-alt);
+  background: #F4F6F8;
   padding: 1rem;
   border-radius: var(--mly-radius-sm);
+  border-left: 3px solid #E6C76E;
 }
 
 .tour-highlights h4 {
-  color: var(--mly-text);
+  color: #1A1A1A;
   margin-bottom: 0.75rem;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -100,7 +103,7 @@
   list-style: none;
   padding: 0;
   font-size: 0.9rem;
-  color: var(--mly-muted);
+  color: #555555;
 }
 
 .tour-highlights li {
@@ -113,14 +116,14 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--mly-green);
+  color: #C9A227;
   font-weight: bold;
 }
 
 .book-now-btn {
   width: 100%;
-  background: var(--mly-green);
-  color: white;
+  background: #C9A227;
+  color: #FFFFFF;
   border: none;
   padding: 1rem 1.5rem;
   border-radius: 50px;
@@ -130,10 +133,11 @@
   transition: all var(--mly-transition);
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.25);
 }
 
 .book-now-btn:hover {
-  background: var(--mly-green-light);
+  background: #D4AF37;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.2);
+  box-shadow: 0 12px 28px rgba(201, 162, 39, 0.38);
 }
