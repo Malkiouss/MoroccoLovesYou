@@ -1,0 +1,150 @@
+.home {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--mly-bg);
+}
+
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Featured Destinations Section */
+.featured-destinations {
+  padding: 6rem 0;
+  background: white;
+}
+
+.featured-destinations h2,
+.featured-tours h2,
+.testimonials-preview h2 {
+  font-size: 2.75rem;
+  color: var(--mly-text);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--mly-muted);
+  font-size: 1.15rem;
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Featured Tours Section */
+.featured-tours {
+  padding: 6rem 0;
+  background: var(--mly-bg-alt);
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Testimonials Preview Section */
+.testimonials-preview {
+  padding: 6rem 0;
+  background: white;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* View All Buttons */
+.view-all-btn {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: var(--mly-green);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: all var(--mly-transition);
+  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.15);
+}
+
+.view-all-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(10, 92, 54, 0.25);
+  background: var(--mly-green-light);
+  color: white;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--mly-green) 0%, var(--mly-green-light) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  border-radius: var(--mly-radius);
+  margin: 0 auto 5rem;
+  max-width: 1200px;
+  box-shadow: 0 20px 40px rgba(10, 92, 54, 0.2);
+}
+
+.cta-content h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.cta-btn {
+  display: inline-flex;
+  padding: 1.2rem 3rem;
+  background-color: var(--mly-gold);
+  color: var(--mly-text);
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  transition: all var(--mly-transition);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: var(--mly-green);
+}
+
+@media screen and (max-width: 768px) {
+  .featured-destinations,
+  .featured-tours,
+  .testimonials-preview {
+    padding: 4rem 0;
+  }
+
+  .cta-section {
+    padding: 3rem 1.5rem;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}

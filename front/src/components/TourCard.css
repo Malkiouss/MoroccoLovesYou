@@ -1,0 +1,139 @@
+.tour-card {
+  background: var(--mly-card);
+  border-radius: var(--mly-radius);
+  overflow: hidden;
+  box-shadow: var(--mly-shadow-soft);
+  transition: all var(--mly-transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tour-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--mly-shadow-hover);
+}
+
+.tour-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tour-card:hover .tour-image img {
+  transform: scale(1.05);
+}
+
+.tour-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--mly-gold);
+  color: var(--mly-text);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tour-content {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-content h3 {
+  color: var(--mly-text);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  transition: color var(--mly-transition);
+}
+
+.tour-card:hover .tour-content h3 {
+  color: var(--mly-green);
+}
+
+.tour-duration {
+  color: var(--mly-red);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tour-duration::before {
+  content: '⏱️';
+}
+
+.tour-highlights {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  background: var(--mly-bg-alt);
+  padding: 1rem;
+  border-radius: var(--mly-radius-sm);
+}
+
+.tour-highlights h4 {
+  color: var(--mly-text);
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.tour-highlights ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: var(--mly-muted);
+}
+
+.tour-highlights li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tour-highlights li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mly-green);
+  font-weight: bold;
+}
+
+.book-now-btn {
+  width: 100%;
+  background: var(--mly-green);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--mly-transition);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.book-now-btn:hover {
+  background: var(--mly-green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.2);
+}

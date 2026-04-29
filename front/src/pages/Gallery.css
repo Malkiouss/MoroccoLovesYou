@@ -1,0 +1,235 @@
+.gallery {
+  min-height: 100vh;
+  background-color: var(--mly-bg);
+}
+
+.gallery-section {
+  padding: 6rem 0;
+  background: var(--mly-bg);
+}
+
+.gallery-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gallery-section h2 {
+  color: var(--mly-text);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery-intro {
+  text-align: center;
+  color: var(--mly-muted);
+  font-size: 1.25rem;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.category-btn {
+  padding: 0.75rem 2rem;
+  background-color: white;
+  border: 2px solid var(--mly-bg-alt);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: all var(--mly-transition);
+  color: var(--mly-muted);
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: var(--mly-green);
+  color: white;
+  border-color: var(--mly-green);
+  box-shadow: 0 10px 20px rgba(10, 92, 54, 0.2);
+  transform: translateY(-2px);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--mly-radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--mly-shadow-soft);
+  height: 300px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+  opacity: 0;
+  transition: opacity var(--mly-transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay h3 {
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  transform: translateY(20px);
+  transition: transform var(--mly-transition);
+}
+
+.gallery-overlay p {
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+  font-size: 1rem;
+  transform: translateY(20px);
+  transition: transform var(--mly-transition) 0.1s;
+}
+
+.gallery-item:hover .gallery-overlay h3,
+.gallery-item:hover .gallery-overlay p {
+  transform: translateY(0);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+}
+
+.lightbox-img {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--mly-radius);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--mly-transition);
+}
+
+.lightbox-close:hover {
+  color: var(--mly-red);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all var(--mly-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-nav:hover {
+  background: var(--mly-green);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+  left: -70px;
+}
+
+.lightbox-next {
+  right: -70px;
+}
+
+@media screen and (max-width: 1200px) {
+  .lightbox-nav {
+    display: none; /* Hide on smaller screens or adjust position */
+  }
+  .lightbox-close {
+    top: -40px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-section {
+    padding: 4rem 0;
+  }
+  .gallery-section h2 {
+    font-size: 2.2rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .gallery-item {
+    height: 250px;
+  }
+}
