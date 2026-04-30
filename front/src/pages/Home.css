@@ -51,205 +51,255 @@
 }
 
 
-/*Word cup banner*/
-/* Luxury World Cup 2030 Banner */
-/* Luxury World Cup 2030 Banner */
-
+/* Luxury World Cup 2030 Banner - Smaller + Responsive */
 .mly-wc2030-luxury-banner {
   position: relative;
   overflow: hidden;
-  margin: 60px 0;
-  padding: 75px 8%;
-  border-radius: 30px;
+  width: min(100% - 32px, 1050px);
+  margin: 28px auto;
+  padding: 18px 5%;
+  border-radius: 20px;
   color: #ffffff;
   background:
-    linear-gradient(135deg, rgba(35, 4, 7, 0.98), rgba(78, 8, 15, 0.96)),
-    radial-gradient(circle at top right, rgba(212, 175, 55, 0.22), transparent 38%);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 42%),
+    linear-gradient(135deg, rgba(24, 4, 6, 0.97), rgba(66, 8, 16, 0.98));
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mly-wc2030-luxury-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.14);
 }
 
 .mly-wc2030-pattern {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.16), transparent 25%),
-    radial-gradient(circle at 85% 80%, rgba(0, 98, 51, 0.25), transparent 32%),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%);
-  background-size: auto, auto, 28px 28px, 28px 28px;
-  opacity: 0.65;
+    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 80%, rgba(0, 98, 51, 0.13), transparent 38%);
+  opacity: 0.55;
   pointer-events: none;
 }
 
-/* Main layout: 50% text / 50% image */
+/* Layout */
 .mly-wc2030-content {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .mly-wc2030-text {
-  max-width: 640px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 500px;
 }
 
 .mly-wc2030-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-  padding: 9px 20px;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding: 5px 13px;
   border-radius: 999px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  color: #f5d77b;
-  font-size: 14px;
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  color: #fce28b;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .mly-wc2030-text h2 {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(42px, 6vw, 82px);
-  line-height: 1;
+  font-size: clamp(26px, 4vw, 48px);
+  line-height: 1.05;
   font-weight: 900;
   color: #f7d774;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  text-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.4px;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .mly-wc2030-text p {
-  margin: 0 0 32px;
-  max-width: 560px;
-  font-size: 18px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.86);
+  margin: 0 0 18px;
+  max-width: 450px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.84);
 }
 
 .mly-wc2030-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 32px;
+  min-height: 42px;
+  padding: 12px 24px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #d4af37, #f7d774);
-  color: #2a0508;
+  background: linear-gradient(135deg, #d4af37, #fce28b);
+  color: #1a0505;
   font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 18px rgba(212, 175, 55, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .mly-wc2030-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.38);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.35);
+  background: linear-gradient(135deg, #fce28b, #d4af37);
 }
 
 /* Image side */
 .mly-wc2030-visual {
-  position: relative;
-  width: 100%;
-  min-height: 380px;
+  flex: 0 0 330px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .mly-wc2030-image {
-  width: 120%;
-  max-width: none;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   object-fit: contain;
-  transform: translateX(35px);
-  filter: drop-shadow(0 28px 38px rgba(0, 0, 0, 0.55));
-  animation: mlyWc2030Float 4s ease-in-out infinite;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.55));
+  animation: mlyWc2030Float 5s ease-in-out infinite;
 }
 
 @keyframes mlyWc2030Float {
   0%, 100% {
-    transform: translateX(35px) translateY(0);
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateX(35px) translateY(-12px);
+    transform: translateY(-6px);
   }
 }
 
 /* Tablet */
 @media (max-width: 992px) {
   .mly-wc2030-luxury-banner {
-    padding: 65px 6%;
+    width: min(100% - 28px, 900px);
+    padding: 24px 5%;
   }
 
-  .mly-wc2030-content {
-    gap: 25px;
+  .mly-wc2030-visual {
+    flex-basis: 280px;
   }
 
   .mly-wc2030-image {
-    width: 125%;
-    transform: translateX(20px);
-  }
-
-  @keyframes mlyWc2030Float {
-    0%, 100% {
-      transform: translateX(20px) translateY(0);
-    }
-
-    50% {
-      transform: translateX(20px) translateY(-10px);
-    }
+    max-width: 260px;
   }
 }
 
-/* Mobile */
+/* iPhone / Mobile */
 @media (max-width: 768px) {
   .mly-wc2030-luxury-banner {
-    padding: 55px 24px;
-    border-radius: 24px;
+    width: calc(100% - 24px);
+    margin: 20px auto;
+    padding: 24px 18px;
+    border-radius: 18px;
     text-align: center;
   }
 
   .mly-wc2030-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    flex-direction: column-reverse;
+    gap: 18px;
   }
 
   .mly-wc2030-text {
+    width: 100%;
+    min-width: 0;
     max-width: 100%;
   }
 
+  .mly-wc2030-badge {
+    margin-bottom: 9px;
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+
+  .mly-wc2030-text h2 {
+    font-size: clamp(25px, 9vw, 36px);
+    line-height: 1.08;
+    margin-bottom: 10px;
+  }
+
   .mly-wc2030-text p {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    margin: 0 auto 16px;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .mly-wc2030-btn {
+    width: 100%;
+    max-width: 280px;
+    min-height: 44px;
+    padding: 12px 18px;
+    font-size: 11.5px;
   }
 
   .mly-wc2030-visual {
-    min-height: 260px;
+    flex: none;
+    width: 100%;
   }
 
   .mly-wc2030-image {
-    width: 100%;
-    max-width: 360px;
-    transform: translateX(0);
-  }
-
-  @keyframes mlyWc2030Float {
-    0%, 100% {
-      transform: translateX(0) translateY(0);
-    }
-
-    50% {
-      transform: translateX(0) translateY(-10px);
-    }
+    max-width: 210px;
   }
 }
 
+/* Small iPhone */
+@media (max-width: 430px) {
+  .mly-wc2030-luxury-banner {
+    width: calc(100% - 20px);
+    padding: 22px 15px;
+    border-radius: 16px;
+  }
+
+  .mly-wc2030-text h2 {
+    font-size: clamp(24px, 8.5vw, 32px);
+  }
+
+  .mly-wc2030-text p {
+    font-size: 13px;
+  }
+
+  .mly-wc2030-image {
+    max-width: 185px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .mly-wc2030-luxury-banner {
+    padding: 20px 13px;
+  }
+
+  .mly-wc2030-text h2 {
+    font-size: 23px;
+  }
+
+  .mly-wc2030-btn {
+    max-width: 100%;
+    font-size: 11px;
+  }
+
+  .mly-wc2030-image {
+    max-width: 170px;
+  }
+}
 /* WhatsApp CTA Section */
 .wa-cta-section {
   background: var(--mly-bg-alt);
