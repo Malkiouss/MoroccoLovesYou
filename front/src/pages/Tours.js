@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import PageHeader from '../components/PageHeader';
 import TourCard from '../components/TourCard';
 import './Tours.css';
 
@@ -11,7 +11,7 @@ export default function Tours() {
       title: 'Classic Morocco Experience',
       duration: 7,
       price: 1299,
-      highlights: ['Marrakech Medina', 'Sahara Desert Trek', 'Atlas Mountains', 'Camel Trekking', 'Berber Village']
+      highlights: ['Marrakech', 'Sahara Desert', 'Atlas Mountains', 'Camel Trekking']
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export default function Tours() {
       title: 'Coastal Escape',
       duration: 5,
       price: 899,
-      highlights: ['Essaouira Beach', 'Casablanca City', 'Fresh Seafood', 'Coastal Views', 'Relaxation']
+      highlights: ['Essaouira', 'Casablanca', 'Beach Relaxation', 'Fresh Seafood']
     },
     {
       id: 3,
@@ -27,42 +27,26 @@ export default function Tours() {
       title: 'Mountain Adventure',
       duration: 6,
       price: 1199,
-      highlights: ['Atlas Hiking', 'Berber Villages', 'Mountain Views', 'Local Cuisine', 'Nature Trekking']
+      highlights: ['Atlas Hiking', 'Berber Villages', 'Mountain Views', 'Local Cuisine']
     },
     {
       id: 4,
       image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Blue Cities & Culture',
-      duration: 4,
-      price: 749,
-      highlights: ['Chefchaouen Blue City', 'Fes Medina', 'Cultural Tours', 'Traditional Markets', 'Local Guides']
+      title: 'Imperial Cities',
+      duration: 8,
+      price: 1499,
+      highlights: ['Rabat', 'Meknes', 'Fes', 'Marrakech', 'Historic Sites']
     },
     {
       id: 5,
       image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Desert Luxury Experience',
-      duration: 8,
-      price: 1799,
-      highlights: ['Luxury Desert Camp', 'Camel Safari', 'Stargazing', 'All Meals Included', 'Premium Accommodations']
+      title: 'Desert Explorer',
+      duration: 4,
+      price: 799,
+      highlights: ['Ouarzazate', 'Merzouga', 'Kasbahs', '4x4 Adventure']
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Family Fun Morocco',
-      duration: 5,
-      price: 999,
-      highlights: ['Family-Friendly Activities', 'Beach Days', 'Adventure Sports', 'Cultural Events', 'Kid Activities']
-    },
-    {
-      id: 7,
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Romantic Gateway',
-      duration: 4,
-      price: 1399,
-      highlights: ['Couples Activities', 'Sunset Views', 'Fine Dining', 'Spa Services', 'Private Experiences']
-    },
-    {
-      id: 8,
       image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
       title: 'Photography Tour',
       duration: 6,
@@ -73,10 +57,10 @@ export default function Tours() {
 
   return (
     <div className="tours">
-      <HeroSection
+      <PageHeader
         title="Tours & Packages"
         subtitle="Choose from our carefully curated Morocco tour packages"
-        backgroundImage="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop"
+        bgImage="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop"
       />
 
       <section className="tours-section">

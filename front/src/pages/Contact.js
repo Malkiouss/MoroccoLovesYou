@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HeroSection from '../components/HeroSection';
+import PageHeader from '../components/PageHeader';
 import './Contact.css';
 
 export default function Contact() {
@@ -40,10 +40,10 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      <HeroSection
+      <PageHeader
         title="Contact Us"
-        subtitle="Get in touch with our team to plan your Morocco adventure"
-        backgroundImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
+        subtitle="Get in touch with our team to plan your VIP Morocco adventure"
+        bgImage="https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1200&h=600&fit=crop"
       />
 
       <section className="contact-section">

@@ -3,7 +3,7 @@ import './WhatsAppBanner.css';
 
 const WhatsAppButton = () => {
   const phoneNumber = '972546338757'; // your number
-  const message = 'Hello! I need more information about Morocco tours.';
+  const message = 'Hello, I’m interested in a premium Morocco travel experience.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (

@@ -1,0 +1,98 @@
+.experiences-page {
+  background-color: var(--mly-bg);
+  min-height: 100vh;
+}
+
+.experiences-section {
+  padding: 6rem 0;
+}
+
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem 2rem;
+}
+
+.experience-card {
+  background: var(--mly-card);
+  border: 1px solid var(--mly-border);
+  border-radius: var(--mly-radius);
+  overflow: hidden;
+  transition: all var(--mly-transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--mly-shadow-hover);
+  border-color: rgba(219, 159, 70, 0.5);
+}
+
+.experience-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.experience-card:hover .experience-image img {
+  transform: scale(1.05);
+}
+
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,31,23,1) 0%, rgba(13,31,23,0) 100%);
+  opacity: 0.8;
+}
+
+.experience-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.experience-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--mly-gold);
+  margin-bottom: 1rem;
+}
+
+.experience-content p {
+  color: var(--mly-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.exp-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: #25D366;
+  border: 1px solid #25D366;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  transition: all var(--mly-transition);
+}
+
+.exp-wa-btn:hover {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import PageHeader from '../components/PageHeader';
 import DestinationCard from '../components/DestinationCard';
 import './Destinations.css';
 
@@ -57,10 +57,10 @@ export default function Destinations() {
 
   return (
     <div className="destinations">
-      <HeroSection
+      <PageHeader
         title="Explore Morocco's Destinations"
-        subtitle="Discover 8 incredible places to visit across beautiful Morocco"
-        backgroundImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
+        subtitle="Discover incredible places to visit across beautiful Morocco"
+        bgImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
       />
 
       <section className="destinations-section">

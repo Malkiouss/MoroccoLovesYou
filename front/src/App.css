@@ -2,41 +2,41 @@
 
 :root {
   /* Primary Colors */
-  --mly-gold: #C9A227;
-  --mly-gold-hover: #D4AF37;
-  --mly-gold-light: #E6C76E;
-  --mly-gold-soft-bg: #F5E6B3;
-  --mly-gold-sand: #E8D8B0;
+  --mly-gold: #DB9F46;
+  --mly-gold-hover: #E2B96F;
+  --mly-gold-light: #E2B96F;
+  --mly-gold-soft-bg: rgba(219, 159, 70, 0.1);
+  --mly-gold-sand: #DB9F46;
 
-  /* Navy Colors */
-  --mly-navy: #0F2A44;
-  --mly-navy-soft: #1F3F5B;
+  /* Navy Colors -> Dark Green */
+  --mly-navy: #1A3A2A;
+  --mly-navy-soft: #2D6A4F;
 
   /* Legacy aliases used by components */
-  --mly-green: #C9A227;
-  --mly-green-light: #D4AF37;
-  --mly-red: #C9A227;
-  --mly-sky: #C9A227;
-  --mly-atlas: #0F2A44;
+  --mly-green: #2D6A4F;
+  --mly-green-light: #E2B96F;
+  --mly-red: #C0392B;
+  --mly-sky: #DB9F46;
+  --mly-atlas: #1A3A2A;
 
   /* Backgrounds */
-  --mly-bg: #FAFAFA;
-  --mly-bg-alt: #F4F6F8;
+  --mly-bg: #0D1F17;
+  --mly-bg-alt: #12281D;
 
   /* Text */
-  --mly-text: #1A1A1A;
-  --mly-muted: #555555;
+  --mly-text: #FFFFFF;
+  --mly-muted: rgba(255, 255, 255, 0.7);
 
   /* Cards & Borders */
-  --mly-card: #FFFFFF;
-  --mly-border: rgba(201, 162, 39, 0.25);
+  --mly-card: rgba(255, 255, 255, 0.03);
+  --mly-border: rgba(219, 159, 70, 0.25);
 
   /* Radii & Shadows */
-  --mly-radius: 20px;
-  --mly-radius-sm: 12px;
-  --mly-shadow: 0 20px 40px rgba(15, 42, 68, 0.10);
-  --mly-shadow-soft: 0 8px 24px rgba(15, 42, 68, 0.07);
-  --mly-shadow-hover: 0 24px 48px rgba(15, 42, 68, 0.15);
+  --mly-radius: 16px;
+  --mly-radius-sm: 8px;
+  --mly-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --mly-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --mly-shadow-hover: 0 24px 48px rgba(219, 159, 70, 0.15);
   --mly-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

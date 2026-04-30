@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import './About.css';
 
@@ -37,10 +37,10 @@ export default function About() {
 
   return (
     <div className="about">
-      <HeroSection
+      <PageHeader
         title="About MoroccoLovesYou"
         subtitle="Your trusted partner in discovering the magic of Morocco"
-        backgroundImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
+        bgImage="https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop"
       />
 
       {/* Company Story */}

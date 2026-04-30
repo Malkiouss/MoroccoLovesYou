@@ -1,5 +1,6 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+
+import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import './Blog.css';
 
@@ -80,11 +81,11 @@ export default function Blog() {
   ];
 
   return (
-    <div className="blog">
-      <HeroSection
+    <div className="blog-page">
+      <PageHeader
         title="Travel Blog"
-        subtitle="Tips, guides, and stories from Morocco lovers"
-        backgroundImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
+        subtitle="Stories, tips, and guides for your Moroccan adventure"
+        bgImage="https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop"
       />
 
       <section className="blog-section">

@@ -1,7 +1,7 @@
 .home {
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #FAFAFA;
+  background-color: var(--mly-bg);
 }
 
 .section-container {
@@ -10,41 +10,348 @@
   padding: 0 2rem;
 }
 
-/* Featured Destinations Section */
-.featured-destinations {
+/* Premium Banners */
+.premium-banner {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-top: 1px solid rgba(219, 159, 70, 0.2);
+  border-bottom: 1px solid rgba(219, 159, 70, 0.2);
+}
+
+.vip-banner {
+  background: linear-gradient(rgba(13, 31, 23, 0.8), rgba(13, 31, 23, 0.9)), url('https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1600&q=80') center/cover;
+}
+
+.wc-banner-section {
+  background: linear-gradient(rgba(13, 31, 23, 0.8), rgba(13, 31, 23, 0.9)), url('https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1600&q=80') center/cover;
+  margin-top: 2rem;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: var(--mly-gold);
+  margin-bottom: 1.5rem;
+}
+
+.banner-content p {
+  font-size: 1.25rem;
+  color: var(--mly-muted);
+  margin-bottom: 2.5rem;
+}
+
+
+/*Word cup banner*/
+/* Luxury World Cup 2030 Banner */
+/* Luxury World Cup 2030 Banner */
+
+.mly-wc2030-luxury-banner {
+  position: relative;
+  overflow: hidden;
+  margin: 60px 0;
+  padding: 75px 8%;
+  border-radius: 30px;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(35, 4, 7, 0.98), rgba(78, 8, 15, 0.96)),
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.22), transparent 38%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.mly-wc2030-pattern {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.16), transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(0, 98, 51, 0.25), transparent 32%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%);
+  background-size: auto, auto, 28px 28px, 28px 28px;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* Main layout: 50% text / 50% image */
+.mly-wc2030-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.mly-wc2030-text {
+  max-width: 640px;
+}
+
+.mly-wc2030-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #f5d77b;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mly-wc2030-text h2 {
+  margin: 0 0 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6vw, 82px);
+  line-height: 1;
+  font-weight: 900;
+  color: #f7d774;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.mly-wc2030-text p {
+  margin: 0 0 32px;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.mly-wc2030-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d4af37, #f7d774);
+  color: #2a0508;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+}
+
+.mly-wc2030-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.38);
+}
+
+/* Image side */
+.mly-wc2030-visual {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mly-wc2030-image {
+  width: 120%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(35px);
+  filter: drop-shadow(0 28px 38px rgba(0, 0, 0, 0.55));
+  animation: mlyWc2030Float 4s ease-in-out infinite;
+}
+
+@keyframes mlyWc2030Float {
+  0%, 100% {
+    transform: translateX(35px) translateY(0);
+  }
+
+  50% {
+    transform: translateX(35px) translateY(-12px);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .mly-wc2030-luxury-banner {
+    padding: 65px 6%;
+  }
+
+  .mly-wc2030-content {
+    gap: 25px;
+  }
+
+  .mly-wc2030-image {
+    width: 125%;
+    transform: translateX(20px);
+  }
+
+  @keyframes mlyWc2030Float {
+    0%, 100% {
+      transform: translateX(20px) translateY(0);
+    }
+
+    50% {
+      transform: translateX(20px) translateY(-10px);
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mly-wc2030-luxury-banner {
+    padding: 55px 24px;
+    border-radius: 24px;
+    text-align: center;
+  }
+
+  .mly-wc2030-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mly-wc2030-text {
+    max-width: 100%;
+  }
+
+  .mly-wc2030-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mly-wc2030-visual {
+    min-height: 260px;
+  }
+
+  .mly-wc2030-image {
+    width: 100%;
+    max-width: 360px;
+    transform: translateX(0);
+  }
+
+  @keyframes mlyWc2030Float {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+
+    50% {
+      transform: translateX(0) translateY(-10px);
+    }
+  }
+}
+
+/* WhatsApp CTA Section */
+.wa-cta-section {
+  background: var(--mly-bg-alt);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--mly-border);
+  border-bottom: 1px solid var(--mly-border);
+}
+
+.wa-cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--mly-text);
+  margin-bottom: 1rem;
+}
+
+.wa-cta-content p {
+  color: var(--mly-muted);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.wa-btn-large {
+  display: inline-flex;
+  background: #25D366;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all var(--mly-transition);
+}
+
+.wa-btn-large:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Video Showcase Section */
+.video-showcase {
   padding: 6rem 0;
-  background: #FFFFFF;
+  background: var(--mly-bg);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.video-card {
+  aspect-ratio: 16/9;
+  background: var(--mly-bg-alt);
+  border: 1px solid var(--mly-border);
+  border-radius: var(--mly-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mly-gold);
+  font-weight: bold;
+}
+
+/* Featured Sections */
+.featured-destinations, .testimonials-preview, .featured-experiences {
+  padding: 6rem 0;
+  background: var(--mly-bg);
 }
 
 .featured-destinations h2,
 .featured-tours h2,
-.testimonials-preview h2 {
+.testimonials-preview h2,
+.video-showcase h2,
+.featured-experiences h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
-  color: #1A1A1A;
+  color: var(--mly-gold);
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
   text-align: center;
-  color: #555555;
+  color: var(--mly-muted);
   font-size: 1.15rem;
   margin-bottom: 3.5rem;
   max-width: 600px;
   margin-inline: auto;
 }
 
-.destinations-grid {
+.destinations-grid, .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
-/* Featured Tours Section */
 .featured-tours {
   padding: 6rem 0;
-  background: #F4F6F8;
+  background: var(--mly-bg-alt);
 }
 
 .tours-grid {
@@ -54,17 +361,14 @@
   margin-bottom: 3rem;
 }
 
-/* Testimonials Preview Section */
-.testimonials-preview {
-  padding: 6rem 0;
-  background: #FFFFFF;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+.experiences-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: linear-gradient(rgba(13, 31, 23, 0.7), rgba(13, 31, 23, 0.7)), url('https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&q=80') center/cover;
+  border-radius: var(--mly-radius);
+  border: 1px solid var(--mly-border);
 }
 
 /* View All Buttons */
@@ -73,79 +377,33 @@
   width: fit-content;
   margin: 0 auto;
   padding: 1rem 2.5rem;
-  background: #C9A227;
-  color: #FFFFFF;
+  background: transparent;
+  border: 2px solid var(--mly-gold);
+  color: var(--mly-gold);
   border-radius: 50px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.25);
 }
 
 .view-all-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.38);
-  background: #D4AF37;
-  color: #FFFFFF;
-}
-
-/* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, #0F2A44 0%, #1F3F5B 100%);
-  padding: 5rem 2rem;
-  text-align: center;
-  color: white;
-  border-radius: var(--mly-radius);
-  margin: 0 auto 5rem;
-  max-width: 1200px;
-  box-shadow: 0 20px 40px rgba(15, 42, 68, 0.25);
-}
-
-.cta-content h2 {
-  color: #FFFFFF;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-inline: auto;
-  color: rgba(255,255,255,0.85);
-}
-
-.cta-btn {
-  display: inline-flex;
-  padding: 1.2rem 3rem;
-  background-color: #C9A227;
-  color: #FFFFFF;
-  border-radius: 50px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  transition: all var(--mly-transition);
-  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.3);
-}
-
-.cta-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.45);
-  background-color: #D4AF37;
-  color: #FFFFFF;
+  background: var(--mly-gold);
+  color: var(--mly-bg);
+  box-shadow: 0 15px 30px rgba(219, 159, 70, 0.2);
 }
 
 @media screen and (max-width: 768px) {
   .featured-destinations,
   .featured-tours,
-  .testimonials-preview {
-    padding: 4rem 0;
+  .testimonials-preview,
+  .video-showcase,
+  .wa-cta-section,
+  .premium-banner {
+    padding: 4rem 1rem;
   }
-
-  .cta-section {
-    padding: 3rem 1.5rem;
-    border-radius: 0;
-    margin-bottom: 0;
+  
+  .banner-content h2 {
+    font-size: 2.5rem;
   }
 }

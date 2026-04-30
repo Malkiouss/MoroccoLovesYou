@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import PageHeader from '../components/PageHeader';
 import TestimonialCard from '../components/TestimonialCard';
 import './Testimonials.css';
 
@@ -71,11 +71,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="testimonials">
-      <HeroSection
-        title="Testimonials"
-        subtitle="Read what our happy travelers have to say"
-        backgroundImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
+    <div className="testimonials-page">
+      <PageHeader
+        title="Guest Testimonials"
+        subtitle="Read what our travelers have to say about their Moroccan experience"
+        bgImage="https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1200&h=600&fit=crop"
       />
 
       <section className="testimonials-section">
