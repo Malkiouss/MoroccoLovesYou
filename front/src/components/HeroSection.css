@@ -115,14 +115,6 @@ nav {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(30,15,5,0.35) 0%,
-    rgba(20,10,3,0.55) 50%,
-    rgba(10,25,18,0.85) 100%
-  ),
-  url('C:\Users\Oussa\OneDrive\Desktop\MoroccoLovesYou\front\public\assets\images\hero-img2.png')center/cover no-repeat;
-  
 }
 .hero-content { position: relative; z-index: 2; margin-top: 330px; padding: 160px 20px 10px; max-width: 780px; }
 .hero-star { color: var(--gold); margin-bottom: 16px; display: inline-flex; }
