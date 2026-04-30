@@ -151,12 +151,16 @@ export default function HeroSection() {
             </div>
 
             <div className="mobile-links">
-              <a href="#home" className="active" onClick={() => setIsMenuOpen(false)}>Home</a>
-              <a href="#tours" onClick={() => setIsMenuOpen(false)}>Tours</a>
-              <a href="#destinations" onClick={() => setIsMenuOpen(false)}>Destinations</a>
-              <a href="#experiences" onClick={() => setIsMenuOpen(false)}>Experiences</a>
-              <a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link to="/tours" onClick={() => setIsMenuOpen(false)}>Tours</Link>
+              <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
+              <Link to="/experiences" onClick={() => setIsMenuOpen(false)}>Experiences</Link>
+              <Link to="/vip" onClick={() => setIsMenuOpen(false)}>VIP Business Travel</Link>
+              <Link to="/worldcup" onClick={() => setIsMenuOpen(false)}>World Cup 2030</Link>
+              <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
+              <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             </div>
 
             <button className="nav-cta mobile-menu-cta" type="button">
