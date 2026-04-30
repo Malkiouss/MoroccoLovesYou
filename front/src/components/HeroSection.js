@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
   Car,
-  Flag,
-  Goal,
   Heart,
   Hotel,
   MapPin,
@@ -12,8 +9,6 @@ import {
   MessageCircle,
   ShieldCheck,
   Star,
-  Trophy,
-  Users,
   X,
 } from "lucide-react";
 
