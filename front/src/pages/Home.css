@@ -22,8 +22,8 @@
 }
 
 .vip-banner {
-  background: linear-gradient(rgba(13, 31, 23, 0.8), rgba(13, 31, 23, 0.9)),
-    url('https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1600&q=80') center/cover;
+  background: linear-gradient(rgba(13, 31, 23, 0.75), rgba(13, 31, 23, 0.88)),
+    url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1600&q=80') center/cover;
 }
 
 .banner-content {
@@ -173,13 +173,13 @@
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-6px); }
 }
-
 /* ─── WhatsApp CTA — WHITE panel ───────────────────────────────────────────── */
 .wa-cta-section {
   background: #ffffff;
   padding: 5.5rem 2rem;
   text-align: center;
   position: relative;
+  overflow: hidden;
   border-top: none;
   border-bottom: none;
   box-shadow:
@@ -192,19 +192,38 @@
 .wa-cta-section::after {
   content: '';
   position: absolute;
-  width: 120px;
-  height: 120px;
-  border: 2px solid rgba(219, 159, 70, 0.15);
-  border-radius: 4px;
+  width: 110px;
+  height: 110px;
   pointer-events: none;
+  z-index: 1;
 }
-.wa-cta-section::before { top: 20px; left: 24px; border-top-color: rgba(219, 159, 70, 0.4); border-left-color: rgba(219, 159, 70, 0.4); }
-.wa-cta-section::after  { bottom: 20px; right: 24px; border-bottom-color: rgba(219, 159, 70, 0.4); border-right-color: rgba(219, 159, 70, 0.4); }
+
+/* Top-left corner */
+.wa-cta-section::before {
+  top: 24px;
+  left: 24px;
+  border-top: 2px solid rgba(219, 159, 70, 0.45);
+  border-left: 2px solid rgba(219, 159, 70, 0.45);
+  border-radius: 8px 0 0 0;
+}
+
+/* Bottom-right corner */
+.wa-cta-section::after {
+  bottom: 24px;
+  right: 24px;
+  border-bottom: 2px solid rgba(219, 159, 70, 0.45);
+  border-right: 2px solid rgba(219, 159, 70, 0.45);
+  border-radius: 0 0 8px 0;
+}
+
+.wa-cta-content {
+  position: relative;
+  z-index: 2;
+}
 
 .wa-cta-content h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  /* Switch to dark for white background */
   color: #1a2e22;
   margin-bottom: 1rem;
 }
@@ -217,6 +236,8 @@
 
 .wa-btn-large {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #25D366;
   color: white;
   padding: 1rem 2.5rem;
@@ -234,6 +255,43 @@
   box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
 }
 
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .wa-cta-section {
+    padding: 4rem 1.2rem;
+  }
+
+  .wa-cta-section::before,
+  .wa-cta-section::after {
+    width: 70px;
+    height: 70px;
+  }
+
+  .wa-cta-section::before {
+    top: 16px;
+    left: 16px;
+  }
+
+  .wa-cta-section::after {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .wa-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .wa-cta-content p {
+    font-size: 1rem;
+  }
+
+  .wa-btn-large {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.9rem 1.6rem;
+    font-size: 1rem;
+  }
+}
 /* ─── Video Showcase — dark panel ──────────────────────────────────────────── */
 .video-showcase {
   padding: 6rem 0;

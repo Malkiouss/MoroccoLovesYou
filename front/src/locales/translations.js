@@ -42,8 +42,10 @@ const translations = {
   vi: { nav: { home: "Trang chủ" }, cta: { whatsappInquiry: "Xin chào, tôi quan tâm đến trải nghiệm du lịch cao cấp tại Maroc." } },
   de: { nav: { home: "Startseite" }, cta: { whatsappInquiry: "Hallo, ich interessiere mich für ein erstklassiges Marokko-Reiseerlebnis." } },
   it: { nav: { home: "Home" }, cta: { whatsappInquiry: "Ciao, sono interessato a un'esperienza di viaggio premium in Marocco." } },
-  ko: { nav: { home: "홈" }, cta: { whatsappInquiry: "안녕하세요, 프리미엄 모로코 여행 경험에 관심이 있습니다." } }
+  ko: { nav: { home: "홈" }, cta: { whatsappInquiry: "안녕하세요, 프리미엄 모로코 여행 경험에 관심이 있습니다." } },
+  ru: { nav: { home: "Главная" }, cta: { whatsappInquiry: "Здравствуйте, меня интересует отдых премиум-класса в Марокко." } }
 };
+
 
 
 export default translations;

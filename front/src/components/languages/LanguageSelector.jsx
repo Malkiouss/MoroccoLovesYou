@@ -9,14 +9,16 @@ const languages = [
   { code: "fr", label: "French", flagCode: "fr" },
   { code: "es", label: "Spanish", flagCode: "es" },
   { code: "he", label: "Hebrew", flagCode: "il" },
-  { code: "ar", label: "Arabic", flagCode: "ma" },
+  { code: "ar", label: "\u0627\u0644\u0639\u0631\u0628\u064a\u0629Arabic", flagCode: "ma" },
   { code: "de", label: "German", flagCode: "de" },
   { code: "it", label: "Italian", flagCode: "it" },
   { code: "ja", label: "Japanese", flagCode: "jp" },
   { code: "zh", label: "Chinese", flagCode: "cn" },
   { code: "ko", label: "Korean", flagCode: "kr" },
   { code: "vi", label: "Vietnamese", flagCode: "vn" },
+  { code: "ru", label: "Russian", flagCode: "ru" },
 ];
+
 
 function LanguageSelector() {
   const { language: selectedLang, setLanguage } = useLanguage();
