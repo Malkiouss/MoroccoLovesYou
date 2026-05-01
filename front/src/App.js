@@ -4,6 +4,7 @@ import './App.css';
 
 import Footer from './components/Footer';
 import WhatsAppBanner from './components/WhatsAppBanner';
+import LanguageSelector from './components/languages/LanguageSelector';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -22,6 +23,7 @@ function App() {
     <LanguageProvider>
       <Router>
         <div className="App">
+          <LanguageSelector />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -44,3 +46,4 @@ function App() {
 }
 
 export default App;
+

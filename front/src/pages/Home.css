@@ -10,7 +10,7 @@
   padding: 0 2rem;
 }
 
-/* Premium Banners */
+/* ─── Premium Banners ──────────────────────────────────────────────────────── */
 .premium-banner {
   padding: 6rem 2rem;
   text-align: center;
@@ -22,12 +22,8 @@
 }
 
 .vip-banner {
-  background: linear-gradient(rgba(13, 31, 23, 0.8), rgba(13, 31, 23, 0.9)), url('https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1600&q=80') center/cover;
-}
-
-.wc-banner-section {
-  background: linear-gradient(rgba(13, 31, 23, 0.8), rgba(13, 31, 23, 0.9)), url('https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1600&q=80') center/cover;
-  margin-top: 2rem;
+  background: linear-gradient(rgba(13, 31, 23, 0.8), rgba(13, 31, 23, 0.9)),
+    url('https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1600&q=80') center/cover;
 }
 
 .banner-content {
@@ -50,8 +46,7 @@
   margin-bottom: 2.5rem;
 }
 
-
-/* Luxury World Cup 2030 Banner - Smaller + Responsive */
+/* ─── World Cup 2030 Banner ────────────────────────────────────────────────── */
 .mly-wc2030-luxury-banner {
   position: relative;
   overflow: hidden;
@@ -83,7 +78,6 @@
   pointer-events: none;
 }
 
-/* Layout */
 .mly-wc2030-content {
   position: relative;
   z-index: 2;
@@ -159,7 +153,6 @@
   background: linear-gradient(135deg, #fce28b, #d4af37);
 }
 
-/* Image side */
 .mly-wc2030-visual {
   flex: 0 0 330px;
   display: flex;
@@ -177,33 +170,300 @@
 }
 
 @keyframes mlyWc2030Float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-6px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
 }
 
-/* Tablet */
+/* ─── WhatsApp CTA — WHITE panel ───────────────────────────────────────────── */
+.wa-cta-section {
+  background: #ffffff;
+  padding: 5.5rem 2rem;
+  text-align: center;
+  position: relative;
+  border-top: none;
+  border-bottom: none;
+  box-shadow:
+    inset 0 1px 0 rgba(219, 159, 70, 0.18),
+    inset 0 -1px 0 rgba(219, 159, 70, 0.18);
+}
+
+/* subtle zellige-inspired corner accents */
+.wa-cta-section::before,
+.wa-cta-section::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(219, 159, 70, 0.15);
+  border-radius: 4px;
+  pointer-events: none;
+}
+.wa-cta-section::before { top: 20px; left: 24px; border-top-color: rgba(219, 159, 70, 0.4); border-left-color: rgba(219, 159, 70, 0.4); }
+.wa-cta-section::after  { bottom: 20px; right: 24px; border-bottom-color: rgba(219, 159, 70, 0.4); border-right-color: rgba(219, 159, 70, 0.4); }
+
+.wa-cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  /* Switch to dark for white background */
+  color: #1a2e22;
+  margin-bottom: 1rem;
+}
+
+.wa-cta-content p {
+  color: #5a6b61;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.wa-btn-large {
+  display: inline-flex;
+  background: #25D366;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+}
+
+.wa-btn-large:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+}
+
+/* ─── Video Showcase — dark panel ──────────────────────────────────────────── */
+.video-showcase {
+  padding: 6rem 0;
+  background: var(--mly-bg);
+}
+
+.video-showcase h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: var(--mly-gold);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.video-card {
+  aspect-ratio: 16/9;
+  background: var(--mly-bg-alt);
+  border: 1px solid var(--mly-border);
+  border-radius: var(--mly-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mly-gold);
+  font-weight: bold;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.video-card:hover {
+  border-color: rgba(219, 159, 70, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ─── Featured Destinations — WHITE panel ──────────────────────────────────── */
+.featured-destinations {
+  padding: 6rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+/* thin gold rule top */
+.featured-destinations::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--mly-gold), transparent);
+  margin: 0 auto 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.featured-destinations h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  /* dark on white */
+  color: #1a2e22;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.featured-destinations .section-subtitle {
+  color: #5a6b61;
+}
+
+/* ─── Featured Tours — slightly warm cream ─────────────────────────────────── */
+.featured-tours {
+  padding: 6rem 0;
+  background: #faf8f4;           /* warm off-white, not plain grey */
+  border-top: 1px solid rgba(219, 159, 70, 0.12);
+  border-bottom: 1px solid rgba(219, 159, 70, 0.12);
+}
+
+.featured-tours h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: #1a2e22;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.featured-tours .section-subtitle {
+  color: #5a6b61;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* ─── Exclusive Experiences — dark panel ───────────────────────────────────── */
+.featured-experiences {
+  padding: 6rem 0;
+  background: var(--mly-bg);
+}
+
+.featured-experiences h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: var(--mly-gold);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.featured-experiences .section-subtitle {
+  color: var(--mly-muted);
+}
+
+.experiences-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: linear-gradient(rgba(13, 31, 23, 0.7), rgba(13, 31, 23, 0.7)),
+    url('https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&q=80') center/cover;
+  border-radius: var(--mly-radius);
+  border: 1px solid var(--mly-border);
+}
+
+/* ─── Testimonials — WHITE panel ───────────────────────────────────────────── */
+.testimonials-preview {
+  padding: 6rem 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(219, 159, 70, 0.12);
+}
+
+.testimonials-preview h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: #1a2e22;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.testimonials-preview .section-subtitle {
+  color: #5a6b61;
+}
+
+.destinations-grid,
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ─── Shared section subtitle ──────────────────────────────────────────────── */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* ─── View All Buttons — adapt to background ───────────────────────────────── */
+.view-all-btn {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 2px solid var(--mly-gold);
+  color: var(--mly-gold);
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.view-all-btn:hover {
+  transform: translateY(-3px);
+  background: var(--mly-gold);
+  color: var(--mly-bg);
+  box-shadow: 0 15px 30px rgba(219, 159, 70, 0.2);
+}
+
+/* On white sections, darken the btn text to stay readable after fill */
+.featured-destinations .view-all-btn:hover,
+.featured-tours .view-all-btn:hover,
+.testimonials-preview .view-all-btn:hover {
+  color: #1a2e22;
+}
+
+/* ─── Section dividers (decorative thin gold line between panels) ────────────*/
+.featured-destinations,
+.featured-tours,
+.featured-experiences,
+.testimonials-preview {
+  position: relative;
+}
+
+/* ─── Tablet ────────────────────────────────────────────────────────────────── */
 @media (max-width: 992px) {
   .mly-wc2030-luxury-banner {
     width: min(100% - 28px, 900px);
     padding: 24px 5%;
   }
-
-  .mly-wc2030-visual {
-    flex-basis: 280px;
-  }
-
-  .mly-wc2030-image {
-    max-width: 260px;
-  }
+  .mly-wc2030-visual { flex-basis: 280px; }
+  .mly-wc2030-image  { max-width: 260px; }
 }
 
-/* iPhone / Mobile */
-@media (max-width: 768px) {
+/* ─── Mobile ────────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+  .featured-destinations,
+  .featured-tours,
+  .testimonials-preview,
+  .video-showcase,
+  .wa-cta-section,
+  .premium-banner,
+  .featured-experiences {
+    padding: 4rem 1rem;
+  }
+
+  .banner-content h2 { font-size: 2.5rem; }
+
+  .wa-cta-section::before,
+  .wa-cta-section::after { display: none; }
+
   .mly-wc2030-luxury-banner {
     width: calc(100% - 24px);
     margin: 20px auto;
@@ -223,11 +483,7 @@
     max-width: 100%;
   }
 
-  .mly-wc2030-badge {
-    margin-bottom: 9px;
-    font-size: 10px;
-    padding: 5px 12px;
-  }
+  .mly-wc2030-badge  { margin-bottom: 9px; font-size: 10px; padding: 5px 12px; }
 
   .mly-wc2030-text h2 {
     font-size: clamp(25px, 9vw, 36px);
@@ -250,210 +506,22 @@
     font-size: 11.5px;
   }
 
-  .mly-wc2030-visual {
-    flex: none;
-    width: 100%;
-  }
-
-  .mly-wc2030-image {
-    max-width: 210px;
-  }
+  .mly-wc2030-visual { flex: none; width: 100%; }
+  .mly-wc2030-image  { max-width: 210px; }
 }
 
-/* Small iPhone */
+/* ─── Small iPhone ──────────────────────────────────────────────────────────── */
 @media (max-width: 430px) {
-  .mly-wc2030-luxury-banner {
-    width: calc(100% - 20px);
-    padding: 22px 15px;
-    border-radius: 16px;
-  }
-
-  .mly-wc2030-text h2 {
-    font-size: clamp(24px, 8.5vw, 32px);
-  }
-
-  .mly-wc2030-text p {
-    font-size: 13px;
-  }
-
-  .mly-wc2030-image {
-    max-width: 185px;
-  }
+  .mly-wc2030-luxury-banner { width: calc(100% - 20px); padding: 22px 15px; border-radius: 16px; }
+  .mly-wc2030-text h2       { font-size: clamp(24px, 8.5vw, 32px); }
+  .mly-wc2030-text p        { font-size: 13px; }
+  .mly-wc2030-image          { max-width: 185px; }
 }
 
-/* Very small phones */
+/* ─── Very small phones ─────────────────────────────────────────────────────── */
 @media (max-width: 360px) {
-  .mly-wc2030-luxury-banner {
-    padding: 20px 13px;
-  }
-
-  .mly-wc2030-text h2 {
-    font-size: 23px;
-  }
-
-  .mly-wc2030-btn {
-    max-width: 100%;
-    font-size: 11px;
-  }
-
-  .mly-wc2030-image {
-    max-width: 170px;
-  }
-}
-/* WhatsApp CTA Section */
-.wa-cta-section {
-  background: var(--mly-bg-alt);
-  padding: 5rem 2rem;
-  text-align: center;
-  border-top: 1px solid var(--mly-border);
-  border-bottom: 1px solid var(--mly-border);
-}
-
-.wa-cta-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: var(--mly-text);
-  margin-bottom: 1rem;
-}
-
-.wa-cta-content p {
-  color: var(--mly-muted);
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-.wa-btn-large {
-  display: inline-flex;
-  background: #25D366;
-  color: white;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all var(--mly-transition);
-}
-
-.wa-btn-large:hover {
-  background: #1EBE5D;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-}
-
-/* Video Showcase Section */
-.video-showcase {
-  padding: 6rem 0;
-  background: var(--mly-bg);
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.video-card {
-  aspect-ratio: 16/9;
-  background: var(--mly-bg-alt);
-  border: 1px solid var(--mly-border);
-  border-radius: var(--mly-radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--mly-gold);
-  font-weight: bold;
-}
-
-/* Featured Sections */
-.featured-destinations, .testimonials-preview, .featured-experiences {
-  padding: 6rem 0;
-  background: var(--mly-bg);
-}
-
-.featured-destinations h2,
-.featured-tours h2,
-.testimonials-preview h2,
-.video-showcase h2,
-.featured-experiences h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
-  color: var(--mly-gold);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--mly-muted);
-  font-size: 1.15rem;
-  margin-bottom: 3.5rem;
-  max-width: 600px;
-  margin-inline: auto;
-}
-
-.destinations-grid, .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.featured-tours {
-  padding: 6rem 0;
-  background: var(--mly-bg-alt);
-}
-
-.tours-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.experiences-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  background: linear-gradient(rgba(13, 31, 23, 0.7), rgba(13, 31, 23, 0.7)), url('https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&q=80') center/cover;
-  border-radius: var(--mly-radius);
-  border: 1px solid var(--mly-border);
-}
-
-/* View All Buttons */
-.view-all-btn {
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  border: 2px solid var(--mly-gold);
-  color: var(--mly-gold);
-  border-radius: 50px;
-  font-weight: 600;
-  font-family: 'Lato', sans-serif;
-  transition: all var(--mly-transition);
-}
-
-.view-all-btn:hover {
-  transform: translateY(-3px);
-  background: var(--mly-gold);
-  color: var(--mly-bg);
-  box-shadow: 0 15px 30px rgba(219, 159, 70, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-  .featured-destinations,
-  .featured-tours,
-  .testimonials-preview,
-  .video-showcase,
-  .wa-cta-section,
-  .premium-banner {
-    padding: 4rem 1rem;
-  }
-  
-  .banner-content h2 {
-    font-size: 2.5rem;
-  }
+  .mly-wc2030-luxury-banner { padding: 20px 13px; }
+  .mly-wc2030-text h2       { font-size: 23px; }
+  .mly-wc2030-btn           { max-width: 100%; font-size: 11px; }
+  .mly-wc2030-image          { max-width: 170px; }
 }
