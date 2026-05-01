@@ -40,7 +40,9 @@
   font-size: 1.05rem;
   line-height: 1.7;
 }
-
+.testimonial-text{
+  color: rgb(0, 0, 0);
+}
 .testimonial-author {
   display: flex;
   align-items: center;

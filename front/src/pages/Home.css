@@ -1,3 +1,6 @@
+/* ============================================
+   BASE & RESET
+   ============================================ */
 .home {
   min-height: 100vh;
   overflow-x: hidden;
@@ -7,29 +10,33 @@
 .section-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 
-/* ─── Premium Banners ──────────────────────────────────────────────────────── */
+
+/* ============================================
+   PREMIUM / VIP BANNER  (dark, keeps original feel)
+   ============================================ */
 .premium-banner {
-  padding: 6rem 2rem;
+  padding: 7rem 2rem;
   text-align: center;
   background-size: cover;
   background-position: center;
   position: relative;
-  border-top: 1px solid rgba(219, 159, 70, 0.2);
-  border-bottom: 1px solid rgba(219, 159, 70, 0.2);
+  border-top: 1px solid rgba(219, 159, 70, 0.18);
+  border-bottom: 1px solid rgba(219, 159, 70, 0.18);
 }
 
 .vip-banner {
-  background: linear-gradient(rgba(13, 31, 23, 0.75), rgba(13, 31, 23, 0.88)),
-    url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1600&q=80') center/cover;
+  background:
+    linear-gradient(rgba(13, 31, 23, 0.82), rgba(13, 31, 23, 0.94)),
+    url('https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1600&q=80') center/cover;
 }
 
 .banner-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
@@ -37,35 +44,49 @@
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   color: var(--mly-gold);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
 }
 
 .banner-content p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--mly-muted);
   margin-bottom: 2.5rem;
+  line-height: 1.7;
 }
 
-/* ─── World Cup 2030 Banner ────────────────────────────────────────────────── */
+
+/* ============================================
+   WORLD CUP 2030 — wrapped in a white strip
+   ============================================ */
+
+/* White strip that wraps the WC card, separating the two dark sections */
+.wc2030-strip {
+  background: #ffffff;
+  padding: 3rem 0;
+}
+
 .mly-wc2030-luxury-banner {
   position: relative;
   overflow: hidden;
   width: min(100% - 32px, 1050px);
-  margin: 28px auto;
-  padding: 18px 5%;
-  border-radius: 20px;
+  margin: 0 auto;
+  padding: 22px 5%;
+  border-radius: 22px;
   color: #ffffff;
   background:
     radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 42%),
     linear-gradient(135deg, rgba(24, 4, 6, 0.97), rgba(66, 8, 16, 0.98));
   border: 1px solid rgba(212, 175, 55, 0.28);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255,255,255,0.04) inset;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .mly-wc2030-luxury-banner:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 28px 55px rgba(212, 175, 55, 0.16);
 }
 
 .mly-wc2030-pattern {
@@ -97,15 +118,15 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 10px;
-  padding: 5px 13px;
+  margin-bottom: 12px;
+  padding: 5px 14px;
   border-radius: 999px;
   background: rgba(212, 175, 55, 0.14);
   border: 1px solid rgba(212, 175, 55, 0.28);
   color: #fce28b;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 800;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
 }
 
@@ -122,11 +143,11 @@
 }
 
 .mly-wc2030-text p {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   max-width: 450px;
   font-size: 14px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .mly-wc2030-btn {
@@ -134,22 +155,22 @@
   align-items: center;
   justify-content: center;
   min-height: 42px;
-  padding: 12px 24px;
+  padding: 12px 26px;
   border-radius: 999px;
   background: linear-gradient(135deg, #d4af37, #fce28b);
   color: #1a0505;
   font-weight: 900;
   font-size: 12px;
-  letter-spacing: 0.45px;
+  letter-spacing: 0.55px;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 8px 18px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .mly-wc2030-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 14px 28px rgba(212, 175, 55, 0.38);
   background: linear-gradient(135deg, #fce28b, #d4af37);
 }
 
@@ -160,7 +181,7 @@
   justify-content: center;
 }
 
-.mly-wc2030-image {
+.mly-wc2030-visual img {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -171,139 +192,100 @@
 
 @keyframes mlyWc2030Float {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+  50%       { transform: translateY(-7px); }
 }
-/* ─── WhatsApp CTA — WHITE panel ───────────────────────────────────────────── */
+
+
+/* ============================================
+   WHATSAPP CTA — pure white section
+   ============================================ */
 .wa-cta-section {
   background: #ffffff;
   padding: 5.5rem 2rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
-  border-top: none;
-  border-bottom: none;
-  box-shadow:
-    inset 0 1px 0 rgba(219, 159, 70, 0.18),
-    inset 0 -1px 0 rgba(219, 159, 70, 0.18);
 }
 
-/* subtle zellige-inspired corner accents */
+/* thin gold rules top & bottom */
 .wa-cta-section::before,
 .wa-cta-section::after {
   content: '';
+  display: block;
   position: absolute;
-  width: 110px;
-  height: 110px;
-  pointer-events: none;
-  z-index: 1;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(219,159,70,0.4), transparent);
 }
-
-/* Top-left corner */
-.wa-cta-section::before {
-  top: 24px;
-  left: 24px;
-  border-top: 2px solid rgba(219, 159, 70, 0.45);
-  border-left: 2px solid rgba(219, 159, 70, 0.45);
-  border-radius: 8px 0 0 0;
-}
-
-/* Bottom-right corner */
-.wa-cta-section::after {
-  bottom: 24px;
-  right: 24px;
-  border-bottom: 2px solid rgba(219, 159, 70, 0.45);
-  border-right: 2px solid rgba(219, 159, 70, 0.45);
-  border-radius: 0 0 8px 0;
-}
-
-.wa-cta-content {
-  position: relative;
-  z-index: 2;
-}
+.wa-cta-section::before { top: 0; }
+.wa-cta-section::after  { bottom: 0; }
 
 .wa-cta-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #1a2e22;
-  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  color: #1a1a1a;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.4px;
 }
 
 .wa-cta-content p {
-  color: #5a6b61;
-  margin-bottom: 2rem;
+  color: #666;
+  margin-bottom: 2.25rem;
   font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .wa-btn-large {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   background: #25D366;
-  color: white;
-  padding: 1rem 2.5rem;
+  color: #ffffff;
+  padding: 1rem 2.75rem;
   border-radius: 50px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.28);
+  transition: all 0.28s ease;
 }
 
 .wa-btn-large:hover {
   background: #1EBE5D;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.38);
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .wa-cta-section {
-    padding: 4rem 1.2rem;
-  }
 
-  .wa-cta-section::before,
-  .wa-cta-section::after {
-    width: 70px;
-    height: 70px;
-  }
-
-  .wa-cta-section::before {
-    top: 16px;
-    left: 16px;
-  }
-
-  .wa-cta-section::after {
-    bottom: 16px;
-    right: 16px;
-  }
-
-  .wa-cta-content h2 {
-    font-size: 2rem;
-  }
-
-  .wa-cta-content p {
-    font-size: 1rem;
-  }
-
-  .wa-btn-large {
-    width: 100%;
-    max-width: 300px;
-    padding: 0.9rem 1.6rem;
-    font-size: 1rem;
-  }
-}
-/* ─── Video Showcase — dark panel ──────────────────────────────────────────── */
+/* ============================================
+   VIDEO SHOWCASE — warm off-white
+   ============================================ */
 .video-showcase {
-  padding: 6rem 0;
-  background: var(--mly-bg);
+  padding: 6.5rem 0;
+  background: #faf8f4;
+  position: relative;
+}
+
+.video-showcase::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(219,159,70,0.45), transparent);
 }
 
 .video-showcase h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
-  color: var(--mly-gold);
+  color: #1a1a1a;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.video-showcase .section-subtitle {
+  color: #777;
 }
 
 .video-grid {
@@ -315,74 +297,81 @@
 
 .video-card {
   aspect-ratio: 16/9;
-  background: var(--mly-bg-alt);
-  border: 1px solid var(--mly-border);
-  border-radius: var(--mly-radius);
+  background: #ffffff;
+  border: 1px solid rgba(219,159,70,0.18);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--mly-gold);
-  font-weight: bold;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .video-card:hover {
-  border-color: rgba(219, 159, 70, 0.5);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.11);
 }
 
-/* ─── Featured Destinations — WHITE panel ──────────────────────────────────── */
+
+/* ============================================
+   FEATURED DESTINATIONS — dark (var)
+   ============================================ */
 .featured-destinations {
-  padding: 6rem 0;
-  background: #ffffff;
+  padding: 7rem 0;
+  background: var(--mly-bg);
   position: relative;
-}
-
-/* thin gold rule top */
-.featured-destinations::before {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--mly-gold), transparent);
-  margin: 0 auto 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .featured-destinations h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
-  /* dark on white */
-  color: #1a2e22;
+  color: var(--mly-gold);
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .featured-destinations .section-subtitle {
-  color: #5a6b61;
+  color: var(--mly-muted);
 }
 
-/* ─── Featured Tours — slightly warm cream ─────────────────────────────────── */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+/* ============================================
+   FEATURED TOURS — white section
+   ============================================ */
 .featured-tours {
-  padding: 6rem 0;
-  background: #faf8f4;           /* warm off-white, not plain grey */
-  border-top: 1px solid rgba(219, 159, 70, 0.12);
-  border-bottom: 1px solid rgba(219, 159, 70, 0.12);
+  padding: 7rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.featured-tours::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--mly-gold), rgba(219,159,70,0.1));
 }
 
 .featured-tours h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
-  color: #1a2e22;
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .featured-tours .section-subtitle {
-  color: #5a6b61;
+  color: #666;
 }
 
 .tours-grid {
@@ -392,13 +381,76 @@
   margin-bottom: 3rem;
 }
 
-/* ─── Exclusive Experiences — dark panel ───────────────────────────────────── */
+/* Override view-all-btn for white context */
+.featured-tours .view-all-btn {
+  border-color: #c49a30;
+  color: #c49a30;
+}
+
+.featured-tours .view-all-btn:hover {
+  background: #c49a30;
+  color: #ffffff;
+  box-shadow: 0 15px 30px rgba(196,154,48,0.25);
+}
+
+
+/* ============================================
+   EXCLUSIVE EXPERIENCES — warm off-white
+   ============================================ */
 .featured-experiences {
   padding: 6rem 0;
-  background: var(--mly-bg);
+  background: #faf8f4;
 }
 
 .featured-experiences h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.featured-experiences .section-subtitle {
+  color: #777;
+}
+
+.experiences-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  background:
+    linear-gradient(rgba(13, 31, 23, 0.68), rgba(13, 31, 23, 0.72)),
+    url('https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&q=80') center/cover;
+  border-radius: 18px;
+  border: 1px solid rgba(219,159,70,0.22);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.16);
+  transition: box-shadow 0.3s ease;
+}
+
+.experiences-preview:hover {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.24);
+}
+
+
+/* ============================================
+   TESTIMONIALS — dark section
+   ============================================ */
+.testimonials-preview {
+  padding: 7rem 0;
+  background: var(--mly-bg);
+  position: relative;
+}
+
+.testimonials-preview::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 5%; right: 5%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(219,159,70,0.3), transparent);
+}
+
+.testimonials-preview h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
   color: var(--mly-gold);
@@ -406,41 +458,10 @@
   margin-bottom: 1rem;
 }
 
-.featured-experiences .section-subtitle {
+.testimonials-preview .section-subtitle {
   color: var(--mly-muted);
 }
 
-.experiences-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  background: linear-gradient(rgba(13, 31, 23, 0.7), rgba(13, 31, 23, 0.7)),
-    url('https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&q=80') center/cover;
-  border-radius: var(--mly-radius);
-  border: 1px solid var(--mly-border);
-}
-
-/* ─── Testimonials — WHITE panel ───────────────────────────────────────────── */
-.testimonials-preview {
-  padding: 6rem 0;
-  background: #ffffff;
-  border-top: 1px solid rgba(219, 159, 70, 0.12);
-}
-
-.testimonials-preview h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
-  color: #1a2e22;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.testimonials-preview .section-subtitle {
-  color: #5a6b61;
-}
-
-.destinations-grid,
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -448,21 +469,25 @@
   margin-bottom: 3rem;
 }
 
-/* ─── Shared section subtitle ──────────────────────────────────────────────── */
+
+/* ============================================
+   SHARED UTILITIES
+   ============================================ */
 .section-subtitle {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   margin-bottom: 3.5rem;
-  max-width: 600px;
+  max-width: 580px;
   margin-inline: auto;
+  line-height: 1.65;
 }
 
-/* ─── View All Buttons — adapt to background ───────────────────────────────── */
+/* View All Buttons — default (dark bg context) */
 .view-all-btn {
   display: flex;
   width: fit-content;
   margin: 0 auto;
-  padding: 1rem 2.5rem;
+  padding: 0.9rem 2.5rem;
   background: transparent;
   border: 2px solid var(--mly-gold);
   color: var(--mly-gold);
@@ -470,116 +495,92 @@
   font-weight: 600;
   font-family: 'Lato', sans-serif;
   text-decoration: none;
-  transition: all 0.25s ease;
+  letter-spacing: 0.2px;
+  transition: all 0.28s ease;
 }
 
 .view-all-btn:hover {
   transform: translateY(-3px);
   background: var(--mly-gold);
   color: var(--mly-bg);
-  box-shadow: 0 15px 30px rgba(219, 159, 70, 0.2);
+  box-shadow: 0 15px 30px rgba(219, 159, 70, 0.22);
 }
 
-/* On white sections, darken the btn text to stay readable after fill */
-.featured-destinations .view-all-btn:hover,
-.featured-tours .view-all-btn:hover,
-.testimonials-preview .view-all-btn:hover {
-  color: #1a2e22;
-}
 
-/* ─── Section dividers (decorative thin gold line between panels) ────────────*/
-.featured-destinations,
-.featured-tours,
-.featured-experiences,
-.testimonials-preview {
-  position: relative;
-}
-
-/* ─── Tablet ────────────────────────────────────────────────────────────────── */
+/* ============================================
+   WORLD CUP RESPONSIVE
+   ============================================ */
 @media (max-width: 992px) {
   .mly-wc2030-luxury-banner {
     width: min(100% - 28px, 900px);
     padding: 24px 5%;
   }
   .mly-wc2030-visual { flex-basis: 280px; }
-  .mly-wc2030-image  { max-width: 260px; }
+  .mly-wc2030-visual img { max-width: 260px; }
 }
 
-/* ─── Mobile ────────────────────────────────────────────────────────────────── */
-@media screen and (max-width: 768px) {
-  .featured-destinations,
-  .featured-tours,
-  .testimonials-preview,
-  .video-showcase,
-  .wa-cta-section,
-  .premium-banner,
-  .featured-experiences {
-    padding: 4rem 1rem;
-  }
-
-  .banner-content h2 { font-size: 2.5rem; }
-
-  .wa-cta-section::before,
-  .wa-cta-section::after { display: none; }
-
+@media (max-width: 768px) {
   .mly-wc2030-luxury-banner {
     width: calc(100% - 24px);
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 24px 18px;
     border-radius: 18px;
     text-align: center;
   }
-
   .mly-wc2030-content {
     flex-direction: column-reverse;
     gap: 18px;
   }
-
-  .mly-wc2030-text {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .mly-wc2030-badge  { margin-bottom: 9px; font-size: 10px; padding: 5px 12px; }
-
-  .mly-wc2030-text h2 {
-    font-size: clamp(25px, 9vw, 36px);
-    line-height: 1.08;
-    margin-bottom: 10px;
-  }
-
-  .mly-wc2030-text p {
-    max-width: 100%;
-    margin: 0 auto 16px;
-    font-size: 13.5px;
-    line-height: 1.55;
-  }
-
-  .mly-wc2030-btn {
-    width: 100%;
-    max-width: 280px;
-    min-height: 44px;
-    padding: 12px 18px;
-    font-size: 11.5px;
-  }
-
-  .mly-wc2030-visual { flex: none; width: 100%; }
-  .mly-wc2030-image  { max-width: 210px; }
+  .mly-wc2030-text { width: 100%; min-width: 0; max-width: 100%; }
+  .mly-wc2030-badge { margin-bottom: 9px; font-size: 10px; padding: 5px 12px; }
+  .mly-wc2030-text h2 { font-size: clamp(25px, 9vw, 36px); line-height: 1.08; margin-bottom: 10px; }
+  .mly-wc2030-text p  { max-width: 100%; margin: 0 auto 16px; font-size: 13.5px; }
+  .mly-wc2030-btn     { width: 100%; max-width: 280px; min-height: 44px; }
+  .mly-wc2030-visual  { flex: none; width: 100%; }
+  .mly-wc2030-visual img { max-width: 210px; }
+  .wc2030-strip { padding: 2rem 0; }
 }
 
-/* ─── Small iPhone ──────────────────────────────────────────────────────────── */
 @media (max-width: 430px) {
   .mly-wc2030-luxury-banner { width: calc(100% - 20px); padding: 22px 15px; border-radius: 16px; }
-  .mly-wc2030-text h2       { font-size: clamp(24px, 8.5vw, 32px); }
-  .mly-wc2030-text p        { font-size: 13px; }
-  .mly-wc2030-image          { max-width: 185px; }
+  .mly-wc2030-text h2 { font-size: clamp(24px, 8.5vw, 32px); }
+  .mly-wc2030-text p  { font-size: 13px; }
+  .mly-wc2030-visual img { max-width: 185px; }
 }
 
-/* ─── Very small phones ─────────────────────────────────────────────────────── */
 @media (max-width: 360px) {
   .mly-wc2030-luxury-banner { padding: 20px 13px; }
-  .mly-wc2030-text h2       { font-size: 23px; }
-  .mly-wc2030-btn           { max-width: 100%; font-size: 11px; }
-  .mly-wc2030-image          { max-width: 170px; }
+  .mly-wc2030-text h2 { font-size: 23px; }
+  .mly-wc2030-btn { max-width: 100%; font-size: 11px; }
+  .mly-wc2030-visual img { max-width: 170px; }
+}
+
+
+/* ============================================
+   GENERAL RESPONSIVE
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .featured-destinations,
+  .featured-tours,
+  .testimonials-preview,
+  .featured-experiences,
+  .video-showcase,
+  .wa-cta-section,
+  .premium-banner {
+    padding: 4rem 1rem;
+  }
+
+  .banner-content h2  { font-size: 2.4rem; }
+  .wa-cta-content h2  { font-size: 2rem; }
+  .section-container  { padding: 0 1.25rem; }
+
+  .featured-destinations h2,
+  .featured-tours h2,
+  .testimonials-preview h2,
+  .video-showcase h2,
+  .featured-experiences h2 {
+    font-size: 2.1rem;
+  }
+
+  .wc2030-strip { padding: 2rem 0; }
 }

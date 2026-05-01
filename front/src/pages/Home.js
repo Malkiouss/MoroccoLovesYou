@@ -99,38 +99,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Premium Banner 2: World Cup 2030 */}
-{/* Luxury World Cup 2030 Banner */}
-<section className="mly-wc2030-luxury-banner">
-  <div className="mly-wc2030-pattern"></div>
+      {/* White strip wraps the WC card — breaks up the two dark sections */}
+      <div className="wc2030-strip">
+        <section className="mly-wc2030-luxury-banner">
+          <div className="mly-wc2030-pattern"></div>
 
-  <div className="mly-wc2030-content">
-    <div className="mly-wc2030-text">
-      <span className="mly-wc2030-badge">🇲🇦 Morocco World Cup 2030</span>
+          <div className="mly-wc2030-content">
+            <div className="mly-wc2030-text">
+              <span className="mly-wc2030-badge">🇲🇦 Morocco World Cup 2030</span>
 
-      <h2>Morocco 2030</h2>
+              <h2>Morocco 2030</h2>
 
-      <p>
-        Exclusive World Cup travel packages combining football, Moroccan culture,
-        VIP hospitality, and luxury experiences.
-      </p>
+              <p>
+                Exclusive World Cup travel packages combining football, Moroccan culture,
+                VIP hospitality, and luxury experiences.
+              </p>
 
-      <Link to="/worldcup" className="mly-wc2030-btn">
-        View Packages
-      </Link>
-    </div>
+              <Link to="/worldcup" className="mly-wc2030-btn">
+                View Packages
+              </Link>
+            </div>
 
-    <div className="mly-wc2030-visual">
-      <img
-        src="/assets/wordcup.png"
-        alt="World Cup trophy with Moroccan flag"
-      />
-    </div>
-  </div>
-</section>
+            <div className="mly-wc2030-visual">
+              <img
+                src="/assets/wordcup.png"
+                alt="World Cup trophy with Moroccan flag"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
 
-
-      {/* WhatsApp CTA Section */}
+      {/* WhatsApp CTA Section — white */}
       <section className="wa-cta-section">
         <div className="wa-cta-content">
           <h2>Talk Directly to the CEO</h2>
@@ -141,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Showcase Section */}
+      {/* Video Showcase Section — warm off-white */}
       <section className="video-showcase">
         <div className="section-container">
           <h2>Discover the Magic</h2>
@@ -158,7 +158,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Previews linking to main pages */}
+      {/* Featured Destinations — dark */}
       <section className="featured-destinations">
         <div className="section-container">
           <h2>Top Destinations</h2>
@@ -172,6 +172,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Tours — white */}
       <section className="featured-tours">
         <div className="section-container">
           <h2>Featured Tours & Packages</h2>
@@ -184,7 +185,8 @@ export default function Home() {
           <Link to="/tours" className="view-all-btn">View All Tours</Link>
         </div>
       </section>
-      
+
+      {/* Experiences — warm off-white */}
       <section className="featured-experiences">
         <div className="section-container">
           <h2>Exclusive Experiences</h2>
@@ -195,6 +197,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials — dark */}
       <section className="testimonials-preview">
         <div className="section-container">
           <h2>What Our VIP Guests Say</h2>
