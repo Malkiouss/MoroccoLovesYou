@@ -7,6 +7,16 @@
   padding: 6rem 0;
   background: #FAFAFA;
 }
+.gallery-city {
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(201, 162, 39, 0.9);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
 
 .gallery-container {
   max-width: 1280px;

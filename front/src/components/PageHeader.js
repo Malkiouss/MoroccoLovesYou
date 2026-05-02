@@ -5,7 +5,7 @@ import './PageHeader.css';
 
 export default function PageHeader({ title, subtitle, bgImage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const heroStyle = bgImage ? { backgroundImage: `linear-gradient(rgba(13,31,23,0.8), rgba(13,31,23,0.9)), url(${bgImage})` } : {};
+  const heroStyle = bgImage ? { backgroundImage: `linear-gradient(rgba(13,31,23,0.8), rgba(13, 31, 23, 0.13)), url(${bgImage})` } : {};
 
   return (
     <>

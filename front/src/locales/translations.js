@@ -46,6 +46,11 @@ const translations = {
   ru: { nav: { home: "Главная" }, cta: { whatsappInquiry: "Здравствуйте, меня интересует отдых премиум-класса в Марокко." } }
 };
 
+// Regional variations fallback to base English
+translations['en-US'] = translations.en;
+translations['en-AU'] = translations.en;
+translations['en-CA'] = translations.en;
+
 
 
 export default translations;

@@ -14,9 +14,13 @@ import Experiences from './pages/Experiences';
 import VIP from './pages/VIP';
 import WorldCup from './pages/WorldCup';
 import Gallery from './pages/Gallery';
+import CityDetailPage from './pages/CityDetailPage';
 import Testimonials from './pages/Testimonials';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import StarBanner from './components/StarBanner';
+import TourMiniBanner from './components/TourMiniBanner';
+
 
 function App() {
   return (
@@ -33,12 +37,15 @@ function App() {
             <Route path="/vip" element={<VIP />} />
             <Route path="/worldcup" element={<WorldCup />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery/:slug" element={<CityDetailPage />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
           <WhatsAppBanner />
+          <StarBanner />
+          <TourMiniBanner />
         </div>
       </Router>
     </LanguageProvider>

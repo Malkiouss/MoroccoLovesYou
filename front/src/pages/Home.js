@@ -1,39 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
-import DestinationCard from '../components/DestinationCard';
 import TourCard from '../components/TourCard';
 import TestimonialCard from '../components/TestimonialCard';
+import GallerySection from '../components/GallerySection';
 import './Home.css';
 
 
 export default function Home() {
-  const featuredDestinations = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=400&h=300&fit=crop',
-      title: 'Marrakech',
-      description: 'Explore the vibrant markets, stunning palaces, and the beautiful Jemaa el-Fnaa square.'
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1532336414038-446546efb0fd?w=400&h=300&fit=crop',
-      title: 'Chefchaouen',
-      description: 'Experience the enchanting blue-painted streets and the serene mountain atmosphere.'
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1518552666983-3a60fbe5f0fa?w=400&h=300&fit=crop',
-      title: 'Sahara Desert',
-      description: 'Adventure into the endless golden dunes and experience the magic of desert nights.'
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1509316366560-61e0ba8cdd03?w=400&h=300&fit=crop',
-      title: 'Fes',
-      description: 'Wander through the ancient medinas and immerse yourself in Moroccan culture and history.'
-    },
-  ];
+
 
   const featuredTours = [
     {
@@ -130,48 +105,13 @@ export default function Home() {
         </section>
       </div>
 
-      {/* WhatsApp CTA Section — white */}
-      <section className="wa-cta-section">
-        <div className="wa-cta-content">
-          <h2>Talk Directly to the CEO</h2>
-          <p>No middlemen. Get a personalized itinerary from Ilan Hatchuel.</p>
-          <a href="https://wa.me/972546338757?text=Hello,%20I%E2%80%99m%20interested%20in%20a%20premium%20Morocco%20travel%20experience." target="_blank" rel="noopener noreferrer" className="wa-btn-large">
-            Chat on WhatsApp
-          </a>
-        </div>
-      </section>
+     
 
-      {/* Video Showcase Section — warm off-white */}
-      <section className="video-showcase">
-        <div className="section-container">
-          <h2>Discover the Magic</h2>
-          <p className="section-subtitle">A glimpse into your future Moroccan journey</p>
-          <div className="video-grid">
-            {[1, 2, 3].map((v) => (
-              <div key={v} className="video-card">
-                <div className="video-placeholder">
-                  <span>Video {v} Placeholder</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
+      {/* Gallery Section */}
+      <GallerySection />
 
-      {/* Featured Destinations — dark */}
-      <section className="featured-destinations">
-        <div className="section-container">
-          <h2>Top Destinations</h2>
-          <p className="section-subtitle">Explore Morocco's most enchanting destinations</p>
-          <div className="destinations-grid">
-            {featuredDestinations.map(destination => (
-              <DestinationCard key={destination.id} {...destination} />
-            ))}
-          </div>
-          <Link to="/destinations" className="view-all-btn">View All Destinations</Link>
-        </div>
-      </section>
-
+   
       {/* Featured Tours — white */}
       <section className="featured-tours">
         <div className="section-container">
@@ -189,10 +129,10 @@ export default function Home() {
       {/* Experiences — warm off-white */}
       <section className="featured-experiences">
         <div className="section-container">
-          <h2>Exclusive Experiences</h2>
-          <p className="section-subtitle">From desert camps to private yachts</p>
+          <h2>Moroccan Culinary Excellence</h2>
+          <p className="section-subtitle">Discover our food — the best in the world</p>
           <div className="experiences-preview">
-            <Link to="/experiences" className="view-all-btn">Discover Experiences</Link>
+            <Link to="/experiences" className="view-all-btn">Discover Food Experiences</Link>
           </div>
         </div>
       </section>

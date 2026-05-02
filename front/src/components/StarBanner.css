@@ -1,0 +1,177 @@
+.star-float {
+  position: fixed;
+  right: 20px;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+/* Star image — bigger, sits on top */
+.star-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Text block below the star */
+.star-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 8px 12px 10px;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(245, 200, 66, 0.35);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.star-title {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f5c842;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.star-icon {
+  font-size: 11px;
+  color: #f5c842;
+}
+
+.star-sub {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  color: #f5c842;
+  line-height: 1.4;
+}
+
+.star-arrow {
+  font-size: 20px;
+  color: #f5c842;
+  line-height: 1;
+  margin: 2px 0;
+}
+
+.star-cta {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f5c842;
+  line-height: 1.4;
+}
+
+.star-cta em {
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Hover */
+.star-float:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .star-float { right: 15px; width: 180px; }
+  .star-img   { width: 180px; height: 180px; }
+
+  .star-title { font-size: 11px; }
+  .star-sub   { font-size: 10px; }
+  .star-cta   { font-size: 12px; }
+  .star-arrow { font-size: 18px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .star-float {
+    width: 130px;
+    right: 10px;
+    top: auto;
+    bottom: 80px;
+    transform: none;
+  }
+
+  .star-img { width: 130px; height: 130px; }
+
+  .star-float:hover { transform: scale(1.05); }
+
+  .star-title { font-size: 9px;  letter-spacing: 0.5px; }
+  .star-sub   { font-size: 9px;  }
+  .star-cta   { font-size: 10px; }
+  .star-cta em { font-size: 11px; }
+  .star-arrow { font-size: 14px; margin: 1px 0; }
+
+  .star-overlay { gap: 3px; padding: 6px 8px 8px; }
+}
+
+/* WhatsApp bar */
+.whatsapp-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  margin-top: 6px;
+  padding: 7px 12px;
+
+  background: #25D366;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4);
+
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.star-float:hover .whatsapp-bar {
+  background: #1ebe5d;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.whatsapp-label {
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .whatsapp-icon  { width: 20px; height: 20px; }
+  .whatsapp-label { font-size: 10px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .whatsapp-bar   { padding: 6px 10px; gap: 5px; margin-top: 4px; }
+  .whatsapp-icon  { width: 18px; height: 18px; }
+  .whatsapp-label { font-size: 9px; }
+}

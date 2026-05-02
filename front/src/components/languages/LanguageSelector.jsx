@@ -6,6 +6,9 @@ import { useLanguage } from "../../context/LanguageContext";
 
 const languages = [
   { code: "en", label: "English",    flagCode: "gb" },
+  { code: "en-US", label: "American", flagCode: "us" },
+  { code: "en-AU", label: "Australia", flagCode: "au" },
+  { code: "en-CA", label: "Canada",    flagCode: "ca" },
   { code: "fr", label: "French",     flagCode: "fr" },
   { code: "es", label: "Spanish",    flagCode: "es" },
   { code: "he", label: "Hebrew",     flagCode: "il" },

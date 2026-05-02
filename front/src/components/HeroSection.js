@@ -21,13 +21,9 @@ export default function HeroSection() {
     <>
       {/* NAV */}
       <nav>
-        <div className="logo">
-          <span className="logo-top">Morocco</span>
-          <div className="logo-heart">
-            Loves <Heart className="icon" aria-hidden="true" /> You
-          </div>
-          <div className="logo-sub"><span className="logo-star">★</span></div>
-        </div>
+        <Link to="/" className="logo">
+          <img src="/assets/images/logoMorocco.png" alt="Logo" />
+        </Link>
         <div className="nav-links">
          <Link to="/">Home</Link>
           <Link to="/tours">Tours</Link>
@@ -53,7 +49,7 @@ export default function HeroSection() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" style={{ background: 'linear-gradient(to bottom, rgba(30,15,5,0.35) 0%, rgba(20,10,3,0.55) 50%, rgba(10,25,18,0.85) 100%), url("/assets/images/hero-img2.png") center/cover no-repeat' }} />
+        <div className="hero-bg" style={{ background: 'linear-gradient(to bottom, rgba(30,15,5,0.35) 0%, rgba(20, 10, 3, 0.15) 50%, rgba(10,25,18,0.85) 100%), url("/assets/images/hero-img4.png") center/cover no-repeat' }} />
         <div className="hero-content">
           <span className="hero-star" aria-hidden="true">
             <Star />

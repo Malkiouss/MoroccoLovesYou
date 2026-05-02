@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ============================================
+   BASE
+   ============================================ */
+.city-detail-page {
+  min-height: 100vh;
+  background-color: #FAFAFA;
+}
+
+.city-not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.city-not-found h1 {
+  color: #1A1A1A;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.city-not-found button {
+  padding: 1rem 2rem;
+  background-color: #C9A227;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.city-not-found button:hover {
+  background-color: #B8921F;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.25);
+}
+
+/* ============================================
+   DESCRIPTION SECTION — REDESIGNED
+   ============================================ */
+.city-description-section {
+  padding: 7rem 2rem;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+/* Decorative background texture */
+.city-description-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(201, 162, 39, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 10% 20%, rgba(66, 8, 16, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Large decorative quote mark */
+.city-description-section::after {
+  content: '\201C';
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: 22rem;
+  color: rgba(201, 162, 39, 0.055);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.city-description {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Thin gold top rule */
+.city-description::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A227, transparent);
+  margin: 0 auto 2.5rem;
+}
+
+/* Optional label above */
+.city-description-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C9A227;
+  margin-bottom: 1.5rem;
+}
+
+.city-description p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #2C2C2C;
+  letter-spacing: 0.01em;
+  margin: 0;
+
+  /* Subtle first-letter drop cap effect */
+}
+
+.city-description p::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.75;
+  margin-right: 0.1em;
+  margin-top: 0.08em;
+  color: #C9A227;
+}
+
+/* Thin gold bottom rule */
+.city-description::after {
+  content: '✦ ✦ ✦';
+  display: block;
+  margin-top: 2.5rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+  color: rgba(201, 162, 39, 0.5);
+}
+
+/* ============================================
+   CITY GALLERY SECTION
+   ============================================ */
+.city-gallery-section {
+  padding: 6rem 2rem;
+  background: #F7F4EF;
+  position: relative;
+}
+
+.city-gallery-section::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #C9A227, transparent);
+  margin: 0 auto 4rem;
+}
+
+.city-gallery-section h2 {
+  color: #1A1A1A;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.city-gallery-section h2 em {
+  font-style: italic;
+  color: #C9A227;
+}
+
+.city-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.city-gallery-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 300px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+/* Subtle gold border on hover */
+.city-gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(201, 162, 39, 0);
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.city-gallery-item:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  transform: translateY(-5px);
+}
+
+.city-gallery-item:hover::after {
+  border-color: rgba(201, 162, 39, 0.6);
+}
+
+.city-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: saturate(0.92);
+}
+
+.city-gallery-item:hover .city-gallery-img {
+  transform: scale(1.07);
+  filter: saturate(1.05);
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.city-cta-section {
+  padding: 8rem 2rem;
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 110%, rgba(201, 162, 39, 0.15) 0%, transparent 60%),
+    linear-gradient(160deg, #180406 0%, #3D0610 50%, #180406 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.city-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A227' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.city-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.city-cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #F7D774;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.city-cta-content p {
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.wa-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #D4AF37, #FCE28B);
+  color: #1A0505;
+  padding: 1.25rem 3rem;
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.25);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.wa-btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.35);
+  background: linear-gradient(135deg, #FCE28B, #D4AF37);
+}
+
+
+/* ============================================
+   ADD THESE TO THE BOTTOM OF CityDetailPage.css
+   ============================================ */
+
+/* Shared section CTA wrapper */
+.section-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Inline button — used in description & gallery sections */
+.wa-btn-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(135deg, #C9A227, #E8C547);
+  color: #1A0505;
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.2);
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+}
+
+.wa-btn-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(201, 162, 39, 0.3);
+  background: linear-gradient(135deg, #E8C547, #C9A227);
+}
+
+/* Outlined variant */
+.wa-btn-outline {
+  background: transparent;
+  color: #C9A227;
+  border: 1.5px solid #C9A227;
+  box-shadow: none;
+}
+
+.wa-btn-outline:hover {
+  background: rgba(201, 162, 39, 0.08);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.12);
+  color: #B8921F;
+  border-color: #B8921F;
+}
+
+/* CTA section — two buttons side by side */
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Secondary CTA button — outlined on dark background */
+.wa-btn-cta-secondary {
+  background: transparent;
+  color: #F7D774;
+  border: 1.5px solid rgba(247, 215, 116, 0.5);
+  box-shadow: none;
+}
+
+.wa-btn-cta-secondary:hover {
+  background: rgba(247, 215, 116, 0.08);
+  border-color: #F7D774;
+  box-shadow: 0 12px 30px rgba(247, 215, 116, 0.1);
+  color: #FCE28B;
+}
+
+
+/* ============================================
+   ADD THESE TO THE BOTTOM OF CityDetailPage.css
+   ============================================ */
+
+/* Shared section CTA wrapper */
+.section-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* CTA section — two buttons side by side */
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Outlined variant — for secondary buttons */
+.mly-wc2030-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: transparent;
+  color: #d4af37;
+  border: 1.5px solid #d4af37;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.mly-wc2030-btn-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+  color: #fce28b;
+  border-color: #fce28b;
+}
+
+/* On dark backgrounds (CTA section) */
+.city-cta-section .mly-wc2030-btn-outline {
+  color: #f7d774;
+  border-color: rgba(247, 215, 116, 0.5);
+}
+
+.city-cta-section .mly-wc2030-btn-outline:hover {
+  color: #fce28b;
+  border-color: #fce28b;
+  background: rgba(247, 215, 116, 0.08);
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .section-cta,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .mly-wc2030-btn,
+  .mly-wc2030-btn-outline {
+    justify-content: center;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .section-cta,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .wa-btn-inline,
+  .wa-btn-cta-secondary {
+    justify-content: center;
+  }
+}
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .city-description-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .city-description-section::after {
+    font-size: 14rem;
+    top: -1rem;
+  }
+
+  .city-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .city-description p::first-letter {
+    font-size: 3rem;
+  }
+
+  .city-gallery-section {
+    padding: 4rem 1rem;
+  }
+
+  .city-gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .city-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .city-gallery-item {
+    height: 240px;
+  }
+
+  .city-cta-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .city-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .city-cta-content p {
+    font-size: 1.05rem;
+  }
+
+  .wa-btn-cta {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .city-description p {
+    font-size: 1.1rem;
+  }
+
+  .city-description p::first-letter {
+    font-size: 2.6rem;
+  }
+
+  .city-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-gallery-item {
+    height: 260px;
+  }
+
+  .city-cta-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .city-cta-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
