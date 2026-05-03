@@ -8,8 +8,10 @@ export default function PageHeader({ title, subtitle, bgImage }) {
  const heroStyle = bgImage
   ? {
       backgroundImage: `linear-gradient(rgba(13,31,23,0.8), rgba(13,31,23,0.13)), url(${bgImage})`,
-      backgroundSize: 'cover',
+      backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundColor: '#0d1f17',
     }
   : {};
   return (

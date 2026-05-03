@@ -7,9 +7,10 @@
   justify-content: center;
   text-align: center;
   padding: 120px 20px 40px;
-  background-color: var(--dark);
-  background-size: cover;
-  background-position: center ;
+  background-color: #0d1f17;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   
 }
 
