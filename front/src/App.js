@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 import Footer from './components/Footer';
 import WhatsAppBanner from './components/WhatsAppBanner';
@@ -26,6 +27,9 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
+
+         <ScrollToTop />
+         
         <div className="App">
           <LanguageSelector />
           <Routes>
