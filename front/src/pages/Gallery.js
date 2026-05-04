@@ -6,7 +6,6 @@ import './Gallery.css';
 export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [playingVideo, setPlayingVideo] = useState(null);
 
   const galleryImages = [
     {
@@ -106,14 +105,6 @@ export default function Gallery() {
     setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   }, [galleryImages.length]);
 
-  const handleVideoPlay = (videoId) => {
-    setPlayingVideo(videoId);
-  };
-
-  const handleVideoPause = () => {
-    setPlayingVideo(null);
-  };
-
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!lightboxOpen) return;
@@ -186,9 +177,6 @@ export default function Gallery() {
                   className="gallery-video"
                   controls
                   preload="metadata"
-                  onPlay={() => handleVideoPlay(video.id)}
-                  onPause={handleVideoPause}
-                  onEnded={handleVideoPause}
                 />
               </div>
             ))}
