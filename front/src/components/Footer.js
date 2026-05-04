@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>🌍 MoroccoLovesYou</h3>
+        <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" style={{ height: '180px', width: 'auto', alignItems:'left',marginBottom: '15px' }} />
           <p>Discover the magic of Morocco with us. Experience unforgettable adventures and create lasting memories.</p>
         </div>
 

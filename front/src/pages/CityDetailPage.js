@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
@@ -9,9 +9,42 @@ export default function CityDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
 
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const city = galleryCities.find(c => c.slug === slug);
 
-  const waLink = `https://wa.me/?text=I'd like to plan a trip to ${city?.name}. Can you help me?`;
+  const openLightbox = (index) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  const nextImage = useCallback((e) => {
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % city.galleryImages.length);
+  }, [city?.galleryImages?.length]);
+
+  const prevImage = useCallback((e) => {
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + city.galleryImages.length) % city.galleryImages.length);
+  }, [city?.galleryImages?.length]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!lightboxOpen) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxOpen, nextImage, prevImage]);
 
   if (!city) {
     return (
@@ -21,6 +54,8 @@ export default function CityDetailPage() {
       </div>
     );
   }
+
+  const waLink = `https://wa.me/?text=I'd like to plan a trip to ${city.name}. Can you help me?`;
 
   return (
     <div className="city-detail-page">
@@ -50,12 +85,19 @@ export default function CityDetailPage() {
           <h2>Gallery of {city.name}</h2>
           <div className="city-gallery-grid">
             {city.galleryImages.map((image, index) => (
-              <div key={index} className="city-gallery-item">
+              <div 
+                key={index} 
+                className="city-gallery-item"
+                onClick={() => openLightbox(index)}
+              >
                 <SafeImage
                   src={image}
                   alt={`${city.name} - ${index + 1}`}
                   className="city-gallery-img"
                 />
+                <div className="gallery-overlay">
+                  <span>🔎</span>
+                </div>
               </div>
             ))}
           </div>
@@ -69,6 +111,32 @@ export default function CityDetailPage() {
           </div>
         </div>
       </section>
+
+      {/* LIGHTBOX */}
+      {lightboxOpen && (
+        <div className="mly-lightbox" onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox}>×</button>
+          
+          <button className="lightbox-nav prev" onClick={prevImage}>
+            ‹
+          </button>
+          
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={city.galleryImages[currentImageIndex]} 
+              alt={`${city.name} - ${currentImageIndex + 1}`} 
+              className="lightbox-main-img"
+            />
+            <div className="lightbox-caption">
+              {city.name} — {currentImageIndex + 1} / {city.galleryImages.length}
+            </div>
+          </div>
+
+          <button className="lightbox-nav next" onClick={nextImage}>
+            ›
+          </button>
+        </div>
+      )}
 
       {/* CTA SECTION */}
       <section className="city-cta-section">

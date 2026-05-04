@@ -35,7 +35,7 @@
       rgba(0, 0, 0, 0.48) 45%,
       rgba(0, 0, 0, 0.20) 100%
     ),
-    url('../../public/assets/vip.png') center/cover no-repeat;
+    url('../../public/assets/vip.jpg') center/cover no-repeat;
 
   color: #fff;
 }

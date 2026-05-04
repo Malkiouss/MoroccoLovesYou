@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import './Gallery.css';
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const galleryImages = [
     {
@@ -49,8 +50,39 @@ export default function Gallery() {
       city: 'Casablanca',
       category: 'Beach'
     },
-    
   ];
+
+  const openLightbox = (index) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  const nextImage = useCallback((e) => {
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+  }, [galleryImages.length]);
+
+  const prevImage = useCallback((e) => {
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  }, [galleryImages.length]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!lightboxOpen) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxOpen, nextImage, prevImage]);
 
   return (
     <div className="gallery-page">
@@ -68,11 +100,11 @@ export default function Gallery() {
           </p>
 
           <div className="gallery-grid">
-            {galleryImages.map((image) => (
+            {galleryImages.map((image, index) => (
               <div
                 key={image.id}
                 className="gallery-item"
-                onClick={() => setSelectedImage(image)}
+                onClick={() => openLightbox(index)}
               >
                 <SafeImage
                   src={image.src}
@@ -85,6 +117,7 @@ export default function Gallery() {
                     <h3>{image.title}</h3>
                     <span className="gallery-city">{image.city}</span>
                     <p>{image.category}</p>
+                    <div className="zoom-icon">🔎</div>
                   </div>
                 </div>
               </div>
@@ -93,32 +126,35 @@ export default function Gallery() {
         </div>
       </section>
 
-      {selectedImage && (
-        <div className="lightbox" onClick={() => setSelectedImage(null)}>
+      {/* PREMIUM LIGHTBOX */}
+      {lightboxOpen && (
+        <div className="mly-lightbox" onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox}>×</button>
+          
+          <button className="lightbox-nav prev" onClick={prevImage}>
+            ‹
+          </button>
+          
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="lightbox-close"
-              onClick={() => setSelectedImage(null)}
-            >
-              ✕
-            </button>
-
-            <SafeImage
-              src={selectedImage.src}
-              alt={selectedImage.title}
-              className="lightbox-img"
+            <img 
+              src={galleryImages[currentImageIndex].src} 
+              alt={galleryImages[currentImageIndex].title} 
+              className="lightbox-main-img"
             />
-
-            <div className="lightbox-info">
-              <h3>{selectedImage.title}</h3>
-              <span className="gallery-city">{selectedImage.city}</span>
-              <p>{selectedImage.category}</p>
+            <div className="lightbox-caption">
+              <h3>{galleryImages[currentImageIndex].title}</h3>
+              <p>{galleryImages[currentImageIndex].city} — {galleryImages[currentImageIndex].category}</p>
+              <div className="lightbox-counter">
+                {currentImageIndex + 1} / {galleryImages.length}
+              </div>
             </div>
           </div>
+
+          <button className="lightbox-nav next" onClick={nextImage}>
+            ›
+          </button>
         </div>
       )}
-
-     
     </div>
   );
 }
