@@ -55,7 +55,7 @@ export default function CityDetailPage() {
     );
   }
 
-  const waLink = `https://wa.me/?text=I'd like to plan a trip to ${city.name}. Can you help me?`;
+  const waLink = `https://wa.me/972546338757?text=I'd like to plan a trip to ${city.name}. Can you help me?`;
 
   return (
     <div className="city-detail-page">

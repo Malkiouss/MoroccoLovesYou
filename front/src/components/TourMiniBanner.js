@@ -2,7 +2,7 @@ import React from "react";
 import "./TourMiniBanner.css";
 
 const TourMiniBanner = () => {
-  const whatsappUrl = "https://wa.me/212663630579";
+  const whatsappUrl = "https://wa.me/972546338757";
 
   return (
     <a

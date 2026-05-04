@@ -28,7 +28,7 @@ const WhatsAppIcon = () => (
 );
 
 const StarBanner = () => {
-  const whatsappUrl = "https://wa.me/212600000000";
+  const whatsappUrl = "https://wa.me/972546338757";
 
   return (
     <a
