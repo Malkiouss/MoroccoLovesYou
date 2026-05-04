@@ -19,19 +19,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918685/chef_1_xdt8sk.mp4',
-        poster: '/assets/cities/chefchaouen/chef (1).jpg',
         title: 'Chefchaouen Dream'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918678/chef_2_og13gs.mp4',
-        poster: '/assets/cities/chefchaouen/chef (2).jpg',
         title: 'Blue Alleys'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918678/chef_3_ksyxa6.mp4',
-        poster: '/assets/cities/chefchaouen/chef (3).jpg',
         title: 'Hidden Gems'
       }
     ]
@@ -55,19 +52,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777917661/fes_tb2e8o.mp4',
-        poster: '/assets/cities/fes/fes1.jpg',
         title: 'Fes Medina'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777917695/WhatsApp_Video_2026-05-04_at_18.58.40_igqupy.mp4',
-        poster: '/assets/cities/fes/fes2.jpg',
         title: 'Fes Atmosphere'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777917695/WhatsApp_Video_2026-05-04_at_18.58.41_l0vbma.mp4',
-        poster: '/assets/cities/fes/fes3.jpg',
         title: 'Fes Streets'
       }
     ]
@@ -91,19 +85,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918618/casa_1_jo2y8o.mp4',
-        poster: '/assets/cities/casa/casa (1).webp',
         title: 'Hassan II Mosque'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918619/casa_2_phkkjz.mp4',
-        poster: '/assets/cities/casa/casa (2).jpg',
         title: 'Modern Casablanca'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918618/casa_3_l4i7wz.mp4',
-        poster: '/assets/cities/casa/casa (3).jpg',
         title: 'Atlantic Breeze'
       }
     ]
@@ -127,19 +118,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918371/WhatsApp_Video_2026-05-04_at_12.44.03_bzqoym.mp4',
-        poster: '/assets/cities/marakech/kech1.jpg',
         title: 'Marrakech Life'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918370/WhatsApp_Video_2026-05-04_at_12.50.20_kw8j0i.mp4',
-        poster: '/assets/cities/marakech/kech2.jpg',
         title: 'Vibrant Souks'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918370/WhatsApp_Video_2026-05-04_at_12.49.47_j0yixj.mp4',
-        poster: '/assets/cities/marakech/kech3.jpg',
         title: 'Marrakech Magic'
       }
     ]
@@ -162,19 +150,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777917940/WhatsApp_Video_2026-05-04_at_16.33.12_xdelhr.mp4',
-        poster: '/assets/cities/sahara/sahara1.jpg',
         title: 'Sahara Sunset'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777917939/WhatsApp_Video_2026-05-04_at_16.34.28_obkivr.mp4',
-        poster: '/assets/cities/sahara/sahara2.jpg',
         title: 'Desert Dunes'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777917938/WhatsApp_Video_2026-05-04_at_16.26.17_knpyvm.mp4',
-        poster: '/assets/cities/sahara/sahara3.jpg',
         title: 'Sahara Experience'
       }
     ]
@@ -198,19 +183,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918539/WhatsApp_Video_2026-05-04_at_13.40.34_y8debg.mp4',
-        poster: '/assets/cities/ourika/ourika1.jpg',
         title: 'Ourika River'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918539/WhatsApp_Video_2026-05-04_at_14.12.03_nmsl0a.mp4',
-        poster: '/assets/cities/ourika/ourika2.jpg',
         title: 'Atlas Landscapes'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918540/WhatsApp_Video_2026-05-04_at_14.12.04_yb28mv.mp4',
-        poster: '/assets/cities/ourika/ourika3.jpg',
         title: 'Berber Heritage'
       }
     ]
@@ -233,19 +215,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777919127/WhatsApp_Video_2026-05-03_at_20.46.27_xjaeb6.mp4',
-        poster: '/assets/cities/Ifran/ifran (1).jpg',
         title: 'Ifran Winter'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777919128/WhatsApp_Video_2026-05-03_at_20.37.18_f1atxr.mp4',
-        poster: '/assets/cities/Ifran/ifran (2).jpg',
         title: 'Middle Atlas Beauty'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777919129/WhatsApp_Video_2026-05-03_at_20.46.46_ujfo2z.mp4',
-        poster: '/assets/cities/Ifran/ifran (3).jpg',
         title: 'Little Switzerland'
       }
     ]
@@ -284,19 +263,16 @@ export const galleryCities = [
       {
         id: 1,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918936/WhatsApp_Video_2026-05-03_at_21.07.42_bzr9lo.mp4',
-        poster: '/assets/cities/tanger/tanger1.jpg',
         title: 'Tangier Bay'
       },
       {
         id: 2,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918937/WhatsApp_Video_2026-05-03_at_21.12.59_gnz9sf.mp4',
-        poster: '/assets/cities/tanger/tanger2.jpg',
         title: 'Gateway to Africa'
       },
       {
         id: 3,
         src: 'https://res.cloudinary.com/dylxqjhjj/video/upload/v1777918935/WhatsApp_Video_2026-05-03_at_21.08.09_aag5xl.mp4',
-        poster: '/assets/cities/tanger/tanger3.jpg',
         title: 'Mediterranean Views'
       }
     ]
