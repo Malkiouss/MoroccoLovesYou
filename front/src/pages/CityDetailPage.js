@@ -110,6 +110,7 @@ export default function CityDetailPage() {
                 </div>
                 <video
                   src={video.src}
+                  poster={video.poster}
                   className="city-gallery-video"
                   controls
                 />
