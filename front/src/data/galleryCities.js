@@ -132,11 +132,11 @@ export const galleryCities = [
   },
   {
     id: 9,
-    slug: 'tanger',
-    name: 'Tanger',
+    slug: 'tangier',
+    name: 'Tangier',
     coverImage: '/assets/cities/tanger/tanger.jpg',
     heroImage: '/assets/cities/tanger/tanger.jpg',
-    description: 'Tanger, the gateway to Africa, is a legendary city where the Mediterranean meets the Atlantic. Throughout history, it has been a sanctuary for artists, writers, and explorers, creating a unique cosmopolitan atmosphere that sets it apart from any other Moroccan destination. From the mysterious Caves of Hercules and the iconic Cape Spartel to the winding alleys of the Kasbah and the bustling cafes of the Petit Socco, Tanger is a city of myths and modern energy. Experience the salt-tinged breeze, the panoramic views across the Strait of Gibraltar, and the vibrant cultural tapestry of this "Bride of the North."',
+    description: 'Tangier, the gateway to Africa, is a legendary city where the Mediterranean meets the Atlantic. Throughout history, it has been a sanctuary for artists, writers, and explorers, creating a unique cosmopolitan atmosphere that sets it apart from any other Moroccan destination. From the mysterious Caves of Hercules and the iconic Cape Spartel to the winding alleys of the Kasbah and the bustling cafes of the Petit Socco, Tangier is a city of myths and modern energy. Experience the salt-tinged breeze, the panoramic views across the Strait of Gibraltar, and the vibrant cultural tapestry of this "Bride of the North."',
     galleryImages: [
       '/assets/cities/tanger/tanger1.jpg',
       '/assets/cities/tanger/tanger2.jpg',
