@@ -84,9 +84,10 @@ export default function CityDetailPage() {
         <div className="section-container">
           <h2>Gallery of {city.name}</h2>
           <div className="city-gallery-grid">
+            {/* RENDER PHOTOS */}
             {city.galleryImages.map((image, index) => (
               <div 
-                key={index} 
+                key={`img-${index}`} 
                 className="city-gallery-item"
                 onClick={() => openLightbox(index)}
               >
@@ -100,7 +101,22 @@ export default function CityDetailPage() {
                 </div>
               </div>
             ))}
+
+            {/* RENDER VIDEOS (Mixed in) */}
+            {city.galleryVideos && city.galleryVideos.map((video) => (
+              <div key={`vid-${video.id}`} className="city-gallery-item video-item">
+                <div className="video-watermark">
+                  <img src="/assets/vidlogo.png" alt="Logo" />
+                </div>
+                <video
+                  src={video.src}
+                  className="city-gallery-video"
+                  controls
+                />
+              </div>
+            ))}
           </div>
+
           <div className="section-cta">
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="mly-wc2030-btn">
               <span>📸</span>&nbsp; Book This Experience

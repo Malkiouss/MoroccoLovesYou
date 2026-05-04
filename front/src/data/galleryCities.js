@@ -14,6 +14,26 @@ export const galleryCities = [
     '/assets/cities/chefchaouen/chef (4).jpg',
     '/assets/cities/chefchaouen/chef (5).jpg',
     '/assets/cities/chefchaouen/chef (6).jpg',
+  ],
+  galleryVideos: [
+    {
+      id: 1,
+      src: '/assets/cities/chefchaouen/chef1.mp4',
+      poster: '/assets/cities/chefchaouen/chef (1).jpg',
+      title: 'Chefchaouen Dream'
+    },
+    {
+      id: 2,
+      src: '/assets/cities/chefchaouen/chef2.mp4',
+      poster: '/assets/cities/chefchaouen/chef (2).jpg',
+      title: 'Blue Alleys'
+    },
+    {
+      id: 3,
+      src: '/assets/cities/chefchaouen/chef3.mp4',
+      poster: '/assets/cities/chefchaouen/chef (3).jpg',
+      title: 'Hidden Gems'
+    }
   ]
 },
   {
@@ -55,48 +75,47 @@ export const galleryCities = [
     id: 4,
     slug: 'marrakech',
     name: 'Marrakech',
-    coverImage: '/assets/cities/marakkech/kechhero.jpg',
-    heroImage: '/assets/cities/marakkech/kechhero.jpg',
+    coverImage: '/assets/cities/marakech/kech.jpg',
+    heroImage: '/assets/cities/marakech/kech.jpg',
     description: 'Marrakech, the Red City, is a vibrant destination filled with exotic markets, beautiful gardens, and stunning architecture. The iconic Jemaa el-Fnaa square pulses with snake charmers, musicians, and food stalls, while serene gardens like Menara and Majorelle provide peaceful retreats. Experience the perfect blend of bustling medinas and tranquil palaces in this magical city that has captivated travelers for centuries.',
     galleryImages: [
-      'https://images.unsplash.com/photo-1585874635613-5acca83a9a7a?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1527631120-3c5c7cf9e3b7?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1512850183-6d7990f42385?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1571116600-31e00b61f3b4?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&h=400&fit=crop&auto=format',
+      '/assets/cities/marakech/kech1.jpg',
+      '/assets/cities/marakech/kech2.jpg',
+      '/assets/cities/marakech/kech3.jpg',
+      '/assets/cities/marakech/kech4.jpg',
+      '/assets/cities/marakech/kech5.jpg',
+      '/assets/cities/marakech/kech.jpg',
     ]
   },
   {
     id: 5,
-    slug: 'sahara-desert',
-    name: 'Sahara Desert',
-    coverImage: '/assets/cities/sahara/sahara.jpg',
-    heroImage: '/assets/cities/sahara/sahara.jpg',
-    description: 'The Sahara Desert is a legendary landscape of golden dunes, star-filled skies, and timeless beauty. Experience the magic of camel trekking across endless golden sands, spend nights in traditional Bedouin camps under the stars, and witness breathtaking sunrises and sunsets. This ancient desert holds the secrets of nomadic cultures and offers an unforgettable adventure in one of the world\'s most iconic natural wonders.',
+    slug: 'merzouga-sahara',
+    name: 'Merzouga & Sahara',
+    coverImage: '/assets/cities/sahara/sahara1.jpg',
+    heroImage: '/assets/cities/sahara/sahara1.jpg',
+    description: 'Merzouga & Sahara – Where the Desert Becomes an Experience. Discover the magic of Merzouga and the Sahara Desert — one of the most breathtaking journeys in Morocco. Ride camels across golden dunes, witness unforgettable sunrises and sunsets, and sleep beneath a sky filled with millions of stars. From luxury desert camps and traditional music around the fire to thrilling quad biking and 4x4 adventures, the Sahara offers a rare experience of beauty, silence, and deep emotion. A place where silence speaks, the stars shine brighter, and every moment feels timeless.',
     galleryImages: [
-      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1518552666983-3a60fbe5f0fa?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1527631120-3c5c7cf9e3b7?w=600&h=400&fit=crop&auto=format',
+      '/assets/cities/sahara/sahara1.jpg',
+      '/assets/cities/sahara/sahara2.jpg',
+      '/assets/cities/sahara/sahara3.jpg',
+      '/assets/cities/sahara/sahara4.jpg',
+      '/assets/cities/sahara/sahara.jpg',
     ]
   },
   {
     id: 6,
     slug: 'ourika-valley',
     name: 'Ourika Valley',
-    coverImage: '/assets/cities/ourika/ourikahero.jpg',
-    heroImage: '/assets/cities/ourika/ourikahero.jpg',
+    coverImage: '/assets/cities/ourika/ourika3.jpg',
+    heroImage: '/assets/cities/ourika/ourika3.jpg',
     description: 'Ourika Valley, nestled in the High Atlas Mountains just outside Marrakech, is a hidden gem of natural beauty and Berber culture. Crystal-clear rivers, cascading waterfalls, and lush green valleys create a stunning backdrop for hiking and village exploration. Visit traditional Berber villages, enjoy authentic home-cooked cuisine, and discover the warm hospitality of mountain communities in this peaceful alpine retreat.',
     galleryImages: [
-      'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1518552666983-3a60fbe5f0fa?w=600&h=400&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&h=400&fit=crop&auto=format',
+      '/assets/cities/ourika/ourika1.jpg',
+      '/assets/cities/ourika/ourika2.jpg',
+      '/assets/cities/ourika/ourika3.jpg',
+      '/assets/cities/ourika/ourika4.jpg',
+      '/assets/cities/ourika/ourika.jpg',
+      '/assets/cities/ourika/ourikahero.jpg',
     ]
   },
   {
@@ -143,6 +162,22 @@ export const galleryCities = [
       '/assets/cities/tanger/tanger3.jpg',
       '/assets/cities/tanger/tanger4.jpg',
       '/assets/cities/tanger/tanger5.jpg',
+    ]
+  },
+  {
+    id: 10,
+    slug: 'essaouira',
+    name: 'Essaouira',
+    coverImage: '/assets/cities/essaouira/swira.jpg',
+    heroImage: '/assets/cities/essaouira/swira.jpg',
+    description: 'Discover Essaouira — Morocco’s most charming coastal city. A historic port where the Atlantic Ocean, ancient medina walls, fresh seafood, and vibrant music come together. From blue fishing boats and ocean breeze to Gnawa rhythms and cultural festivals, Essaouira offers a unique blend of relaxation, authenticity, and artistic soul.',
+    galleryImages: [
+      '/assets/cities/essaouira/swira1.jpg',
+      '/assets/cities/essaouira/swira2.jpg',
+      '/assets/cities/essaouira/swira3.jpg',
+      '/assets/cities/essaouira/swira4.jpg',
+      '/assets/cities/essaouira/swira5.jpg',
+      '/assets/cities/essaouira/swira.jpg',
     ]
   }
 ];

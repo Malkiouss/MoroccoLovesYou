@@ -6,6 +6,7 @@ import './Gallery.css';
 export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [playingVideo, setPlayingVideo] = useState(null);
 
   const galleryImages = [
     {
@@ -52,6 +53,38 @@ export default function Gallery() {
     },
   ];
 
+  // ─── Add your video files here ───────────────────────────────────────────────
+  const galleryVideos = [
+    {
+      id: 1,
+      src: '/assets/cities/chefchaouen/chef1.mp4',
+      poster: '/assets/cities/chefchaouen/chef (1).jpg',
+      title: 'Chefchaouen Dream',
+      city: 'Chefchaouen',
+      category: 'Explore'
+    },
+    {
+      id: 2,
+      src: '/assets/cities/chefchaouen/chef2.mp4',
+      poster: '/assets/cities/chefchaouen/chef (2).jpg',
+      title: 'Blue Alleys of Chefchaouen',
+      city: 'Chefchaouen',
+      category: 'Atmosphere'
+    },
+    {
+      id: 3,
+      src: '/assets/cities/chefchaouen/chef3.mp4',
+      poster: '/assets/cities/chefchaouen/chef (3).jpg',
+      title: 'Hidden Gems in the North',
+      city: 'Chefchaouen',
+      category: 'Discovery'
+    },
+  ];
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  // Path to your logo — update this to match your actual logo file
+  const LOGO_SRC = '/assets/vidlogo.png';
+
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
@@ -72,6 +105,14 @@ export default function Gallery() {
     e?.stopPropagation();
     setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   }, [galleryImages.length]);
+
+  const handleVideoPlay = (videoId) => {
+    setPlayingVideo(videoId);
+  };
+
+  const handleVideoPause = () => {
+    setPlayingVideo(null);
+  };
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -99,6 +140,7 @@ export default function Gallery() {
             Explore our collection of breathtaking photos from Morocco
           </p>
 
+          {/* ── PHOTOS GRID ── */}
           <div className="gallery-grid">
             {galleryImages.map((image, index) => (
               <div
@@ -111,7 +153,6 @@ export default function Gallery() {
                   alt={image.title}
                   className="gallery-img"
                 />
-
                 <div className="gallery-overlay">
                   <div className="overlay-content">
                     <h3>{image.title}</h3>
@@ -123,22 +164,51 @@ export default function Gallery() {
               </div>
             ))}
           </div>
+
+          {/* ── VIDEOS SECTION ── */}
+          <div className="gallery-videos-header">
+            <h2>Morocco in Motion</h2>
+            <p className="gallery-intro">
+              Experience Morocco through our curated video collection
+            </p>
+          </div>
+
+          <div className="gallery-grid gallery-video-grid">
+            {galleryVideos.map((video) => (
+              <div key={video.id} className="gallery-item gallery-video-item">
+                {/* Logo watermark — always visible on top-left */}
+                <div className="video-logo-overlay">
+                  <img src={LOGO_SRC} alt="Logo" className="video-logo" />
+                </div>
+
+                <video
+                  src={video.src}
+                  className="gallery-video"
+                  controls
+                  preload="metadata"
+                  onPlay={() => handleVideoPlay(video.id)}
+                  onPause={handleVideoPause}
+                  onEnded={handleVideoPause}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* PREMIUM LIGHTBOX */}
+      {/* ── LIGHTBOX ── */}
       {lightboxOpen && (
         <div className="mly-lightbox" onClick={closeLightbox}>
           <button className="lightbox-close" onClick={closeLightbox}>×</button>
-          
+
           <button className="lightbox-nav prev" onClick={prevImage}>
             ‹
           </button>
-          
+
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={galleryImages[currentImageIndex].src} 
-              alt={galleryImages[currentImageIndex].title} 
+            <img
+              src={galleryImages[currentImageIndex].src}
+              alt={galleryImages[currentImageIndex].title}
               className="lightbox-main-img"
             />
             <div className="lightbox-caption">

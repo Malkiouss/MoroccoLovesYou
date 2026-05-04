@@ -229,6 +229,36 @@
   filter: saturate(1.05);
 }
 
+/* Video specific styles */
+.video-item {
+  cursor: default !important;
+}
+
+.city-gallery-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: #000;
+  border-radius: 12px;
+}
+
+.video-watermark {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.video-watermark img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  opacity: 0.9;
+}
+
 /* ============================================
    CTA SECTION
    ============================================ */
