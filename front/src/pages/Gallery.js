@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import './Gallery.css';
 
 export default function Gallery() {
+  const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -119,17 +121,15 @@ export default function Gallery() {
   return (
     <div className="gallery-page">
       <PageHeader
-        title="Our Gallery"
-        subtitle="Visual memories of unforgettable Moroccan journeys"
+        title={t('gallery.pageTitle')}
+        subtitle={t('gallery.pageSubtitle')}
         bgImage="https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop"
       />
 
       <section className="gallery-section">
         <div className="gallery-container">
-          <h2>Morocco in Pictures</h2>
-          <p className="gallery-intro">
-            Explore our collection of breathtaking photos from Morocco
-          </p>
+          <h2>{t('gallery.picturesTitle')}</h2>
+          <p className="gallery-intro">{t('gallery.picturesIntro')}</p>
 
           {/* ── PHOTOS GRID ── */}
           <div className="gallery-grid">
@@ -158,10 +158,8 @@ export default function Gallery() {
 
           {/* ── VIDEOS SECTION ── */}
           <div className="gallery-videos-header">
-            <h2>Morocco in Motion</h2>
-            <p className="gallery-intro">
-              Experience Morocco through our curated video collection
-            </p>
+            <h2>{t('gallery.videosTitle')}</h2>
+            <p className="gallery-intro">{t('gallery.videosIntro')}</p>
           </div>
 
           <div className="gallery-grid gallery-video-grid">

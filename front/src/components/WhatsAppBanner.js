@@ -1,9 +1,11 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './WhatsAppBanner.css';
 
 const WhatsAppButton = () => {
+  const { t } = useLanguage();
   const phoneNumber = '972546338757'; // your number
-  const message = 'Hello, I’m interested in a premium Morocco travel experience.';
+  const message = t('cta.whatsappInquiry');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -12,7 +14,7 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"
-      aria-label="Chat on WhatsApp"
+      aria-label={t('cta.whatsappFloating')}
     >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"

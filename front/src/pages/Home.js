@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import HeroSection from '../components/HeroSection';
 import TourCard from '../components/TourCard';
 import TestimonialCard from '../components/TestimonialCard';
@@ -8,7 +9,7 @@ import './Home.css';
 
 
 export default function Home() {
-
+  const { t } = useLanguage();
 
   const featuredTours = [
     {
@@ -68,9 +69,9 @@ export default function Home() {
       {/* Premium Banner 1: VIP Morocco Travel Experiences */}
       <section className="premium-banner vip-banner">
         <div className="banner-content">
-          <h2>VIP Morocco Travel Experiences</h2>
-          <p>Exclusive access, private drivers, and luxury accommodations tailored for discerning travelers.</p>
-          <Link to="/vip" className="btn-primary">Discover VIP Services</Link>
+          <h2>{t('home.vipBannerTitle')}</h2>
+          <p>{t('home.vipBannerText')}</p>
+          <Link to="/vip" className="btn-primary">{t('home.vipBannerBtn')}</Link>
         </div>
       </section>
 
@@ -81,17 +82,14 @@ export default function Home() {
 
           <div className="mly-wc2030-content">
             <div className="mly-wc2030-text">
-              <span className="mly-wc2030-badge">🇲🇦 Morocco World Cup 2030</span>
+              <span className="mly-wc2030-badge">{t('home.wcBadge')}</span>
 
-              <h2>Morocco 2030</h2>
+              <h2>{t('home.wcTitle')}</h2>
 
-              <p>
-                Exclusive World Cup travel packages combining football, Moroccan culture,
-                VIP hospitality, and luxury experiences.
-              </p>
+              <p>{t('home.wcText')}</p>
 
               <Link to="/worldcup" className="mly-wc2030-btn">
-                View Packages
+                {t('home.wcBtn')}
               </Link>
             </div>
 
@@ -115,24 +113,24 @@ export default function Home() {
       {/* Featured Tours — white */}
       <section className="featured-tours">
         <div className="section-container">
-          <h2>Featured Tours & Packages</h2>
-          <p className="section-subtitle">Carefully curated experiences for the perfect Moroccan adventure</p>
+          <h2>{t('home.featuredToursTitle')}</h2>
+          <p className="section-subtitle">{t('home.featuredToursSubtitle')}</p>
           <div className="tours-grid">
             {featuredTours.map(tour => (
               <TourCard key={tour.id} {...tour} />
             ))}
           </div>
-          <Link to="/tours" className="view-all-btn">View All Tours</Link>
+          <Link to="/tours" className="view-all-btn">{t('home.viewAllTours')}</Link>
         </div>
       </section>
 
       {/* Experiences — warm off-white */}
       <section className="featured-experiences">
         <div className="section-container">
-          <h2>Moroccan Culinary Excellence</h2>
-          <p className="section-subtitle">Discover our food — the best in the world</p>
+          <h2>{t('home.culinaryTitle')}</h2>
+          <p className="section-subtitle">{t('home.culinarySubtitle')}</p>
           <div className="experiences-preview">
-            <Link to="/experiences" className="view-all-btn">Discover Food Experiences</Link>
+            <Link to="/experiences" className="view-all-btn">{t('home.culinaryBtn')}</Link>
           </div>
         </div>
       </section>
@@ -140,14 +138,14 @@ export default function Home() {
       {/* Testimonials — dark */}
       <section className="testimonials-preview">
         <div className="section-container">
-          <h2>What Our VIP Guests Say</h2>
-          <p className="section-subtitle">Real reviews from international travelers</p>
+          <h2>{t('home.testimonialsTitle')}</h2>
+          <p className="section-subtitle">{t('home.testimonialsSubtitle')}</p>
           <div className="testimonials-grid">
             {testimonials.map(testimonial => (
               <TestimonialCard key={testimonial.id} {...testimonial} />
             ))}
           </div>
-          <Link to="/testimonials" className="view-all-btn">Read More Reviews</Link>
+          <Link to="/testimonials" className="view-all-btn">{t('home.readMoreReviews')}</Link>
         </div>
       </section>
     </div>

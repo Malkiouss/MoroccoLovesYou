@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Menu, MessageCircle, Star, X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import './PageHeader.css';
 
 export default function PageHeader({ title, subtitle, bgImage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
  const heroStyle = bgImage
   ? {
       backgroundImage: `linear-gradient(rgba(13,31,23,0.8), rgba(13,31,23,0.13)), url(${bgImage})`,
@@ -28,17 +30,17 @@ export default function PageHeader({ title, subtitle, bgImage }) {
           </Link>
         </div>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/tours">Tours</Link>
-          <Link to="/destinations">Destinations</Link>
-          <Link to="/experiences">Experiences</Link>
-          <Link to="/vip">VIP Business</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/">{t('nav.home')}</Link>
+          <Link to="/tours">{t('nav.tours')}</Link>
+          <Link to="/destinations">{t('nav.destinations')}</Link>
+          <Link to="/experiences">{t('nav.experiences')}</Link>
+          <Link to="/vip">{t('nav.vip')}</Link>
+          <Link to="/about">{t('nav.about')}</Link>
+          <Link to="/contact">{t('nav.contact')}</Link>
         </div>
-        <button className="nav-cta" onClick={() => window.open('https://wa.me/972546338757?text=Hello,%20I’m%20interested%20in%20a%20premium%20Morocco%20travel%20experience.', '_blank')}>
+        <button className="nav-cta" onClick={() => window.open('https://wa.me/972546338757?text=' + encodeURIComponent(t('cta.whatsappInquiry')), '_blank')}>
           <MessageCircle aria-hidden="true" />
-          Chat on WhatsApp
+          {t('nav.chatWhatsApp')}
         </button>
         <button
           type="button"
@@ -68,7 +70,7 @@ export default function PageHeader({ title, subtitle, bgImage }) {
         >
           <div className="mobile-menu" onClick={(e) => e.stopPropagation()}>
             <div className="mobile-menu-top">
-              <div className="mobile-menu-title">Menu</div>
+              <div className="mobile-menu-title">{t('nav.menu')}</div>
               <button
                 type="button"
                 className="mobile-menu-close"
@@ -80,21 +82,21 @@ export default function PageHeader({ title, subtitle, bgImage }) {
             </div>
 
             <div className="mobile-links">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link to="/tours" onClick={() => setIsMenuOpen(false)}>Tours</Link>
-              <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
-              <Link to="/experiences" onClick={() => setIsMenuOpen(false)}>Experiences</Link>
-              <Link to="/vip" onClick={() => setIsMenuOpen(false)}>VIP Business Travel</Link>
-              <Link to="/worldcup" onClick={() => setIsMenuOpen(false)}>World Cup 2030</Link>
-              <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-              <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
-              <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
+              <Link to="/tours" onClick={() => setIsMenuOpen(false)}>{t('nav.tours')}</Link>
+              <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>{t('nav.destinations')}</Link>
+              <Link to="/experiences" onClick={() => setIsMenuOpen(false)}>{t('nav.experiences')}</Link>
+              <Link to="/vip" onClick={() => setIsMenuOpen(false)}>{t('nav.vipFull')}</Link>
+              <Link to="/worldcup" onClick={() => setIsMenuOpen(false)}>{t('nav.worldcup')}</Link>
+              <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>{t('nav.gallery')}</Link>
+              <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>{t('nav.testimonials')}</Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</Link>
             </div>
 
             <button className="nav-cta mobile-menu-cta" type="button" onClick={() => window.open('https://wa.me/972546338757', '_blank')}>
               <MessageCircle aria-hidden="true" />
-              Chat on WhatsApp
+              {t('nav.chatWhatsApp')}
             </button>
           </div>
         </div>

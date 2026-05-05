@@ -1,9 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import TourCard from '../components/TourCard';
 import './Tours.css';
 
 export default function Tours() {
+  const { t } = useLanguage();
+
   const allTours = [
     {
       id: 1,
@@ -58,17 +61,15 @@ export default function Tours() {
   return (
     <div className="tours">
       <PageHeader
-        title="Tours & Packages"
-        subtitle="Choose from our carefully curated Morocco tour packages"
+        title={t('tours.pageTitle')}
+        subtitle={t('tours.pageSubtitle')}
         bgImage="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop"
       />
 
       <section className="tours-section">
         <div className="tours-container">
-          <h2>Our Tour Packages</h2>
-          <p className="tours-intro">
-            From desert adventures to coastal escapes, we have the perfect package for every traveler
-          </p>
+          <h2>{t('tours.sectionTitle')}</h2>
+          <p className="tours-intro">{t('tours.sectionIntro')}</p>
           <div className="tours-grid">
             {allTours.map(tour => (
               <TourCard key={tour.id} {...tour} />
@@ -79,27 +80,27 @@ export default function Tours() {
 
       <section className="booking-info">
         <div className="booking-container">
-          <h2>How to Book</h2>
+          <h2>{t('tours.howToBook')}</h2>
           <div className="booking-steps">
             <div className="step">
               <div className="step-number">1</div>
-              <h3>Choose a Tour</h3>
-              <p>Browse our packages and select the one that suits you best</p>
+              <h3>{t('tours.step1Title')}</h3>
+              <p>{t('tours.step1Text')}</p>
             </div>
             <div className="step">
               <div className="step-number">2</div>
-              <h3>Click Book Now</h3>
-              <p>Click the "Book Now" button on your chosen tour</p>
+              <h3>{t('tours.step2Title')}</h3>
+              <p>{t('tours.step2Text')}</p>
             </div>
             <div className="step">
               <div className="step-number">3</div>
-              <h3>Fill Details</h3>
-              <p>Provide your travel dates and personal information</p>
+              <h3>{t('tours.step3Title')}</h3>
+              <p>{t('tours.step3Text')}</p>
             </div>
             <div className="step">
               <div className="step-number">4</div>
-              <h3>Confirmation</h3>
-              <p>Receive confirmation and itinerary details via email</p>
+              <h3>{t('tours.step4Title')}</h3>
+              <p>{t('tours.step4Text')}</p>
             </div>
           </div>
         </div>
@@ -107,9 +108,9 @@ export default function Tours() {
 
       <section className="contact-cta">
         <div className="contact-inner">
-          <h2>Need a Custom Package?</h2>
-          <p>Contact us to create a personalized Morocco tour experience</p>
-          <a href="/contact" className="contact-button">Get in Touch</a>
+          <h2>{t('tours.customTitle')}</h2>
+          <p>{t('tours.customText')}</p>
+          <a href="/contact" className="contact-button">{t('tours.customBtn')}</a>
         </div>
       </section>
     </div>

@@ -1,9 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import DestinationCard from '../components/DestinationCard';
 import './Destinations.css';
 
 export default function Destinations() {
+  const { t } = useLanguage();
+
   const allDestinations = [
     {
       id: 1,
@@ -58,17 +61,15 @@ export default function Destinations() {
   return (
     <div className="destinations">
       <PageHeader
-        title="Explore Morocco's Destinations"
-        subtitle="Discover incredible places to visit across beautiful Morocco"
+        title={t('destinations.pageTitle')}
+        subtitle={t('destinations.pageSubtitle')}
         bgImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
       />
 
       <section className="destinations-section">
         <div className="destinations-container">
-          <h2>All Destinations</h2>
-          <p className="destinations-intro">
-            Morocco is a country of diverse landscapes and rich cultural heritage. Explore our carefully selected destinations:
-          </p>
+          <h2>{t('destinations.sectionTitle')}</h2>
+          <p className="destinations-intro">{t('destinations.sectionIntro')}</p>
           <div className="destinations-grid">
             {allDestinations.map(destination => (
               <DestinationCard key={destination.id} {...destination} />
@@ -79,9 +80,9 @@ export default function Destinations() {
 
       <section className="explore-cta">
         <div className="cta-inner">
-          <h2>Ready to Plan Your Trip?</h2>
-          <p>Browse our curated tours and packages to find the perfect Moroccan experience</p>
-          <a href="/tours" className="cta-button">View Tours & Packages</a>
+          <h2>{t('destinations.ctaTitle')}</h2>
+          <p>{t('destinations.ctaText')}</p>
+          <a href="/tours" className="cta-button">{t('destinations.ctaBtn')}</a>
         </div>
       </section>
     </div>

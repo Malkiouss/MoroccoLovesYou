@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import { galleryCities } from '../data/galleryCities';
@@ -8,32 +9,15 @@ import './CityDetailPage.css';
 export default function CityDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
-
+  const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const city = galleryCities.find(c => c.slug === slug);
 
-  const openLightbox = (index) => {
-    setCurrentImageIndex(index);
-    setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-    document.body.style.overflow = 'auto';
-  };
-
-  const nextImage = useCallback((e) => {
-    e?.stopPropagation();
-    setCurrentImageIndex((prev) => (prev + 1) % city.galleryImages.length);
-  }, [city?.galleryImages?.length]);
-
-  const prevImage = useCallback((e) => {
-    e?.stopPropagation();
-    setCurrentImageIndex((prev) => (prev - 1 + city.galleryImages.length) % city.galleryImages.length);
-  }, [city?.galleryImages?.length]);
+  const openLightbox = (index) => { setCurrentImageIndex(index); setLightboxOpen(true); document.body.style.overflow = 'hidden'; };
+  const closeLightbox = () => { setLightboxOpen(false); document.body.style.overflow = 'auto'; };
+  const nextImage = useCallback((e) => { e?.stopPropagation(); setCurrentImageIndex((prev) => (prev + 1) % city.galleryImages.length); }, [city?.galleryImages?.length]);
+  const prevImage = useCallback((e) => { e?.stopPropagation(); setCurrentImageIndex((prev) => (prev - 1 + city.galleryImages.length) % city.galleryImages.length); }, [city?.galleryImages?.length]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -49,8 +33,8 @@ export default function CityDetailPage() {
   if (!city) {
     return (
       <div className="city-not-found">
-        <h1>City not found</h1>
-        <button onClick={() => navigate('/')}>Back to Home</button>
+        <h1>{t('cityDetail.notFound')}</h1>
+        <button onClick={() => navigate('/')}>{t('cityDetail.backHome')}</button>
       </div>
     );
   }
@@ -59,112 +43,75 @@ export default function CityDetailPage() {
 
   return (
     <div className="city-detail-page">
-      <PageHeader
-        title={city.name}
-        subtitle="Discover the beauty and culture"
-        bgImage={city.heroImage}
-      />
+      <PageHeader title={city.name} subtitle={t('cityDetail.discoverSubtitle')} bgImage={city.heroImage} />
 
-      {/* DESCRIPTION SECTION */}
       <section className="city-description-section">
         <div className="section-container">
           <div className="city-description">
-            <p>{city.description}</p>
+            <p>
+              {t(`cityDesc.${city.slug}`) !== `cityDesc.${city.slug}` 
+                ? t(`cityDesc.${city.slug}`) 
+                : city.description}
+            </p>
           </div>
           <div className="section-cta">
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="mly-wc2030-btn">
-              <span>💬</span>&nbsp; Plan My Trip to {city.name}
+              <span>💬</span>&nbsp; {t('cityDetail.planTrip')} {city.name}
             </a>
           </div>
         </div>
       </section>
 
-      {/* GALLERY SECTION */}
       <section className="city-gallery-section">
         <div className="section-container">
-          <h2>Gallery of {city.name}</h2>
+          <h2>{t('cityDetail.galleryOf')} {city.name}</h2>
           <div className="city-gallery-grid">
-            {/* RENDER PHOTOS */}
             {city.galleryImages.map((image, index) => (
-              <div 
-                key={`img-${index}`} 
-                className="city-gallery-item"
-                onClick={() => openLightbox(index)}
-              >
-                <SafeImage
-                  src={image}
-                  alt={`${city.name} - ${index + 1}`}
-                  className="city-gallery-img"
-                />
-                <div className="gallery-overlay">
-                  <span>🔎</span>
-                </div>
+              <div key={`img-${index}`} className="city-gallery-item" onClick={() => openLightbox(index)}>
+                <SafeImage src={image} alt={`${city.name} - ${index + 1}`} className="city-gallery-img" />
+                <div className="gallery-overlay"><span>🔎</span></div>
               </div>
             ))}
-
-            {/* RENDER VIDEOS (Mixed in) */}
             {city.galleryVideos && city.galleryVideos.map((video) => (
               <div key={`vid-${video.id}`} className="city-gallery-item video-item">
-                <div className="video-watermark">
-                  <img src="/assets/vidlogo.png" alt="Logo" />
-                </div>
-                <video
-                  src={video.src}
-                  className="city-gallery-video"
-                  controls
-                />
+                <div className="video-watermark"><img src="/assets/vidlogo.png" alt="Logo" /></div>
+                <video src={video.src} className="city-gallery-video" controls />
               </div>
             ))}
           </div>
-
           <div className="section-cta">
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="mly-wc2030-btn">
-              <span>📸</span>&nbsp; Book This Experience
+              <span>📸</span>&nbsp; {t('cityDetail.bookExperience')}
             </a>
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="mly-wc2030-btn-outline">
-              <span>📋</span>&nbsp; Request Full Itinerary
+              <span>📋</span>&nbsp; {t('cityDetail.requestItinerary')}
             </a>
           </div>
         </div>
       </section>
 
-      {/* LIGHTBOX */}
       {lightboxOpen && (
         <div className="mly-lightbox" onClick={closeLightbox}>
           <button className="lightbox-close" onClick={closeLightbox}>×</button>
-          
-          <button className="lightbox-nav prev" onClick={prevImage}>
-            ‹
-          </button>
-          
+          <button className="lightbox-nav prev" onClick={prevImage}>‹</button>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={city.galleryImages[currentImageIndex]} 
-              alt={`${city.name} - ${currentImageIndex + 1}`} 
-              className="lightbox-main-img"
-            />
-            <div className="lightbox-caption">
-              {city.name} — {currentImageIndex + 1} / {city.galleryImages.length}
-            </div>
+            <img src={city.galleryImages[currentImageIndex]} alt={`${city.name} - ${currentImageIndex + 1}`} className="lightbox-main-img" />
+            <div className="lightbox-caption">{city.name} — {currentImageIndex + 1} / {city.galleryImages.length}</div>
           </div>
-
-          <button className="lightbox-nav next" onClick={nextImage}>
-            ›
-          </button>
+          <button className="lightbox-nav next" onClick={nextImage}>›</button>
         </div>
       )}
 
-      {/* CTA SECTION */}
       <section className="city-cta-section">
         <div className="city-cta-content">
-          <h2>Ready to Visit {city.name}?</h2>
-          <p>Let us plan your perfect journey to this amazing destination</p>
+          <h2>{t('cityDetail.readyToVisit')} {city.name}?</h2>
+          <p>{t('cityDetail.readyToVisitText')}</p>
           <div className="cta-buttons">
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="mly-wc2030-btn">
-              <span>💬</span>&nbsp; Plan My Trip
+              <span>💬</span>&nbsp; {t('cityDetail.planMyTrip')}
             </a>
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="mly-wc2030-btn-outline">
-              <span>📞</span>&nbsp; Talk to an Expert
+              <span>📞</span>&nbsp; {t('cityDetail.talkExpert')}
             </a>
           </div>
         </div>

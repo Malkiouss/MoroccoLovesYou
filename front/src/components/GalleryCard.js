@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import SafeImage from './SafeImage';
 
 export default function GalleryCard({ city }) {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const handleClick = () => {
     navigate(`/gallery/${city.slug}`);
@@ -18,7 +20,7 @@ export default function GalleryCard({ city }) {
       />
       <div className="gallery-card-overlay">
         <h3>{city.name}</h3>
-        <p>Explore destination</p>
+        <p>{t('home.exploreDestination')}</p>
       </div>
     </div>
   );

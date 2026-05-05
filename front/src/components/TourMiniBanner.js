@@ -1,7 +1,9 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./TourMiniBanner.css";
 
 const TourMiniBanner = () => {
+  const { t } = useLanguage();
   const whatsappUrl = "https://wa.me/972546338757";
 
   return (
@@ -16,17 +18,19 @@ const TourMiniBanner = () => {
 
         {/* ── Top red section ── */}
         <div className="tour-mini-top">
-          <h3>10 DAYS</h3>
-          <h3>/ 9 NIGHTS</h3>
+          <h3>{t('tourMini.days')}</h3>
+          <h3>{t('tourMini.nights')}</h3>
           <p className="tour-mini-title">
-            PREMIUM MOROCCO<br />TOUR
+            {t('tourMini.title').split('\n').map((line, i) => (
+              <React.Fragment key={i}>{line}{i === 0 && <br />}</React.Fragment>
+            ))}
           </p>
         </div>
 
         {/* ── Green date band ── */}
         <div className="tour-mini-date">
-          <span>2026 - 2027</span>
-          <small>MONTHLY DEPARTURES</small>
+          <span>{t('tourMini.years')}</span>
+          <small>{t('tourMini.departures')}</small>
         </div>
 
         {/* ── Dark bottom section ── */}
@@ -37,7 +41,9 @@ const TourMiniBanner = () => {
           </div>
 
           <p className="tour-mini-included">
-            ALL INCLUDED<br />FULL BOARD
+            {t('tourMini.allIncluded').split('\n').map((line, i) => (
+              <React.Fragment key={i}>{line}{i === 0 && <br />}</React.Fragment>
+            ))}
           </p>
         </div>
 

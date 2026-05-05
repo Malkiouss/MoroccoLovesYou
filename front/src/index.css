@@ -13,3 +13,102 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* ── RTL Support ─────────────────────────────────────────────── */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .nav-links,
+body.rtl .mobile-links,
+body.rtl .nav-menu {
+  direction: rtl;
+}
+
+body.rtl .footer-container {
+  direction: rtl;
+}
+
+body.rtl .hero-badges {
+  direction: rtl;
+}
+
+body.rtl .footer-strip {
+  direction: rtl;
+}
+
+body.rtl .strip-item {
+  direction: rtl;
+}
+
+body.rtl .booking-steps {
+  direction: rtl;
+}
+
+body.rtl .contact-container {
+  direction: rtl;
+}
+
+body.rtl .info-item {
+  direction: rtl;
+}
+
+body.rtl .form-group {
+  text-align: right;
+}
+
+body.rtl .form-group input,
+body.rtl .form-group select,
+body.rtl .form-group textarea {
+  text-align: right;
+}
+
+body.rtl .faq-item {
+  text-align: right;
+}
+
+body.rtl .experience-content {
+  text-align: right;
+}
+
+body.rtl .vip-service-card {
+  text-align: right;
+}
+
+body.rtl .package-features li {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .story-container {
+  direction: rtl;
+}
+
+body.rtl .features-grid .feature-card {
+  text-align: right;
+}
+
+body.rtl .tour-content {
+  text-align: right;
+}
+
+body.rtl .destination-content {
+  text-align: right;
+}
+
+body.rtl .testimonial-card {
+  text-align: right;
+}
+
+body.rtl .blog-content {
+  text-align: right;
+}
+
+body.rtl .star-overlay {
+  text-align: right;
+}
+
+body.rtl .language-section {
+  direction: ltr;
+}

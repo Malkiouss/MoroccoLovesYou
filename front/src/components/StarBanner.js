@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './StarBanner.css';
 
 const WhatsAppIcon = () => (
@@ -28,6 +29,7 @@ const WhatsAppIcon = () => (
 );
 
 const StarBanner = () => {
+  const { t } = useLanguage();
   const whatsappUrl = "https://wa.me/972546338757";
 
   return (
@@ -42,16 +44,16 @@ const StarBanner = () => {
 
       <div className="star-overlay">
         <p className="star-title">
-          <span className="star-icon">★</span> CEO MESSAGE <span className="star-icon">★</span>
+          <span className="star-icon">★</span> {t('starBanner.ceoMessage')} <span className="star-icon">★</span>
         </p>
-        <p className="star-sub">Watch my video<br />&amp; read my message</p>
+        <p className="star-sub">{t('starBanner.watchVideo')}<br />&amp; {t('starBanner.readMessage')}</p>
         <div className="star-arrow">↕</div>
-        <p className="star-cta">Get to know<br /><em>Ilan personally</em></p>
+        <p className="star-cta">{t('starBanner.getToKnow')}<br /><em>{t('starBanner.ilanPersonally')}</em></p>
       </div>
 
       <div className="whatsapp-bar">
         <WhatsAppIcon />
-        <span className="whatsapp-label">Chat on WhatsApp</span>
+        <span className="whatsapp-label">{t('cta.whatsappFloating')}</span>
       </div>
     </a>
   );

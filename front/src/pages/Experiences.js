@@ -1,9 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import { MessageCircle } from 'lucide-react';
 import './Experiences.css';
 
 export default function Experiences() {
+  const { t } = useLanguage();
+
   const experiences = [
     {
       id: 1,
@@ -46,8 +49,8 @@ export default function Experiences() {
   return (
     <div className="experiences-page">
       <PageHeader
-        title="Moroccan Culinary Excellence"
-        subtitle="Discover our food — the best in the world"
+        title={t('experiences.pageTitle')}
+        subtitle={t('experiences.pageSubtitle')}
         bgImage="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1600&q=80"
       />
 
@@ -69,7 +72,7 @@ export default function Experiences() {
                     rel="noopener noreferrer"
                     className="exp-wa-btn"
                   >
-                    <MessageCircle size={18} /> Book via WhatsApp
+                    <MessageCircle size={18} /> {t('experiences.bookViaWhatsApp')}
                   </a>
                 </div>
               </div>

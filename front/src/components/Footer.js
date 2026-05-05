@@ -1,38 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import './Footer.css';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
         <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" style={{ height: '180px', width: 'auto', alignItems:'left',marginBottom: '15px' }} />
-          <p>Discover the magic of Morocco with us. Experience unforgettable adventures and create lasting memories.</p>
+          <p>{t('footer.description')}</p>
         </div>
 
         <div className="footer-section">
-          <h4>Quick Links</h4>
+          <h4>{t('footer.quickLinks')}</h4>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/destinations">Destinations</Link></li>
-            <li><Link to="/tours">Tours & Packages</Link></li>
+            <li><Link to="/">{t('nav.home')}</Link></li>
+            <li><Link to="/about">{t('nav.about')}</Link></li>
+            <li><Link to="/destinations">{t('nav.destinations')}</Link></li>
+            <li><Link to="/tours">{t('nav.tours')}</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4>More</h4>
+          <h4>{t('footer.more')}</h4>
           <ul>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/testimonials">Testimonials</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/gallery">{t('nav.gallery')}</Link></li>
+            <li><Link to="/testimonials">{t('nav.testimonials')}</Link></li>
+            <li><Link to="/blog">{t('nav.blog')}</Link></li>
+            <li><Link to="/contact">{t('nav.contact')}</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4>Contact Info</h4>
+          <h4>{t('footer.contactInfo')}</h4>
           <p>📍 Marrakech, Morocco</p>
           <p>📧 info@moroccolovesyou.com</p>
           <p>📞 +212 5 24 43 77 77</p>
@@ -45,7 +48,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 MoroccoLovesYou. All rights reserved.</p>
+        <p>{t('footer.copyright')}</p>
       </div>
     </footer>
   );

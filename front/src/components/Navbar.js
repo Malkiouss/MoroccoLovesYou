@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,28 +24,28 @@ export default function Navbar() {
         </div>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.home')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.about')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/destinations" className="nav-link" onClick={() => setIsOpen(false)}>Destinations</Link>
+            <Link to="/destinations" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.destinations')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/tours" className="nav-link" onClick={() => setIsOpen(false)}>Tours & Packages</Link>
+            <Link to="/tours" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.tours')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/gallery" className="nav-link" onClick={() => setIsOpen(false)}>Gallery</Link>
+            <Link to="/gallery" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.gallery')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/testimonials" className="nav-link" onClick={() => setIsOpen(false)}>Testimonials</Link>
+            <Link to="/testimonials" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.testimonials')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog" className="nav-link" onClick={() => setIsOpen(false)}>Blog</Link>
+            <Link to="/blog" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.blog')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link nav-link-btn" onClick={() => setIsOpen(false)}>Contact Us</Link>
+            <Link to="/contact" className="nav-link nav-link-btn" onClick={() => setIsOpen(false)}>{t('nav.contact')}</Link>
           </li>
         </ul>
       </div>
