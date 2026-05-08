@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Menu, MessageCircle, Star, X } from 'lucide-react';
+import {  Menu, MessageCircle, Star, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './PageHeader.css';
 
@@ -21,12 +21,8 @@ export default function PageHeader({ title, subtitle, bgImage }) {
       {/* NAV */}
       <nav className="page-nav">
         <div className="logo">
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <span className="logo-top">Morocco</span>
-            <div className="logo-heart">
-              Loves <Heart className="icon" aria-hidden="true" /> You
-            </div>
-            <div className="logo-sub"><span className="logo-star">★</span></div>
+          <Link to="/">
+            <img src="/assets/images/logoMorocco1.png" alt="MoroccoLovesYou Logo" />
           </Link>
         </div>
         <div className="nav-links">

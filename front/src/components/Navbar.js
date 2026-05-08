@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-           MoroccoLovesYou
+           <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" />
         </Link>
         <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>

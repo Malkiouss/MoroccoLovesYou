@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-        <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" style={{ height: '180px', width: 'auto', alignItems:'left',marginBottom: '15px' }} />
+          <img src="/assets/images/logoMorocco1.png" alt="MoroccoLovesYou Logo" style={{ height: '180px', width: 'auto', alignItems:'left',marginBottom: '15px' }} />
           <p>{t('footer.description')}</p>
         </div>
 
