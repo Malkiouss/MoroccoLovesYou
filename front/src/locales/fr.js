@@ -57,6 +57,7 @@ const fr = {
     culinaryTitle: "Excellence Culinaire Marocaine",
     culinarySubtitle: "Découvrez notre cuisine — la meilleure au monde",
     culinaryBtn: "Découvrir les Expériences Culinaires",
+    videoTitle: "Découvrez la Magie du Maroc en Vidéo",
     testimonialsTitle: "Ce que Disent nos Invités VIP",
     testimonialsSubtitle: "Vrais avis de voyageurs internationaux",
     readMoreReviews: "Lire Plus d'Avis"

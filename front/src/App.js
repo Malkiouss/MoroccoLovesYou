@@ -21,6 +21,8 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import StarBanner from './components/StarBanner';
 import TourMiniBanner from './components/TourMiniBanner';
+import SocialFloating from './components/SocialFloating';
+import Transportation from './pages/Transportation';
 
 
 function App() {
@@ -45,11 +47,16 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/transportation" element={<Transportation />} />
           </Routes>
+          <SocialFloating/>
           <Footer />
           <WhatsAppBanner />
+          
           <StarBanner />
+          
           <TourMiniBanner />
+          
         </div>
       </Router>
     </LanguageProvider>

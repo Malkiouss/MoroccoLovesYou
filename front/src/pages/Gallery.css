@@ -57,6 +57,15 @@
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+/* Transportation override */
+.transportation-gallery .gallery-item {
+  background-color: #0d1f17;
+}
+
+.transportation-gallery .gallery-item img {
+  object-fit: contain;
+}
+
 .gallery-overlay {
   position: absolute;
   inset: 0;
@@ -135,6 +144,13 @@
   left: 20px;
   z-index: 5;
   pointer-events: none;
+}
+
+.video-logo {
+  width: 80px;
+  height: auto;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 /* ── LIGHTBOX ────────────────────────────────────────────────────────────── */

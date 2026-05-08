@@ -5,6 +5,8 @@ import HeroSection from '../components/HeroSection';
 import TourCard from '../components/TourCard';
 import TestimonialCard from '../components/TestimonialCard';
 import GallerySection from '../components/GallerySection';
+import VideoSection from '../components/VideoSection';
+import BusSection from '../components/BusSection';
 import './Home.css';
 
 
@@ -134,6 +136,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Experience Section */}
+      <VideoSection />
+
+      {/* Bus Section */}
+      <BusSection />
 
       {/* Testimonials — dark */}
       <section className="testimonials-preview">

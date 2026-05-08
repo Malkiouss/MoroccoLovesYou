@@ -57,6 +57,7 @@ const ar = {
     culinaryTitle: "التميز الطهوي المغربي",
     culinarySubtitle: "اكتشف طعامنا — الأفضل في العالم",
     culinaryBtn: "اكتشف تجارب الطعام",
+    videoTitle: "اكتشف سحر المغرب بالفيديو",
     testimonialsTitle: "ماذا يقول ضيوفنا VIP",
     testimonialsSubtitle: "تقييمات حقيقية من مسافرين دوليين",
     readMoreReviews: "اقرأ المزيد من التقييمات"

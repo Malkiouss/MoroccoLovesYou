@@ -57,9 +57,14 @@ const en = {
     culinaryTitle: "Moroccan Culinary Excellence",
     culinarySubtitle: "Discover our food — the best in the world",
     culinaryBtn: "Discover Food Experiences",
+    videoTitle: "Experience the Magic of Morocco",
     testimonialsTitle: "What Our VIP Guests Say",
     testimonialsSubtitle: "Real reviews from international travelers",
-    readMoreReviews: "Read More Reviews"
+    readMoreReviews: "Read More Reviews",
+    viewAllTransport: "View All Transport",
+    transportTitle: "Our VIP Transportation & Drivers",
+    transportSubtitle: "Luxury, Comfort & Safety Across Morocco 🌍",
+    transportIntro: "At Morocco Loves You, transportation is not just about moving from one place to another. It is part of the experience. We provide modern, clean, comfortable, and fully air-conditioned vehicles across Morocco — with professional drivers, warm hospitality, and VIP service from the very first moment."
   },
   tours: {
     pageTitle: "Tours & Packages",
@@ -289,6 +294,53 @@ const en = {
     readyToVisitText: "Let us plan your perfect journey to this amazing destination",
     planMyTrip: "Plan My Trip",
     talkExpert: "Talk to an Expert"
+  },
+  transportation: {
+    pageTitle: "VIP Transportation & Drivers",
+    pageSubtitle: "Luxury, Comfort & Safety Across Morocco",
+    introTitle: "Our VIP Transportation & Drivers",
+    introP1: "At Morocco Loves You, transportation is not just about moving from one place to another.",
+    introP2: "It is part of the experience.",
+    introP3: "We provide modern, clean, comfortable, and fully air-conditioned vehicles across Morocco — with professional drivers, warm hospitality, and VIP service from the very first moment.",
+    introP4: "Whether you travel as a couple, family, business delegation, or private group, we make sure your journey is safe, relaxing, and unforgettable.",
+    servicesTitle: "Our Transportation Services Include",
+    servicesList: [
+      "Modern VIP buses",
+      "Luxury minibuses",
+      "Private cars",
+      "4x4 Jeeps for desert adventures",
+      "VIP limousines",
+      "Airport pickup & drop-off",
+      "Professional multilingual drivers",
+      "Comfortable air conditioning",
+      "Clean and organized vehicles",
+      "Refrigerators in selected vehicles",
+      "TV & entertainment systems",
+      "Music during the journey",
+      "Safe and smooth driving",
+      "24/7 assistance across Morocco"
+    ],
+    driversTitle: "Meet Our Drivers",
+    driversText1: "Our drivers are part of the Morocco Loves You family.",
+    driversText2: "Professional, respectful, experienced, and always ready to help with a smile.",
+    driversText3: "Many of our drivers speak multiple languages and know Morocco deeply — helping our guests feel comfortable, safe, and connected throughout the journey.",
+    safetyTitle: "Safety & Comfort First",
+    safetyText1: "Your comfort and safety are our top priorities.",
+    safetyText2: "All vehicles are regularly maintained, cleaned, and carefully prepared before every trip.",
+    safetyText3: "We work only with trusted professional drivers and high-quality transportation partners.",
+    categories: {
+      buses: "VIP Buses",
+      minibuses: "Luxury Minibuses",
+      cars: "Private Cars & VIP Transfers",
+      jeeps: "4x4 Jeeps & Desert Transportation",
+      meetDrivers: "Meet Our Drivers",
+      videos: "Transportation Experience Videos"
+    },
+    videoGalleryTitle: "VIP Experience Videos",
+    ctaTitle: "Ready To Explore Morocco In Comfort?",
+    ctaSubtitle: "Speak Directly With Allan – CEO & Founder",
+    whatsapp: "WhatsApp: +972546338757",
+    moroccoLine: "Morocco Direct Line: +212 6 63 63 05 79"
   }
 };
 
