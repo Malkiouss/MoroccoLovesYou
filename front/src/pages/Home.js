@@ -7,6 +7,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import GallerySection from '../components/GallerySection';
 import VideoSection from '../components/VideoSection';
 import BusSection from '../components/BusSection';
+import CulinarySection from '../components/CulinarySection';
 import './Home.css';
 
 
@@ -126,16 +127,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experiences — warm off-white */}
-      <section className="featured-experiences">
-        <div className="section-container">
-          <h2>{t('home.culinaryTitle')}</h2>
-          <p className="section-subtitle">{t('home.culinarySubtitle')}</p>
-          <div className="experiences-preview">
-            <Link to="/experiences" className="view-all-btn">{t('home.culinaryBtn')}</Link>
-          </div>
-        </div>
-      </section>
+      {/* Culinary Section — mimic BusSection */}
+      <CulinarySection />
 
       {/* Video Experience Section */}
       <VideoSection />

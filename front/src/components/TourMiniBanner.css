@@ -7,14 +7,79 @@
   top: 55%;
   transform: translateY(-50%);
   z-index: 9999;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.tour-mini-float:hover {
-  transform: translateY(-50%) scale(1.05);
+.tour-mini-float:hover .tour-mini-card {
+  transform: scale(1.05);
   filter: brightness(1.1);
+}
+
+/* ============================================
+   RECOMMENDATIONS BADGE (separate from card)
+   ============================================ */
+.tour-mini-rec-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  padding: 12px 14px 10px;
+  text-align: center;
+  width: 230px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.tour-mini-rec-badge:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+.tour-mini-rec-stars {
+  font-size: 18px;
+  color: #d4af37;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.tour-mini-rec-text {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.tour-mini-rec-count {
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #d4af37;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* ============================================
@@ -32,6 +97,8 @@
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   font-family: Georgia, 'Times New Roman', serif;
   text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* ============================================
@@ -104,12 +171,11 @@
   min-height: 56px;
 }
 
-/* Moroccan flag */
 .tour-mini-flag {
   flex-shrink: 0;
   width: 32px;
   height: 22px;
-  background: #c1121f;   /* Moroccan red */
+  background: #c1121f;
   border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -121,10 +187,9 @@
 
 .flag-star {
   font-size: 11px;
-  color: #006233;        /* Moroccan green */
+  color: #006233;
   line-height: 1;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  /* Unicode ★ renders as a solid star — outline the inner to mimic the Moroccan pentagram outline style */
   -webkit-text-stroke: 0.4px #004d28;
 }
 
@@ -144,19 +209,19 @@
    TABLET
    ============================================ */
 @media (max-width: 992px) {
-  .tour-mini-float {
-    left: 14px;
-  }
+  .tour-mini-float      { left: 14px; }
 
-  .tour-mini-card {
-    width: 112px;
-  }
+  .tour-mini-rec-badge  { width: 160px; padding: 10px 14px 8px; }
+  .tour-mini-rec-stars  { font-size: 15px; }
+  .tour-mini-rec-text   { font-size: 13px; letter-spacing: 1px; }
+  .tour-mini-rec-count  { font-size: 9px; }
 
-  .tour-mini-top h3    { font-size: 15px; }
-  .tour-mini-title     { font-size: 8.5px; }
-  .tour-mini-date span { font-size: 12px; }
-  .tour-mini-date small{ font-size: 6px; }
-  .tour-mini-included  { font-size: 8px; }
+  .tour-mini-card       { width: 140px; }
+  .tour-mini-top h3     { font-size: 15px; }
+  .tour-mini-title      { font-size: 8.5px; }
+  .tour-mini-date span  { font-size: 12px; }
+  .tour-mini-date small { font-size: 6px; }
+  .tour-mini-included   { font-size: 8px; }
 }
 
 /* ============================================
@@ -170,54 +235,33 @@
     transform: none;
   }
 
-  .tour-mini-float:hover {
-    transform: scale(1.04);
-  }
+  .tour-mini-rec-badge  { width: 110px; padding: 8px 10px 7px; }
+  .tour-mini-rec-stars  { font-size: 12px; letter-spacing: 1px; }
+  .tour-mini-rec-text   { font-size: 10px; letter-spacing: 0.5px; }
+  .tour-mini-rec-count  { font-size: 7.5px; }
 
-  .tour-mini-card {
-    width: 90px;
-    border-radius: 6px;
-    border-width: 2px;
-  }
-
-  .tour-mini-top {
-    padding: 9px 6px 6px;
-  }
-
-  .tour-mini-top h3    { font-size: 12px; }
-  .tour-mini-title     { font-size: 7px; letter-spacing: 0.2px; }
-
-  .tour-mini-date {
-    padding: 5px 4px;
-  }
-
-  .tour-mini-date span { font-size: 10px; }
-  .tour-mini-date small{ font-size: 5.5px; }
-
-  .tour-mini-bottom {
-    padding: 6px 6px 8px;
-    min-height: 44px;
-  }
-
-  .tour-mini-flag {
-    width: 24px;
-    height: 17px;
-  }
-
-  .flag-star { font-size: 8px; }
-
-  .tour-mini-included {
-    font-size: 7px;
-  }
+  .tour-mini-card       { width: 90px; border-radius: 6px; border-width: 2px; }
+  .tour-mini-top        { padding: 9px 6px 6px; }
+  .tour-mini-top h3     { font-size: 12px; }
+  .tour-mini-title      { font-size: 7px; letter-spacing: 0.2px; }
+  .tour-mini-date       { padding: 5px 4px; }
+  .tour-mini-date span  { font-size: 10px; }
+  .tour-mini-date small { font-size: 5.5px; }
+  .tour-mini-bottom     { padding: 6px 6px 8px; min-height: 44px; }
+  .tour-mini-flag       { width: 24px; height: 17px; }
+  .flag-star            { font-size: 8px; }
+  .tour-mini-included   { font-size: 7px; }
 }
 
 /* ============================================
    VERY SMALL PHONES
    ============================================ */
 @media (max-width: 380px) {
-  .tour-mini-card  { width: 80px; }
-  .tour-mini-top h3{ font-size: 11px; }
-  .tour-mini-title { font-size: 6.5px; }
-  .tour-mini-date span { font-size: 9px; }
-  .tour-mini-included  { font-size: 6.5px; }
+  .tour-mini-rec-badge  { width: 96px; padding: 7px 8px 6px; }
+  .tour-mini-rec-text   { font-size: 9px; }
+  .tour-mini-card       { width: 80px; }
+  .tour-mini-top h3     { font-size: 11px; }
+  .tour-mini-title      { font-size: 6.5px; }
+  .tour-mini-date span  { font-size: 9px; }
+  .tour-mini-included   { font-size: 6.5px; }
 }

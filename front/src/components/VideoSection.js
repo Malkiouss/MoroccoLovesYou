@@ -34,7 +34,7 @@ export default function VideoSection() {
   };
 
   return (
-    <section className="video-showcase">
+    <section className="video-showcase" id="magic-morocco-video">
       <h2 className="video-title">{t('home.videoTitle')}</h2>
 
       <div className="video-wrapper" onClick={togglePlay}>

@@ -54,9 +54,11 @@ const en = {
     featuredToursTitle: "Featured Tours & Packages",
     featuredToursSubtitle: "Carefully curated experiences for the perfect Moroccan adventure",
     viewAllTours: "View All Tours",
-    culinaryTitle: "Moroccan Culinary Excellence",
-    culinarySubtitle: "Discover our food — the best in the world",
-    culinaryBtn: "Discover Food Experiences",
+    culinaryTitle: "Our Food - The Best In The World",
+    culinarySubtitle: "Experience Moroccan Culinary Excellence 🍲",
+    culinaryBtn: "Discover Culinary Experiences",
+    culinaryIntro: "At Morocco Loves You, dining is not just about eating. It is a journey into the heart of Moroccan culture. We offer authentic, hand-picked culinary experiences — from traditional home-cooked meals to high-end Moroccan gastronomy, all prepared with love and the freshest local ingredients.",
+    culinaryVideoTitle: "Culinary Experience Videos",
     videoTitle: "Experience the Magic of Morocco",
     testimonialsTitle: "What Our VIP Guests Say",
     testimonialsSubtitle: "Real reviews from international travelers",
@@ -280,7 +282,9 @@ const en = {
     title: "PREMIUM MOROCCO\nTOUR",
     years: "2026 - 2027",
     departures: "MONTHLY DEPARTURES",
-    allIncluded: "ALL INCLUDED\nFULL BOARD"
+    allIncluded: "ALL INCLUDED\nFULL BOARD",
+    recommendations: "Recommendations",
+    recCount: "500+ happy travelers"
   },
   cityDetail: {
     notFound: "City not found",

@@ -1,6 +1,6 @@
 .vip-page {
-  background-color: var(--mly-bg);
-  color: var(--mly-text);
+  background-color: white;
+  color: rgb(0, 0, 0);
   min-height: 100vh;
 }
 
@@ -24,7 +24,7 @@
 .vip-intro p {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--mly-muted);
+  color: rgb(0, 0, 0);
 }
 
 .vip-services {

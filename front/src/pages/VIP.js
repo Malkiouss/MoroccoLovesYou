@@ -45,7 +45,7 @@ export default function VIP() {
       <PageHeader
         title={t('vip.pageTitle')}
         subtitle={t('vip.pageSubtitle')}
-        bgImage="https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1600&q=80"
+        bgImage="/assets/vip.jpg"
       />
 
       <section className="vip-intro">

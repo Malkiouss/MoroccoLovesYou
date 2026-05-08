@@ -54,12 +54,18 @@ const de = {
     featuredToursTitle: "Empfohlene Touren & Pakete",
     featuredToursSubtitle: "Sorgfältig kuratierte Erlebnisse für das perfekte marokkanische Abenteuer",
     viewAllTours: "Alle Touren Ansehen",
-    culinaryTitle: "Marokkanische Kulinarische Exzellenz",
-    culinarySubtitle: "Entdecken Sie unser Essen — das beste der Welt",
+    culinaryTitle: "Unser Essen - Das Beste der Welt",
+    culinarySubtitle: "Erleben Sie marokkanische kulinarische Exzellenz 🍲",
     culinaryBtn: "Kulinarische Erlebnisse Entdecken",
+    culinaryIntro: "Bei Morocco Loves You ist Essen nicht nur Nahrungsaufnahme. Es ist eine Reise in das Herz der marokkanischen Kultur. Wir bieten authentische, handverlesene kulinarische Erlebnisse — von traditionellen hausgemachten Gerichten bis hin zu marokkanischer Spitzengastronomie, alles mit Liebe und den frischesten lokalen Zutaten zubereitet.",
+    videoTitle: "Erleben Sie die Magie Marokkos",
     testimonialsTitle: "Was Unsere VIP-Gäste Sagen",
     testimonialsSubtitle: "Echte Bewertungen von internationalen Reisenden",
-    readMoreReviews: "Weitere Bewertungen Lesen"
+    readMoreReviews: "Weitere Bewertungen Lesen",
+    viewAllTransport: "Alle Transportmöglichkeiten ansehen",
+    transportTitle: "Unser VIP-Transport & unsere Fahrer",
+    transportSubtitle: "Luxus, Komfort & Sicherheit in ganz Marokko 🌍",
+    transportIntro: "Bei Morocco Loves You ist der Transport nicht nur eine Fortbewegung von einem Ort zum anderen. Er ist Teil des Erlebnisses. Wir bieten moderne, saubere, komfortable und voll klimatisierte Fahrzeuge in ganz Marokko — mit professionellen Fahrern, herzlicher Gastfreundschaft und VIP-Service vom ersten Moment an."
   },
   tours: {
     pageTitle: "Touren & Pakete",
@@ -275,7 +281,9 @@ const de = {
     title: "PREMIUM MAROKKO\nTOUR",
     years: "2026 - 2027",
     departures: "MONATLICHE ABFAHRTEN",
-    allIncluded: "ALLES INKLUSIVE\nVOLLPENSION"
+    allIncluded: "ALLES INKLUSIVE\nVOLLPENSION",
+    recommendations: "Empfehlungen",
+    recCount: "500+ glückliche Reisende"
   },
   cityDetail: {
     notFound: "Stadt nicht gefunden",
@@ -289,6 +297,53 @@ const de = {
     readyToVisitText: "Lassen Sie uns Ihre perfekte Reise zu diesem fantastischen Ziel planen",
     planMyTrip: "Meine Reise Planen",
     talkExpert: "Mit einem Experten Sprechen"
+  },
+  transportation: {
+    pageTitle: "VIP-Transport & Fahrer",
+    pageSubtitle: "Luxus, Komfort & Sicherheit in ganz Marokko",
+    introTitle: "Unser VIP-Transport & unsere Fahrer",
+    introP1: "Bei Morocco Loves You ist der Transport nicht nur eine Fortbewegung von einem Ort zum anderen.",
+    introP2: "Er ist Teil des Erlebnisses.",
+    introP3: "Wir bieten moderne, saubere, komfortable und voll klimatisierte Fahrzeuge in ganz Marokko — mit professionellen Fahrern, herzlicher Gastfreundschaft und VIP-Service vom ersten Moment an.",
+    introP4: "Ob Sie als Paar, Familie, Business-Delegation oder private Gruppe reisen, wir sorgen dafür, dass Ihre Reise sicher, entspannt und unvergesslich wird.",
+    servicesTitle: "Unsere Transportdienstleistungen umfassen",
+    servicesList: [
+      "Moderne VIP-Busse",
+      "Luxus-Minibusse",
+      "Privatwagen",
+      "4x4-Jeeps für Wüstenabenteuer",
+      "VIP-Limousinen",
+      "Flughafentransfer (Abholung & Bringservice)",
+      "Professionelle mehrsprachige Fahrer",
+      "Angenehme Klimatisierung",
+      "Saubere und organisierte Fahrzeuge",
+      "Kühlschränke in ausgewählten Fahrzeugen",
+      "TV- & Unterhaltungssysteme",
+      "Musik während der Fahrt",
+      "Sicheres und ruhiges Fahren",
+      "24/7 Unterstützung in ganz Marokko"
+    ],
+    driversTitle: "Lernen Sie unsere Fahrer kennen",
+    driversText1: "Unsere Fahrer sind Teil der Morocco Loves You-Familie.",
+    driversText2: "Professionell, respektvoll, erfahren und immer bereit, mit einem Lächeln zu helfen.",
+    driversText3: "Viele unserer Fahrer sprechen mehrere Sprachen und kennen Marokko in- und auswendig — so fühlen sich unsere Gäste während der gesamten Reise wohl, sicher und gut aufgehoben.",
+    safetyTitle: "Sicherheit & Komfort zuerst",
+    safetyText1: "Ihr Komfort und Ihre Sicherheit haben für uns oberste Priorität.",
+    safetyText2: "Alle Fahrzeuge werden regelmäßig gewartet, gereinigt und vor jeder Fahrt sorgfältig vorbereitet.",
+    safetyText3: "Wir arbeiten nur mit vertrauenswürdigen professionellen Fahrern und hochwertigen Transportpartnern zusammen.",
+    categories: {
+      buses: "VIP-Busse",
+      minibuses: "Luxus-Minibusse",
+      cars: "Privatwagen & VIP-Transfers",
+      jeeps: "4x4-Jeeps & Wüstentransport",
+      meetDrivers: "Lernen Sie unsere Fahrer kennen",
+      videos: "Videos zum Transporterlebnis"
+    },
+    videoGalleryTitle: "VIP-Erlebnisvideos",
+    ctaTitle: "Bereit, Marokko mit Komfort zu erkunden?",
+    ctaSubtitle: "Sprechen Sie direkt mit Allan – CEO & Gründer",
+    whatsapp: "WhatsApp: +972546338757",
+    moroccoLine: "Direktleitung Marokko: +212 6 63 63 05 79"
   }
 };
 

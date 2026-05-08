@@ -54,12 +54,18 @@ const ko = {
     featuredToursTitle: "추천 투어 및 패키지",
     featuredToursSubtitle: "완벽한 모로코 여행을 위해 세심하게 큐레이션된 경험",
     viewAllTours: "모든 투어 보기",
-    culinaryTitle: "모로코 요리의 우수성",
-    culinarySubtitle: "세계 최고의 요리를 만나보세요",
+    culinaryTitle: "우리의 음식 - 세계 최고",
+    culinarySubtitle: "모로코 요리의 우수성을 경험해보세요 🍲",
     culinaryBtn: "미식 경험 알아보기",
+    culinaryIntro: "Morocco Loves You에서 식사는 단순한 식사가 아닙니다. 그것은 모로코 문화의 심장부로 떠나는 여행입니다. 우리는 전통적인 가정식부터 고급 모로코 미식까지, 사랑과 가장 신선한 현지 식재료로 정성껏 준비된 진정한 엄선된 미식 경험을 제공합니다.",
+    videoTitle: "모로코의 마법을 경험해보세요",
     testimonialsTitle: "VIP 고객 후기",
     testimonialsSubtitle: "전 세계 여행자들의 생생한 리뷰",
-    readMoreReviews: "리뷰 더 보기"
+    readMoreReviews: "리뷰 더 보기",
+    viewAllTransport: "모든 교통 수단 보기",
+    transportTitle: "VIP 교통 서비스 및 기사",
+    transportSubtitle: "모로코 전역에서의 럭셔리함, 편안함, 안전함 🌍",
+    transportIntro: "Morocco Loves You에서 교통은 단순한 이동 수단이 아닙니다. 그것은 경험의 일부입니다. 우리는 전문 기사, 따뜻한 환대, 그리고 첫 순간부터 VIP 서비스를 제공하며, 모로코 전역에 깨끗하고 편안한 최신 에어컨 시설을 갖춘 차량을 제공합니다."
   },
   tours: {
     pageTitle: "투어 및 패키지",
@@ -275,7 +281,9 @@ const ko = {
     title: "프리미엄 모로코\n투어",
     years: "2026 - 2027",
     departures: "매월 출발",
-    allIncluded: "올인클루시브\n풀보드"
+    allIncluded: "올인클루시브\n풀보드",
+    recommendations: "추천",
+    recCount: "500명 이상의 행복한 여행자"
   },
   cityDetail: {
     notFound: "도시를 찾을 수 없습니다",
@@ -289,6 +297,53 @@ const ko = {
     readyToVisitText: "이 놀라운 목적지로의 완벽한 여행을 계획해 드립니다",
     planMyTrip: "내 여행 계획하기",
     talkExpert: "전문가와 상담하기"
+  },
+  transportation: {
+    pageTitle: "VIP 교통 서비스 및 기사",
+    pageSubtitle: "모로코 전역에서의 럭셔리함, 편안함, 안전함",
+    introTitle: "저희의 VIP 교통 서비스 및 기사",
+    introP1: "Morocco Loves You에서 교통은 단순한 이동 수단이 아닙니다.",
+    introP2: "그것은 경험의 일부입니다.",
+    introP3: "우리는 전문 기사, 따뜻한 환대, 그리고 첫 순간부터 VIP 서비스를 제공하며, 모로코 전역에 깨끗하고 편안한 최신 에어컨 시설을 갖춘 차량을 제공합니다.",
+    introP4: "커플, 가족, 비즈니스 대표단 또는 프라이빗 그룹 등 어떤 형태로 여행하시든, 고객님의 여정이 안전하고 편안하며 잊지 못할 추억이 되도록 최선을 다하겠습니다.",
+    servicesTitle: "저희의 교통 서비스에는 다음이 포함됩니다",
+    servicesList: [
+      "최신 VIP 버스",
+      "럭셔리 미니버스",
+      "프라이빗 승용차",
+      "사막 모험을 위한 4x4 지프",
+      "VIP 리무진",
+      "공항 픽업 및 드랍 서비스",
+      "전문 다국어 기사",
+      "쾌적한 에어컨 시설",
+      "깨끗하고 잘 관리된 차량",
+      "일부 차량 내 냉장고 구비",
+      "TV 및 엔터테인먼트 시스템",
+      "여행 중 음악 서비스",
+      "안전하고 부드러운 주행",
+      "모로코 전역 24/7 지원"
+    ],
+    driversTitle: "저희 기사들을 만나보세요",
+    driversText1: "저희 기사들은 Morocco Loves You 가족의 일원입니다.",
+    driversText2: "전문적이고 예의 바르며 경험이 풍부하고 항상 미소로 도와드릴 준비가 되어 있습니다.",
+    driversText3: "많은 기사들이 여러 언어를 구사하며 모로코에 대해 깊이 알고 있습니다. 덕분에 고객님들은 여행 내내 편안함과 안전함, 그리고 현지와의 연결을 느끼실 수 있습니다.",
+    safetyTitle: "안전과 편안함이 최우선입니다",
+    safetyText1: "고객님의 편안함과 안전은 저희의 최우선 순위입니다.",
+    safetyText2: "모든 차량은 정기적으로 점검 및 청소되며, 모든 여행 전에 세심하게 준비됩니다.",
+    safetyText3: "우리는 신뢰할 수 있는 전문 기사 및 고품질 교통 파트너와만 협력합니다.",
+    categories: {
+      buses: "VIP 버스",
+      minibuses: "럭셔리 미니버스",
+      cars: "프라이빗 승용차 및 VIP 이동",
+      jeeps: "4x4 지프 및 사막 교통",
+      meetDrivers: "저희 기사들을 만나보세요",
+      videos: "교통 경험 영상"
+    },
+    videoGalleryTitle: "VIP 경험 영상",
+    ctaTitle: "모로코를 편안하게 탐험할 준비가 되셨나요?",
+    ctaSubtitle: "창립자 겸 CEO인 Allan과 직접 상담하세요",
+    whatsapp: "WhatsApp: +972546338757",
+    moroccoLine: "모로코 직통 전화: +212 6 63 63 05 79"
   }
 };
 

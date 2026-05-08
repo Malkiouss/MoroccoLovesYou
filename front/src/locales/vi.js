@@ -54,12 +54,18 @@ const vi = {
     featuredToursTitle: "Tour & Gói Du Lịch Nổi Bật",
     featuredToursSubtitle: "Những trải nghiệm được tuyển chọn cẩn thận cho cuộc phiêu lưu hoàn hảo tại Maroc",
     viewAllTours: "Xem Tất Cả Các Tour",
-    culinaryTitle: "Tinh Hoa Ẩm Thực Maroc",
-    culinarySubtitle: "Khám phá ẩm thực của chúng tôi — tốt nhất thế giới",
+    culinaryTitle: "Thức ăn của chúng tôi - Tốt nhất thế giới",
+    culinarySubtitle: "Trải nghiệm tinh hoa ẩm thực Ma-rốc 🍲",
     culinaryBtn: "Khám Phá Trải Nghiệm Ẩm Thực",
+    culinaryIntro: "Tại Morocco Loves You, ăn uống không chỉ là việc nạp năng lượng. Đó là một hành trình vào trung tâm văn hóa Ma-rốc. Chúng tôi mang đến những trải nghiệm ẩm thực đích thực, được tuyển chọn kỹ lưỡng — từ những bữa cơm gia đình truyền thống đến ẩm thực Ma-rốc cao cấp, tất cả đều được chuẩn bị bằng tình yêu và những nguyên liệu địa phương tươi ngon nhất.",
+    videoTitle: "Trải nghiệm điều kỳ diệu của Ma-rốc",
     testimonialsTitle: "Khách Hàng VIP Nói Gì",
     testimonialsSubtitle: "Những đánh giá thực tế từ du khách quốc tế",
-    readMoreReviews: "Đọc Thêm Đánh Giá"
+    readMoreReviews: "Đọc Thêm Đánh Giá",
+    viewAllTransport: "Xem tất cả phương tiện",
+    transportTitle: "Dịch vụ vận chuyển & Tài xế VIP của chúng tôi",
+    transportSubtitle: "Sang trọng, Thoải mái & An toàn trên khắp Ma-rốc 🌍",
+    transportIntro: "Tại Morocco Loves You, vận chuyển không chỉ là di chuyển từ nơi này sang nơi khác. Đó là một phần của trải nghiệm. Chúng tôi cung cấp các phương tiện hiện đại, sạch sẽ, thoải mái và có máy lạnh hoàn toàn trên khắp Ma-rốc — với tài xế chuyên nghiệp, lòng hiếu khách nồng hậu và dịch vụ VIP ngay từ những giây phút đầu tiên."
   },
   tours: {
     pageTitle: "Tour & Gói Du Lịch",
@@ -275,7 +281,9 @@ const vi = {
     title: "TOUR MAROC\nCAO CẤP",
     years: "2026 - 2027",
     departures: "KHỞI HÀNH HÀNG THÁNG",
-    allIncluded: "TRỌN GÓI\nFULL BOARD"
+    allIncluded: "TRỌN GÓI\nFULL BOARD",
+    recommendations: "Đề xuất",
+    recCount: "500+ khách du lịch hạnh phúc"
   },
   cityDetail: {
     notFound: "Không tìm thấy thành phố",
@@ -289,6 +297,53 @@ const vi = {
     readyToVisitText: "Hãy để chúng tôi lập kế hoạch cho chuyến đi hoàn hảo của bạn",
     planMyTrip: "Lên Kế Hoạch",
     talkExpert: "Nói Chuyện Chuyên Gia"
+  },
+  transportation: {
+    pageTitle: "Dịch vụ vận chuyển VIP & Tài xế",
+    pageSubtitle: "Sang trọng, Thoải mái & An toàn trên khắp Ma-rốc",
+    introTitle: "Dịch vụ vận chuyển & Tài xế VIP của chúng tôi",
+    introP1: "Tại Morocco Loves You, vận chuyển không chỉ là di chuyển từ nơi này sang nơi khác.",
+    introP2: "Đó là một phần của trải nghiệm.",
+    introP3: "Chúng tôi cung cấp các phương tiện hiện đại, sạch sẽ, thoải mái và có máy lạnh hoàn toàn trên khắp Ma-rốc — với tài xế chuyên nghiệp, lòng hiếu khách nồng hậu và dịch vụ VIP ngay từ những giây phút đầu tiên.",
+    introP4: "Cho dù bạn đi du lịch theo cặp đôi, gia đình, phái đoàn doanh nghiệp hay nhóm riêng, chúng tôi đảm bảo hành trình của bạn sẽ an toàn, thư giãn và khó quên.",
+    servicesTitle: "Dịch vụ vận chuyển của chúng tôi bao gồm",
+    servicesList: [
+      "Xe buýt VIP hiện đại",
+      "Xe minibus sang trọng",
+      "Xe hơi riêng",
+      "Xe Jeep 4x4 cho những chuyến phiêu lưu sa mạc",
+      "Xe Limousine VIP",
+      "Đưa đón sân bay",
+      "Tài xế chuyên nghiệp đa ngôn ngữ",
+      "Máy lạnh thoải mái",
+      "Phương tiện sạch sẽ và ngăn nắp",
+      "Tủ lạnh trên các phương tiện được chọn",
+      "Hệ thống TV & giải trí",
+      "Âm nhạc trong suốt hành trình",
+      "Lái xe an toàn và êm ái",
+      "Hỗ trợ 24/7 trên khắp Ma-rốc"
+    ],
+    driversTitle: "Gặp gỡ các tài xế của chúng tôi",
+    driversText1: "Các tài xế của chúng tôi là một phần của gia đình Morocco Loves You.",
+    driversText2: "Chuyên nghiệp, tôn trọng, giàu kinh nghiệm và luôn sẵn lòng giúp đỡ với nụ cười trên môi.",
+    driversText3: "Nhiều tài xế của chúng tôi nói được nhiều ngôn ngữ và am hiểu sâu sắc về Ma-rốc — giúp khách hàng cảm thấy thoải mái, an toàn và được kết nối trong suốt hành trình.",
+    safetyTitle: "An toàn & Thoải mái là trên hết",
+    safetyText1: "Sự thoải mái và an toàn của bạn là ưu tiên hàng đầu của chúng tôi.",
+    safetyText2: "Tất cả các phương tiện đều được bảo trì thường xuyên, vệ sinh sạch sẽ và chuẩn bị kỹ lưỡng trước mỗi chuyến đi.",
+    safetyText3: "Chúng tôi chỉ làm việc với những tài xế chuyên nghiệp đáng tin cậy và các đối tác vận chuyển chất lượng cao.",
+    categories: {
+      buses: "Xe buýt VIP",
+      minibuses: "Xe minibus sang trọng",
+      cars: "Xe riêng & Chuyển vùng VIP",
+      jeeps: "Xe Jeep 4x4 & Vận chuyển sa mạc",
+      meetDrivers: "Gặp gỡ các tài xế của chúng tôi",
+      videos: "Video trải nghiệm vận chuyển"
+    },
+    videoGalleryTitle: "Video trải nghiệm VIP",
+    ctaTitle: "Sẵn sàng khám phá Ma-rốc một cách thoải mái?",
+    ctaSubtitle: "Nói chuyện trực tiếp với Allan – CEO & Người sáng lập",
+    whatsapp: "WhatsApp: +972546338757",
+    moroccoLine: "Đường dây trực tiếp Ma-rốc: +212 6 63 63 05 79"
   }
 };
 

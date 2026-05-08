@@ -54,12 +54,18 @@ const zh = {
     featuredToursTitle: "精选旅游团和套餐",
     featuredToursSubtitle: "精心策划的体验，为您打造完美的摩洛哥冒险之旅",
     viewAllTours: "查看所有旅游团",
-    culinaryTitle: "摩洛哥卓越的烹饪艺术",
-    culinarySubtitle: "发现我们的美食 —— 世界上最好的",
-    culinaryBtn: "发现美食体验",
+    culinaryTitle: "我们的美食 - 世界第一",
+    culinarySubtitle: "体验摩洛哥烹饪卓越 🍲",
+    culinaryBtn: "探索美食体验",
+    culinaryIntro: "在 Morocco Loves You，用餐不仅仅是进食。这是一场深入摩洛哥文化核心的旅程。我们提供真实、精心挑选的烹饪体验——从传统的家常菜到高端摩洛哥美食，所有食材都充满了爱，并选用最新鲜的当地食材。",
+    videoTitle: "体验摩洛哥的魔力",
     testimonialsTitle: "我们的VIP客人的评价",
     testimonialsSubtitle: "来自国际旅行者的真实评价",
-    readMoreReviews: "阅读更多评价"
+    readMoreReviews: "阅读更多评价",
+    viewAllTransport: "查看所有交通工具",
+    transportTitle: "我们的贵宾 (VIP) 交通服务与司机",
+    transportSubtitle: "纵横摩洛哥的奢华、舒适与安全 🌍",
+    transportIntro: "在 Morocco Loves You，交通不仅仅是从一个地方移动到另一个地方。它是体验的一部分。我们提供现代化、干净、舒适且全空调的车辆遍布摩洛哥 — 配备专业的司机、热情的款待以及从第一刻起的贵宾服务。"
   },
   tours: {
     pageTitle: "旅行团和套餐",
@@ -275,7 +281,9 @@ const zh = {
     title: "摩洛哥\n高级旅游团",
     years: "2026 - 2027",
     departures: "每月出发",
-    allIncluded: "全包\n包含全餐"
+    allIncluded: "全包\n包含全餐",
+    recommendations: "推荐",
+    recCount: "500+ 位快乐的旅行者"
   },
   cityDetail: {
     notFound: "未找到城市",
@@ -289,6 +297,53 @@ const zh = {
     readyToVisitText: "让我们为您计划前往这个令人惊叹的目的地的完美之旅",
     planMyTrip: "计划我的旅行",
     talkExpert: "与专家交谈"
+  },
+  transportation: {
+    pageTitle: "VIP 交通服务与司机",
+    pageSubtitle: "纵横摩洛哥的奢华、舒适与安全",
+    introTitle: "我们的 VIP 交通服务与司机",
+    introP1: "在 Morocco Loves You，交通不仅仅是从一个地方移动到另一个地方。",
+    introP2: "它是体验的一部分。",
+    introP3: "我们提供现代化、干净、舒适且全空调的车辆遍布摩洛哥 — 配备专业的司机、热情的款待以及从第一刻起的贵宾服务。",
+    introP4: "无论您是夫妻、家庭、商务代表团还是私人团体，我们都会确保您的旅程安全、轻松且令人难忘。",
+    servicesTitle: "我们的交通服务包括",
+    servicesList: [
+      "现代化 VIP 巴士",
+      "豪华小巴",
+      "私人轿车",
+      "用于沙漠探险的 4x4 吉普车",
+      "VIP 豪华轿车",
+      "机场接送服务",
+      "专业多语种司机",
+      "舒适的空调系统",
+      "干净整洁的车辆",
+      "部分车辆配备冰箱",
+      "电视和娱乐系统",
+      "旅途中的音乐陪伴",
+      "安全平稳的驾驶",
+      "遍布摩洛哥的 24/7 协助"
+    ],
+    driversTitle: "认识我们的司机",
+    driversText1: "我们的司机是 Morocco Loves You 家族的一员。",
+    driversText2: "专业、敬业、经验丰富，始终准备着以微笑提供帮助。",
+    driversText3: "我们的许多司机精通多种语言，对摩洛哥有深入的了解 —— 帮助我们的客人在整个旅程中感到舒适、安全和紧密连接。",
+    safetyTitle: "安全与舒适至上",
+    safetyText1: "您的舒适和安全是我们的首要任务。",
+    safetyText2: "所有车辆在每次行程前都会定期维护、清洁并精心准备。",
+    safetyText3: "我们仅与值得信赖的专业司机和高质量的运输合作伙伴合作。",
+    categories: {
+      buses: "VIP 巴士",
+      minibuses: "豪华小巴",
+      cars: "私人轿车与 VIP 接送",
+      jeeps: "4x4 吉普车与沙漠交通",
+      meetDrivers: "认识我们的司机",
+      videos: "交通体验视频"
+    },
+    videoGalleryTitle: "VIP 体验视频",
+    ctaTitle: "准备好在舒适中探索摩洛哥了吗？",
+    ctaSubtitle: "直接与创始人兼首席执行官 Allan 沟通",
+    whatsapp: "WhatsApp: +972546338757",
+    moroccoLine: "摩洛哥直拨热线: +212 6 63 63 05 79"
   }
 };
 

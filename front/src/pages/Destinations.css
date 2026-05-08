@@ -8,34 +8,7 @@
   background: #FAFAFA;
 }
 
-.destinations-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
 
-.destinations-section h2 {
-  color: #1A1A1A;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.destinations-intro {
-  text-align: center;
-  color: #555555;
-  font-size: 1.25rem;
-  margin-bottom: 4rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.destinations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-}
 
 /* Explore CTA */
 .explore-cta {

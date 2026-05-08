@@ -54,12 +54,18 @@ const ja = {
     featuredToursTitle: "おすすめのツアーとパッケージ",
     featuredToursSubtitle: "完璧なモロッコ冒険のために厳選された体験",
     viewAllTours: "すべてのツアーを見る",
-    culinaryTitle: "モロッコ料理の素晴らしさ",
-    culinarySubtitle: "世界で最も美味しい料理を発見してください",
+    culinaryTitle: "私たちの料理 - 世界一",
+    culinarySubtitle: "モロッコの卓越した食文化を体験してください 🍲",
     culinaryBtn: "料理体験を見る",
+    culinaryIntro: "Morocco Loves Youでは、食事は単なる食事ではありません。それはモロッコ文化の核心への旅です。私たちは、伝統的な家庭料理から高級なモロッコ料理まで、愛を込めて、最も新鮮な地元の食材で調理された、本物の厳選された食体験を提供します。",
+    videoTitle: "モロッコの魔法を体験してください",
     testimonialsTitle: "VIPゲストの声",
     testimonialsSubtitle: "世界中の旅行者からの本物のレビュー",
-    readMoreReviews: "さらにレビューを読む"
+    readMoreReviews: "さらにレビューを読む",
+    viewAllTransport: "すべての交通手段を表示",
+    transportTitle: "VIP向け交通サービスとドライバー",
+    transportSubtitle: "モロッコ全土でのラグジュアリー、快適さ、そして安全性 🌍",
+    transportIntro: "Morocco Loves Youでは、交通は単なる移動手段ではありません。それは体験の一部です。私たちはモロッコ全土で、プロのドライバー、温かいおもてなし、そして最初から最後までVIPサービスを提供し、清潔で快適な最新のエアコン完備の車両を提供しています。"
   },
   tours: {
     pageTitle: "ツアーとパッケージ",
@@ -275,7 +281,9 @@ const ja = {
     title: "プレミアム モロッコ\nツアー",
     years: "2026 - 2027",
     departures: "毎月出発",
-    allIncluded: "すべて込み\nフルボード"
+    allIncluded: "すべて込み\nフルボード",
+    recommendations: "推奨事項",
+    recCount: "500人以上の幸せな旅行者"
   },
   cityDetail: {
     notFound: "都市が見つかりません",
@@ -289,6 +297,53 @@ const ja = {
     readyToVisitText: "この素晴らしい目的地への完璧な旅を計画させてください",
     planMyTrip: "旅行を計画する",
     talkExpert: "専門家に相談する"
+  },
+  transportation: {
+    pageTitle: "VIP向け交通サービスとドライバー",
+    pageSubtitle: "モロッコ全土でのラグジュアリー、快適さ、そして安全性",
+    introTitle: "私たちの VIP 交通サービスとドライバー",
+    introP1: "Morocco Loves Youでは、交通は単なる移動手段ではありません。",
+    introP2: "それは体験の一部です。",
+    introP3: "私たちはモロッコ全土で、プロのドライバー、温かいおもてなし、そして最初から最後までVIPサービスを提供し、清潔で快適な最新のエアコン完備の車両を提供しています。",
+    introP4: "カップル、ご家族、ビジネス代表団、プライベートグループのいずれで旅行される場合でも、私たちはあなたの旅が安全でリラックスでき、忘れられないものになるよう努めます。",
+    servicesTitle: "私たちの交通サービスには以下が含まれます",
+    servicesList: [
+      "最新の VIP バス",
+      "豪華ミニバス",
+      "プライベートカー",
+      "砂漠探険用 4x4 ジープ",
+      "VIP リムジン",
+      "空港送迎サービス",
+      "プロの多言語ドライバー",
+      "快適なエアコン完備",
+      "清潔で整理された車両",
+      "一部の車両には冷蔵庫を完備",
+      "テレビとエンターテイメントシステム",
+      "旅の間の音楽",
+      "安全でスムーズな運転",
+      "モロッコ全土での 24 時間年中無休のサポート"
+    ],
+    driversTitle: "ドライバーの紹介",
+    driversText1: "私たちのドライバーは Morocco Loves You ファミリーの一員です。",
+    driversText2: "プロフェッショナルで、礼儀正しく、経験豊富で、常に笑顔でサポートする準備ができています。",
+    driversText3: "多くのドライバーが複数の言語を話し、モロッコを深く知っています。これにより、お客様は旅の間中、快適で安全、そしてつながりを感じることができます。",
+    safetyTitle: "安全性と快適さを第一に",
+    safetyText1: "お客様の快適さと安全は私たちの最優先事項です。",
+    safetyText2: "すべての車両は定期的にメンテナンス、清掃され、すべての旅行の前に慎重に準備されます。",
+    safetyText3: "私たちは、信頼できるプロのドライバーと高品質の輸送パートナーのみと協力しています。",
+    categories: {
+      buses: "VIP バス",
+      minibuses: "豪華ミニバス",
+      cars: "プライベートカーと VIP 送迎",
+      jeeps: "4x4 ジープと砂漠の交通",
+      meetDrivers: "ドライバーの紹介",
+      videos: "交通体験ビデオ"
+    },
+    videoGalleryTitle: "VIP 体験ビデオ",
+    ctaTitle: "快適にモロッコを探索する準備はできましたか？",
+    ctaSubtitle: "創業者兼 CEO の Allan と直接話す",
+    whatsapp: "WhatsApp: +972546338757",
+    moroccoLine: "モロッコ直通電話: +212 6 63 63 05 79"
   }
 };
 
