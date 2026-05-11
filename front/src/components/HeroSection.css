@@ -618,15 +618,14 @@ nav {
 @media (max-width: 768px) {
   nav {
     padding: 10px 20px;
-    justify-content: center;
-    /* Center logo on mobile */
+    justify-content: flex-start;
     top: 125px;
     height: auto;
   }
 
   .logo img {
-    height: 120px;
-    /* Smaller logo for mobile */
+    height: 50px;
+    /* Compact size for the corner */
   }
 
   .nav-links {

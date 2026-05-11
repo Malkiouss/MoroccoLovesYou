@@ -20,11 +20,6 @@ export default function PageHeader({ title, subtitle, bgImage }) {
     <>
       {/* NAV */}
       <nav className="page-nav">
-        <div className="logo">
-          <Link to="/">
-            <img src="/assets/images/logoMorocco1.png" alt="MoroccoLovesYou Logo" />
-          </Link>
-        </div>
         <div className="nav-links">
           <Link to="/">{t('nav.home')}</Link>
           <Link to="/tours">{t('nav.tours')}</Link>
