@@ -16,7 +16,7 @@
 
 .page-nav {
   position: absolute;
-  top: 60px;
+  top: 114px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -63,6 +63,7 @@
 
 @media (max-width: 768px) {
   .page-nav {
-    padding: 18px 20px;
+    padding: 10px 20px;
+    top: 125px;
   }
 }

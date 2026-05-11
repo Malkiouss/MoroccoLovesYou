@@ -69,14 +69,10 @@ export default function Home() {
     <div className="home">
       <HeroSection />
 
-      {/* Premium Banner 1: VIP Morocco Travel Experiences */}
-      <section className="premium-banner vip-banner">
-        <div className="banner-content">
-          <h2>{t('home.vipBannerTitle')}</h2>
-          <p>{t('home.vipBannerText')}</p>
-          <Link to="/vip" className="btn-primary">{t('home.vipBannerBtn')}</Link>
-        </div>
-      </section>
+ {/* Video Experience Section */}
+      <VideoSection />
+
+     
 
       {/* White strip wraps the WC card — breaks up the two dark sections */}
       <div className="wc2030-strip">
@@ -107,7 +103,14 @@ export default function Home() {
       </div>
 
      
-
+ {/* Premium Banner 1: VIP Morocco Travel Experiences */}
+      <section className="premium-banner vip-banner">
+        <div className="banner-content">
+          <h2>{t('home.vipBannerTitle')}</h2>
+          <p>{t('home.vipBannerText')}</p>
+          <Link to="/vip" className="btn-primary">{t('home.vipBannerBtn')}</Link>
+        </div>
+      </section>
     
       {/* Gallery Section */}
       <GallerySection />
@@ -130,8 +133,7 @@ export default function Home() {
       {/* Culinary Section — mimic BusSection */}
       <CulinarySection />
 
-      {/* Video Experience Section */}
-      <VideoSection />
+     
 
       {/* Bus Section */}
       <BusSection />

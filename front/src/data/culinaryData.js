@@ -1,33 +1,44 @@
 export const culinaryPhotos = [
-  {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1541518763669-27f9044d8ad8?w=800&q=80",
-    alt: "Traditional Moroccan Tagine",
-    title: "Authentic Lamb Tagine"
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1541742425281-c1d3fc8aa964?w=800&q=80",
-    alt: "Moroccan Couscous with Vegetables",
-    title: "Royal Couscous"
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
-    alt: "Moroccan Mint Tea and Sweets",
-    title: "Tea Ceremony & Sweets"
-  }
+  { id: 1, src: "/assets/food/food (1).png", alt: "Moroccan Culinary" },
+  { id: 2, src: "/assets/food/food.jpg", alt: "Moroccan Culinary" },
+  { id: 3, src: "/assets/food/food (3).png", alt: "Moroccan Culinary" },
+  { id: 4, src: "/assets/food/food (4).png", alt: "Moroccan Culinary" },
+  { id: 5, src: "/assets/food/food (5).png", alt: "Moroccan Culinary" },
+  { id: 6, src: "/assets/food/food (6).png", alt: "Moroccan Culinary" },
+  { id: 7, src: "/assets/food/food (7).png", alt: "Moroccan Culinary" },
+  { id: 8, src: "/assets/food/food (8).png", alt: "Moroccan Culinary" },
+  { id: 9, src: "/assets/food/food (9).png", alt: "Moroccan Culinary" },
+  { id: 10, src: "/assets/food/food (10).png", alt: "Moroccan Culinary" },
+  { id: 11, src: "/assets/food/food (11).png", alt: "Moroccan Culinary" },
+  { id: 12, src: "/assets/food/food (12).png", alt: "Moroccan Culinary" },
+  { id: 13, src: "/assets/food/food (13).png", alt: "Moroccan Culinary" },
+  { id: 14, src: "/assets/food/food (14).png", alt: "Moroccan Culinary" },
+  { id: 15, src: "/assets/food/food (15).png", alt: "Moroccan Culinary" },
+  { id: 16, src: "/assets/food/food (16).png", alt: "Moroccan Culinary" },
+  { id: 17, src: "/assets/food/food (17).png", alt: "Moroccan Culinary" },
+  { id: 18, src: "/assets/food/food (18).png", alt: "Moroccan Culinary" },
+  { id: 19, src: "/assets/food/food (19).png", alt: "Moroccan Culinary" },
+  { id: 20, src: "/assets/food/food (20).png", alt: "Moroccan Culinary" },
+  { id: 21, src: "/assets/food/food (21).png", alt: "Moroccan Culinary" },
+  { id: 22, src: "/assets/food/food (22).png", alt: "Moroccan Culinary" },
+  { id: 23, src: "/assets/food/food (23).png", alt: "Moroccan Culinary" },
+  { id: 26, src: "/assets/food/food (26).png", alt: "Moroccan Culinary" },
+  { id: 27, src: "/assets/food/food (27).png", alt: "Moroccan Culinary" },
+  { id: 28, src: "/assets/food/food (28).png", alt: "Moroccan Culinary" },
+  { id: 29, src: "/assets/food/food (29).png", alt: "Moroccan Culinary" },
+  { id: 30, src: "/assets/food/food (30).png", alt: "Moroccan Culinary" },
+  { id: 31, src: "/assets/food/food (2).png", alt: "Moroccan Culinary" }
 ];
 
 export const culinaryVideos = [
-  {
-    id: 1,
-    src: "https://v1.bg.yne.io/5f1b5b/1/6/6/1665516035_63469603be49f.mp4", // Random food video placeholder or real if I find one
-    title: "Traditional Cooking Process"
-  },
-  {
-    id: 2,
-    src: "https://v1.bg.yne.io/5f1b5b/1/6/6/1665516035_63469603be49f.mp4",
-    title: "The Art of Spices"
-  }
+  { id: 1, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531781/WhatsApp_Video_2026-05-10_at_19.03.23_pj6etl.mp4", title: "Moroccan Culinary Magic" },
+  { id: 2, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531787/WhatsApp_Video_2026-05-10_at_19.03.22_eot8su.mp4", title: "Authentic Kitchen Moments" },
+  { id: 3, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531734/WhatsApp_Video_2026-05-10_at_18.02.41_baolwh.mp4", title: "Traditional Tagine Secrets" },
+  { id: 4, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531797/WhatsApp_Video_2026-05-10_at_19.03.51_x12icx.mp4", title: "The Art of Moroccan Spices" },
+  { id: 5, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531809/WhatsApp_Video_2026-05-10_at_18.04.43_h1ykai.mp4", title: "Fresh Ingredients Journey" },
+  { id: 6, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531847/WhatsApp_Video_2026-05-10_at_18.07.59_ilklkv.mp4", title: "Moroccan Hospitality & Tea" },
+  { id: 7, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531850/WhatsApp_Video_2026-05-10_at_18.08.30_c8jfui.mp4", title: "Savoring Local Flavors" },
+  { id: 8, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531886/WhatsApp_Video_2026-05-10_at_18.11.12_zkj3e2.mp4", title: "Gourmet Morocco Experience" },
+  { id: 9, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531908/WhatsApp_Video_2026-05-10_at_18.37.10_avtmcp.mp4", title: "Traditional Breakfast Ritual" },
+  { id: 10, src: "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778531909/WhatsApp_Video_2026-05-10_at_19.04.25_wtmfuk.mp4", title: "Culinary Heritage of Morocco" }
 ];

@@ -9,6 +9,7 @@ export default function BusSection() {
   const navigate = useNavigate();
   const displayPhotos = busPhotos.slice(0, 3);
   const featuredVideos = busVideos.slice(0, 2);
+  const LOGO_SRC = "/assets/vidlogo.png";
 
   const handleCardClick = () => {
     navigate("/transportation");
@@ -42,6 +43,9 @@ export default function BusSection() {
       <div className="bus-videos-preview">
         {featuredVideos.map((video) => (
           <div className="bus-video-card-mini" key={video.id}>
+            <div className="mini-video-watermark">
+              <img src={LOGO_SRC} alt="Logo" />
+            </div>
             <video 
               controls 
               autoPlay 

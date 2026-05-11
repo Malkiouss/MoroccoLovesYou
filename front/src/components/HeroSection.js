@@ -52,13 +52,16 @@ export default function HeroSection() {
       <section className="hero">
         <div className="hero-bg" />
         <div className="hero-content">
+          
           <span className="hero-star" aria-hidden="true">
             <Star />
           </span>
+          
           <h1>
             <span className="line1">{t('hero.welcome')}</span>
             <span className="line2">{t('hero.welcomeHome')}</span>
           </h1>
+
           <p className="hero-sub">
             {t('hero.subtitle')}<br />
             {t('hero.subtitleLine2')}
@@ -83,13 +86,8 @@ export default function HeroSection() {
             <span className="dot">•</span>
             <span>{t('hero.personalizedOnly')}</span>
           </div>
-
-          
         </div>
       </section>
-
-      {/* WORLD CUP BANNER */}
-      
 
       {/* FOOTER STRIP */}
       <div className="footer-strip">

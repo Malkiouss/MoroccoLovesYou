@@ -23,6 +23,7 @@ import StarBanner from './components/StarBanner';
 import TourMiniBanner from './components/TourMiniBanner';
 import SocialFloating from './components/SocialFloating';
 import Transportation from './pages/Transportation';
+import UnityBanner from './components/UnityBanner';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
          
         <div className="App">
           <LanguageSelector />
+          <UnityBanner />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

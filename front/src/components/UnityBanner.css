@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap');
+
+.unity-banner {
+  width: 100%;
+  background: #0D1F17;
+  border-bottom: 1px solid rgba(219, 159, 70, 0.25);
+  height: 65px; 
+  padding: 0 20px;
+  position: absolute;
+  top: 60px; 
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.unity-container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.unity-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.line-left {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 175, 88, 0.5));
+}
+
+.line-right {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, transparent, rgba(212, 175, 88, 0.5));
+}
+
+.unity-symbols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 18px;
+}
+
+.sym-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: fadeUp 0.6s ease both;
+}
+
+/* Staggered animation delays */
+.sym-wrap:nth-of-type(1) { animation-delay: 0.05s; }
+.sym-wrap:nth-of-type(2) { animation-delay: 0.12s; }
+.sym-wrap:nth-of-type(3) { animation-delay: 0.19s; }
+.sym-wrap:nth-of-type(4) { animation-delay: 0.26s; }
+.sym-wrap:nth-of-type(5) { animation-delay: 0.33s; }
+.sym-wrap:nth-of-type(6) { animation-delay: 0.40s; }
+.sym-wrap:nth-of-type(7) { animation-delay: 0.47s; }
+.sym-wrap:nth-of-type(8) { animation-delay: 0.54s; }
+.sym-wrap:nth-of-type(9) { animation-delay: 0.61s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sym-wrap svg {
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: default;
+}
+
+.sym-wrap:hover svg {
+  transform: scale(1.18) translateY(-2px);
+  filter: drop-shadow(0 4px 10px rgba(255, 255, 255, 0.2));
+}
+
+.sym-label {
+  display: none;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.dot-sep {
+  display: none;
+  color: rgba(212, 175, 88, 0.5);
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.unity-quote {
+  display: none;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(12px, 1vw, 14px);
+  color: rgba(212, 175, 88, 0.85);
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .unity-divider {
+    max-width: 100%;
+  }
+  .unity-symbols {
+    gap: 4px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .unity-banner {
+    top: 52px; 
+    height: auto;
+    min-height: auto;
+    padding: 10px 15px;
+  }
+  
+  .line-left, .line-right {
+    display: none; /* Hide lines on small screens to save space */
+  }
+
+  .unity-symbols {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .sym-label {
+    display: none; /* Hide labels on very small screens as per previous phone style */
+  }
+
+  .dot-sep {
+    display: none; /* Hide separators on phone as per previous style */
+  }
+
+  .sym-wrap svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .unity-quote {
+    display: block; /* Show quote on phone as it was previously visible */
+    font-size: 11px;
+    white-space: normal;
+  }
+}

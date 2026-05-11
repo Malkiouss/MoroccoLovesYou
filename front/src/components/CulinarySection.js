@@ -7,8 +7,8 @@ import "./CulinarySection.css";
 export default function CulinarySection() {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const displayPhotos = culinaryPhotos.slice(0, 3);
   const featuredVideos = culinaryVideos.slice(0, 2);
+  const LOGO_SRC = "/assets/vidlogo.png";
 
   const handleCardClick = () => {
     navigate("/experiences");
@@ -26,13 +26,9 @@ export default function CulinarySection() {
       </div>
 
       <div className="culinary-cards">
-        {displayPhotos.map((photo) => (
+        {culinaryPhotos.slice(0, 3).map((photo) => (
           <div className="culinary-card" key={photo.id} onClick={handleCardClick}>
             <img src={photo.src} alt={photo.alt} />
-            <div className="culinary-overlay">
-              <h3>{photo.title}</h3>
-              <p>{t('home.culinaryBtn')}</p>
-            </div>
           </div>
         ))}
       </div>
@@ -46,6 +42,9 @@ export default function CulinarySection() {
       <div className="culinary-videos-preview">
         {featuredVideos.map((video) => (
           <div className="culinary-video-card-mini" key={video.id}>
+            <div className="mini-video-watermark">
+              <img src={LOGO_SRC} alt="Logo" />
+            </div>
             <video 
               controls 
               autoPlay 
@@ -58,9 +57,6 @@ export default function CulinarySection() {
               <source src={video.src} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="video-mini-overlay">
-              <span>{video.title}</span>
-            </div>
           </div>
         ))}
       </div>

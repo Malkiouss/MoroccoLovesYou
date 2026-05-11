@@ -38,11 +38,10 @@ export default function VideoSection() {
       <h2 className="video-title">{t('home.videoTitle')}</h2>
 
       <div className="video-wrapper" onClick={togglePlay}>
-        {/* Logo watermark — always visible on top-left */}
+        {/* Logo watermark */}
         <div className="video-logo-overlay">
           <img src={LOGO_SRC} alt="Logo" className="video-logo" />
         </div>
-
         <video
           ref={videoRef}
           className="video-player"

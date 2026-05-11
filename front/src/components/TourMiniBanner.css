@@ -1,4 +1,30 @@
 /* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --gold:          #d4af37;
+  --gold-light:    #f0d060;
+  --gold-pale:     #fef3c7;
+  --crimson-deep:  #5a0808;
+  --crimson:       #8b0d0d;
+  --crimson-mid:   #a81515;
+  --forest-deep:   #0b4d22;
+  --forest:        #157a38;
+  --forest-light:  #1da54d;
+  --ink:           #080f1a;
+  --ink-mid:       #0d1825;
+  --ink-light:     #1a2a3d;
+  --white:         #ffffff;
+  --white-60:      rgba(255, 255, 255, 0.6);
+  --white-20:      rgba(255, 255, 255, 0.2);
+  --white-10:      rgba(255, 255, 255, 0.1);
+  --shadow-xl:     0 24px 64px rgba(0, 0, 0, 0.65), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-gold:   0 0 0 1px rgba(212, 175, 55, 0.3), 0 8px 32px rgba(0, 0, 0, 0.5);
+  --ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
    FLOATING WRAPPER
    ============================================ */
 .tour-mini-float {
@@ -10,76 +36,116 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.tour-mini-float:hover .tour-mini-card {
-  transform: scale(1.05);
-  filter: brightness(1.1);
 }
 
 /* ============================================
-   RECOMMENDATIONS BADGE (separate from card)
+   VIDEO BADGE
    ============================================ */
-.tour-mini-rec-badge {
+.tour-mini-video-badge {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 230px;
+  transition: transform 0.4s var(--ease-bounce), filter 0.3s ease;
+  will-change: transform;
+}
+
+.tour-mini-video-badge:hover {
+  transform: translateY(-3px) scale(1.04);
+  filter: brightness(1.05);
+}
+
+.video-badge-thumb {
+  position: relative;
+  width: 100%;
+  height: 132px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.video-badge-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.video-badge-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  border: 2px solid #d4af37;
-  border-radius: 8px;
-  padding: 12px 14px 10px;
+  color: var(--white);
+  transition: background 0.35s ease;
+}
+
+.tour-mini-video-badge:hover .video-badge-overlay {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.video-badge-watermark {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  opacity: 0.85;
+}
+
+.video-badge-watermark img {
+  width: 38px;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+.video-badge-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
+    transparent 100%
+  );
+  padding: 20px 12px 10px;
   text-align: center;
-  width: 230px;
-  box-sizing: border-box;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
 }
 
-.tour-mini-rec-badge:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
-}
-
-.tour-mini-rec-stars {
-  font-size: 18px;
-  color: #d4af37;
-  letter-spacing: 3px;
-  line-height: 1;
-}
-
-.tour-mini-rec-text {
-  margin-top: 5px;
-  font-size: 16px;
+.video-badge-label span {
+  display: block;
+  font-size: 12px;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family: Georgia, 'Times New Roman', serif;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-.tour-mini-rec-count {
+.video-badge-label .stars {
+  font-size: 13px;
+  color: var(--gold);
   margin-top: 3px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #d4af37;
-  font-family: Georgia, 'Times New Roman', serif;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
 }
 
 /* ============================================
@@ -89,24 +155,65 @@
   display: flex;
   flex-direction: column;
   width: 200px;
-  border: 2.5px solid #d4af37;
-  border-radius: 8px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.55),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-xl);
   font-family: Georgia, 'Times New Roman', serif;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.4s var(--ease-bounce), box-shadow 0.35s ease;
+  will-change: transform;
+  position: relative;
+}
+
+.tour-mini-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.tour-mini-float:hover .tour-mini-card {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(212, 175, 55, 0.5),
+    0 0 40px rgba(212, 175, 55, 0.12);
 }
 
 /* ============================================
-   TOP — dark red section
+   TOP — crimson header
    ============================================ */
 .tour-mini-top {
-  background: linear-gradient(180deg, #6b0a0a 0%, #9b1010 40%, #b31a1a 100%);
-  padding: 12px 8px 8px;
+  background:
+    linear-gradient(180deg,
+      var(--crimson-deep) 0%,
+      var(--crimson)      45%,
+      var(--crimson-mid)  100%
+    );
+  padding: 14px 10px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-mini-top::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 .tour-mini-top h3 {
@@ -114,38 +221,64 @@
   font-size: 17px;
   line-height: 1.1;
   font-weight: 900;
-  color: #ffffff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  letter-spacing: 0.3px;
+  color: var(--white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 1;
 }
 
 .tour-mini-title {
   margin: 6px 0 0;
-  font-size: 9.5px;
-  line-height: 1.25;
+  font-size: 9px;
+  line-height: 1.3;
   font-weight: 800;
-  color: #ffd76a;
-  letter-spacing: 0.5px;
+  color: var(--gold-light);
+  letter-spacing: 0.8px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ============================================
-   MIDDLE — green date band
+   MIDDLE — forest date band
    ============================================ */
 .tour-mini-date {
-  background: linear-gradient(180deg, #1f8a3f 0%, #0f6b2c 100%);
-  padding: 7px 6px 6px;
-  border-top: 1.5px solid rgba(212, 175, 55, 0.85);
-  border-bottom: 1.5px solid rgba(212, 175, 55, 0.85);
+  background:
+    linear-gradient(180deg,
+      var(--forest-light) 0%,
+      var(--forest)       40%,
+      var(--forest-deep)  100%
+    );
+  padding: 8px 8px 7px;
+  border-top: 1.5px solid rgba(212, 175, 55, 0.75);
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.75);
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-mini-date::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 .tour-mini-date span {
   display: block;
   font-size: 13px;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--white);
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
 }
 
 .tour-mini-date small {
@@ -153,22 +286,46 @@
   margin-top: 2px;
   font-size: 6.5px;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: 0.8px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================
-   BOTTOM — dark section with flag + text
+   BOTTOM — ink section with flag
    ============================================ */
 .tour-mini-bottom {
-  background: linear-gradient(180deg, #111827 0%, #0d1520 100%);
-  padding: 8px 8px 10px;
+  background:
+    linear-gradient(180deg,
+      var(--ink-mid)   0%,
+      var(--ink)       100%
+    );
+  padding: 9px 10px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;
+  gap: 6px;
   min-height: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-mini-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 175, 55, 0.4) 30%,
+    rgba(212, 175, 55, 0.4) 70%,
+    transparent
+  );
 }
 
 .tour-mini-flag {
@@ -176,56 +333,73 @@
   width: 32px;
   height: 22px;
   background: #c1121f;
-  border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+
+.tour-mini-flag::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 60%
+  );
 }
 
 .flag-star {
   font-size: 11px;
   color: #006233;
   line-height: 1;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  -webkit-text-stroke: 0.4px #004d28;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke: 0.3px #004a24;
+  position: relative;
+  z-index: 1;
 }
 
 .tour-mini-included {
   flex: 1;
   margin: 0;
-  font-size: 8.5px;
-  line-height: 1.4;
+  font-size: 8px;
+  line-height: 1.5;
   font-weight: 800;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.88);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* ============================================
-   TABLET
+   TABLET  ≤ 992px
    ============================================ */
 @media (max-width: 992px) {
-  .tour-mini-float      { left: 14px; }
+  .tour-mini-float         { left: 14px; }
 
-  .tour-mini-rec-badge  { width: 160px; padding: 10px 14px 8px; }
-  .tour-mini-rec-stars  { font-size: 15px; }
-  .tour-mini-rec-text   { font-size: 13px; letter-spacing: 1px; }
-  .tour-mini-rec-count  { font-size: 9px; }
+  .tour-mini-video-badge   { width: 160px; }
+  .video-badge-thumb       { height: 90px; border-radius: 10px; }
+  .video-badge-label span  { font-size: 10px; letter-spacing: 1px; }
+  .video-badge-label .stars{ font-size: 10px; }
 
-  .tour-mini-card       { width: 140px; }
-  .tour-mini-top h3     { font-size: 15px; }
-  .tour-mini-title      { font-size: 8.5px; }
-  .tour-mini-date span  { font-size: 12px; }
-  .tour-mini-date small { font-size: 6px; }
-  .tour-mini-included   { font-size: 8px; }
+  .tour-mini-card          { width: 142px; border-radius: 10px; }
+  .tour-mini-top h3        { font-size: 15px; }
+  .tour-mini-title         { font-size: 8px; }
+  .tour-mini-date span     { font-size: 12px; }
+  .tour-mini-date small    { font-size: 6px; }
+  .tour-mini-included      { font-size: 7.5px; }
 }
 
 /* ============================================
-   MOBILE
+   MOBILE  ≤ 768px
    ============================================ */
 @media (max-width: 768px) {
   .tour-mini-float {
@@ -235,33 +409,224 @@
     transform: none;
   }
 
-  .tour-mini-rec-badge  { width: 110px; padding: 8px 10px 7px; }
-  .tour-mini-rec-stars  { font-size: 12px; letter-spacing: 1px; }
-  .tour-mini-rec-text   { font-size: 10px; letter-spacing: 0.5px; }
-  .tour-mini-rec-count  { font-size: 7.5px; }
+  .tour-mini-float:hover .tour-mini-card {
+    transform: translateY(-2px) scale(1.02);
+  }
 
-  .tour-mini-card       { width: 90px; border-radius: 6px; border-width: 2px; }
-  .tour-mini-top        { padding: 9px 6px 6px; }
-  .tour-mini-top h3     { font-size: 12px; }
-  .tour-mini-title      { font-size: 7px; letter-spacing: 0.2px; }
-  .tour-mini-date       { padding: 5px 4px; }
-  .tour-mini-date span  { font-size: 10px; }
-  .tour-mini-date small { font-size: 5.5px; }
-  .tour-mini-bottom     { padding: 6px 6px 8px; min-height: 44px; }
-  .tour-mini-flag       { width: 24px; height: 17px; }
-  .flag-star            { font-size: 8px; }
-  .tour-mini-included   { font-size: 7px; }
+  .tour-mini-video-badge   { width: 112px; }
+  .video-badge-thumb       { height: 72px; border-radius: 8px; }
+  .video-badge-label       { padding: 10px 5px 5px; }
+  .video-badge-label span  { font-size: 8px; letter-spacing: 0.8px; }
+  .video-badge-label .stars{ font-size: 8px; }
+
+  .tour-mini-card          { width: 92px; border-radius: 7px; border-width: 1.5px; }
+  .tour-mini-top           { padding: 10px 7px 7px; }
+  .tour-mini-top h3        { font-size: 12px; }
+  .tour-mini-title         { font-size: 6.5px; letter-spacing: 0.3px; }
+  .tour-mini-date          { padding: 6px 5px 5px; }
+  .tour-mini-date span     { font-size: 10px; }
+  .tour-mini-date small    { font-size: 5.5px; }
+  .tour-mini-bottom        { padding: 7px 7px 9px; min-height: 44px; gap: 4px; }
+  .tour-mini-flag          { width: 24px; height: 17px; }
+  .flag-star               { font-size: 8px; }
+  .tour-mini-included      { font-size: 7px; }
 }
 
 /* ============================================
-   VERY SMALL PHONES
+   VERY SMALL  ≤ 380px
    ============================================ */
 @media (max-width: 380px) {
-  .tour-mini-rec-badge  { width: 96px; padding: 7px 8px 6px; }
-  .tour-mini-rec-text   { font-size: 9px; }
-  .tour-mini-card       { width: 80px; }
-  .tour-mini-top h3     { font-size: 11px; }
-  .tour-mini-title      { font-size: 6.5px; }
-  .tour-mini-date span  { font-size: 9px; }
-  .tour-mini-included   { font-size: 6.5px; }
+  .tour-mini-video-badge   { width: 96px; }
+  .video-badge-thumb       { height: 60px; }
+  .video-badge-label span  { font-size: 7px; }
+
+  .tour-mini-card          { width: 80px; }
+  .tour-mini-top h3        { font-size: 11px; }
+  .tour-mini-title         { font-size: 6px; }
+  .tour-mini-date span     { font-size: 9px; }
+  .tour-mini-included      { font-size: 6.5px; }
+}
+
+/* ============================================
+   VIDEO LIGHTBOX OVERLAY
+   ============================================ */
+.video-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.97);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lb-fade-in 0.3s var(--ease-out) forwards;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.video-lightbox-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 85vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: lb-scale-in 0.38s var(--ease-out) forwards;
+}
+
+/* Close button */
+.video-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 110;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.video-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* ============================================
+   LIGHTBOX VIDEO STYLES
+   ============================================ */
+.lightbox-video.video-showcase {
+  padding: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox-video .video-title {
+  display: none; /* Hide title for a cleaner look as requested */
+}
+
+.lightbox-video .video-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.lightbox-video .video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Use cover to fill the 20px rounded container */
+}
+
+/* Logo watermark */
+.video-logo-overlay {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.video-logo {
+  width: clamp(110px, 14vw, 200px);
+  height: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.7));
+}
+
+/* Play button */
+.video-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 82px;
+  height: 82px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 25;
+  transition:
+    transform 0.35s var(--ease-bounce),
+    background 0.25s ease,
+    opacity 0.3s ease;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.video-btn:hover {
+  transform: scale(1.1);
+  background: var(--white);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.6),
+    0 0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+.video-btn.playing {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-wrapper:hover .video-btn.playing {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================================
+   KEYFRAMES
+   ============================================ */
+@keyframes lb-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes lb-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   MOBILE — lightbox
+   ============================================ */
+@media (max-width: 768px) {
+  .video-lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .video-btn {
+    width: 64px;
+    height: 64px;
+  }
+
+  .video-logo-overlay {
+    top: 16px;
+    left: 16px;
+  }
 }
