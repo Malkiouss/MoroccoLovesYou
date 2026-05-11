@@ -624,7 +624,8 @@ nav {
   }
 
   .logo img {
-    height: 50px;
+    height: 90px;
+    width: auto;
     /* Compact size for the corner */
   }
 
