@@ -1,7 +1,7 @@
 .culinary-section {
   width: 100%;
   padding: 90px 20px;
-  background: #ffffff;
+  background: #062016;
   text-align: center;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .culinary-header p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
   margin-bottom: 30px;
 }
@@ -24,7 +24,7 @@
 }
 
 .culinary-intro p {
-  color: #444;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 18px;
   line-height: 1.8;
 }
@@ -127,9 +127,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.05),
-      rgba(60, 5, 12, 0.95));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(47, 12, 17, 0.562));
 }
 
 .culinary-overlay h3 {
@@ -156,9 +154,9 @@
 }
 
 .culinary-features span {
-  color: #062016;
-  background: rgba(6, 32, 22, 0.05);
-  border: 1px solid rgba(6, 32, 22, 0.15);
+  color: #d99b3d;
+  background: rgba(217, 155, 61, 0.1);
+  border: 1px solid rgba(217, 155, 61, 0.3);
   padding: 12px 18px;
   border-radius: 30px;
   font-size: 15px;
@@ -196,8 +194,8 @@
   margin: 55px auto 0;
   padding: 35px 25px;
   border-radius: 20px;
-  background: #062016;
-  border: 1px solid #eee;
+  background: #fff;
+  border: 1px solid rgba(217, 155, 61, 0.2);
 }
 
 .culinary-cta h3 {
@@ -208,7 +206,7 @@
 }
 
 .culinary-cta p {
-  color: #555;
+  color: rgba(0, 0, 0, 0.8);
   margin-bottom: 22px;
   font-size: 17px;
 }
