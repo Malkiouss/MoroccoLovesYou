@@ -36,7 +36,7 @@ nav {
   top: 114px;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,8 +47,14 @@ nav {
   background: transparent;
 }
 
-.logo {
+.navbar-brand-group {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -617,14 +623,14 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    padding: 10px 20px;
+    padding: 0 5px;
     justify-content: flex-start;
-    top: 125px;
+    top: 100px;
     height: auto;
   }
 
   .logo img {
-    height: 90px;
+    height: 140px;
     width: auto;
     /* Compact size for the corner */
   }

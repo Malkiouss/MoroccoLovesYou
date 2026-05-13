@@ -14,9 +14,20 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-           <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" />
-        </Link>
+        <div className="navbar-brand-group">
+          <div className="royal-portrait">
+            <svg className="royal-crown-icon" viewBox="0 0 24 24" fill="#C9A227" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5ZM19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z" />
+            </svg>
+            <div className="royal-portrait-frame">
+              <img src="/assets/king.jpeg" alt="King Hassan III" />
+            </div>
+            <span className="royal-portrait-text">Kingdom of Morocco</span>
+          </div>
+          <Link to="/" className="navbar-logo">
+             <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" />
+          </Link>
+        </div>
         <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>

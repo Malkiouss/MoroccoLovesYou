@@ -30,7 +30,7 @@
 .tour-mini-float {
   position: fixed;
   left: 20px;
-  top: 55%;
+  top: 65%;
   transform: translateY(-50%);
   z-index: 9999;
   display: flex;
