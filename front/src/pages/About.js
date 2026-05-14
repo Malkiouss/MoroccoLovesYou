@@ -6,12 +6,12 @@ import './About.css';
 
 export default function About() {
   const { t } = useLanguage();
-  const teamMembers = [
+  /*const teamMembers = [
     { id: 1, name: 'Fatima Hassan', role: 'Founder & CEO', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop', bio: 'Travel enthusiast with 15+ years of experience in Morocco tourism.' },
     { id: 2, name: 'Ahmed Bennani', role: 'Operations Director', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop', bio: 'Expert in creating unforgettable travel experiences for diverse groups.' },
     { id: 3, name: 'Layla Rahim', role: 'Customer Experience Manager', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop', bio: 'Dedicated to ensuring every guest has a magical Moroccan journey.' },
     { id: 4, name: 'Youssef Alaoui', role: 'Lead Tour Guide', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop', bio: 'Passionate storyteller sharing the rich history and culture of Morocco.' },
-  ];
+  ];*/
 
   return (
     <div className="about">
@@ -47,22 +47,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="team-section">
-        <div className="team-container">
-          <h2>{t('about.teamTitle')}</h2>
-          <p className="section-subtitle">{t('about.teamSubtitle')}</p>
-          <div className="team-grid">
-            {teamMembers.map(member => (
-              <div key={member.id} className="team-member">
-                <div className="member-image"><SafeImage src={member.image} alt={member.name} /></div>
-                <h3>{member.name}</h3>
-                <p className="member-role">{member.role}</p>
-                <p className="member-bio">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
       <section className="stats-section">
         <div className="stats-container">
           <div className="stat-item"><h3>5000+</h3><p>{t('about.happyTravelers')}</p></div>

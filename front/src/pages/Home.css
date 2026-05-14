@@ -604,3 +604,290 @@
 
   .wc2030-strip { padding: 2rem 0; }
 }
+
+/* ============================================
+   TRAVEL CARDS (Updated Premium Style)
+   ============================================ */
+
+.travel-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.travel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.14);
+}
+
+.travel-card-header {
+  position: relative;
+  height: 220px;
+}
+
+.travel-card-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.travel-card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #C9960A;
+  color: #FFFFFF;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(201, 150, 10, 0.4);
+  z-index: 2;
+}
+
+.travel-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.travel-card-title {
+  color: #C9960A;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.travel-card-duration {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.travel-card-highlights {
+  background-color: #F8F9FA;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.travel-card-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.travel-card-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.travel-card-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #C9960A;
+  font-weight: 900;
+}
+
+.card-footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.view-more-trigger {
+  background: #FFF9E9;
+  border: 1px solid rgba(201, 150, 10, 0.25);
+  color: #C9960A;
+  font-weight: 800;
+  padding: 0.85rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+}
+
+.view-more-trigger:hover {
+  background: #C9960A;
+  color: #FFFFFF;
+}
+
+.travel-card-btn {
+  background-color: #C9960A;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   MODAL STYLES (for Home Page)
+   ============================================ */
+
+.tour-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.tour-modal {
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.tour-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.tour-modal-image {
+  position: relative;
+}
+
+.tour-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-modal-content {
+  padding: 2rem;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.tour-modal-content h2 {
+  font-family: 'Playfair Display', serif;
+  color: #0D1F17;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tour-modal-duration {
+  color: #C9960A;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.details-subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.details-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-section h5 {
+  color: #C9960A;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+}
+
+.details-list li {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  position: relative;
+  color: #555;
+}
+
+.details-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #C9960A;
+}
+
+.card-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.message-box {
+  background: #F8F9FA;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.tour-modal-actions {
+  margin-top: 2rem;
+}
+
+.tour-modal-book-btn {
+  width: 100%;
+  background: #C9960A;
+  color: #fff;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .tour-modal {
+    grid-template-columns: 1fr;
+  }
+  .tour-modal-image {
+    height: 200px;
+  }
+}

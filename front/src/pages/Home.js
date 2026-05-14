@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import HeroSection from '../components/HeroSection';
-import TourCard from '../components/TourCard';
 import TestimonialCard from '../components/TestimonialCard';
 import GallerySection from '../components/GallerySection';
 import VideoSection from '../components/VideoSection';
@@ -14,32 +13,142 @@ import './Home.css';
 export default function Home() {
   const { t } = useLanguage();
 
+  const [selectedPackage, setSelectedPackage] = React.useState(null);
+
   const featuredTours = [
     {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Classic Morocco Experience',
-      duration: 7,
-      price: 1299,
-      highlights: ['Marrakech', 'Sahara Desert', 'Atlas Mountains', 'Camel Trekking']
+      id: "pkg1",
+      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop',
+      title: "Fes Luxury Weekend Escape",
+      duration: "3 Nights / 4 Days (Thursday → Sunday)",
+      price: "€790",
+      highlights: [
+        "Direct roundtrip flights included",
+        "4–5 star luxury hotels",
+        "Traditional Moroccan hammam",
+        "Cooking & art workshops"
+      ],
+      fullDetails: {
+        subtitle: "All-Inclusive Package – From A to Z",
+        flights: ["Direct roundtrip flights", "20kg checked luggage", "Cabin luggage up to 8kg"],
+        included: [
+          "Airport pickup & transfer back",
+          "4–5 star hotels (Half board)",
+          "Fresh & authentic Moroccan cuisine",
+          "Traditional tea & pastries experience",
+          "Professional tour guide & Private driver",
+          "Modern air-conditioned transportation",
+          "Special live performances",
+          "Traditional market tours",
+          "Cooking & Art workshops",
+          "Day trips to Chefchaouen & Ifrane",
+          "Visits with local Moroccan families"
+        ]
+      }
     },
     {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Coastal Escape',
-      duration: 5,
-      price: 899,
-      highlights: ['Essaouira', 'Casablanca', 'Beach Relaxation', 'Fresh Seafood']
+      id: "pkg2",
+      image: 'https://images.unsplash.com/photo-1552683526-616900f6b3b5?w=600&h=400&fit=crop',
+      title: "Morocco Luxury Discovery Tour",
+      duration: "6 Nights / 7 Days (Monday → Sunday)",
+      price: "€1490",
+      highlights: [
+        "Fes & North Morocco Route",
+        "Chefchaouen & Tangier visits",
+        "Direct flights & private driver",
+        "Premium locations"
+      ],
+      fullDetails: {
+        subtitle: "Fes & North Morocco Route (All Inclusive)",
+        route: "2 nights Fes, 1 night Chefchaouen, 1 night Tangier, 1 night Ifrane, 1 final night Fes",
+        flights: ["Direct roundtrip flights from Europe", "20kg luggage + Cabin luggage"],
+        transportation: ["Airport pickup & transfer", "Private professional driver & tour guide"],
+        hotels: ["4–5 star hotels", "Premium locations"],
+        food: ["Half board", "Authentic cuisine", "Traditional tea & pastries"],
+        experiences: ["Moroccan live performances", "Traditional markets", "Hammam", "Nature visits"]
+      }
     },
     {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop',
-      title: 'Mountain Adventure',
-      duration: 6,
-      price: 1199,
-      highlights: ['Atlas Hiking', 'Berber Villages', 'Mountain Views', 'Local Cuisine']
-    },
+      id: "pkg4",
+      image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&h=400&fit=crop',
+      title: "Morocco Imperial & Sahara Experience",
+      duration: "13 Nights / 14 Days",
+      price: "All Inclusive",
+      highlights: [
+        "2 Nights Merzouga Sahara Desert",
+        "Premium AC tents & Jeep excursions",
+        "Visit Atlas Mountains",
+        "Full ground services from A to Z"
+      ],
+      fullDetails: {
+        subtitle: "✨ Morocco Imperial & Sahara Experience (Full Ground Services)",
+        sahara: [
+          "Premium air-conditioned desert tents",
+          "Campfire music atmosphere",
+          "Jeep excursions & Camel rides"
+        ],
+        included: [
+          "Full premium ground services",
+          "4–5 star hotels",
+          "Professional tour guide",
+          "Special live performances",
+          "Traditional markets"
+        ]
+      }
+    }
   ];
+
+  // Helper component for the modal details
+  const DetailList = ({ title, items }) => {
+    if (!items) return null;
+    return (
+      <div className="details-section">
+        <h5>{title}</h5>
+        <ul className="details-list">
+          {items.map((item, i) => <li key={i}>{item}</li>)}
+        </ul>
+      </div>
+    );
+  };
+
+  const TourModal = ({ pkg }) => {
+    if (!pkg) return null;
+    return (
+      <div className="tour-modal-overlay" onClick={() => setSelectedPackage(null)}>
+        <div className="tour-modal" onClick={e => e.stopPropagation()}>
+          <button className="tour-modal-close" onClick={() => setSelectedPackage(null)}>×</button>
+          <div className="tour-modal-image">
+            <img src={pkg.image} alt={pkg.title} />
+            <div className="travel-card-badge">{pkg.price}</div>
+          </div>
+          <div className="tour-modal-content">
+            <h2>{pkg.title}</h2>
+            <p className="tour-modal-duration">⏱️ {pkg.duration}</p>
+            {pkg.fullDetails.subtitle && <h4 className="details-subtitle">{pkg.fullDetails.subtitle}</h4>}
+            <DetailList title="Flights:" items={pkg.fullDetails.flights} />
+            <DetailList title="Route:" items={pkg.fullDetails.route ? [pkg.fullDetails.route] : null} />
+            <DetailList title="Included:" items={pkg.fullDetails.included} />
+            <DetailList title="Sahara Experience:" items={pkg.fullDetails.sahara} />
+            
+            <div className="card-messages">
+              <div className="message-box safety">
+                <strong>Safety & Comfort:</strong>
+                <p>Coordinated with Moroccan authorities for your safety.</p>
+              </div>
+              <div className="message-box values">
+                <strong>Morocco Loves You:</strong>
+                <p>More love, care, and professionalism.</p>
+              </div>
+            </div>
+
+            <div className="tour-modal-actions">
+              <button className="tour-modal-book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   const testimonials = [
     {
@@ -122,8 +231,28 @@ export default function Home() {
           <h2>{t('home.featuredToursTitle')}</h2>
           <p className="section-subtitle">{t('home.featuredToursSubtitle')}</p>
           <div className="tours-grid">
-            {featuredTours.map(tour => (
-              <TourCard key={tour.id} {...tour} />
+            {featuredTours.map(pkg => (
+              <div key={pkg.id} className="travel-card">
+                <div className="travel-card-header">
+                  <img src={pkg.image} alt={pkg.title} />
+                  <div className="travel-card-badge">{pkg.price}</div>
+                </div>
+                <div className="travel-card-body">
+                  <h3 className="travel-card-title">{pkg.title}</h3>
+                  <p className="travel-card-duration">⏱️ {pkg.duration}</p>
+                  <div className="travel-card-highlights">
+                    <ul>
+                      {pkg.highlights.map((hl, i) => <li key={i}>{hl}</li>)}
+                    </ul>
+                  </div>
+                  <div className="card-footer-actions">
+                    <button className="view-more-trigger" onClick={() => setSelectedPackage(pkg)}>
+                      View Details
+                    </button>
+                    <button className="travel-card-btn">Book Now</button>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
           <Link to="/tours" className="view-all-btn">{t('home.viewAllTours')}</Link>
@@ -151,6 +280,7 @@ export default function Home() {
           <Link to="/testimonials" className="view-all-btn">{t('home.readMoreReviews')}</Link>
         </div>
       </section>
+      <TourModal pkg={selectedPackage} />
     </div>
   );
 }
