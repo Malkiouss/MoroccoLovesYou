@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
@@ -8,6 +8,7 @@ import './JewishHeritage.css';
 
 export default function JewishHeritage() {
   const { t } = useLanguage();
+  const [lightboxVideo, setLightboxVideo] = useState(null);
 
   const experiences = [
     { title: "100% Kosher Food", icon: "🍷" },
@@ -171,7 +172,8 @@ export default function JewishHeritage() {
           </div>
           <div className="videos-grid">
             {videos.map((vid, idx) => (
-              <div key={idx} className="video-card">
+              <div key={idx} className="video-card" onClick={() => setLightboxVideo(vid)}>
+                <div className="video-card-overlay"></div>
                 <CustomVideoPlayer src={getWatermarkedVideoUrl(vid)} />
               </div>
             ))}
@@ -195,6 +197,21 @@ export default function JewishHeritage() {
           </div>
         </div>
       </section>
+
+      {lightboxVideo && (
+        <div className="video-lightbox" onClick={() => setLightboxVideo(null)}>
+          <div className="video-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="video-lightbox-close" onClick={() => setLightboxVideo(null)}>×</button>
+            <video 
+              src={getWatermarkedVideoUrl(lightboxVideo)} 
+              controls 
+              autoPlay 
+              playsInline 
+              className="lightbox-video"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
