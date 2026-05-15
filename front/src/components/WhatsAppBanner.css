@@ -37,3 +37,17 @@
 .whatsapp-float {
   animation: pulse 1.5s infinite;
 }
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    width: 38px;
+    height: 38px;
+    bottom: 14px;
+    left: 14px;
+  }
+  
+  .whatsapp-float img {
+    width: 18px;
+    height: 18px;
+  }
+}
