@@ -7,6 +7,7 @@ import GallerySection from '../components/GallerySection';
 import VideoSection from '../components/VideoSection';
 import BusSection from '../components/BusSection';
 import CulinarySection from '../components/CulinarySection';
+import JewishHeritageSection from '../components/JewishHeritageSection';
 import './Home.css';
 
 
@@ -18,7 +19,7 @@ export default function Home() {
   const featuredTours = [
     {
       id: "pkg1",
-      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1544971587-b842c27f8e14?w=600&h=400&fit=crop',
       title: "Fes Luxury Weekend Escape",
       duration: "3 Nights / 4 Days (Thursday → Sunday)",
       price: "€790",
@@ -70,7 +71,7 @@ export default function Home() {
     },
     {
       id: "pkg4",
-      image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?w=600&h=400&fit=crop',
       title: "Morocco Imperial & Sahara Experience",
       duration: "13 Nights / 14 Days",
       price: "All Inclusive",
@@ -261,6 +262,9 @@ export default function Home() {
 
       {/* Culinary Section — mimic BusSection */}
       <CulinarySection />
+
+      {/* Jewish Heritage Section */}
+      <JewishHeritageSection />
 
      
 

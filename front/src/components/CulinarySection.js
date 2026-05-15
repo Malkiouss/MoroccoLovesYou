@@ -2,13 +2,14 @@ import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { culinaryPhotos, culinaryVideos } from "../data/culinaryData";
+import { getWatermarkedVideoUrl } from "../utils/imageUtils";
+import CustomVideoPlayer from "./CustomVideoPlayer";
 import "./CulinarySection.css";
 
 export default function CulinarySection() {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const featuredVideos = culinaryVideos.slice(0, 2);
-  const LOGO_SRC = "/assets/vidlogo.png";
 
   const handleCardClick = () => {
     navigate("/experiences");
@@ -42,21 +43,7 @@ export default function CulinarySection() {
       <div className="culinary-videos-preview">
         {featuredVideos.map((video) => (
           <div className="culinary-video-card-mini" key={video.id}>
-            <div className="mini-video-watermark">
-              <img src={LOGO_SRC} alt="Logo" />
-            </div>
-            <video 
-              controls 
-              autoPlay 
-              muted 
-              loop 
-              playsInline 
-              preload="metadata"
-              className="mini-video-player"
-            >
-              <source src={video.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <CustomVideoPlayer src={getWatermarkedVideoUrl(video.src, undefined, 'c_fill,w_700,h_400')} />
           </div>
         ))}
       </div>

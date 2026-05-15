@@ -4,6 +4,8 @@ import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import { galleryCities } from '../data/galleryCities';
+import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import CustomVideoPlayer from '../components/CustomVideoPlayer';
 import './CityDetailPage.css';
 
 export default function CityDetailPage() {
@@ -74,8 +76,7 @@ export default function CityDetailPage() {
             ))}
             {city.galleryVideos && city.galleryVideos.map((video) => (
               <div key={`vid-${video.id}`} className="city-gallery-item video-item">
-                <div className="video-watermark"><img src="/assets/vidlogo.png" alt="Logo" /></div>
-                <video src={video.src} className="city-gallery-video" controls />
+                <CustomVideoPlayer src={getWatermarkedVideoUrl(video.src, undefined, 'c_fill,ar_16:9')} />
               </div>
             ))}
           </div>

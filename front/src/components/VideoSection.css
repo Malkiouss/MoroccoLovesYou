@@ -52,20 +52,6 @@
     0 0 20px rgba(217, 155, 61, 0.15);
 }
 
-.video-logo-overlay {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.video-logo {
-  width: 80px;
-  height: auto;
-  opacity: 0.85;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
 
 .video-player {
   width: 100%;

@@ -24,6 +24,7 @@ import TourMiniBanner from './components/TourMiniBanner';
 import SocialFloating from './components/SocialFloating';
 import Transportation from './pages/Transportation';
 import UnityBanner from './components/UnityBanner';
+import JewishHeritage from './pages/JewishHeritage';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/transportation" element={<Transportation />} />
+            <Route path="/jewish-heritage" element={<JewishHeritage />} />
           </Routes>
           <SocialFloating/>
           <Footer />

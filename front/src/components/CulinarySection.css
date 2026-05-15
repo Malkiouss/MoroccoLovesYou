@@ -66,20 +66,6 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.mini-video-watermark {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.mini-video-watermark img {
-  width: 80px;
-  height: auto;
-  opacity: 0.85;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
 
 .mini-video-player {
   width: 100%;

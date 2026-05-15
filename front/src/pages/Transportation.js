@@ -4,6 +4,8 @@ import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import { busPhotos } from '../data/busPhotos';
 import { busVideos } from '../data/busVideos';
+import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import CustomVideoPlayer from '../components/CustomVideoPlayer';
 import './Gallery.css';
 import './Transportation.css';
 
@@ -11,9 +13,6 @@ export default function Transportation() {
   const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const LOGO_SRC = '/assets/vidlogo.png';
-
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
@@ -121,21 +120,7 @@ export default function Transportation() {
             {busVideos.map((video) => (
               <div key={video.id} className="bus-video-card">
                 <div className="video-container">
-                  <div className="video-logo-overlay">
-                    <img src={LOGO_SRC} alt="Logo" className="video-logo" />
-                  </div>
-                  <video
-                    className="bus-video-player"
-                    controls
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <CustomVideoPlayer src={getWatermarkedVideoUrl(video.src, undefined, 'c_fill,ar_9:16')} />
                 </div>
                 <div className="video-info">
                   <h3>{video.title}</h3>

@@ -1,12 +1,14 @@
 import { useRef, useState } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { getWatermarkedVideoUrl } from "../utils/imageUtils";
 import "./VideoSection.css";
 
 export default function VideoSection() {
   const { t } = useLanguage();
   const videoRef = useRef(null);
-  const LOGO_SRC = "/assets/vidlogo.png";
+  const rawVideoUrl = "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4";
+  const watermarkedUrl = getWatermarkedVideoUrl(rawVideoUrl); 
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [finished, setFinished] = useState(false);
@@ -38,10 +40,6 @@ export default function VideoSection() {
       <h2 className="video-title">{t('home.videoTitle')}</h2>
 
       <div className="video-wrapper" onClick={togglePlay}>
-        {/* Logo watermark */}
-        <div className="video-logo-overlay">
-          <img src={LOGO_SRC} alt="Logo" className="video-logo" />
-        </div>
         <video
           ref={videoRef}
           className="video-player"
@@ -54,7 +52,7 @@ export default function VideoSection() {
           controls={false}
           playsInline
         >
-          <source src="https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4" type="video/mp4" />
+          <source src={watermarkedUrl} type="video/mp4" />
         </video>
 
         <button 

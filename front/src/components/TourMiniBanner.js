@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { X, Play, Pause, RotateCcw } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { getWatermarkedVideoUrl } from '../utils/imageUtils';
 import "./TourMiniBanner.css";
 
 const TourMiniBanner = () => {
@@ -116,9 +117,6 @@ const TourMiniBanner = () => {
               <h2 className="video-title">{t('home.videoTitle')}</h2>
 
               <div className="video-wrapper" onClick={togglePlay}>
-                <div className="video-logo-overlay">
-                  <img src="/assets/vidlogo.png" alt="Logo" className="video-logo" />
-                </div>
                 <video
                   ref={videoRef}
                   className="video-player"
@@ -131,7 +129,7 @@ const TourMiniBanner = () => {
                   controls={false}
                   playsInline
                 >
-                  <source src="https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4" type="video/mp4" />
+                  <source src={getWatermarkedVideoUrl("https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4")} type="video/mp4" />
                 </video>
 
                 <button 

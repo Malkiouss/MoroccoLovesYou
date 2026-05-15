@@ -12,8 +12,8 @@ const en = {
     vip: "VIP Business",
     vipFull: "VIP Business Travel",
     worldcup: "World Cup 2030",
-    menu: "Menu",
-    chatWhatsApp: "Chat on WhatsApp"
+    chatWhatsApp: "Chat on WhatsApp",
+    jewishHeritage: "Kosher Travel"
   },
   hero: {
     welcome: "Welcome to Morocco.",
@@ -345,6 +345,34 @@ const en = {
     ctaSubtitle: "Speak Directly With Allan – CEO & Founder",
     whatsapp: "WhatsApp: +972546338757",
     moroccoLine: "Morocco Direct Line: +212 6 63 63 05 79"
+  },
+  jewishHeritage: {
+    pageTitle: "Luxury Kosher Tours In Morocco",
+    pageSubtitle: "Authentic Jewish Heritage, 100% Kosher Cuisine, Luxury Hospitality & Unique Morocco Experiences.",
+    introTitle: "Luxury Jewish Heritage Experience",
+    introText: "Discover the deep roots of Jewish history in Morocco with an elegant, authentic, and premium travel experience. We specialize in providing a seamless journey for Jewish communities worldwide, focusing on heritage, connection, and absolute comfort.",
+    experiencesTitle: "Our Kosher Experiences Include",
+    experiencesList: [
+      "100% Kosher Food & Restaurants",
+      "Private Kosher Chef Available",
+      "Traditional Moroccan Jewish Cuisine",
+      "Luxury 4 & 5-Star Hotels",
+      "Private VIP Transportation",
+      "Multilingual Professional Guides",
+      "Jewish Heritage & Synagogue Tours",
+      "Jewish Cemeteries & Museums",
+      "Sahara Desert & Hammam Experiences",
+      "24/7 Professional Assistance"
+    ],
+    packagesTitle: "Flexible Kosher Travel Packages",
+    packagesIntro: "We customize every trip according to the needs, traditions, travel style, dates, and expectations of our guests.",
+    packageOptions: ["4–5 Days", "7–8 Days", "10–11 Days", "13–14 Days", "21 Days", "Tailor-Made Private Tours"],
+    safetyTitle: "Comfortable, Professional & Safe Travel",
+    safetyText: "Our tours operate with high attention to comfort, organization, service quality, and professional coordination across Morocco.",
+    b2bTitle: "B2B Jewish Travel Partnerships",
+    b2bText: "We partner with Jewish communities, synagogues, rabbis, and kosher tour operators worldwide to create meaningful heritage journeys.",
+    ceoContact: "Speak With Allan Hatchuel Directly On WhatsApp",
+    exploreBtn: "Explore Kosher Tours"
   }
 };
 

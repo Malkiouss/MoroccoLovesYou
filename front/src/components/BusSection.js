@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { busPhotos } from "../data/busPhotos";
 import { busVideos } from "../data/busVideos";
+import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import CustomVideoPlayer from "./CustomVideoPlayer";
 import "./BusSection.css";
 
 export default function BusSection() {
@@ -9,7 +11,6 @@ export default function BusSection() {
   const navigate = useNavigate();
   const displayPhotos = busPhotos.slice(0, 3);
   const featuredVideos = busVideos.slice(0, 2);
-  const LOGO_SRC = "/assets/vidlogo.png";
 
   const handleCardClick = () => {
     navigate("/transportation");
@@ -43,21 +44,7 @@ export default function BusSection() {
       <div className="bus-videos-preview">
         {featuredVideos.map((video) => (
           <div className="bus-video-card-mini" key={video.id}>
-            <div className="mini-video-watermark">
-              <img src={LOGO_SRC} alt="Logo" />
-            </div>
-            <video 
-              controls 
-              autoPlay 
-              muted 
-              loop 
-              playsInline 
-              preload="metadata"
-              className="mini-video-player"
-            >
-              <source src={video.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <CustomVideoPlayer src={getWatermarkedVideoUrl(video.src, undefined, 'c_fill,w_700,h_400')} />
           </div>
         ))}
       </div>

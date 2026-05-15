@@ -3,6 +3,8 @@ import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
 import { culinaryPhotos, culinaryVideos } from '../data/culinaryData';
+import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import CustomVideoPlayer from '../components/CustomVideoPlayer';
 import './Gallery.css';
 import './Experiences.css';
 
@@ -14,7 +16,6 @@ export default function Experiences() {
   const heroImage = "/assets/food/food (1).png";
   const introImage = "/assets/food/food.jpg";
   const philosophyImage = "/assets/food/food (5).png";
-   const LOGO_SRC = "/assets/vidlogo.png";
 
   const usedImages = [heroImage, introImage, philosophyImage];
   const availablePhotos = culinaryPhotos.filter(photo => !usedImages.includes(photo.src));
@@ -112,21 +113,7 @@ export default function Experiences() {
             {culinaryVideos.map((video) => (
               <div key={video.id} className="exp-video-card">
                 <div className="video-container">
-                  <div className="video-logo-overlay">
-                    <img src={LOGO_SRC} alt="Logo" className="video-logo" />
-                  </div>
-                  <video
-                    className="exp-video-player"
-                    controls
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <CustomVideoPlayer src={getWatermarkedVideoUrl(video.src, undefined, 'c_fill,ar_9:16')} />
                 </div>
               </div>
             ))}

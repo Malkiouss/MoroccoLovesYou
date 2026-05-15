@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
+import { getWatermarkedVideoUrl } from '../utils/imageUtils';
 import './Gallery.css';
 
 export default function Gallery() {
@@ -83,8 +84,7 @@ export default function Gallery() {
   ];
   // ─────────────────────────────────────────────────────────────────────────────
 
-  // Path to your logo — update this to match your actual logo file
-  const LOGO_SRC = '/assets/vidlogo.png';
+  // ─────────────────────────────────────────────────────────────────────────────
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
@@ -165,13 +165,8 @@ export default function Gallery() {
           <div className="gallery-grid gallery-video-grid">
             {galleryVideos.map((video) => (
               <div key={video.id} className="gallery-item gallery-video-item">
-                {/* Logo watermark — always visible on top-left */}
-                <div className="video-logo-overlay">
-                  <img src={LOGO_SRC} alt="Logo" className="video-logo" />
-                </div>
-
                 <video
-                  src={video.src}
+                  src={getWatermarkedVideoUrl(video.src)}
                   className="gallery-video"
                   controls
                   preload="metadata"

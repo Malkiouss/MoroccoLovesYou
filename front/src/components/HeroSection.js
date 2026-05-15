@@ -41,6 +41,7 @@ export default function HeroSection() {
           <Link to="/tours">{t('nav.tours')}</Link>
           <Link to="/destinations">{t('nav.destinations')}</Link>
           <Link to="/experiences">{t('nav.experiences')}</Link>
+          <Link to="/jewish-heritage">{t('nav.jewishHeritage')}</Link>
           <Link to="/vip">{t('nav.vip')}</Link>
           <Link to="/about">{t('nav.about')}</Link>
           <Link to="/contact">{t('nav.contact')}</Link>
@@ -161,6 +162,7 @@ export default function HeroSection() {
               <Link to="/tours" onClick={() => setIsMenuOpen(false)}>{t('nav.tours')}</Link>
               <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>{t('nav.destinations')}</Link>
               <Link to="/experiences" onClick={() => setIsMenuOpen(false)}>{t('nav.experiences')}</Link>
+              <Link to="/jewish-heritage" onClick={() => setIsMenuOpen(false)}>{t('nav.jewishHeritage')}</Link>
               <Link to="/vip" onClick={() => setIsMenuOpen(false)}>{t('nav.vipFull')}</Link>
               <Link to="/worldcup" onClick={() => setIsMenuOpen(false)}>{t('nav.worldcup')}</Link>
               <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>{t('nav.gallery')}</Link>
