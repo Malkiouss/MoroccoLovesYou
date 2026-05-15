@@ -243,7 +243,7 @@ nav {
   height: 150px;
   object-fit: cover;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
-  z-index: 5000;
+  z-index: -5000;
   display: block;
 }
 
@@ -748,6 +748,6 @@ nav {
     transform: translateX(-50%);
     width: 220px;
     height: 125px;
-    z-index: 20;
+    z-index: -20;
   }
 }}
