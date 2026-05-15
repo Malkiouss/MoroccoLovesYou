@@ -232,9 +232,25 @@ nav {
 }
 
 /* HERO */
+
+/* ── King Flag Photo ───────────────────── */
+
+.mly-king-flag-photo {
+  position: absolute;
+  top: 70px;
+  left: 35px;
+  width: 260px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+  z-index: 5000;
+  display: block;
+}
+
+
 .hero {
   position: relative;
-  min-height: 95vh;
+  height: 130vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,8 +269,8 @@ nav {
 .hero-content {
   position: relative;
   z-index: 2;
-  margin-top: 345px;
-  padding: 160px 20px 10px;
+  top: 170px;
+  padding: 100px 10px10px 40px;
   max-width: 780px;
 }
 
@@ -717,4 +733,21 @@ nav {
     right: 18px;
     bottom: 18px;
   }
-}
+
+
+  
+
+/* ── King Flag Photo ───────────────────── */
+
+/* Mobile version */
+@media (max-width: 768px) {
+  .mly-king-flag-photo {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 125px;
+    z-index: 20;
+  }
+}}

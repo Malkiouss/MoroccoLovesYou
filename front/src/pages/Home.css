@@ -69,8 +69,13 @@
 
 /* White strip that wraps the WC card, separating the two dark sections */
 .wc2030-strip {
-  background: #ffffff;
-  padding: 3rem 0;
+  min-height: 6vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  position: relative;
 }
 
 .mly-wc2030-luxury-banner {
@@ -558,7 +563,7 @@
   .mly-wc2030-btn     { width: 100%; max-width: 280px; min-height: 44px; }
   .mly-wc2030-visual  { flex: none; width: 100%; }
   .mly-wc2030-visual img { max-width: 210px; }
-  .wc2030-strip { padding: 2rem 0; }
+  .wc2030-strip { min-height: 100vh; padding: 4rem 0; }
 }
 
 @media (max-width: 430px) {
@@ -602,7 +607,7 @@
     font-size: 2.1rem;
   }
 
-  .wc2030-strip { padding: 2rem 0; }
+  .wc2030-strip { min-height: 100vh; padding: 4rem 0; }
 }
 
 /* ============================================

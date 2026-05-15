@@ -53,7 +53,8 @@ export default function HeroSection() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" />
+  <div className="hero-bg" />
+  <img src="../../assets/king.jpeg" alt="King Hassan III" className="mly-king-flag-photo" />
         <div className="hero-content">
           
           <span className="hero-star" aria-hidden="true">
