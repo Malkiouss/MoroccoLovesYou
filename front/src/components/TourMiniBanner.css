@@ -42,54 +42,35 @@
 
 /* ── Kosher Simple Banner (Integrated) ── */
 .kosher-simple-banner {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  background-color: #004080;
-  border: 2px solid #C9A227;
-  border-radius: 15px;
-  padding: 12px 10px;
-  width: 90px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: transparent;
+  padding: 0;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  text-align: center;
   margin-bottom: 5px;
 }
 
 .kosher-simple-banner:hover {
-  transform: scale(1.1) rotate(-3deg);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7),
-              0 0 20px rgba(201, 162, 39, 0.3);
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.kosher-image {
+  width: 100%;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 3px solid #C9A227;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
+              0 0 15px rgba(201, 162, 39, 0.3);
+  transition: all 0.4s ease;
+}
+
+.kosher-simple-banner:hover .kosher-image {
+  transform: rotate(360deg) scale(1.1);
   border-color: #fff;
-}
-
-.kosher-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.david-star {
-  font-size: 28px;
-  color: #C9A227;
-  line-height: 1;
-  filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.5));
-  transition: transform 0.4s ease;
-}
-
-.kosher-simple-banner:hover .david-star {
-  transform: rotate(180deg);
-  color: #fff;
-}
-
-.kosher-text {
-  font-size: 11px;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: 1.5px;
-  font-family: 'Montserrat', sans-serif;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 /* ============================================
@@ -462,20 +443,9 @@
     gap: 12px; /* Balanced gap for mobile */
   }
 
-  .kosher-simple-banner {
-    width: 75px;
-    padding: 8px 6px;
-    border-radius: 12px;
-    margin-bottom: 2px;
-  }
-
-  .david-star {
-    font-size: 20px;
-  }
-
-  .kosher-text {
-    font-size: 9px;
-    letter-spacing: 1px;
+  .kosher-image {
+    width: 100%;
+    height: 60px;
   }
 
   .tour-mini-float:hover .tour-mini-card {

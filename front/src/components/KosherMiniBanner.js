@@ -11,10 +11,7 @@ const KosherMiniBanner = () => {
         className="kosher-simple-banner"
         aria-label="Kosher Travel Morocco"
       >
-        <div className="kosher-content">
-          <span className="david-star">✡</span>
-          <span className="kosher-text">KOSHER</span>
-        </div>
+        <img src="/assets/kosherbanner.jpeg" alt="Kosher Morocco" className="kosher-image" />
       </Link>
     </div>
   );
