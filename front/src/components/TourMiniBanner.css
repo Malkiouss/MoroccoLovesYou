@@ -30,14 +30,66 @@
 .tour-mini-float {
   position: fixed;
   left: 20px;
-  top: 60%;
+  top: 55%;
   transform: translateY(-50%);
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 20px; /* Increased gap to ensure no overlapping */
   cursor: pointer;
+}
+
+/* ── Kosher Simple Banner (Integrated) ── */
+.kosher-simple-banner {
+  display: block;
+  text-decoration: none;
+  background-color: #004080;
+  border: 2px solid #C9A227;
+  border-radius: 15px;
+  padding: 12px 10px;
+  width: 90px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.kosher-simple-banner:hover {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7),
+              0 0 20px rgba(201, 162, 39, 0.3);
+  border-color: #fff;
+}
+
+.kosher-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.david-star {
+  font-size: 28px;
+  color: #C9A227;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.5));
+  transition: transform 0.4s ease;
+}
+
+.kosher-simple-banner:hover .david-star {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.kosher-text {
+  font-size: 11px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 /* ============================================
@@ -407,6 +459,23 @@
     top: auto;
     bottom: 80px;
     transform: none;
+    gap: 12px; /* Balanced gap for mobile */
+  }
+
+  .kosher-simple-banner {
+    width: 75px;
+    padding: 8px 6px;
+    border-radius: 12px;
+    margin-bottom: 2px;
+  }
+
+  .david-star {
+    font-size: 20px;
+  }
+
+  .kosher-text {
+    font-size: 9px;
+    letter-spacing: 1px;
   }
 
   .tour-mini-float:hover .tour-mini-card {

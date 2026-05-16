@@ -25,7 +25,6 @@ import SocialFloating from './components/SocialFloating';
 import Transportation from './pages/Transportation';
 import UnityBanner from './components/UnityBanner';
 import JewishHeritage from './pages/JewishHeritage';
-import KosherMiniBanner from './components/KosherMiniBanner';
 
 
 function App() {
@@ -61,7 +60,6 @@ function App() {
           <StarBanner />
           
           <TourMiniBanner />
-          <KosherMiniBanner />
         </div>
       </Router>
     </LanguageProvider>

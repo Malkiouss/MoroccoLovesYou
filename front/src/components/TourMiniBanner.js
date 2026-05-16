@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { X, Play, Pause, RotateCcw } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { getWatermarkedVideoUrl } from '../utils/imageUtils';
@@ -28,7 +29,6 @@ const TourMiniBanner = () => {
     e.preventDefault();
     setIsVideoOpen(true);
     setFinished(false);
-    // Use a timeout to ensure the ref is available after render
     setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.play();
@@ -48,6 +48,18 @@ const TourMiniBanner = () => {
   return (
     <>
       <div className="tour-mini-float">
+
+        {/* ── Simplified Kosher Link ── */}
+        <Link
+          to="/jewish-heritage"
+          className="kosher-simple-banner"
+          aria-label="Kosher Travel Morocco"
+        >
+          <div className="kosher-content">
+            <span className="david-star">✡</span>
+            <span className="kosher-text">KOSHER</span>
+          </div>
+        </Link>
 
         {/* ── Video Thumbnail Badge ── */}
         <button 

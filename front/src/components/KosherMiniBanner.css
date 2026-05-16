@@ -4,9 +4,9 @@
 .kosher-mini-float {
   position: fixed;
   left: 20px;
-  top: 40%; /* Adjusted position */
+  top: 25%; /* Higher up to avoid TourMiniBanner */
   transform: translateY(-50%);
-  z-index: 9998;
+  z-index: 10005; /* Highest z-index for visibility */
 }
 
 .kosher-simple-banner {
@@ -63,8 +63,9 @@
 @media (max-width: 768px) {
   .kosher-mini-float {
     left: 10px;
-    top: 350px;
-    bottom: 190px;
+    top: auto;
+    bottom: 250px; /* Positioned above TourMiniBanner (80px) */
+    z-index: 10005;
   }
 
   .kosher-simple-banner {
