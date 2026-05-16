@@ -5,7 +5,6 @@ import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 
 import Footer from './components/Footer';
-import WhatsAppBanner from './components/WhatsAppBanner';
 import LanguageSelector from './components/languages/LanguageSelector';
 
 import Home from './pages/Home';
@@ -22,7 +21,6 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import StarBanner from './components/StarBanner';
 import TourMiniBanner from './components/TourMiniBanner';
-import SocialFloating from './components/SocialFloating';
 import Transportation from './pages/Transportation';
 import UnityBanner from './components/UnityBanner';
 import JewishHeritage from './pages/JewishHeritage';
@@ -87,8 +85,6 @@ function App() {
               <Route path="/transportation" element={<Transportation />} />
               <Route path="/jewish-heritage" element={<JewishHeritage />} />
             </Routes>
-            <SocialFloating/>
-            <WhatsAppBanner />
             <StarBanner />
             <TourMiniBanner />
           </div>

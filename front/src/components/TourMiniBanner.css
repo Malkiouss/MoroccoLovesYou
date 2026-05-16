@@ -30,7 +30,7 @@
 .tour-mini-float {
   position: fixed;
   left: 20px;
-  top: 55%;
+  top: 70%;
   transform: translateY(calc(-50% - var(--footer-offset, 0px)));
   z-index: 9999;
   display: flex;
@@ -49,12 +49,11 @@
   text-decoration: none;
   background: transparent;
   padding: 0;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-bottom: 5px;
 }
 
 .kosher-simple-banner:hover {
-  transform: scale(1.15) rotate(-5deg);
+  transform: scale(1.15);
 }
 
 .kosher-image {
@@ -65,11 +64,9 @@
   border: 3px solid #C9A227;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
               0 0 15px rgba(201, 162, 39, 0.3);
-  transition: all 0.4s ease;
 }
 
 .kosher-simple-banner:hover .kosher-image {
-  transform: rotate(360deg) scale(1.1);
   border-color: #fff;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
@@ -182,236 +179,6 @@
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
 }
 
-/* ============================================
-   CARD SHELL
-   ============================================ */
-.tour-mini-card {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-  font-family: Georgia, 'Times New Roman', serif;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.4s var(--ease-bounce), box-shadow 0.35s ease;
-  will-change: transform;
-  position: relative;
-}
-
-.tour-mini-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.07) 0%,
-    transparent 50%
-  );
-  pointer-events: none;
-  z-index: 1;
-  border-radius: inherit;
-}
-
-.tour-mini-float:hover .tour-mini-card {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow:
-    0 32px 80px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(212, 175, 55, 0.5),
-    0 0 40px rgba(212, 175, 55, 0.12);
-}
-
-/* ============================================
-   TOP — crimson header
-   ============================================ */
-.tour-mini-top {
-  background:
-    linear-gradient(180deg,
-      var(--crimson-deep) 0%,
-      var(--crimson)      45%,
-      var(--crimson-mid)  100%
-    );
-  padding: 14px 10px 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.tour-mini-top::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.06) 0%,
-    transparent 100%
-  );
-  pointer-events: none;
-}
-
-.tour-mini-top h3 {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.1;
-  font-weight: 900;
-  color: var(--white);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
-  letter-spacing: 0.2px;
-  position: relative;
-  z-index: 1;
-}
-
-.tour-mini-title {
-  margin: 6px 0 0;
-  font-size: 9px;
-  line-height: 1.3;
-  font-weight: 800;
-  color: var(--gold-light);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* ============================================
-   MIDDLE — forest date band
-   ============================================ */
-.tour-mini-date {
-  background:
-    linear-gradient(180deg,
-      var(--forest-light) 0%,
-      var(--forest)       40%,
-      var(--forest-deep)  100%
-    );
-  padding: 8px 8px 7px;
-  border-top: 1.5px solid rgba(212, 175, 55, 0.75);
-  border-bottom: 1.5px solid rgba(212, 175, 55, 0.75);
-  position: relative;
-  overflow: hidden;
-}
-
-.tour-mini-date::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.08) 0%,
-    transparent 100%
-  );
-  pointer-events: none;
-}
-
-.tour-mini-date span {
-  display: block;
-  font-size: 13px;
-  font-weight: 900;
-  color: var(--white);
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 1;
-}
-
-.tour-mini-date small {
-  display: block;
-  margin-top: 2px;
-  font-size: 6.5px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-}
-
-/* ============================================
-   BOTTOM — ink section with flag
-   ============================================ */
-.tour-mini-bottom {
-  background:
-    linear-gradient(180deg,
-      var(--ink-mid)   0%,
-      var(--ink)       100%
-    );
-  padding: 9px 10px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-  min-height: 56px;
-  position: relative;
-  overflow: hidden;
-}
-
-.tour-mini-bottom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(212, 175, 55, 0.4) 30%,
-    rgba(212, 175, 55, 0.4) 70%,
-    transparent
-  );
-}
-
-.tour-mini-flag {
-  flex-shrink: 0;
-  width: 32px;
-  height: 22px;
-  background: #c1121f;
-  border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.tour-mini-flag::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    transparent 60%
-  );
-}
-
-.flag-star {
-  font-size: 11px;
-  color: #006233;
-  line-height: 1;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-  -webkit-text-stroke: 0.3px #004a24;
-  position: relative;
-  z-index: 1;
-}
-
-.tour-mini-included {
-  flex: 1;
-  margin: 0;
-  font-size: 8px;
-  line-height: 1.5;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.88);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
 
 /* ============================================
    TABLET  ≤ 992px
@@ -424,12 +191,7 @@
   .video-badge-label span  { font-size: 10px; letter-spacing: 1px; }
   .video-badge-label .stars{ font-size: 10px; }
 
-  .tour-mini-card          { width: 142px; border-radius: 10px; }
-  .tour-mini-top h3        { font-size: 15px; }
-  .tour-mini-title         { font-size: 8px; }
-  .tour-mini-date span     { font-size: 12px; }
-  .tour-mini-date small    { font-size: 6px; }
-  .tour-mini-included      { font-size: 7.5px; }
+  .tour-mini-card          { display: none; }
 }
 
 /* ============================================
@@ -449,27 +211,7 @@
     height: 60px;
   }
 
-  .tour-mini-float:hover .tour-mini-card {
-    transform: translateY(-2px) scale(1.02);
-  }
-
-  .tour-mini-video-badge   { width: 112px; }
-  .video-badge-thumb       { height: 72px; border-radius: 8px; }
-  .video-badge-label       { padding: 10px 5px 5px; }
-  .video-badge-label span  { font-size: 8px; letter-spacing: 0.8px; }
-  .video-badge-label .stars{ font-size: 8px; }
-
-  .tour-mini-card          { width: 92px; border-radius: 7px; border-width: 1.5px; }
-  .tour-mini-top           { padding: 10px 7px 7px; }
-  .tour-mini-top h3        { font-size: 12px; }
-  .tour-mini-title         { font-size: 6.5px; letter-spacing: 0.3px; }
-  .tour-mini-date          { padding: 6px 5px 5px; }
-  .tour-mini-date span     { font-size: 10px; }
-  .tour-mini-date small    { font-size: 5.5px; }
-  .tour-mini-bottom        { padding: 7px 7px 9px; min-height: 44px; gap: 4px; }
-  .tour-mini-flag          { width: 24px; height: 17px; }
-  .flag-star               { font-size: 8px; }
-  .tour-mini-included      { font-size: 7px; }
+  .tour-mini-card          { display: none; }
 }
 
 /* ============================================
@@ -480,11 +222,7 @@
   .video-badge-thumb       { height: 60px; }
   .video-badge-label span  { font-size: 7px; }
 
-  .tour-mini-card          { width: 80px; }
-  .tour-mini-top h3        { font-size: 11px; }
-  .tour-mini-title         { font-size: 6px; }
-  .tour-mini-date span     { font-size: 9px; }
-  .tour-mini-included      { font-size: 6.5px; }
+  .tour-mini-card          { display: none; }
 }
 
 /* ============================================

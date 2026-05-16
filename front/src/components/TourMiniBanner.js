@@ -11,7 +11,6 @@ const TourMiniBanner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [finished, setFinished] = useState(false);
   const videoRef = useRef(null);
-  const whatsappUrl = "https://wa.me/972546338757";
   const VIDEO_THUMB = "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.jpg";
 
   const togglePlay = () => {
@@ -48,7 +47,6 @@ const TourMiniBanner = () => {
   return (
     <>
       <div className="tour-mini-float">
-
         {/* ── Simplified Kosher Link ── */}
         <Link
           to="/jewish-heritage"
@@ -74,44 +72,6 @@ const TourMiniBanner = () => {
             </div>
           </div>
         </button>
-
-        {/* ── Clickable card ── */}
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="tour-mini-card"
-          aria-label="Premium Morocco Tour WhatsApp"
-        >
-          {/* ── Top red section ── */}
-          <div className="tour-mini-top">
-            <h3>{t('tourMini.days')}</h3>
-            <h3>{t('tourMini.nights')}</h3>
-            <p className="tour-mini-title">
-              {t('tourMini.title').split('\n').map((line, i) => (
-                <React.Fragment key={i}>{line}{i === 0 && <br />}</React.Fragment>
-              ))}
-            </p>
-          </div>
-
-          {/* ── Green date band ── */}
-          <div className="tour-mini-date">
-            <span>{t('tourMini.years')}</span>
-            <small>{t('tourMini.departures')}</small>
-          </div>
-
-          {/* ── Dark bottom section ── */}
-          <div className="tour-mini-bottom">
-            <div className="tour-mini-flag" aria-hidden="true">
-              <span className="flag-star">★</span>
-            </div>
-            <p className="tour-mini-included">
-              {t('tourMini.allIncluded').split('\n').map((line, i) => (
-                <React.Fragment key={i}>{line}{i === 0 && <br />}</React.Fragment>
-              ))}
-            </p>
-          </div>
-        </a>
       </div>
 
       {/* ── Video Lightbox Overlay ── */}
