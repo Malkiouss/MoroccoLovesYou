@@ -113,7 +113,7 @@
     width: 130px;
     right: 10px;
     top: auto;
-    bottom: calc(80px + var(--footer-offset, 0px));
+    bottom: calc(20px + var(--footer-offset, 0px));
     transform: none;
   }
 
