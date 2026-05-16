@@ -1,7 +1,7 @@
 /* WhatsApp floating button - small & sticky */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: calc(20px + var(--footer-offset, 0px));
   left: 40px;
   width: 60px;
   height: 60px;
@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, bottom 0.3s ease;
   z-index: 999;
 }
 
@@ -42,7 +42,7 @@
   .whatsapp-float {
     width: 38px;
     height: 38px;
-    bottom: 14px;
+    bottom: calc(14px + var(--footer-offset, 0px));
     left: 14px;
   }
   

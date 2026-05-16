@@ -37,8 +37,8 @@ export default function Footer() {
         <div className="footer-section">
           <h4>{t('footer.contactInfo')}</h4>
           <p>📍 Marrakech, Morocco</p>
-          <p>📧 info@moroccolovesyou.com</p>
-          <p>📞 +212 5 24 43 77 77</p>
+          <p>📧 I.H.Tradein@gmail.com</p>
+          <p>📞 +972 54-633-8757</p>
           <div className="social-links">
             <a href="#facebook" target="_blank" rel="noopener noreferrer">f</a>
             <a href="#twitter" target="_blank" rel="noopener noreferrer">𝕏</a>

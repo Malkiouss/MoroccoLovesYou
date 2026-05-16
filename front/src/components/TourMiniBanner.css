@@ -31,13 +31,14 @@
   position: fixed;
   left: 20px;
   top: 55%;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - var(--footer-offset, 0px)));
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px; /* Increased gap to ensure no overlapping */
   cursor: pointer;
+  transition: transform 0.3s ease, bottom 0.3s ease;
 }
 
 /* ── Kosher Simple Banner (Integrated) ── */
@@ -438,7 +439,7 @@
   .tour-mini-float {
     left: 10px;
     top: auto;
-    bottom: 80px;
+    bottom: calc(80px + var(--footer-offset, 0px));
     transform: none;
     gap: 12px; /* Balanced gap for mobile */
   }

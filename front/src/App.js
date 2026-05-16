@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import './App.css';
@@ -28,6 +29,38 @@ import JewishHeritage from './pages/JewishHeritage';
 
 
 function App() {
+  useEffect(() => {
+    const updateOffset = () => {
+      const footer = document.querySelector('.footer');
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        const visibleHeight = Math.max(0, window.innerHeight - rect.top);
+        document.documentElement.style.setProperty('--footer-offset', `${visibleHeight}px`);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          window.addEventListener('scroll', updateOffset);
+          updateOffset();
+        } else {
+          window.removeEventListener('scroll', updateOffset);
+          document.documentElement.style.setProperty('--footer-offset', '0px');
+        }
+      },
+      { threshold: 0 }
+    );
+
+    const footer = document.querySelector('.footer');
+    if (footer) observer.observe(footer);
+
+    return () => {
+      if (footer) observer.unobserve(footer);
+      window.removeEventListener('scroll', updateOffset);
+    };
+  }, []);
+
   return (
     <LanguageProvider>
       <Router>
@@ -37,29 +70,29 @@ function App() {
         <div className="App">
           <LanguageSelector />
           <UnityBanner />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/destinations" element={<Destinations />} />
-            <Route path="/tours" element={<Tours />} />
-            <Route path="/experiences" element={<Experiences />} />
-            <Route path="/vip" element={<VIP />} />
-            <Route path="/worldcup" element={<WorldCup />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/gallery/:slug" element={<CityDetailPage />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/transportation" element={<Transportation />} />
-            <Route path="/jewish-heritage" element={<JewishHeritage />} />
-          </Routes>
-          <SocialFloating/>
+          <div className="app-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/destinations" element={<Destinations />} />
+              <Route path="/tours" element={<Tours />} />
+              <Route path="/experiences" element={<Experiences />} />
+              <Route path="/vip" element={<VIP />} />
+              <Route path="/worldcup" element={<WorldCup />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/gallery/:slug" element={<CityDetailPage />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/transportation" element={<Transportation />} />
+              <Route path="/jewish-heritage" element={<JewishHeritage />} />
+            </Routes>
+            <SocialFloating/>
+            <WhatsAppBanner />
+            <StarBanner />
+            <TourMiniBanner />
+          </div>
           <Footer />
-          <WhatsAppBanner />
-          
-          <StarBanner />
-          
-          <TourMiniBanner />
         </div>
       </Router>
     </LanguageProvider>
