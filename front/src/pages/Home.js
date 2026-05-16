@@ -19,7 +19,7 @@ export default function Home() {
   const featuredTours = [
     {
       id: "pkg1",
-      image: 'https://images.unsplash.com/photo-1544971587-b842c27f8e14?w=600&h=400&fit=crop',
+      image: '/assets/packs/pack1.jpeg',
       title: "Fes Luxury Weekend Escape",
       duration: "3 Nights / 4 Days (Thursday → Sunday)",
       price: "€790",
@@ -49,7 +49,7 @@ export default function Home() {
     },
     {
       id: "pkg2",
-      image: 'https://images.unsplash.com/photo-1552683526-616900f6b3b5?w=600&h=400&fit=crop',
+      image: '/assets/packs/pack2.jpeg',
       title: "Morocco Luxury Discovery Tour",
       duration: "6 Nights / 7 Days (Monday → Sunday)",
       price: "€1490",
@@ -71,7 +71,7 @@ export default function Home() {
     },
     {
       id: "pkg4",
-      image: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?w=600&h=400&fit=crop',
+      image: '/assets/packs/pack4.jpeg',
       title: "Morocco Imperial & Sahara Experience",
       duration: "13 Nights / 14 Days",
       price: "All Inclusive",
