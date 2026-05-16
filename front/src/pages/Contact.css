@@ -200,80 +200,7 @@
   border: 1px solid #c3fae8;
 }
 
-/* Floating WhatsApp Button */
-.allan-whatsapp-float {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  background: #fff;
-  padding: 8px 30px 8px 8px;
-  border-radius: 100px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.18);
-  text-decoration: none;
-  z-index: 2000;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(0,0,0,0.05);
-}
 
-.allan-whatsapp-float:hover {
-  transform: scale(1.08) translateY(-10px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-}
-
-.allan-photo-wrapper {
-  position: relative;
-  width: 70px;
-  height: 70px;
-}
-
-.allan-photo-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #25D366;
-  background: #f0f0f0;
-}
-
-.online-indicator {
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 16px;
-  height: 16px;
-  background: #25D366;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
-  animation: pulse-green 2s infinite;
-}
-
-@keyframes pulse-green {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-.allan-label {
-  display: flex;
-  flex-direction: column;
-}
-
-.allan-name {
-  font-weight: 800;
-  color: #1a1a1a;
-  font-size: 1.15rem;
-  line-height: 1.2;
-}
-
-.allan-status {
-  font-size: 0.85rem;
-  color: #25D366;
-  font-weight: 700;
-}
 
 @media (max-width: 1100px) {
   .contact-container {
@@ -301,28 +228,7 @@
     grid-template-columns: 1fr;
   }
   
-  .allan-name {
-    display: none;
-  }
-  
-  .allan-label {
-    padding-right: 5px;
-  }
-  
-  .allan-status {
-    font-size: 0.75rem;
-  }
 
-  .allan-whatsapp-float {
-    bottom: 30px;
-    right: 30px;
-    padding: 6px 15px 6px 6px;
-  }
-  
-  .allan-photo-wrapper {
-    width: 55px;
-    height: 55px;
-  }
   
   .hours-highlight {
     font-size: 1.5rem;

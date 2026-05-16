@@ -175,22 +175,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Floating WhatsApp Button with Allan's Photo */}
-      <a 
-        href="https://wa.me/972546338757" 
-        className="allan-whatsapp-float" 
-        target="_blank" 
-        rel="noreferrer"
-      >
-        <div className="allan-photo-wrapper">
-          <img src="/assets/star.png" alt="Allan Hatchuel" />
-          <div className="online-indicator"></div>
-        </div>
-        <div className="allan-label">
-          <span className="allan-name">Allan Hatchuel</span>
-          <span className="allan-status">Online - Click to Chat</span>
-        </div>
-      </a>
+
     </div>
   );
 }
