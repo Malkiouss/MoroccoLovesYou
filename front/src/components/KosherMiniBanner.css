@@ -1,0 +1,84 @@
+/* ============================================
+   SIMPLIFIED KOSHER BANNER
+   ============================================ */
+.kosher-mini-float {
+  position: fixed;
+  left: 20px;
+  top: 40%; /* Adjusted position */
+  transform: translateY(-50%);
+  z-index: 9998;
+}
+
+.kosher-simple-banner {
+  display: block;
+  text-decoration: none;
+  background-color: #004080;
+  border: 2px solid #C9A227;
+  border-radius: 15px;
+  padding: 15px 12px;
+  width: 90px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+}
+
+.kosher-simple-banner:hover {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7),
+              0 0 20px rgba(201, 162, 39, 0.3);
+  border-color: #fff;
+}
+
+.kosher-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.david-star {
+  font-size: 32px;
+  color: #C9A227;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.5));
+  transition: transform 0.4s ease;
+}
+
+.kosher-simple-banner:hover .david-star {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.kosher-text {
+  font-size: 13px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .kosher-mini-float {
+    left: 10px;
+    top: 350px;
+    bottom: 190px;
+  }
+
+  .kosher-simple-banner {
+    width: 75px;
+    padding: 10px 8px;
+    border-radius: 12px;
+  }
+
+  .david-star {
+    font-size: 24px;
+  }
+
+  .kosher-text {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
