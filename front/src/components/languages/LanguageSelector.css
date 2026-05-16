@@ -9,8 +9,8 @@
   -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 20px;
+  justify-content: flex-start;
+  padding: 0 40px;
   border-bottom: 1px solid rgba(219, 159, 70, 0.15);
   position: absolute;
   top: 0;
@@ -25,11 +25,11 @@
 
 /* Desktop list — horizontal row */
 .language-list {
-  width: 100%;
+  width: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
   padding: 10px 0;
 }
@@ -130,7 +130,7 @@
   .mobile-language-toggle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
     width: 100%;
     height: 52px;
@@ -288,14 +288,14 @@
 }
 .lang-social-icon {
   color: white;
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .lang-social-icon:hover {
@@ -319,18 +319,23 @@
     gap: 8px;
   }
   .lang-social-icon {
-    width: 26px;
-    height: 26px;
+    width: 34px;
+    height: 34px;
   }
   .lang-social-icon svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
   }
 }
 
 @media (max-width: 600px) {
   .language-socials {
-    top: 26px; /* Center within the 52px mobile header */
-    right: 12px;
+    top: 26px;
+    right: 15px;
+    gap: 10px;
+  }
+  .lang-social-icon {
+    width: 36px;
+    height: 36px;
   }
 }
