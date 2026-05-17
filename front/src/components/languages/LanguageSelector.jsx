@@ -56,7 +56,7 @@ function LanguageSelector() {
 
   return (
     <section className="language-section">
-      {/* Mobile toggle — shows globe + current language name + chevron */}
+      {/* Mobile toggle — shows globe + current language name + flag + chevron */}
       <button
         className={`mobile-language-toggle ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -65,6 +65,9 @@ function LanguageSelector() {
       >
         <Earth size={16} />
         <span>{activeLang?.label ?? "Language"}</span>
+        {activeLang && (
+          <span className={`fi fi-${activeLang.flagCode} mobile-active-flag`} aria-hidden="true"></span>
+        )}
         <span className="toggle-chevron">▼</span>
       </button>
 

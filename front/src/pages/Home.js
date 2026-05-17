@@ -181,37 +181,12 @@ export default function Home() {
 
  {/* Video Experience Section */}
       <VideoSection />
-
+      
+ {/* Culinary Section — mimic BusSection */}
+      <CulinarySection />
      
 
-      {/* White strip wraps the WC card — breaks up the two dark sections */}
-      <div className="wc2030-strip">
-        <section className="mly-wc2030-luxury-banner">
-          <div className="mly-wc2030-pattern"></div>
-
-          <div className="mly-wc2030-content">
-            <div className="mly-wc2030-text">
-              <span className="mly-wc2030-badge">{t('home.wcBadge')}</span>
-
-              <h2>{t('home.wcTitle')}</h2>
-
-              <p>{t('home.wcText')}</p>
-
-              <Link to="/worldcup" className="mly-wc2030-btn">
-                {t('home.wcBtn')}
-              </Link>
-            </div>
-
-            <div className="mly-wc2030-visual">
-              <img
-                src="/assets/wordcup.png"
-                alt="World Cup trophy with Moroccan flag"
-              />
-            </div>
-          </div>
-        </section>
-      </div>
-
+    
      
  {/* Premium Banner 1: VIP Morocco Travel Experiences */}
       <section className="premium-banner vip-banner">
@@ -260,8 +235,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Culinary Section — mimic BusSection */}
-      <CulinarySection />
+     
+
+        {/* White strip wraps the WC card — breaks up the two dark sections */}
+      <div className="wc2030-strip">
+        <section className="mly-wc2030-luxury-banner">
+          <div className="mly-wc2030-pattern"></div>
+
+          <div className="mly-wc2030-content">
+            <div className="mly-wc2030-text">
+              <span className="mly-wc2030-badge">{t('home.wcBadge')}</span>
+
+              <h2>{t('home.wcTitle')}</h2>
+
+              <p>{t('home.wcText')}</p>
+
+              <Link to="/worldcup" className="mly-wc2030-btn">
+                {t('home.wcBtn')}
+              </Link>
+            </div>
+
+            <div className="mly-wc2030-visual">
+              <img
+                src="/assets/wordcup.png"
+                alt="World Cup trophy with Moroccan flag"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
 
       {/* Jewish Heritage Section */}
       <JewishHeritageSection />

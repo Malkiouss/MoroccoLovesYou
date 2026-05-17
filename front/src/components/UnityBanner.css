@@ -53,11 +53,12 @@
 @media (max-width: 768px) {
   .unity-banner {
     top: 52px; 
-    height: 60px;
+    height: 80px;
+    width: 100%;
     padding: 0 10px;
   }
   
   .unity-banner-img {
-    max-height: 50px;
+    max-height: 70px;
   }
 }

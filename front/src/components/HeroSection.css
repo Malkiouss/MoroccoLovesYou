@@ -639,15 +639,16 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    padding: 0 5px;
+    padding: 0 5px 0 0;
     justify-content: flex-start;
     top: 100px;
     height: auto;
   }
 
   .logo img {
-    height: 140px;
+    height: 160px;
     width: auto;
+    margin-left: -25px;
     /* Compact size for the corner */
   }
 
