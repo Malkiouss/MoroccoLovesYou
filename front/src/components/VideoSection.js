@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import { getWatermarkedVideoUrl } from "../utils/imageUtils";
+import { getWatermarkedVideoUrl, getVideoThumbnailUrl } from "../utils/imageUtils";
 import "./VideoSection.css";
 
 export default function VideoSection() {
@@ -9,6 +9,7 @@ export default function VideoSection() {
   const videoRef = useRef(null);
   const rawVideoUrl = "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4";
   const watermarkedUrl = getWatermarkedVideoUrl(rawVideoUrl); 
+  const posterUrl = getVideoThumbnailUrl(rawVideoUrl);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [finished, setFinished] = useState(false);
@@ -51,6 +52,7 @@ export default function VideoSection() {
           onPause={() => setIsPlaying(false)}
           controls={false}
           playsInline
+          poster={posterUrl}
         >
           <source src={watermarkedUrl} type="video/mp4" />
         </video>

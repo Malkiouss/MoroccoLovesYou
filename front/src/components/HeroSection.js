@@ -138,7 +138,7 @@ export default function HeroSection() {
         >
           <div className="mobile-menu" onClick={(e) => e.stopPropagation()}>
             <div className="mobile-menu-top">
-              <div className="mobile-menu-title">{t('nav.menu')}</div>
+              <div className="mobile-menu-title">{t('menu')}</div>
               <button
                 type="button"
                 className="mobile-menu-close"

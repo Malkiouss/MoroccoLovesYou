@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import CustomVideoPlayer from '../components/CustomVideoPlayer';
-import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import { getWatermarkedVideoUrl, getVideoThumbnailUrl } from '../utils/imageUtils';
 import './JewishHeritage.css';
 
 export default function JewishHeritage() {
@@ -208,6 +208,7 @@ export default function JewishHeritage() {
               autoPlay 
               playsInline 
               className="lightbox-video"
+              poster={getVideoThumbnailUrl(lightboxVideo)}
             />
           </div>
         </div>

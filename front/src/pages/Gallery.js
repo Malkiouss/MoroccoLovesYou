@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import SafeImage from '../components/SafeImage';
-import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import { getWatermarkedVideoUrl, getVideoThumbnailUrl } from '../utils/imageUtils';
 import './Gallery.css';
 
 export default function Gallery() {
@@ -170,6 +170,7 @@ export default function Gallery() {
                   className="gallery-video"
                   controls
                   preload="metadata"
+                  poster={video.poster || getVideoThumbnailUrl(video.src)}
                 />
               </div>
             ))}

@@ -41,3 +41,27 @@ export function getWatermarkedVideoUrl(url, logoPublicId = 'My Brand:vidlogo_otz
   
   return url;
 }
+
+export function getVideoThumbnailUrl(url) {
+  if (!url || typeof url !== 'string') return '';
+  
+  if (url.includes('cloudinary.com')) {
+    // Replace extension at the end of URL with .jpg
+    let thumbnailUrl = url.replace(/\.[^/.]+$/, '.jpg');
+    
+    // Add start-offset of 1 second (so_1) to ensure we don't get a black/blank frame from the very start of the video
+    if (thumbnailUrl.includes('/video/upload/')) {
+      // If there are existing transformations, prepend so_1 to them
+      thumbnailUrl = thumbnailUrl.replace('/video/upload/', '/video/upload/so_1/');
+    }
+    
+    return thumbnailUrl;
+  }
+  
+  // Fallback for local or other video URLs (replace extension with jpg as a best effort)
+  if (url.startsWith('/') || url.startsWith('http')) {
+    return url.replace(/\.[^/.]+$/, '.jpg');
+  }
+  
+  return '';
+}

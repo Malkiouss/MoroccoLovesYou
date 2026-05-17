@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
+import { getVideoThumbnailUrl } from "../utils/imageUtils";
 import "./CustomVideoPlayer.css";
 
-export default function CustomVideoPlayer({ src, className = "" }) {
+export default function CustomVideoPlayer({ src, poster, className = "" }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [finished, setFinished] = useState(false);
@@ -27,9 +28,11 @@ export default function CustomVideoPlayer({ src, className = "" }) {
     }
   };
 
+  const activePoster = poster || getVideoThumbnailUrl(src);
+
   return (
     <div className={`custom-video-wrapper ${className}`} onClick={togglePlay}>
-     
+      
 
       <video
         ref={videoRef}
@@ -42,6 +45,7 @@ export default function CustomVideoPlayer({ src, className = "" }) {
         onPause={() => setIsPlaying(false)}
         controls={false}
         playsInline
+        poster={activePoster}
       >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.

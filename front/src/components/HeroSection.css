@@ -149,24 +149,28 @@ nav {
 .mobile-menu-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 2000000000; /* overlay all header/language selectors */
   background: rgba(0, 0, 0, 0.55);
   display: flex;
   justify-content: flex-end;
-  padding: 18px;
+  padding: 0;
   backdrop-filter: blur(6px);
-  z-index: 10000000;
 }
 
 .mobile-menu {
   width: min(360px, 100%);
-  background: rgba(13, 31, 23, 0.96);
+  height: 100dvh;
+  background: rgba(13, 31, 23, 0.97);
   border: 1px solid rgba(201, 168, 76, 0.22);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 16px 0 0 16px;
+  padding: 24px 20px;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
   animation: panelIn 220ms ease-out both;
-
+  z-index: 100000000000;
+  overflow-y: auto;
 }
 
 .mobile-menu-top {

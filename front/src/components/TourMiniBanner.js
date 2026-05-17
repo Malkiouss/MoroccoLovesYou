@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { X, Play, Pause, RotateCcw } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import { getWatermarkedVideoUrl } from '../utils/imageUtils';
+import { getWatermarkedVideoUrl, getVideoThumbnailUrl } from '../utils/imageUtils';
 import "./TourMiniBanner.css";
 
 const TourMiniBanner = () => {
@@ -11,7 +11,8 @@ const TourMiniBanner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [finished, setFinished] = useState(false);
   const videoRef = useRef(null);
-  const VIDEO_THUMB = "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.jpg";
+  const videoSrc = "https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4";
+  const VIDEO_THUMB = getVideoThumbnailUrl(videoSrc);
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -64,7 +65,7 @@ const TourMiniBanner = () => {
         >
           <div className="video-badge-thumb" style={{ backgroundImage: `url(${VIDEO_THUMB})` }}>
             <div className="video-badge-overlay">
-              <Play size={24} fill="currentColor" />
+               <Play size={24} fill="currentColor" />
             </div>
             <div className="video-badge-label">
               <span>{t('tourMini.recommendations')}</span>
@@ -97,8 +98,9 @@ const TourMiniBanner = () => {
                   onPause={() => setIsPlaying(false)}
                   controls={false}
                   playsInline
+                  poster={VIDEO_THUMB}
                 >
-                  <source src={getWatermarkedVideoUrl("https://res.cloudinary.com/dylxqjhjj/video/upload/v1778161943/WhatsApp_Video_2026-05-05_at_11.04.21_jbcjin.mp4")} type="video/mp4" />
+                  <source src={getWatermarkedVideoUrl(videoSrc)} type="video/mp4" />
                 </video>
 
                 <button 
