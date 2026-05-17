@@ -123,27 +123,29 @@ nav {
 
 .nav-menu-btn {
   display: none;
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--white);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--gold);
+  border: none;
+  color: #0d1f17;
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-menu-btn:hover {
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+  background: #fff;
+  color: var(--gold);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .mobile-menu-backdrop {
