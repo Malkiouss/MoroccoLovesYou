@@ -11,31 +11,36 @@ export default function JewishHeritage() {
   const [lightboxVideo, setLightboxVideo] = useState(null);
 
   const experiences = [
-    { title: "100% Kosher Food", icon: "🍷" },
-    { title: "Kosher Restaurant", icon: "🍽️" },
-    { title: "Private Kosher Chef Available", icon: "👨‍🍳" },
-    { title: "Traditional Moroccan Jewish Cuisine", icon: "🍲" },
-    { title: "Luxury Hotels 4 & 5 Stars", icon: "🏨" },
-    { title: "Deluxe Hotels Available Upon Request", icon: "✨" },
-    { title: "Private VIP Transportation", icon: "🚘" },
-    { title: "Professional Drivers", icon: "👤" },
-    { title: "Air-Conditioned Vehicles", icon: "❄️" },
-    { title: "WiFi, TV & Refrigerators In Selected Vehicles", icon: "📡" },
-    { title: "Multilingual Professional Guides", icon: "🗣️" },
-    { title: "Hebrew / English / French / Spanish / Russian / German Speaking Staff", icon: "🌍" },
-    { title: "Jewish Heritage Tours", icon: "📜" },
-    { title: "Ancient Synagogues", icon: "✡" },
-    { title: "Jewish Cemeteries", icon: "🪦" },
-    { title: "Jewish Museums", icon: "🖼️" },
-    { title: "Spiritual & Cultural Experiences", icon: "🧘" },
-    { title: "Sahara Desert Experiences", icon: "🐪" },
-    { title: "Moroccan Hammam Experiences", icon: "🧖" },
-    { title: "Unique Attractions Across Morocco", icon: "🏰" },
-    { title: "24/7 Assistance", icon: "☎️" }
+    { title: t('jewishHeritage.expFood') || "100% Kosher Food", icon: "🍷" },
+    { title: t('jewishHeritage.expRestaurant') || "Kosher Restaurant", icon: "🍽️" },
+    { title: t('jewishHeritage.expChef') || "Private Kosher Chef Available", icon: "👨‍🍳" },
+    { title: t('jewishHeritage.expCuisine') || "Traditional Moroccan Jewish Cuisine", icon: "🍲" },
+    { title: t('jewishHeritage.expHotels') || "Luxury Hotels 4 & 5 Stars", icon: "🏨" },
+    { title: t('jewishHeritage.expDeluxeHotels') || "Deluxe Hotels Available Upon Request", icon: "✨" },
+    { title: t('jewishHeritage.expTransport') || "Private VIP Transportation", icon: "🚘" },
+    { title: t('jewishHeritage.expDrivers') || "Professional Drivers", icon: "👤" },
+    { title: t('jewishHeritage.expAC') || "Air-Conditioned Vehicles", icon: "❄️" },
+    { title: t('jewishHeritage.expWifi') || "WiFi, TV & Refrigerators In Selected Vehicles", icon: "📡" },
+    { title: t('jewishHeritage.expGuides') || "Multilingual Professional Guides", icon: "🗣️" },
+    { title: t('jewishHeritage.expStaff') || "Hebrew / English / French / Spanish / Russian / German Speaking Staff", icon: "🌍" },
+    { title: t('jewishHeritage.expHeritage') || "Jewish Heritage Tours", icon: "📜" },
+    { title: t('jewishHeritage.expSynagogues') || "Ancient Synagogues", icon: "✡" },
+    { title: t('jewishHeritage.expCemeteries') || "Jewish Cemeteries", icon: "🪦" },
+    { title: t('jewishHeritage.expMuseums') || "Jewish Museums", icon: "🖼️" },
+    { title: t('jewishHeritage.expSpiritual') || "Spiritual & Cultural Experiences", icon: "🧘" },
+    { title: t('jewishHeritage.expDesert') || "Sahara Desert Experiences", icon: "🐪" },
+    { title: t('jewishHeritage.expHammam') || "Moroccan Hammam Experiences", icon: "🧖" },
+    { title: t('jewishHeritage.expAttractions') || "Unique Attractions Across Morocco", icon: "🏰" },
+    { title: t('jewishHeritage.expAssistance') || "24/7 Assistance", icon: "☎️" }
   ];
 
   const packages = [
-    "4–5 Days", "7–8 Days", "10–11 Days", "13–14 Days", "21 Days", "Tailor-Made Private Tours"
+    t('jewishHeritage.package4_5') || "4–5 Days",
+    t('jewishHeritage.package7_8') || "7–8 Days",
+    t('jewishHeritage.package10_11') || "10–11 Days",
+    t('jewishHeritage.package13_14') || "13–14 Days",
+    t('jewishHeritage.package21') || "21 Days",
+    t('jewishHeritage.packageTailor') || "Tailor-Made Private Tours"
   ];
 
   const videos = [
@@ -69,11 +74,11 @@ export default function JewishHeritage() {
         <div className="container">
           <div className="intro-grid">
             <div className="intro-text">
-              <span className="kicker">Luxury Jewish Heritage Experience</span>
-              <h2>Discover Authentic Jewish Morocco</h2>
+              <span className="kicker">{t('jewishHeritage.introTitle')}</span>
+              <h2>{t('jewishHeritage.introHeading') || "Discover Authentic Jewish Morocco"}</h2>
               <p>{t('jewishHeritage.introText')}</p>
               <div className="intro-quote">
-                <p>"Morocco is a land of tolerance and coexistence, where Jewish heritage is preserved with love and respect."</p>
+                <p>{t('jewishHeritage.introQuote') || `"Morocco is a land of tolerance and coexistence, where Jewish heritage is preserved with love and respect."`}</p>
               </div>
             </div>
             <div className="intro-image">
@@ -113,7 +118,7 @@ export default function JewishHeritage() {
                   </div>
                 ))}
               </div>
-              <p className="packages-note">“We customize every trip according to the needs, traditions, travel style, dates, and expectations of our guests.”</p>
+              <p className="packages-note">{t('jewishHeritage.packagesQuote') || `“We customize every trip according to the needs, traditions, travel style, dates, and expectations of our guests.”`}</p>
             </div>
             <div className="packages-image">
               <img src="/assets/kosher/kosher (6).png" alt="Kosher Moroccan Table" />
@@ -127,7 +132,7 @@ export default function JewishHeritage() {
           <div className="safety-box">
             <div className="safety-icon">🛡️</div>
             <h2>{t('jewishHeritage.safetyTitle')}</h2>
-            <p>“Our tours operate with high attention to comfort, organization, service quality, and professional coordination across Morocco.”</p>
+            <p>{t('jewishHeritage.safetyQuote') || `“Our tours operate with high attention to comfort, organization, service quality, and professional coordination across Morocco.”`}</p>
           </div>
         </div>
       </section>
@@ -141,8 +146,8 @@ export default function JewishHeritage() {
             <div className="b2b-content">
               <h2>{t('jewishHeritage.b2bTitle')}</h2>
               <p>{t('jewishHeritage.b2bText')}</p>
-              <p>We work with: Jewish communities, Synagogues, Rabbis, Jewish organizations, Kosher tour operators, and Travel agencies worldwide.</p>
-              <Link to="/contact" className="b2b-btn">Partner With Us</Link>
+              <p>{t('jewishHeritage.b2bPartnersList') || "We work with: Jewish communities, Synagogues, Rabbis, Jewish organizations, Kosher tour operators, and Travel agencies worldwide."}</p>
+              <Link to="/contact" className="b2b-btn">{t('jewishHeritage.partnerBtn') || "Partner With Us"}</Link>
             </div>
           </div>
         </div>
@@ -184,14 +189,14 @@ export default function JewishHeritage() {
       <section className="heritage-cta">
         <div className="container">
           <div className="cta-card">
-            <h2>Ready to Begin Your Journey?</h2>
+            <h2>{t('jewishHeritage.ctaTitle') || "Ready to Begin Your Journey?"}</h2>
             <p>{t('jewishHeritage.ceoContact')}</p>
             <div className="cta-buttons">
               <a href="https://wa.me/972546338757" target="_blank" rel="noreferrer" className="btn-whatsapp">
-                Message Allan on WhatsApp
+                {t('jewishHeritage.msgAllan') || "Message Allan on WhatsApp"}
               </a>
               <a href="tel:+212663630579" className="btn-phone">
-                Call Morocco: +212 6 63 63 05 79
+                {t('jewishHeritage.callMorocco') || "Call Morocco: +212 6 63 63 05 79"}
               </a>
             </div>
           </div>

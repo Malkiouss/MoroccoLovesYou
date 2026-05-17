@@ -65,15 +65,15 @@ export default function Experiences() {
         <section className="exp-intro-section">
           <div className="split-layout">
             <div className="exp-text">
-              <h2>Our Unique Moroccan Culinary Experience</h2>
-              <p className="intro-highlight">Authentic flavors, fresh ingredients, centuries of tradition, and unforgettable hospitality.</p>
-              <p>Welcome to the authentic flavors of Morocco.</p>
-              <p>At Morocco Loves You, food is not just a meal — it is culture, history, family, hospitality, and love.</p>
-              <p>For centuries, Moroccan cuisine has been considered one of the richest, healthiest, and most flavorful cuisines in the world.</p>
-              <p>Our culinary traditions combine Arab, Berber, Jewish Moroccan, Andalusian, Mediterranean, and African influences — creating unique recipes preserved for more than 500 years.</p>
+              <h2>{t('experiences.introTitle')}</h2>
+              <p className="intro-highlight">{t('experiences.introHighlight')}</p>
+              <p>{t('experiences.introP1')}</p>
+              <p>{t('experiences.introP2')}</p>
+              <p>{t('experiences.introP3')}</p>
+              <p>{t('experiences.introP4')}</p>
             </div>
             <div className="exp-image">
-              <img src={introImage} alt="Moroccan Feast" className="exp-img" />
+              <img src={introImage} alt={t('experiences.introTitle')} className="exp-img" />
             </div>
           </div>
 
@@ -86,29 +86,26 @@ export default function Experiences() {
           </div>
         </section>
 
-     
-
         {/* ── PHILOSOPHY SECTION ── */}
         <section className="philosophy-section">
           <div className="split-layout reverse">
             <div className="exp-image">
-              <img src={philosophyImage} alt="Fresh Ingredients" className="exp-img" />
+              <img src={philosophyImage} alt={t('experiences.prepTitle')} className="exp-img" />
             </div>
             <div className="exp-text">
-              <h2>The Art of Moroccan Preparation</h2>
+              <h2>{t('experiences.prepTitle')}</h2>
               <div className="text-content-card">
-                <p>Everything is prepared with care, passion, fresh local ingredients, and authentic Moroccan spices.</p>
-                <p>We carefully select trusted restaurants, authentic local experiences, and quality culinary destinations for our guests.</p>
-                <p>Morocco is known worldwide for its colorful markets, fresh agriculture, natural products, spices, olives, oranges, pastries, mint tea, and unforgettable hospitality.</p>
+                <p>{t('experiences.prepP1')}</p>
+                <p>{t('experiences.prepP2')}</p>
+                <p>{t('experiences.prepP3')}</p>
               </div>
             </div>
           </div>
         </section>
 
-
         {/* ── VIDEO GALLERY SECTION ── */}
         <section className="experiences-video-section">
-          <h2>Culinary Journey Videos</h2>
+          <h2>{t('experiences.journeyVideos')}</h2>
           <div className="exp-video-grid">
             {culinaryVideos.map((video) => (
               <div key={video.id} className="exp-video-card">
@@ -120,26 +117,25 @@ export default function Experiences() {
           </div>
         </section>
 
-
          {/* ── FEATURES LIST ── */}
         <section className="services-grid-section">
-          <h2>Traditional Culinary Highlights</h2>
+          <h2>{t('experiences.highlightsTitle')}</h2>
           <ul className="services-list">
-            <li><span className="service-icon">🥘</span> Authentic Moroccan Tagine</li>
-            <li><span className="service-icon">🥘</span> Traditional Couscous</li>
-            <li><span className="service-icon">🥘</span> Fresh vegetables & natural ingredients</li>
-            <li><span className="service-icon">🥘</span> Homemade pastries & desserts</li>
-            <li><span className="service-icon">🥘</span> Traditional Moroccan breakfasts</li>
-            <li><span className="service-icon">🥘</span> Fresh fish & quality meats</li>
-            <li><span className="service-icon">🥘</span> Natural juices & Moroccan tea</li>
-            <li><span className="service-icon">🥘</span> Healthy and delicious cooking traditions</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightTagine')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightCouscous')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightVegetables')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightPastries')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightBreakfasts')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightMeat')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightJuices')}</li>
+            <li><span className="service-icon">🥘</span> {t('experiences.highlightHealthy')}</li>
           </ul>
         </section>
 
         {/* ── PHOTO GALLERY GRID ── */}
         <section className="gallery-section experiences-gallery">
           <div className="gallery-container">
-            <h2>Our Culinary Gallery</h2>
+            <h2>{t('experiences.galleryTitle')}</h2>
             <div className="gallery-grid">
               {availablePhotos.map((photo, index) => (
                 <div
@@ -161,18 +157,18 @@ export default function Experiences() {
         {/* ── SUMMARY SECTION ── */}
         <section className="summary-section">
           <div className="text-content-card">
-            <p>Our goal is to offer our guests not only a trip — but a true Moroccan culinary journey.</p>
+            <p>{t('experiences.summaryP1')}</p>
             <div className="feature-tags">
-              <span>🌿 Healthy</span>
-              <span>🌿 Authentic</span>
-              <span>🌿 Traditional</span>
-              <span>🌿 Fresh</span>
-              <span>🌿 Unique</span>
-              <span>🌿 Delicious</span>
+              <span>🌿 {t('experiences.tagHealthy')}</span>
+              <span>🌿 {t('experiences.tagAuthentic')}</span>
+              <span>🌿 {t('experiences.tagTraditional')}</span>
+              <span>🌿 {t('experiences.tagFresh')}</span>
+              <span>🌿 {t('experiences.tagUnique')}</span>
+              <span>🌿 {t('experiences.tagDelicious')}</span>
             </div>
             <div className="important-note">
-              <h4>Important:</h4>
-              <p>For the best culinary experience, we strongly recommend following the guidance of our team and culinary recommendations during your journey in Morocco.</p>
+              <h4>{t('experiences.important')}</h4>
+              <p>{t('experiences.guidanceNote')}</p>
             </div>
           </div>
         </section>
@@ -180,13 +176,13 @@ export default function Experiences() {
         {/* ── CTA SECTION ── */}
         <section className="experiences-cta">
           <h3>Morocco Loves You</h3>
-          <p className="cta-sub">Where every meal becomes a memory.</p>
+          <p className="cta-sub">{t('experiences.whereMeal')}</p>
           <div className="cta-links">
             <a href="https://wa.me/972546338757" target="_blank" rel="noreferrer" className="cta-link whatsapp">
-              <span>📲</span> WhatsApp: +972 54-633-8757
+              <span>📲</span> {t('experiences.whatsappLabel') || "WhatsApp: +972 54-633-8757"}
             </a>
             <a href="tel:+212663630579" className="cta-link phone">
-              <span>☎️</span> Morocco Line: +212 6 63 63 05 79
+              <span>☎️</span> {t('experiences.moroccoLine') || "Morocco Line: +212 6 63 63 05 79"}
             </a>
           </div>
           <p style={{ marginTop: '2rem', opacity: 0.7 }}>🌐 www.MoroccoLovesYou.com</p>

@@ -20,80 +20,102 @@ export default function Home() {
     {
       id: "pkg1",
       image: '/assets/packs/pack1.jpeg',
-      title: "Fes Luxury Weekend Escape",
-      duration: "3 Nights / 4 Days (Thursday → Sunday)",
-      price: "€790",
+      title: t('tours.pkg1.title') || "Fes Luxury Weekend Escape",
+      duration: t('tours.pkg1.duration') || "3 Nights / 4 Days (Thursday → Sunday)",
+      price: t('tours.pkg1.price') || "€790",
       highlights: [
-        "Direct roundtrip flights included",
-        "4–5 star luxury hotels",
-        "Traditional Moroccan hammam",
-        "Cooking & art workshops"
+        t('tours.pkg1.hl1_brief') || "Direct roundtrip flights included",
+        t('tours.pkg1.hl2') || "4–5 star luxury hotels",
+        t('tours.pkg1.hl3') || "Traditional Moroccan hammam",
+        t('tours.pkg1.hl4') || "Cooking & art workshops"
       ],
       fullDetails: {
-        subtitle: "All-Inclusive Package – From A to Z",
-        flights: ["Direct roundtrip flights", "20kg checked luggage", "Cabin luggage up to 8kg"],
+        subtitle: t('tours.pkg1.subtitle') || "All-Inclusive Package – From A to Z",
+        flights: [
+          t('tours.pkg1.flight1') || "Direct roundtrip flights",
+          t('tours.pkg1.flight2') || "20kg checked luggage",
+          t('tours.pkg1.flight3') || "Cabin luggage up to 8kg"
+        ],
         included: [
-          "Airport pickup & transfer back",
-          "4–5 star hotels (Half board)",
-          "Fresh & authentic Moroccan cuisine",
-          "Traditional tea & pastries experience",
-          "Professional tour guide & Private driver",
-          "Modern air-conditioned transportation",
-          "Special live performances",
-          "Traditional market tours",
-          "Cooking & Art workshops",
-          "Day trips to Chefchaouen & Ifrane",
-          "Visits with local Moroccan families"
+          t('tours.pkg1.inc1') || "Airport pickup & transfer back",
+          t('tours.pkg1.inc2') || "4–5 star hotels (Half board)",
+          t('tours.pkg1.inc3') || "Fresh & authentic Moroccan cuisine",
+          t('tours.pkg1.inc4') || "Traditional tea & pastries experience",
+          t('tours.pkg1.inc5') || "Professional tour guide & Private driver",
+          t('tours.pkg1.inc6') || "Modern air-conditioned transportation",
+          t('tours.pkg1.inc7_brief') || "Special live performances",
+          t('tours.pkg1.inc8_brief') || "Traditional market tours",
+          t('tours.pkg1.inc9_brief') || "Cooking & Art workshops",
+          t('tours.pkg1.inc11') || "Day trips to Chefchaouen & Ifrane",
+          t('tours.pkg1.inc12') || "Visits with local Moroccan families"
         ]
       }
     },
     {
       id: "pkg2",
       image: '/assets/packs/pack2.jpeg',
-      title: "Morocco Luxury Discovery Tour",
-      duration: "6 Nights / 7 Days (Monday → Sunday)",
-      price: "€1490",
+      title: t('tours.pkg2.title') || "Morocco Luxury Discovery Tour",
+      duration: t('tours.pkg2.duration') || "6 Nights / 7 Days (Monday → Sunday)",
+      price: t('tours.pkg2.price') || "€1490",
       highlights: [
-        "Fes & North Morocco Route",
-        "Chefchaouen & Tangier visits",
-        "Direct flights & private driver",
-        "Premium locations"
+        t('tours.pkg2.hl1') || "Fes & North Morocco Route",
+        t('tours.pkg2.hl2') || "Chefchaouen & Tangier visits",
+        t('tours.pkg2.hl3_brief') || "Direct flights & private driver",
+        t('tours.pkg2.hl4_brief') || "Premium locations"
       ],
       fullDetails: {
-        subtitle: "Fes & North Morocco Route (All Inclusive)",
-        route: "2 nights Fes, 1 night Chefchaouen, 1 night Tangier, 1 night Ifrane, 1 final night Fes",
-        flights: ["Direct roundtrip flights from Europe", "20kg luggage + Cabin luggage"],
-        transportation: ["Airport pickup & transfer", "Private professional driver & tour guide"],
-        hotels: ["4–5 star hotels", "Premium locations"],
-        food: ["Half board", "Authentic cuisine", "Traditional tea & pastries"],
-        experiences: ["Moroccan live performances", "Traditional markets", "Hammam", "Nature visits"]
+        subtitle: t('tours.pkg2.subtitle') || "Fes & North Morocco Route (All Inclusive)",
+        route: t('tours.pkg2.routeText') || "2 nights Fes, 1 night Chefchaouen, 1 night Tangier, 1 night Ifrane, 1 final night Fes",
+        flights: [
+          t('tours.pkg2.flight1') || "Direct roundtrip flights from Europe",
+          t('tours.pkg2.flight2') || "20kg luggage + Cabin luggage"
+        ],
+        transportation: [
+          t('tours.pkg2.trans1') || "Airport pickup & transfer",
+          t('tours.pkg2.trans2') || "Private professional driver & tour guide"
+        ],
+        hotels: [
+          t('tours.pkg2.hotel1') || "4–5 star hotels",
+          t('tours.pkg2.hotel2') || "Premium locations"
+        ],
+        food: [
+          t('tours.pkg2.food1') || "Half board",
+          t('tours.pkg2.food2') || "Authentic cuisine",
+          t('tours.pkg2.food3') || "Traditional tea & pastries"
+        ],
+        experiences: [
+          t('tours.pkg2.exp1') || "Moroccan live performances",
+          t('tours.pkg2.exp2_brief') || "Traditional markets",
+          t('tours.pkg2.exp3') || "Traditional Moroccan hammam",
+          t('tours.pkg2.exp4_brief') || "Nature visits"
+        ]
       }
     },
     {
       id: "pkg4",
       image: '/assets/packs/pack4.jpeg',
-      title: "Morocco Imperial & Sahara Experience",
-      duration: "13 Nights / 14 Days",
-      price: "All Inclusive",
+      title: t('tours.pkg4.title') || "Morocco Imperial & Sahara Experience",
+      duration: t('tours.pkg4.duration') || "13 Nights / 14 Days",
+      price: t('tours.pkg4.price') || "All Inclusive",
       highlights: [
-        "2 Nights Merzouga Sahara Desert",
-        "Premium AC tents & Jeep excursions",
-        "Visit Atlas Mountains",
-        "Full ground services from A to Z"
+        t('tours.pkg4.hl1') || "2 Nights Merzouga Sahara Desert",
+        t('tours.pkg4.hl2') || "Premium AC tents & Jeep excursions",
+        t('tours.pkg4.hl3_brief') || "Visit Atlas Mountains",
+        t('tours.pkg4.hl5') || "Full ground services from A to Z"
       ],
       fullDetails: {
-        subtitle: "✨ Morocco Imperial & Sahara Experience (Full Ground Services)",
+        subtitle: t('tours.pkg4.subtitle') || "✨ Morocco Imperial & Sahara Experience (Full Ground Services)",
         sahara: [
-          "Premium air-conditioned desert tents",
-          "Campfire music atmosphere",
-          "Jeep excursions & Camel rides"
+          t('tours.pkg4.sahara1') || "Premium air-conditioned desert tents",
+          t('tours.pkg4.sahara2') || "Campfire music atmosphere",
+          t('tours.pkg4.sahara3_brief') || "Jeep excursions & Camel rides"
         ],
         included: [
-          "Full premium ground services",
-          "4–5 star hotels",
-          "Professional tour guide",
-          "Special live performances",
-          "Traditional markets"
+          t('tours.pkg4.inc1') || "Full premium ground services",
+          t('tours.pkg4.inc2_brief') || "4–5 star hotels",
+          t('tours.pkg4.inc3_brief') || "Professional tour guide",
+          t('tours.pkg4.inc4_brief') || "Special live performances",
+          t('tours.pkg4.inc5_brief') || "Traditional markets"
         ]
       }
     }
@@ -126,24 +148,24 @@ export default function Home() {
             <h2>{pkg.title}</h2>
             <p className="tour-modal-duration">⏱️ {pkg.duration}</p>
             {pkg.fullDetails.subtitle && <h4 className="details-subtitle">{pkg.fullDetails.subtitle}</h4>}
-            <DetailList title="Flights:" items={pkg.fullDetails.flights} />
-            <DetailList title="Route:" items={pkg.fullDetails.route ? [pkg.fullDetails.route] : null} />
-            <DetailList title="Included:" items={pkg.fullDetails.included} />
-            <DetailList title="Sahara Experience:" items={pkg.fullDetails.sahara} />
+            <DetailList title={t('tours.flights') || "Flights:"} items={pkg.fullDetails.flights} />
+            <DetailList title={t('tours.route') || "Route:"} items={pkg.fullDetails.route ? [pkg.fullDetails.route] : null} />
+            <DetailList title={t('tours.whatsIncluded') || "Included:"} items={pkg.fullDetails.included} />
+            <DetailList title={t('tours.specialSaharaExperience') || "Sahara Experience:"} items={pkg.fullDetails.sahara} />
             
             <div className="card-messages">
               <div className="message-box safety">
-                <strong>Safety & Comfort:</strong>
-                <p>Coordinated with Moroccan authorities for your safety.</p>
+                <strong>{t('tours.safetyComfort') || "Safety & Comfort:"}</strong>
+                <p>{t('tours.safetyTextBrief') || "Coordinated with Moroccan authorities for your safety."}</p>
               </div>
               <div className="message-box values">
-                <strong>Morocco Loves You:</strong>
-                <p>More love, care, and professionalism.</p>
+                <strong>{t('tours.givesMoreBrief') || "Morocco Loves You:"}</strong>
+                <p>{t('tours.givesMoreTextBrief') || "More love, care, and professionalism."}</p>
               </div>
             </div>
 
             <div className="tour-modal-actions">
-              <button className="tour-modal-book-btn">Book Now</button>
+              <button className="tour-modal-book-btn">{t('tours.bookNow') || "Book Now"}</button>
             </div>
           </div>
         </div>
@@ -223,9 +245,9 @@ export default function Home() {
                   </div>
                   <div className="card-footer-actions">
                     <button className="view-more-trigger" onClick={() => setSelectedPackage(pkg)}>
-                      View Details
+                      {t('tours.viewDetails') || "View Details"}
                     </button>
-                    <button className="travel-card-btn">Book Now</button>
+                    <button className="travel-card-btn">{t('tours.bookNow') || "Book Now"}</button>
                   </div>
                 </div>
               </div>

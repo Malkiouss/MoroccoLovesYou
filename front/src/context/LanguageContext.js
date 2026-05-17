@@ -56,8 +56,8 @@ export const LanguageProvider = ({ children }) => {
     const fallback = getNestedValue(en, keys);
     if (fallback !== undefined) return fallback;
 
-    // Return the key itself if nothing found
-    return key;
+    // Return undefined to let JSX inline fallbacks (e.g. t('key') || "Default") work perfectly
+    return undefined;
   }, [language]);
 
   return (
