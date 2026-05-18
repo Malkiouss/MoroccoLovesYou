@@ -88,6 +88,16 @@
   color: var(--mly-text, #ffffff);
 }
 
+.language-name.short,
+.toggle-active-name.short {
+  display: none !important;
+}
+
+.language-name.long,
+.toggle-active-name.long {
+  display: block;
+}
+
 /* ============================================
    TABLET — tighten gaps
    ============================================ */
@@ -182,11 +192,11 @@
   /* King image centered in mobile bar */
   .mobile-king-image {
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     height: 50px;
-    width: 120px;
+    width: 180px;
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(219, 159, 70, 0.3);
@@ -257,6 +267,19 @@
     white-space: normal;
     text-align: center;
     line-height: 1.3;
+  }
+
+  .language-name.long,
+  .toggle-active-name.long {
+    display: none !important;
+  }
+
+  .language-name.short {
+    display: block !important;
+  }
+
+  .toggle-active-name.short {
+    display: inline-block !important;
   }
 }
 

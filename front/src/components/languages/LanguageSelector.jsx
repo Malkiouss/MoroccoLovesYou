@@ -1,25 +1,24 @@
 import React, { useState } from "react";
-import { Earth } from "lucide-react";
 import "flag-icons/css/flag-icons.min.css";
 import "./LanguageSelector.css";
 import { useLanguage } from "../../context/LanguageContext";
 
 const languages = [
-  { code: "en", label: "English",    flagCode: "gb" },
-  { code: "en-US", label: "American", flagCode: "us" },
-  { code: "en-AU", label: "Australia", flagCode: "au" },
-  { code: "en-CA", label: "Canada",    flagCode: "ca" },
-  { code: "fr", label: "French",     flagCode: "fr" },
-  { code: "es", label: "Spanish",    flagCode: "es" },
-  { code: "he", label: "Hebrew",     flagCode: "il" },
-  { code: "ar", label: "العربية",    flagCode: "ma" },
-  { code: "de", label: "German",     flagCode: "de" },
-  { code: "it", label: "Italian",    flagCode: "it" },
-  { code: "ja", label: "Japanese",   flagCode: "jp" },
-  { code: "zh", label: "Chinese",    flagCode: "cn" },
-  { code: "ko", label: "Korean",     flagCode: "kr" },
-  { code: "vi", label: "Vietnamese", flagCode: "vn" },
-  { code: "ru", label: "Russian",    flagCode: "ru" },
+  { code: "en", label: "English",    flagCode: "gb", shortLabel: "EN" },
+  { code: "en-US", label: "American", flagCode: "us", shortLabel: "US" },
+  { code: "en-AU", label: "Australia", flagCode: "au", shortLabel: "AU" },
+  { code: "en-CA", label: "Canada",    flagCode: "ca", shortLabel: "CA" },
+  { code: "fr", label: "French",     flagCode: "fr", shortLabel: "FR" },
+  { code: "es", label: "Spanish",    flagCode: "es", shortLabel: "ES" },
+  { code: "he", label: "Hebrew",     flagCode: "il", shortLabel: "HE" },
+  { code: "ar", label: "العربية",    flagCode: "ma", shortLabel: "AR" },
+  { code: "de", label: "German",     flagCode: "de", shortLabel: "DE" },
+  { code: "it", label: "Italian",    flagCode: "it", shortLabel: "IT" },
+  { code: "ja", label: "Japanese",   flagCode: "jp", shortLabel: "JA" },
+  { code: "zh", label: "Chinese",    flagCode: "cn", shortLabel: "ZH" },
+  { code: "ko", label: "Korean",     flagCode: "kr", shortLabel: "KO" },
+  { code: "vi", label: "Vietnamese", flagCode: "vn", shortLabel: "VI" },
+  { code: "ru", label: "Russian",    flagCode: "ru", shortLabel: "RU" },
 ];
 
 const InstagramIcon = () => (
@@ -56,15 +55,15 @@ function LanguageSelector() {
 
   return (
     <section className="language-section">
-      {/* Mobile toggle — shows globe + current language name + flag + chevron */}
+      {/* Mobile toggle — shows current language name + flag + chevron */}
       <button
         className={`mobile-language-toggle ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-label="Select language"
       >
-        <Earth size={16} />
-        <span>{activeLang?.label ?? "Language"}</span>
+        <span className="toggle-active-name long">{activeLang?.label ?? "Language"}</span>
+        <span className="toggle-active-name short">{activeLang?.shortLabel ?? "Language"}</span>
         {activeLang && (
           <span className={`fi fi-${activeLang.flagCode} mobile-active-flag`} aria-hidden="true"></span>
         )}
@@ -83,7 +82,8 @@ function LanguageSelector() {
             aria-pressed={selectedLang === language.code}
           >
             <span className={`fi fi-${language.flagCode} flag-icon`}></span>
-            <span className="language-name">{language.label}</span>
+            <span className="language-name long">{language.label}</span>
+            <span className="language-name short">{language.shortLabel}</span>
           </button>
         ))}
       </div>
