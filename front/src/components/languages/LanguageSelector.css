@@ -182,7 +182,7 @@
   /* King image centered in mobile bar */
   .mobile-king-image {
     position: absolute;
-    left: 50%;
+    left: 55%;
     top: 50%;
     transform: translate(-50%, -50%);
     height: 50px;
