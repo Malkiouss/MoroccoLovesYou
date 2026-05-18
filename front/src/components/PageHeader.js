@@ -80,16 +80,16 @@ export default function PageHeader({ title, subtitle, bgImage }) {
             </div>
 
             <div className="mobile-links">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
+               <Link to="/" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
               <Link to="/tours" onClick={() => setIsMenuOpen(false)}>{t('nav.tours')}</Link>
-              <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>{t('nav.destinations')}</Link>
+              <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>{t('nav.testimonials')}</Link>
               <Link to="/experiences" onClick={() => setIsMenuOpen(false)}>{t('nav.experiences')}</Link>
+              <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>{t('nav.destinations')}</Link> 
               <Link to="/jewish-heritage" onClick={() => setIsMenuOpen(false)}>{t('nav.jewishHeritage')}</Link>
               <Link to="/vip" onClick={() => setIsMenuOpen(false)}>{t('nav.vipFull')}</Link>
-              <Link to="/worldcup" onClick={() => setIsMenuOpen(false)}>{t('nav.worldcup')}</Link>
               <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>{t('nav.gallery')}</Link>
-              <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>{t('nav.testimonials')}</Link>
-              <Link to="/about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
+              <Link to="/worldcup" onClick={() => setIsMenuOpen(false)}>{t('nav.worldcup')}</Link>
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</Link>
             </div>
 
