@@ -12,7 +12,7 @@ export default function WorldCup() {
       <PageHeader
         title={t('worldcup.pageTitle')}
         subtitle={t('worldcup.pageSubtitle')}
-        bgImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1600&q=80"
+        bgImage="/assets/images/cup.jpeg"
       />
 
       <section className="wc-intro">

@@ -1,5 +1,5 @@
 .worldcup-page {
-  background-color: var(--mly-bg);
+  background-color: var(--white);
   min-height: 100vh;
 }
 
@@ -30,14 +30,14 @@
 .wc-intro h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: var(--white);
+  color: var(--mly-navy);
   margin-bottom: 1.5rem;
 }
 
 .wc-intro p {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--mly-muted);
+  color: #444444;
 }
 
 .wc-packages {
