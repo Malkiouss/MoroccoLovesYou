@@ -69,6 +69,8 @@ function LanguageSelector() {
           <span className={`fi fi-${activeLang.flagCode} mobile-active-flag`} aria-hidden="true"></span>
         )}
         <span className="toggle-chevron">▼</span>
+        
+        <img src="/assets/king.jpeg" alt="King" className="mobile-king-image" />
       </button>
 
       {/* Language grid */}
