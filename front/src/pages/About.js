@@ -15,7 +15,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <PageHeader title={t('about.pageTitle')} subtitle={t('about.pageSubtitle')} bgImage="https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop" />
+      <PageHeader title={t('about.pageTitle')} subtitle={t('about.pageSubtitle')} bgImage="/assets/cities/fes/fes2.jpg" />
       <section className="company-story">
         <div className="story-container">
           <div className="story-content">
@@ -24,7 +24,7 @@ export default function About() {
             <p>{t('about.storyP2')}</p>
           </div>
           <div className="story-image">
-            <SafeImage src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop" alt="Morocco landscape" />
+            <SafeImage src="/assets/cities/chefchaouen/chef (1).jpg" alt="Morocco landscape" />
           </div>
         </div>
       </section>
