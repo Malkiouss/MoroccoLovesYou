@@ -24,7 +24,36 @@ export default function Navbar() {
           <span></span>
           <span></span>
         </div>
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+        {/* Desktop Navigation Menu (Preserved clean design) */}
+        <ul className="nav-menu desktop-only">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">{t('nav.home')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-link">{t('nav.about')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/destinations" className="nav-link">{t('nav.destinations')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/tours" className="nav-link">{t('nav.tours')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/gallery" className="nav-link">{t('nav.gallery')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/testimonials" className="nav-link">{t('nav.testimonials')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/blog" className="nav-link">{t('nav.blog')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact" className="nav-link nav-link-btn">{t('nav.contact')}</Link>
+          </li>
+        </ul>
+
+        {/* Mobile Navigation Menu (Exact User-Requested Order & Content) */}
+        <ul className={`nav-menu mobile-only ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.home')}</Link>
           </li>
@@ -32,19 +61,31 @@ export default function Navbar() {
             <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.about')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/destinations" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.destinations')}</Link>
-          </li>
-          <li className="nav-item">
             <Link to="/tours" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.tours')}</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/gallery" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.gallery')}</Link>
           </li>
           <li className="nav-item">
             <Link to="/testimonials" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.testimonials')}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.blog')}</Link>
+            <Link to="/experiences" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.experiences')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/destinations" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.destinations')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/jewish-heritage" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.jewishHeritage') || "Kosher Travel"}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/vip" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.vipFull') || "VIP Business Travel"}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/gallery" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.gallery')}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/worldcup" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.worldcup') || "World Cup 2030"}</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/careers" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.careers') || "Carrier / Your Next Job"}</Link>
           </li>
           <li className="nav-item">
             <Link to="/contact" className="nav-link nav-link-btn" onClick={() => setIsOpen(false)}>{t('nav.contact')}</Link>

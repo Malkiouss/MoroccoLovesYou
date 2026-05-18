@@ -13,7 +13,7 @@ export default function Experiences() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const heroImage = "/assets/food/food (1).png";
+  const heroImage = "/assets/food/food.jpg";
   const introImage = "/assets/food/food.jpg";
   const philosophyImage = "/assets/food/food (5).png";
 

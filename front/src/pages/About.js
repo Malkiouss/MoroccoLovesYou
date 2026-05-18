@@ -15,7 +15,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <PageHeader title={t('about.pageTitle')} subtitle={t('about.pageSubtitle')} bgImage="/assets/cities/fes/fes2.jpg" />
+      <PageHeader title={t('about.pageTitle')} subtitle={t('about.pageSubtitle')} bgImage="/assets/images/aboutus.jpeg" />
       <section className="company-story">
         <div className="story-container">
           <div className="story-content">

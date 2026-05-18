@@ -10,6 +10,7 @@ import LanguageSelector from './components/languages/LanguageSelector';
 import Home from './pages/Home';
 import About from './pages/About';
 import Destinations from './pages/Destinations';
+import Careers from './pages/Careers';
 import Tours from './pages/Tours';
 import Experiences from './pages/Experiences';
 import VIP from './pages/VIP';
@@ -72,6 +73,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/careers" element={<Careers />} />
               <Route path="/destinations" element={<Destinations />} />
               <Route path="/tours" element={<Tours />} />
               <Route path="/experiences" element={<Experiences />} />

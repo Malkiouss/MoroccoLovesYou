@@ -14,7 +14,7 @@ export default function Destinations() {
       <PageHeader
         title={t('destinations.pageTitle')}
         subtitle={t('destinations.pageSubtitle')}
-        bgImage="https://images.unsplash.com/photo-1518684255275-e8c1f8e6fcc6?w=1200&h=600&fit=crop"
+        bgImage="/assets/cities/fes/fes4.jpg"
       />
 
       <section className="destinations-section gallery-showcase">

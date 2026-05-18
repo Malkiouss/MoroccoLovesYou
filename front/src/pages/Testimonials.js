@@ -24,7 +24,7 @@ export default function Testimonials() {
       <PageHeader
         title={t('testimonials.pageTitle')}
         subtitle={t('testimonials.pageSubtitle')}
-        bgImage="https://images.unsplash.com/photo-1542442828-287217bfb87f?w=1200&h=600&fit=crop"
+        bgImage="/assets/images/testements.jpeg"
       />
 
       <section className="testimonials-section">

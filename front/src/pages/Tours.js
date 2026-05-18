@@ -415,7 +415,7 @@ export default function Tours() {
       <PageHeader
         title={t('tours.pageTitle')}
         subtitle={t('tours.pageSubtitle')}
-        bgImage="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop"
+        bgImage="/assets/images/tours.jpeg"
       />
 
       <section className="travel-cards-section premium-bg">

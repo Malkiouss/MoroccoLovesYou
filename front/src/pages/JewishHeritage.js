@@ -67,7 +67,7 @@ export default function JewishHeritage() {
       <PageHeader
         title={t('jewishHeritage.pageTitle')}
         subtitle={t('jewishHeritage.pageSubtitle')}
-        bgImage="/assets/kosher/kosher (4).png"
+        bgImage="/assets/images/kosher.jpeg"
       />
 
       <section className="heritage-intro-section">
