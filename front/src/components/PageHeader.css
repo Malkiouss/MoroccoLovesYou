@@ -58,9 +58,9 @@
   justify-self: end;
   width: 42px; height: 42px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: var(--white);
+  background: #D4AF37;
+  border: 1px solid #0d1f17;
+  color: #0d1f17;
   cursor: pointer;
   align-items: center;
   justify-content: center;

@@ -63,7 +63,7 @@ const TourMiniBanner = () => {
           className="tour-mini-video-badge"
           aria-label="Watch Magic Morocco Video"
         >
-          <div className="video-badge-thumb" style={{ backgroundImage: `url(${VIDEO_THUMB})` }}>
+          <div className="video-badge-thumb" style={{ backgroundImage: `url("${VIDEO_THUMB}")` }}>
             <div className="video-badge-overlay">
                <Play size={24} fill="currentColor" />
             </div>
