@@ -74,10 +74,11 @@ export default function Home() {
       duration: t('tours.pkg2.duration') || "6 Nights / 7 Days (Monday → Sunday)",
       price: t('tours.pkg2.price') || "€1490",
       highlights: [
-        t('tours.pkg2.hl1') || "Fes & North Morocco Route",
-        t('tours.pkg2.hl2') || "Chefchaouen & Tangier visits",
-        t('tours.pkg2.hl3_brief') || "Direct flights & private driver",
-        t('tours.pkg2.hl4_brief') || "Premium locations"
+        t('tours.pkg2.hl1') || "Package A",
+        t('tours.pkg2.hl2') || "6 Nights - 7 Days",
+        t('tours.pkg2.hl3') || "Atlas Mouvements",
+        t('tours.pkg2.hl4') || "Marakech- Essaouira - Merzouga - Ouarzazte - Marakech-",
+        t('tours.pkg2.hl5') || "Big Surprise ❤️"
       ],
       fullDetails: {
         subtitle: t('tours.pkg2.subtitle') || "Fes & North Morocco Route (All Inclusive)",

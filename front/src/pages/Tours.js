@@ -78,11 +78,11 @@ export default function Tours() {
       duration: t('tours.pkg2.duration') || "6 Nights / 7 Days (Monday → Sunday)",
       price: t('tours.pkg2.price') || "€1490",
       highlights: [
-        t('tours.pkg2.hl1') || "Fes & North Morocco Route",
-        t('tours.pkg2.hl2') || "Chefchaouen & Tangier visits",
-        t('tours.pkg2.hl3') || "Direct flights & private driver",
-        t('tours.pkg2.hl4') || "Premium locations & high-level service",
-        t('tours.pkg2.hl5') || "Authentic Moroccan hospitality"
+        t('tours.pkg2.hl1') || "Package A",
+        t('tours.pkg2.hl2') || "6 Nights - 7 Days",
+        t('tours.pkg2.hl3') || "Atlas Mouvements",
+        t('tours.pkg2.hl4') || "Marakech- Essaouira - Merzouga - Ouarzazte - Marakech-",
+        t('tours.pkg2.hl5') || "Big Surprise ❤️"
       ],
       fullDetails: {
         subtitle: t('tours.pkg2.subtitle') || "Fes & North Morocco Route (All Inclusive)",
@@ -129,7 +129,7 @@ export default function Tours() {
     },
     {
       id: "pkg3",
-      image: '/assets/packs/pack3.jpeg',
+      image: '/assets/packs/casatour.jpeg',
       title: t('tours.pkg3.title') || "Morocco Grand Experience",
       duration: t('tours.pkg3.duration') || "10 Nights / 11 Days (Global Travelers)",
       price: t('tours.pkg3.price') || "€1990",
