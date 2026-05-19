@@ -224,29 +224,7 @@ export default function Home() {
     <div className="home">
       <HeroSection />
 
- {/* Video Experience Section */}
-      <VideoSection />
-      
- {/* Culinary Section — mimic BusSection */}
-      <CulinarySection />
-     
-
-    
-     
- {/* Premium Banner 1: VIP Morocco Travel Experiences */}
-      <section className="premium-banner vip-banner">
-        <div className="banner-content">
-          <h2>{t('home.vipBannerTitle')}</h2>
-          <p>{t('home.vipBannerText')}</p>
-          <Link to="/vip" className="btn-primary">{t('home.vipBannerBtn')}</Link>
-        </div>
-      </section>
-    
-      {/* Gallery Section */}
-      <GallerySection />
-
-   
-      {/* Featured Tours — white */}
+       {/* Featured Tours — white */}
       <section className="featured-tours">
         <div className="section-container">
           <h2>{t('home.featuredToursTitle')}</h2>
@@ -286,6 +264,30 @@ export default function Home() {
           <Link to="/tours" className="view-all-btn">{t('home.viewAllTours')}</Link>
         </div>
       </section>
+
+ {/* Video Experience Section */}
+      <VideoSection />
+      
+ {/* Culinary Section — mimic BusSection */}
+      <CulinarySection />
+     
+
+    
+     
+ {/* Premium Banner 1: VIP Morocco Travel Experiences */}
+      <section className="premium-banner vip-banner">
+        <div className="banner-content">
+          <h2>{t('home.vipBannerTitle')}</h2>
+          <p>{t('home.vipBannerText')}</p>
+          <Link to="/vip" className="btn-primary">{t('home.vipBannerBtn')}</Link>
+        </div>
+      </section>
+    
+      {/* Gallery Section */}
+      <GallerySection />
+
+   
+     
 
      
 

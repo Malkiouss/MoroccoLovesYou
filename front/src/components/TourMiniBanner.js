@@ -54,7 +54,7 @@ const TourMiniBanner = () => {
           className="kosher-simple-banner"
           aria-label="Kosher Travel Morocco"
         >
-          <img src="/assets/kosherbanner.jpeg" alt="Kosher Morocco" className="kosher-image" />
+        
         </Link>
 
         {/* ── Video Thumbnail Badge ── */}

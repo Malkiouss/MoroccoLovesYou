@@ -277,7 +277,7 @@ nav {
   z-index: 2;
   top: 170px;
   padding: 100px 10px10px 40px;
-  max-width: 780px;
+  width: 780px;
 }
 
 .hero-star {
@@ -298,7 +298,7 @@ nav {
 
 .hero h1 .line1 {
   font-size: clamp(36px, 6vw, 68px);
-  font-weight: 900;
+  font-weight: 7&00;
   color: var(--white);
   display: block;
 }
@@ -310,20 +310,16 @@ nav {
   display: block;
 }
 
-.hero-sub {
-  font-size: clamp(14px, 2vw, 17px);
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 6px;
-  font-weight: 300;
+.kosher-hero-img {
+  width: 820px;
+  height: auto;
+  object-fit: cover;
+  margin: 20px auto 30px;
+  display: block;
+  border: 3px solid var(--gold);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.hero-sub-gold {
-  color: var(--gold);
-  font-weight: 700;
-  font-size: clamp(14px, 2vw, 17px);
-  margin-bottom: 36px;
-}
 
 .wa-btn {
   display: inline-flex;
@@ -373,23 +369,6 @@ nav {
   font-size: 18px;
 }
 
-.hero-limited {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.hero-limited span {
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.hero-limited .dot {
-  color: var(--gold);
-}
 
 
 

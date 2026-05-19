@@ -66,11 +66,7 @@ export default function HeroSection() {
             <span className="line2">{t('hero.welcomeHome')}</span>
           </h1>
 
-          <p className="hero-sub">
-            {t('hero.subtitle')}<br />
-            {t('hero.subtitleLine2')}
-          </p>
-          <p className="hero-sub-gold">{t('hero.subtitleGold')}</p>
+          <img src="/assets/images/kosher1.jpeg" alt="Kosher Options" className="kosher-hero-img" />
 
           <button className="wa-btn">
             <MessageCircle aria-hidden="true" />
@@ -85,11 +81,7 @@ export default function HeroSection() {
             <span className="badge-item">{t('hero.badge247')}</span>
           </div>
 
-          <div className="hero-limited">
-            <span>{t('hero.limitedAvail')}</span>
-            <span className="dot">•</span>
-            <span>{t('hero.personalizedOnly')}</span>
-          </div>
+         
         </div>
       </section>
 

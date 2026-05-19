@@ -3,10 +3,10 @@
    ============================================ */
 .kosher-mini-float {
   position: fixed;
-  left: 20px;
-  top: 25%; /* Higher up to avoid TourMiniBanner */
-  transform: translateY(-50%);
-  z-index: 10005; /* Highest z-index for visibility */
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10005;
 }
 
 .kosher-simple-banner {
@@ -26,8 +26,8 @@
 
 
 .kosher-image {
-  width: 75px;
-  height: 75px;
+  width: 145px;
+  height: 145px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #C9A227;
@@ -47,14 +47,14 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .kosher-mini-float {
-    left: 10px;
-    top: auto;
-    bottom: 250px; /* Positioned above TourMiniBanner (80px) */
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10005;
   }
 
   .kosher-image {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 }
