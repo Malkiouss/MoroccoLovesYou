@@ -3,6 +3,22 @@ import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import './Tours.css';
 
+const WHATSAPP_NUMBER = '972546338757';
+
+function buildWhatsAppUrl(pkg) {
+  const message = [
+    `Hello Morocco Loves You! 🌟`,
+    `I'd like to book the following package:`,
+    ``,
+    `📦 Package: ${pkg.title}`,
+    `⏱️ Duration: ${pkg.duration}`,
+    `💰 Price: ${pkg.price}`,
+    ``,
+    `Please let me know the availability and next steps. Thank you!`
+  ].join('\n');
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
 export default function Tours() {
   const { t } = useLanguage();
   const [selectedPackage, setSelectedPackage] = React.useState(null);
@@ -262,9 +278,14 @@ export default function Tours() {
               </svg>
             </button>
 
-            <button type="button" className="travel-card-btn">
+            <a
+              href={buildWhatsAppUrl(pkg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="travel-card-btn"
+            >
               {t('tours.bookNow') || "Book Now"}
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -392,9 +413,14 @@ export default function Tours() {
             </div>
 
             <div className="tour-modal-actions">
-              <button type="button" className="tour-modal-book-btn">
+              <a
+                href={buildWhatsAppUrl(pkg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tour-modal-book-btn"
+              >
                 {t('tours.bookThisPackage') || "Book This Package"}
-              </button>
+              </a>
 
               <button
                 type="button"

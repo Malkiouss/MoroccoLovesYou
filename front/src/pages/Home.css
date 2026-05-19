@@ -743,6 +743,7 @@
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
+  text-align: center;
   text-transform: uppercase;
 }
 

@@ -10,6 +10,22 @@ import CulinarySection from '../components/CulinarySection';
 import JewishHeritageSection from '../components/JewishHeritageSection';
 import './Home.css';
 
+const WHATSAPP_NUMBER = '972546338757';
+
+function buildWhatsAppUrl(pkg) {
+  const message = [
+    `Hello Morocco Loves You! 🌟`,
+    `I'd like to book the following package:`,
+    ``,
+    `📦 Package: ${pkg.title}`,
+    `⏱️ Duration: ${pkg.duration}`,
+    `💰 Price: ${pkg.price}`,
+    ``,
+    `Please let me know the availability and next steps. Thank you!`
+  ].join('\n');
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
 
 export default function Home() {
   const { t } = useLanguage();
@@ -165,7 +181,14 @@ export default function Home() {
             </div>
 
             <div className="tour-modal-actions">
-              <button className="tour-modal-book-btn">{t('tours.bookNow') || "Book Now"}</button>
+              <a
+                href={buildWhatsAppUrl(pkg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tour-modal-book-btn"
+              >
+                {t('tours.bookNow') || "Book Now"}
+              </a>
             </div>
           </div>
         </div>
@@ -247,7 +270,14 @@ export default function Home() {
                     <button className="view-more-trigger" onClick={() => setSelectedPackage(pkg)}>
                       {t('tours.viewDetails') || "View Details"}
                     </button>
-                    <button className="travel-card-btn">{t('tours.bookNow') || "Book Now"}</button>
+                    <a
+                      href={buildWhatsAppUrl(pkg)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="travel-card-btn"
+                    >
+                      {t('tours.bookNow') || "Book Now"}
+                    </a>
                   </div>
                 </div>
               </div>
