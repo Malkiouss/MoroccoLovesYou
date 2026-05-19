@@ -68,10 +68,10 @@ export default function HeroSection() {
 
           <img src="/assets/images/kosher1.jpeg" alt="Kosher Options" className="kosher-hero-img" />
 
-          <button className="wa-btn">
+        {/*  <button className="wa-btn">
             <MessageCircle aria-hidden="true" />
             {t('hero.whatsappBtn')}
-          </button>
+          </button> */}
 
           <div className="hero-badges">
             <span className="badge-item">{t('hero.badgeFast')}</span>
