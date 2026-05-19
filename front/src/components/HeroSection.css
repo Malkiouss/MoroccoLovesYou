@@ -537,6 +537,15 @@ nav {
     width: 18px;
     height: 18px;
   }
+  .kosher-hero-img {
+  width: 420px;
+  height: auto;
+  object-fit: cover;
+  margin: 20px auto 30px;
+  display: block;
+  border: 3px solid var(--gold);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
 
   .hero-divider::before,
   .hero-divider::after {
