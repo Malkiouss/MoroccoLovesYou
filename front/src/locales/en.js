@@ -129,7 +129,7 @@ const en = {
       operators: "Tour operators"
     },
     pkg1: {
-      title: "Fes Luxury Weekend Escape",
+      title: "Europe Morocco Luxury Weekend Escape",
       duration: "3 Nights / 4 Days (Thursday → Sunday)",
       price: "€790",
       hl1: "Direct roundtrip flights included (London/Europe)",
