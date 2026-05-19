@@ -158,7 +158,7 @@ export default function Home() {
           <button className="tour-modal-close" onClick={() => setSelectedPackage(null)}>×</button>
           <div className="tour-modal-image">
             <img src={pkg.image} alt={pkg.title} />
-            <div className="travel-card-badge">{pkg.price}</div>
+           {/*  <div className="travel-card-badge">{pkg.price}</div> */}
           </div>
           <div className="tour-modal-content">
             <h2>{pkg.title}</h2>
@@ -234,7 +234,7 @@ export default function Home() {
               <div key={pkg.id} className="travel-card">
                 <div className="travel-card-header">
                   <img src={pkg.image} alt={pkg.title} />
-                  <div className="travel-card-badge">{pkg.price}</div>
+                 {/* <div className="travel-card-badge">{pkg.price}</div> */}
                 </div>
                 <div className="travel-card-body">
                   <h3 className="travel-card-title">{pkg.title}</h3>
