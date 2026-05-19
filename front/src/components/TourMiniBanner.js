@@ -48,6 +48,15 @@ const TourMiniBanner = () => {
   return (
     <>
       <div className="tour-mini-float">
+        {/* ── B2B Banner ── */}
+        <div className="b2b-banner-wrapper" onClick={() => window.open('https://wa.me/972546338757', '_blank')}>
+          <img 
+            src="/assets/b2bbanner.png" 
+            alt="B2B Only - 9 Nights 10 Days from €890 - Click to WhatsApp" 
+            className="b2b-banner-image"
+          />
+        </div>
+
         {/* ── Simplified Kosher Link ── */}
         <Link
           to="/jewish-heritage"
