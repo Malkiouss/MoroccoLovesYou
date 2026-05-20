@@ -52,7 +52,7 @@ const TourMiniBanner = () => {
         <div className="b2b-banner-wrapper" onClick={() => window.open('https://wa.me/972546338757', '_blank')}>
           <img 
             src="/assets/b2bbanner.png" 
-            alt="B2B Only - 9 Nights 10 Days from €890 - Click to WhatsApp" 
+            alt={t('aria.b2bBannerAlt')} 
             className="b2b-banner-image"
           />
         </div>
@@ -61,7 +61,7 @@ const TourMiniBanner = () => {
         <Link
           to="/jewish-heritage"
           className="kosher-simple-banner"
-          aria-label="Kosher Travel Morocco"
+          aria-label={t('aria.kosherTravel')}
         >
         
         </Link>
@@ -70,7 +70,7 @@ const TourMiniBanner = () => {
         <button 
           onClick={handleOpenVideo} 
           className="tour-mini-video-badge"
-          aria-label="Watch Magic Morocco Video"
+          aria-label={t('aria.watchVideo')}
         >
           <div className="video-badge-thumb" style={{ backgroundImage: `url("${VIDEO_THUMB}")` }}>
             <div className="video-badge-overlay">
@@ -118,7 +118,7 @@ const TourMiniBanner = () => {
                     e.stopPropagation();
                     togglePlay();
                   }}
-                  aria-label={isPlaying ? "Pause" : "Play"}
+                  aria-label={isPlaying ? t('aria.pauseVideo') : t('aria.playVideo')}
                 >
                   {finished ? (
                     <RotateCcw size={34} />

@@ -38,9 +38,9 @@ const StarBanner = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="star-float"
-      aria-label="CEO of Morocco Loves You"
+      aria-label={t('aria.ceoMessage')}
     >
-      <img src="/assets/star.png" alt="Star" className="star-img" />
+      <img src="/assets/star.png" alt={t('aria.starAlt')} className="star-img" />
 
       <div className="star-overlay">
         <p className="star-title">

@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="navbar-container">
         <div className="navbar-brand-group">
           <Link to="/" className="navbar-logo">
-             <img src="/assets/images/logoMorocco.png" alt="MoroccoLovesYou Logo" />
+             <img src="/assets/images/logoMorocco.png" alt={t('aria.logoAlt')} />
           </Link>
         </div>
         <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link to="/worldcup" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.worldcup') || "World Cup 2030"}</Link>
           </li>
           <li className="nav-item">
-            <Link to="/careers" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.careers') || "Carrier / Your Next Job"}</Link>
+            <Link to="/careers" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.careers')}</Link>
           </li>
           <li className="nav-item">
             <Link to="/contact" className="nav-link nav-link-btn" onClick={() => setIsOpen(false)}>{t('nav.contact')}</Link>

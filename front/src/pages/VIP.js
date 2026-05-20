@@ -124,7 +124,7 @@ export default function VIP() {
               <p>{t('transportation.introP4')}</p>
             </div>
             <div className="trans-image">
-              <img src="/assets/bus/bus (17).png" alt="VIP Bus" className="trans-img" />
+              <img src="/assets/bus/bus (17).png" alt={t('aria.vipBus')} className="trans-img" />
             </div>
           </div>
 
@@ -141,7 +141,7 @@ export default function VIP() {
         <section className="drivers-section">
           <div className="split-layout reverse">
             <div className="trans-image">
-              <img src="/assets/bus/bus (3).png" alt="Our Drivers" className="trans-img" />
+              <img src="/assets/bus/bus (3).png" alt={t('aria.drivers')} className="trans-img" />
             </div>
             <div className="trans-text">
               <h2>{t('transportation.driversTitle')}</h2>

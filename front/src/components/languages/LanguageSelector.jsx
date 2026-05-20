@@ -10,10 +10,18 @@ const languages = [
   { code: "en-CA", label: "Canada",    flagCode: "ca", shortLabel: "CA" },
   { code: "fr", label: "French",     flagCode: "fr", shortLabel: "FR" },
   { code: "es", label: "Spanish",    flagCode: "es", shortLabel: "ES" },
+  { code: "es-AR", label: "Argentina", flagCode: "ar", shortLabel: "AR" },
   { code: "he", label: "Hebrew",     flagCode: "il", shortLabel: "HE" },
+  { code: "hi", label: "हिन्दी",      flagCode: "in", shortLabel: "HI" },
   { code: "ar", label: "العربية",    flagCode: "ma", shortLabel: "AR" },
   { code: "de", label: "German",     flagCode: "de", shortLabel: "DE" },
+  { code: "nl", label: "Nederlands", flagCode: "nl", shortLabel: "NL" },
   { code: "it", label: "Italian",    flagCode: "it", shortLabel: "IT" },
+  { code: "pl", label: "Polski",      flagCode: "pl", shortLabel: "PL" },
+  { code: "pt-BR", label: "Português Brasil", flagCode: "br", shortLabel: "BR" },
+  { code: "pt-PT", label: "Português Portugal", flagCode: "pt", shortLabel: "PT" },
+  { code: "ro", label: "Română",      flagCode: "ro", shortLabel: "RO" },
+  { code: "th", label: "ไทย",         flagCode: "th", shortLabel: "TH" },
   { code: "ja", label: "Japanese",   flagCode: "jp", shortLabel: "JA" },
   { code: "zh", label: "Chinese",    flagCode: "cn", shortLabel: "ZH" },
   { code: "ko", label: "Korean",     flagCode: "kr", shortLabel: "KO" },
@@ -42,7 +50,7 @@ const WhatsAppIcon = () => (
 );
 
 function LanguageSelector() {
-  const { language: selectedLang, setLanguage } = useLanguage();
+  const { language: selectedLang, setLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageClick = (code) => {
@@ -60,16 +68,16 @@ function LanguageSelector() {
         className={`mobile-language-toggle ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
-        aria-label="Select language"
+        aria-label={t('aria.selectLanguage')}
       >
-        <span className="toggle-active-name long">{activeLang?.label ?? "Language"}</span>
-        <span className="toggle-active-name short">{activeLang?.shortLabel ?? "Language"}</span>
+        <span className="toggle-active-name long">{t(`common.languages.${activeLang?.code}`) || activeLang?.label || t('common.selectLanguage')}</span>
+        <span className="toggle-active-name short">{activeLang?.shortLabel ?? t('common.selectLanguage')}</span>
         {activeLang && (
           <span className={`fi fi-${activeLang.flagCode} mobile-active-flag`} aria-hidden="true"></span>
         )}
         <span className="toggle-chevron">▼</span>
         
-        <img src="/assets/king.jpeg" alt="King" className="mobile-king-image" />
+        <img src="/assets/king.jpeg" alt={t('aria.kingAlt')} className="mobile-king-image" />
       </button>
 
       {/* Language grid */}
@@ -82,7 +90,7 @@ function LanguageSelector() {
             aria-pressed={selectedLang === language.code}
           >
             <span className={`fi fi-${language.flagCode} flag-icon`}></span>
-            <span className="language-name long">{language.label}</span>
+            <span className="language-name long">{t(`common.languages.${language.code}`) || language.label}</span>
             <span className="language-name short">{language.shortLabel}</span>
           </button>
         ))}
@@ -90,13 +98,13 @@ function LanguageSelector() {
 
       {/* Social Links Corner */}
       <div className="language-socials">
-        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="lang-social-icon whatsapp" aria-label="WhatsApp">
+        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="lang-social-icon whatsapp" aria-label={t('aria.whatsappSocial')}>
           <WhatsAppIcon />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="lang-social-icon instagram" aria-label="Instagram">
+        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="lang-social-icon instagram" aria-label={t('aria.instagramSocial')}>
           <InstagramIcon />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="lang-social-icon facebook" aria-label="Facebook">
+        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="lang-social-icon facebook" aria-label={t('aria.facebookSocial')}>
           <FacebookIcon />
         </a>
       </div>

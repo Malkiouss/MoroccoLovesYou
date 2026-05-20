@@ -310,11 +310,22 @@ nav {
   display: block;
 }
 
-.kosher-hero-img {
+.kosher-hero-link {
   width: 820px;
+  margin: 20px auto 30px;
+  display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.kosher-hero-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+.kosher-hero-img {
+  width: 100%;
   height: auto;
   object-fit: cover;
-  margin: 20px auto 30px;
   display: block;
   border: 3px solid var(--gold);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -537,14 +548,10 @@ nav {
     width: 18px;
     height: 18px;
   }
-  .kosher-hero-img {
+  .kosher-hero-link {
   width: 420px;
-  height: auto;
-  object-fit: cover;
   margin: 20px auto 30px;
   display: block;
-  border: 3px solid var(--gold);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
   .hero-divider::before,

@@ -12,8 +12,10 @@ const en = {
     vip: "VIP Business",
     vipFull: "VIP Business Travel",
     worldcup: "World Cup 2030",
+    careers: "Careers",
     chatWhatsApp: "Chat on WhatsApp",
-    jewishHeritage: "Kosher Travel"
+    jewishHeritage: "Kosher Travel",
+    menu: "Menu"
   },
   hero: {
     welcome: "Welcome to Morocco.",
@@ -59,6 +61,16 @@ const en = {
     culinaryBtn: "Discover Culinary Experiences",
     culinaryIntro: "At Morocco Loves You, dining is not just about eating. It is a journey into the heart of Moroccan culture. We offer authentic, hand-picked culinary experiences — from traditional home-cooked meals to high-end Moroccan gastronomy, all prepared with love and the freshest local ingredients.",
     culinaryVideoTitle: "Culinary Experience Videos",
+    culinaryFeatures: [
+      "Traditional Tagines",
+      "Authentic Couscous",
+      "Moroccan Pastries",
+      "Tea Ceremonies",
+      "Cooking Classes",
+      "Local Spices",
+      "Organic Ingredients",
+      "Home-cooked Meals"
+    ],
     videoTitle: "RECOMMENDATIONS",
     unityQuote: "Morocco Loves You welcomes all cultures, all beliefs, and all peoples.",
     unityAlt: "Morocco Loves You Unity Banner",
@@ -102,6 +114,9 @@ const en = {
     foodDining: "Food & Dining:",
     whatsIncluded: "What's Included:",
     attractionsExperiences: "Attractions & Experiences:",
+    itinerary: "Itinerary:",
+    optionalExperiences: "Optional Experiences:",
+    availableUponRequest: "Available Upon Request:",
     specialSaharaExperience: "Special Sahara Experience:",
     suitableFor: "Suitable For:",
     importantNotes: "Important Notes:",
@@ -149,8 +164,11 @@ const en = {
       inc5: "Professional tour guide & Private driver",
       inc6: "Modern air-conditioned transportation",
       inc7: "Special live performances (Singers & dancers)",
+      inc7_brief: "Special live performances",
       inc8: "Traditional market tours (Spice, Lantern, Carpet)",
+      inc8_brief: "Traditional market tours",
       inc9: "Cooking & Art workshops (Pre-booking required)",
+      inc9_brief: "Cooking & Art workshops",
       inc10: "Natural springs & Viewpoints visits",
       inc11: "Day trips to Chefchaouen & Ifrane",
       inc12: "Visits with local Moroccan families",
@@ -188,8 +206,10 @@ const en = {
       food3: "Traditional tea & pastries",
       exp1: "Moroccan live performances",
       exp2: "Traditional markets (Spice, Lantern, Carpet)",
+      exp2_brief: "Traditional markets",
       exp3: "Traditional Moroccan hammam",
       exp4: "Nature & forest visits",
+      exp4_brief: "Nature visits",
       exp5: "Beautiful viewpoints & Day trips",
       exp6: "Cooking & art workshops",
       exp7: "Visits with local families",
@@ -214,7 +234,6 @@ const en = {
       subtitle: "✨ Morocco Grand Experience (Ground Services Only)",
       arrivalText: "Casablanca or Marrakech",
       routeText: "Casablanca, Rabat, 2 nights Fes, Tangier, Chefchaouen, Ifrane, 2 nights Marrakech, Agadir, Ouarzazate, final night Marrakech",
-      note1: "Minimum: 20 travelers",
       note2: "Groups > 40: Special discount of $50 per person",
       note3: "International flights & insurance NOT included",
       note4: "Tips for driver/guide NOT included",
@@ -230,27 +249,58 @@ const en = {
       inc10: "Special surprises during the journey"
     },
     pkg4: {
-      title: "Morocco Imperial & Sahara Experience",
-      duration: "13 Nights / 14 Days",
+      title: "LUXURY MOROCCO EXPERIENCE",
+      duration: "16 Nights / 17 Days",
       price: "All Inclusive",
-      hl1: "2 Nights Merzouga Sahara Desert",
-      hl2: "Premium AC tents & Jeep excursions",
-      hl3: "Visit Atlas Mountains & Ourika Valley",
-      hl4: "Ouzoud Waterfalls & Imperial Cities",
-      hl5: "Full ground services from A to Z",
-      subtitle: "✨ Morocco Imperial & Sahara Experience (Full Ground Services)",
-      routeText: "2 nights Marrakech, Ourika Valley, Agadir, 2 nights Merzouga, Ouarzazate, Ouzoud Waterfalls, Ifrane, Tangier, Chefchaouen, 2 nights Fes, El Jadida, Casablanca",
+      hl1: "Casablanca • Rabat • Fez • Tangier • Chefchaouen",
+      hl2: "Ifrane • Merzouga Sahara Desert",
+      hl3: "Essaouira • Ourika & Atlas Mountains • Marrakesh",
+      hl3_brief: "Visit Atlas Mountains",
+      hl4: "2 Nights Luxury Desert Camp with Camel & Jeep Tours",
+      hl5: "Magical Sunrise & Sunset • Sleep Under The Stars",
+      subtitle: "✨ Morocco Imperial & Sahara Experience - The Complete Journey (16 Nights / 17 Days)",
+      routeText: "Casablanca (1 night), Rabat, Fez (2 nights), Tangier (1 night), Chefchaouen (1 night), Ifrane (1 night), Merzouga Sahara (2 nights), Essaouira (2 nights), Ourika & Atlas Mountains (1 night), Marrakesh (3 nights)",
+      inc1: "4★ / 5★ Hotels",
+      inc2: "Luxury Air-Conditioned Desert Camp",
+      inc2_brief: "4–5 star hotels",
+      inc3: "Full Board / Premium Moroccan Cuisine",
+      inc3_brief: "Professional tour guide",
+      inc4: "Professional Multilingual Guides",
+      inc4_brief: "Special live performances",
+      inc5: "Private Modern Transportation",
+      inc5_brief: "Traditional markets",
+      inc6: "Air-Conditioned Coaches",
+      inc7: "WiFi • TV • Refrigerator On Board",
+      inc8: "Private Driver Throughout The Tour",
+      inc9: "Camel Tours",
+      inc10: "Jeep Desert Experience",
+      inc11: "Folklore Shows & Live Music",
+      inc12: "Moroccan Dance Performances",
+      inc13: "Cooking Workshops",
+      inc14: "Markets & Souks Experiences",
+      inc15: "Carpets • Spices • Flowers • Traditional Crafts",
+      inc16: "Lakes • Rivers • Atlas Mountains",
+      inc17: "Special Sunrise & Sunset Experiences",
+      inc18: "Direct 24/7 Support",
+      optional1: "Hot Air Balloon Experience",
+      optional2: "VIP Upgrades",
+      optional3: "Luxury Experiences",
+      optional4: "Private Security Services",
+      optional5: "Medical Assistance Services",
+      optionalNote: "Some premium services may require an additional fair supplement.",
       sahara1: "Premium air-conditioned desert tents",
       sahara2: "Campfire music atmosphere",
-      sahara3: "Jeep excursions & Camel rides",
-      sahara4: "Unforgettable sunsets & sunrises",
-      inc1: "Full premium ground services",
-      inc2: "4–5 star hotels (Half board)",
-      inc3: "Professional tour guide & Private driver",
-      inc4: "Special live performances & dancers",
-      inc5: "Traditional spice, carpet & lantern markets",
-      inc6: "Traditional Moroccan hammam",
-      inc7: "Cooking & art workshops"
+      sahara3_brief: "Jeep excursions & Camel rides",
+      itinerary1: "Casablanca - Arrival (1 Night)",
+      itinerary2: "Rabat - The Royal Capital",
+      itinerary3: "Fez - Spiritual & Cultural Morocco (2 Nights)",
+      itinerary4: "Tangier - Where Europe Meets Africa (1 Night)",
+      itinerary5: "Chefchaouen - The Blue Pearl (1 Night)",
+      itinerary6: "Ifrane - The Moroccan Switzerland (1 Night)",
+      itinerary7: "Merzouga Sahara Desert (2 Nights) - Luxury Desert Camp - Camel Experience - Jeep Tours - Magical Sunrise & Sunset - Sleeping Under The Stars",
+      itinerary8: "Essaouira - Atlantic Ocean Escape (2 Nights)",
+      itinerary9: "Ourika & Atlas Mountains (1 Night)",
+      itinerary10: "Marrakesh - The Red City (3 Nights)"
     }
   },
   destinations: {
@@ -359,7 +409,11 @@ const en = {
     picturesTitle: "Morocco in Pictures",
     picturesIntro: "Explore our collection of breathtaking photos from Morocco",
     videosTitle: "Morocco in Motion",
-    videosIntro: "Experience Morocco through our curated video collection"
+    videosIntro: "Experience Morocco through our curated video collection",
+    catFood: "Culinary Experience",
+    catDestinations: "Destinations",
+    catKosher: "Kosher",
+    catTransport: "VIP Transportation"
   },
   testimonials: {
     pageTitle: "Guest Testimonials",
@@ -534,6 +588,16 @@ const en = {
       "Safe and smooth driving",
       "24/7 assistance across Morocco"
     ],
+    featureList: [
+      "Modern VIP buses",
+      "Luxury minibuses",
+      "Private cars",
+      "4x4 Jeeps",
+      "Airport pickup",
+      "Multilingual drivers",
+      "24/7 assistance",
+      "Safe driving"
+    ],
     driversTitle: "Meet Our Drivers",
     driversText1: "Our drivers are part of the Morocco Loves You family.",
     driversText2: "Professional, respectful, experienced, and always ready to help with a smile.",
@@ -621,6 +685,326 @@ const en = {
     callMorocco: "Call Morocco: +212 6 63 63 05 79",
     ceoContact: "Speak With Allan Hatchuel Directly On WhatsApp",
     exploreBtn: "Explore Kosher Tours"
+  },
+
+  // Accessibility & UI Labels
+  aria: {
+    selectLanguage: "Select language",
+    closeDetails: "Close details",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    kosherTravel: "Kosher Travel Morocco",
+    watchVideo: "Watch Magic Morocco Video",
+    followInstagram: "Follow us on Instagram",
+    followFacebook: "Follow us on Facebook",
+    ceoMessage: "CEO of Morocco Loves You",
+    whatsappSocial: "WhatsApp",
+    instagramSocial: "Instagram",
+    facebookSocial: "Facebook",
+    logoAlt: "MoroccoLovesYou logo",
+    kingAlt: "King of Morocco",
+    kosherOptionsAlt: "Kosher options",
+    moroccoLandscape: "Morocco landscape",
+    worldCupAlt: "World Cup trophy with Moroccan flag",
+    b2bBannerAlt: "B2B only tour banner - click to WhatsApp",
+    starAlt: "Star",
+    playVideo: "Play",
+    pauseVideo: "Pause",
+    vipBus: "VIP bus",
+    drivers: "Our drivers",
+    jewishHeritageArchitecture: "Jewish heritage architecture",
+    jewishHeritageMorocco: "Jewish heritage Morocco",
+    kosherFoodMorocco: "Kosher food Morocco",
+    jewishHeritageExperience: "Jewish heritage experience",
+    kosherMoroccanTable: "Kosher Moroccan table",
+    luxuryHospitality: "Luxury hospitality",
+    kosherExperience: "Kosher experience"
+  },
+  
+  // Form Placeholders
+  forms: {
+    firstName: "e.g. John",
+    lastName: "e.g. Doe",
+    email: "name@example.com",
+    subject: "How can we help?",
+    message: "Tell us more about your travel plans...",
+    phone: "Your phone number",
+    date: "Select a date",
+    guests: "Number of guests"
+  },
+  
+  // Common UI Text
+  common: {
+    selectLanguage: "Select language",
+    instagram: "Instagram",
+    facebook: "Facebook",
+    loading: "Loading...",
+    error: "An error occurred",
+    success: "Success!",
+    noResults: "No results found",
+    viewMore: "View More",
+    viewLess: "View Less",
+    bookNow: "Book Now",
+    learnMore: "Learn More",
+    contactUs: "Contact Us",
+    close: "Close",
+    back: "Back",
+    next: "Next",
+    previous: "Previous",
+    search: "Search...",
+    filter: "Filter",
+    sort: "Sort",
+    price: "Price",
+    duration: "Duration",
+    languages: {
+      english: "English",
+      american: "American",
+      australia: "Australia",
+      canada: "Canada",
+      french: "French",
+      spanish: "Spanish",
+      hebrew: "Hebrew",
+      arabic: "العربية",
+      german: "German",
+      italian: "Italian",
+      japanese: "Japanese",
+      chinese: "Chinese",
+      korean: "Korean",
+      vietnamese: "Vietnamese",
+      russian: "Russian",
+      en: "English",
+      "en-US": "American",
+      "en-AU": "Australia",
+      "en-CA": "Canada",
+      fr: "French",
+      es: "Spanish",
+      he: "Hebrew",
+      ar: "العربية",
+      de: "German",
+      it: "Italian",
+      ja: "Japanese",
+      zh: "Chinese",
+      ko: "Korean",
+      vi: "Vietnamese",
+      ru: "Russian"
+    }
+  },
+  
+  // WhatsApp Message Templates
+  whatsapp: {
+    greeting: "Hello Morocco Loves You! 🌟",
+    bookPackage: "I'd like to book the following package:",
+    packageInfo: "📦 Package: ",
+    duration: "⏱️ Duration: ",
+    price: "💰 Price: ",
+    bookingRequest: "Please let me know the availability and next steps. Thank you!",
+    cityTrip: "I'd like to plan a trip to {city}. Can you help me?",
+    silverPackage: "I'm interested in the Silver World Cup Package",
+    goldPackage: "I'm interested in the Gold World Cup Package",
+    diamondPackage: "I'm interested in the Diamond World Cup VIP Package",
+    worldCupSecure: "Hello, I want to secure my place for Morocco 2030.",
+    kosherInquiry: "I'm interested in your Kosher Morocco travel packages.",
+    customPackage: "I'd like to create a custom package for our group.",
+    businessInquiry: "I'm interested in VIP Business Travel services."
+  },
+  
+  // Blog Posts
+  blog_posts: {
+    post1: {
+      title: "10 Hidden Gems to Discover in Morocco",
+      author: "Fatima Hassan",
+      date: "March 15, 2024",
+      category: "Travel Guide",
+      excerpt: "Discover the lesser-known destinations and hidden treasures of Morocco that most tourists miss. From secret mountain villages to pristine coastal areas, explore authentic Morocco.",
+      content: "Morocco is far more than just Marrakech and Casablanca. This comprehensive guide reveals hidden gems..."
+    },
+    post2: {
+      title: "Best Time to Visit Morocco: A Complete Guide",
+      author: "Ahmed Bennani",
+      date: "March 10, 2024",
+      category: "Planning",
+      excerpt: "Planning your Morocco trip? Learn about the best seasons to visit, what to expect weather-wise, and how to make the most of your journey throughout the year.",
+      content: "Choosing the right time to visit Morocco can significantly impact your travel experience. Here's our complete guide..."
+    },
+    post3: {
+      title: "Moroccan Cuisine: A Culinary Adventure",
+      author: "Layla Rahim",
+      date: "March 5, 2024",
+      category: "Food & Culture",
+      excerpt: "Embark on a culinary journey through Morocco. Discover the rich flavors, traditional recipes, and dining experiences that make Moroccan food world-famous.",
+      content: "Moroccan cuisine is a blend of Arab, Berber, Andalusian, and African influences. Each dish tells a story of Morocco's diverse heritage..."
+    },
+    post4: {
+      title: "How to Haggle in Moroccan Markets Like a Pro",
+      author: "Youssef Alaoui",
+      date: "February 28, 2024",
+      category: "Travel Tips",
+      excerpt: "Master the art of haggling in Moroccan souks and markets. Learn the cultural etiquette, negotiation tactics, and insider tips for getting the best deals.",
+      content: "Haggling is not just a transaction in Moroccan markets; it's a cultural exchange. Here's how to do it respectfully and effectively..."
+    },
+    post5: {
+      title: "Trekking the Atlas Mountains: What You Need to Know",
+      author: "Ahmed Bennani",
+      date: "February 20, 2024",
+      category: "Adventure",
+      excerpt: "Explore the majestic Atlas Mountains on foot. Get expert advice on trekking routes, what to pack, altitude considerations, and the best time for your mountain adventure.",
+      content: "The Atlas Mountains offer some of the most breathtaking landscapes in North Africa. Whether you're a seasoned hiker or a beginner..."
+    },
+    post6: {
+      title: "Desert Safari: An Unforgettable Experience",
+      author: "Fatima Hassan",
+      date: "February 15, 2024",
+      category: "Adventure",
+      excerpt: "Experience the magic of Morocco's Sahara Desert. Camel trekking, starry nights under canvas tents, and sunrise moments you'll never forget.",
+      content: "The Sahara Desert represents the soul of Morocco. A desert safari is more than just an adventure; it's a spiritual journey..."
+    },
+    post7: {
+      title: "Cultural Etiquette: Respecting Moroccan Traditions",
+      author: "Layla Rahim",
+      date: "February 10, 2024",
+      category: "Culture",
+      excerpt: "Learn the essential cultural norms, customs, and etiquette for respectfully engaging with Moroccan people and traditions during your visit.",
+      content: "Understanding and respecting local customs is crucial when traveling to Morocco. This guide covers essential cultural practices..."
+    },
+    post8: {
+      title: "Photography in Morocco: Capturing the Magic",
+      author: "Youssef Alaoui",
+      date: "February 5, 2024",
+      category: "Photography",
+      excerpt: "Discover the most photogenic locations in Morocco and professional tips for capturing stunning images of landscapes, people, and culture.",
+      content: "Morocco is a photographer's paradise. From the blue medinas to golden deserts, every corner offers incredible photo opportunities..."
+    }
+  },
+  
+  // Job Listings
+  jobs: {
+    title: "Careers & Opportunities",
+    intro: "Join the MoroccoLovesYou team and build your future in luxury travel",
+    workWith: "Work With Love, Care & Excellence",
+    introText: "We're looking for passionate, dedicated individuals who share our vision of delivering world-class travel experiences. Join our growing team and be part of something special.",
+    openPositions: "Open Positions",
+    requirements: "Requirements:",
+    readyJoin: "Ready to Join Us?",
+    sendCV: "Send your CV to careers@moroccolovesyou.com",
+    instructions: "Include a brief cover letter explaining why you'd like to join the Morocco Loves You team.",
+    emailCv: "Email CV to CEO",
+    chatCeo: "Chat with CEO on WhatsApp",
+    
+    job1: {
+      title: "Multilingual Professional Tour Guide",
+      type: "Full-Time / Seasonal",
+      location: "Marrakech / Fes / Morocco-wide",
+      description: "We are looking for passionate, knowledgeable, and storytelling guides who can bring Morocco to life for our VIP guests. Your role involves leading premium tours, sharing cultural insights, and ensuring guest satisfaction.",
+      req1: "Fluent in at least 2 languages (French, Spanish, English, Hebrew, German, Russian, or Italian preferred)",
+      req2: "Deep knowledge of Moroccan history, culture, and geography",
+      req3: "Professional, personable, and excellent customer service skills",
+      req4: "Physical fitness for desert trekking and outdoor activities"
+    },
+    job2: {
+      title: "VIP Executive Driver",
+      type: "Full-Time",
+      location: "Morocco-wide",
+      description: "Join our luxury transport team driving modern high-end Mercedes vehicles. You'll provide VIP transfers, ensure guest comfort and safety, and represent our brand with professionalism and hospitality.",
+      req1: "Valid driver's license with excellent driving record (10+ years experience preferred)",
+      req2: "Fluency in English (additional languages a plus)",
+      req3: "Professional appearance and courteous demeanor",
+      req4: "Knowledge of Morocco's roads and routes; GPS/navigation experience"
+    },
+    job3: {
+      title: "Customer Experience Coordinator",
+      type: "Full-Time",
+      location: "Remote / Hybrid (Fes Office)",
+      description: "Support our CEO office in organizing luxury custom itineraries, managing guest communications, and ensuring seamless travel coordination. This role is ideal for organized, detail-oriented professionals.",
+      req1: "Excellent organizational and communication skills",
+      req2: "Experience with travel, hospitality, or customer service",
+      req3: "Fluent in English; additional languages a bonus",
+      req4: "Proficiency with booking systems and Microsoft Office Suite"
+    }
+  },
+  
+  // Testimonials
+  testimonials_data: {
+    intro: "Meet our satisfied guests who have experienced Morocco through our services",
+    
+    testi1: {
+      name: "Sarah Johnson",
+      title: "London, UK",
+      rating: 5,
+      text: "Morocco Loves You made my dream trip a reality! Every detail was perfectly organized, from luxury hotels to authentic experiences. The service is unmatched. I'm already planning my return visit!",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    },
+    testi2: {
+      name: "Michael Chen",
+      title: "Singapore",
+      rating: 5,
+      text: "As a business traveler, I was impressed by the professionalism and customization. VIP treatment from day one, personalized itinerary, and impeccable logistics. Highly recommended for executive travel.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    },
+    testi3: {
+      name: "Emma Wilson",
+      title: "Sydney, Australia",
+      rating: 5,
+      text: "The desert experience was magical! Sleeping under the stars, camel trekking, and the warmth of Moroccan hospitality exceeded all expectations. Thank you for creating lifelong memories!",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+    },
+    testi4: {
+      name: "James Rodriguez",
+      title: "Madrid, Spain",
+      rating: 5,
+      text: "Family trip planning can be stressful, but Morocco Loves You handled everything brilliantly. Safe, educational, and fun for all ages. Our kids still talk about the medina visits!",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+    },
+    testi5: {
+      name: "Anna Mueller",
+      title: "Berlin, Germany",
+      rating: 5,
+      text: "I appreciated the cultural authenticity and respect shown to local traditions. This wasn't just tourism; it was a genuine cultural immersion. Bravo to the entire team!",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    },
+    testi6: {
+      name: "David Thompson",
+      title: "Toronto, Canada",
+      rating: 5,
+      text: "The accessibility for seniors was exceptional. Comfortable pacing, supportive guides, and luxury accommodations made my grandparents incredibly happy. A service that truly cares.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+    },
+    testi7: {
+      name: "Lisa Anderson",
+      title: "New York, USA",
+      rating: 5,
+      text: "Food lover here! The culinary experiences were exquisite. Every meal told a story, every guide showed genuine passion. Morocco's flavors will stay with me forever.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+    },
+    testi8: {
+      name: "Marcus Smith",
+      title: "Los Angeles, USA",
+      rating: 5,
+      text: "Adventure-packed yet luxurious – exactly what I was looking for. Atlas trekking, desert safaris, all with VIP comfort. Worth every penny!",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    },
+    testi9: {
+      name: "Sophie Laurent",
+      title: "Paris, France",
+      rating: 5,
+      text: "Romance trip extraordinaire! Sunset in the Sahara, private dinners overlooking Marrakech, and attentive service throughout. Morocco Loves You truly lives up to their name.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    }
+  },
+  
+  // Gallery Categories
+  gallery_categories: {
+    food: "Culinary Experience",
+    destinations: "Destinations",
+    kosher: "Kosher",
+    transport: "VIP Transportation"
+  },
+  
+  // Stats
+  stats: {
+    happyTravelers: "5000+",
+    yearsExperience: "15+",
+    destinationsCount: "25+",
+    satisfactionRate: "98%"
   }
 };
 

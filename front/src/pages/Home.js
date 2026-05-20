@@ -12,16 +12,16 @@ import './Home.css';
 
 const WHATSAPP_NUMBER = '972546338757';
 
-function buildWhatsAppUrl(pkg) {
+function buildWhatsAppUrl(pkg, t) {
   const message = [
-    `Hello Morocco Loves You! 🌟`,
-    `I'd like to book the following package:`,
+    t('whatsapp.greeting'),
+    t('whatsapp.bookPackage'),
     ``,
-    `📦 Package: ${pkg.title}`,
-    `⏱️ Duration: ${pkg.duration}`,
-    `💰 Price: ${pkg.price}`,
+    `${t('whatsapp.packageInfo')}${pkg.title}`,
+    `${t('whatsapp.duration')}${pkg.duration}`,
+    `${t('whatsapp.price')}${pkg.price}`,
     ``,
-    `Please let me know the availability and next steps. Thank you!`
+    t('whatsapp.bookingRequest')
   ].join('\n');
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -183,7 +183,7 @@ export default function Home() {
 
             <div className="tour-modal-actions">
               <a
-                href={buildWhatsAppUrl(pkg)}
+                href={buildWhatsAppUrl(pkg, t)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="tour-modal-book-btn"
@@ -250,7 +250,7 @@ export default function Home() {
                       {t('tours.viewDetails') || "View Details"}
                     </button>
                     <a
-                      href={buildWhatsAppUrl(pkg)}
+                      href={buildWhatsAppUrl(pkg, t)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="travel-card-btn"
@@ -313,7 +313,7 @@ export default function Home() {
             <div className="mly-wc2030-visual">
               <img
                 src="/assets/wordcup.png"
-                alt="World Cup trophy with Moroccan flag"
+                alt={t('aria.worldCupAlt')}
               />
             </div>
           </div>

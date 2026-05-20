@@ -55,14 +55,9 @@ export default function CulinarySection() {
       </div>
 
       <div className="culinary-features">
-        <span>Traditional Tagines</span>
-        <span>Authentic Couscous</span>
-        <span>Moroccan Pastries</span>
-        <span>Tea Ceremonies</span>
-        <span>Cooking Classes</span>
-        <span>Local Spices</span>
-        <span>Organic Ingredients</span>
-        <span>Home-cooked Meals</span>
+        {(t('home.culinaryFeatures') || []).map((feature) => (
+          <span key={feature}>{feature}</span>
+        ))}
       </div>
 
       <div className="culinary-cta">
@@ -71,10 +66,10 @@ export default function CulinarySection() {
 
         <div className="culinary-contact">
           <a href="https://wa.me/972546338757" target="_blank" rel="noreferrer">
-            WhatsApp: +972546338757
+            {t('transportation.whatsapp')}
           </a>
 
-          <a href="tel:+212663630579">Morocco Line: +212 6 63 63 05 79</a>
+          <a href="tel:+212663630579">{t('transportation.moroccoLine')}</a>
         </div>
       </div>
     </section>

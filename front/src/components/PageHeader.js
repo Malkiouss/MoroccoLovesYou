@@ -24,7 +24,7 @@ export default function PageHeader({ title, subtitle, bgImage }) {
         <div className="navbar-brand-group">
           
           <Link to="/" className="logo">
-            <img src="/assets/images/logoMorocco.png" alt="Logo" />
+            <img src="/assets/images/logoMorocco.png" alt={t('aria.logoAlt')} />
           </Link>
         </div>
         <div className="nav-links">
@@ -44,7 +44,7 @@ export default function PageHeader({ title, subtitle, bgImage }) {
         <button
           type="button"
           className="nav-menu-btn"
-          aria-label="Open menu"
+          aria-label={t('aria.openMenu')}
           onClick={() => setIsMenuOpen(true)}
         >
           <Menu aria-hidden="true" />
@@ -73,7 +73,7 @@ export default function PageHeader({ title, subtitle, bgImage }) {
               <button
                 type="button"
                 className="mobile-menu-close"
-                aria-label="Close menu"
+                aria-label={t('aria.closeMenu')}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <X aria-hidden="true" />

@@ -108,7 +108,7 @@ export default function Contact() {
                     type="text"
                     id="firstName"
                     name="firstName"
-                    placeholder="e.g. John"
+                    placeholder={t('forms.firstName')}
                     value={formData.firstName}
                     onChange={handleChange}
                     required
@@ -120,7 +120,7 @@ export default function Contact() {
                     type="text"
                     id="lastName"
                     name="lastName"
-                    placeholder="e.g. Doe"
+                    placeholder={t('forms.lastName')}
                     value={formData.lastName}
                     onChange={handleChange}
                     required
@@ -134,7 +134,7 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="name@example.com"
+                  placeholder={t('forms.email')}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -147,7 +147,7 @@ export default function Contact() {
                   type="text"
                   id="subject"
                   name="subject"
-                  placeholder="How can we help?"
+                  placeholder={t('forms.subject')}
                   value={formData.subject}
                   onChange={handleChange}
                   required
@@ -160,7 +160,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows="5"
-                  placeholder="Tell us more about your travel plans..."
+                  placeholder={t('forms.message')}
                   value={formData.message}
                   onChange={handleChange}
                   required

@@ -24,7 +24,7 @@ export default function HeroSection() {
       <nav>
         <div className="navbar-brand-group">
           <Link to="/" className="logo">
-            <img src="/assets/images/logoMorocco.png" alt="Logo" />
+            <img src="/assets/images/logoMorocco.png" alt={t('aria.logoAlt')} />
           </Link>
         </div>
         <div className="nav-links">
@@ -44,7 +44,7 @@ export default function HeroSection() {
         <button
           type="button"
           className="nav-menu-btn"
-          aria-label="Open menu"
+          aria-label={t('aria.openMenu')}
           onClick={() => setIsMenuOpen(true)}
         >
           <Menu aria-hidden="true" />
@@ -54,7 +54,7 @@ export default function HeroSection() {
       {/* HERO */}
       <section className="hero">
   <div className="hero-bg" />
-  <img src="../../assets/king.jpeg" alt="King Hassan III" className="mly-king-flag-photo" />
+  <img src="../../assets/king.jpeg" alt={t('aria.kingAlt')} className="mly-king-flag-photo" />
         <div className="hero-content">
           
           <span className="hero-star" aria-hidden="true">
@@ -66,7 +66,15 @@ export default function HeroSection() {
             <span className="line2">{t('hero.welcomeHome')}</span>
           </h1>
 
-          <img src="/assets/images/kosher1.jpeg" alt="Kosher Options" className="kosher-hero-img" />
+          <a
+            href="https://wa.me/972546338757"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="kosher-hero-link"
+            aria-label={t('aria.whatsappSocial')}
+          >
+            <img src="/assets/images/kosher1.jpeg" alt={t('aria.kosherOptionsAlt')} className="kosher-hero-img" />
+          </a>
 
         {/*  <button className="wa-btn">
             <MessageCircle aria-hidden="true" />
@@ -130,11 +138,11 @@ export default function HeroSection() {
         >
           <div className="mobile-menu" onClick={(e) => e.stopPropagation()}>
             <div className="mobile-menu-top">
-              <div className="mobile-menu-title">{t('menu')}</div>
+              <div className="mobile-menu-title">{t('nav.menu')}</div>
               <button
                 type="button"
                 className="mobile-menu-close"
-                aria-label="Close menu"
+                aria-label={t('aria.closeMenu')}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <X aria-hidden="true" />

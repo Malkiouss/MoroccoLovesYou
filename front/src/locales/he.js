@@ -217,7 +217,6 @@ const he = {
       subtitle: "✨ חוויית מרוקו הגדולה (שירותי קרקע בלבד)",
       arrivalText: "קזבלנקה או מרקש",
       routeText: "קזבלנקה, רבאט, 2 לילות בפס, טנג'יר, שפשאוון, איפראן, 2 לילות במרקש, אגאדיר, ווארזאזאת, לילה אחרון במרקש",
-      note1: "מינימום: 20 מטיילים",
       note2: "קבוצות מעל 40: הנחה מיוחדת של 50$ לאדם",
       note3: "טיסות בינלאומיות וביטוח אינם כלולים",
       note4: "טיפים לנהג/מדריך אינם כלולים",
@@ -575,6 +574,22 @@ const he = {
     callMorocco: "התקשר למרוקו: +212 6 63 63 05 79",
     ceoContact: "שוחח עם אילן האצ'ואל ישירות בוואטסאפ",
     exploreBtn: "חקור סיורים כשרים"
+  },
+  aria: {
+    openMenu: "פתח תפריט",
+    closeMenu: "סגור תפריט",
+    whatsappSocial: "WhatsApp",
+    kosherTravel: "טיולי כשרות במרוקו",
+    logoAlt: "לוגו MoroccoLovesYou",
+    kingAlt: "מלך מרוקו",
+    kosherOptionsAlt: "אפשרויות כשרות",
+    jewishHeritageArchitecture: "אדריכלות מורשת יהודית",
+    kosherMoroccanTable: "שולחן מרוקאי כשר",
+    luxuryHospitality: "אירוח יוקרתי",
+    kosherExperience: "חוויה כשרה",
+    jewishHeritageMorocco: "מורשת יהודית במרוקו",
+    kosherFoodMorocco: "אוכל כשר במרוקו",
+    jewishHeritageExperience: "חוויית מורשת יהודית"
   }
 };
 

@@ -24,7 +24,7 @@ export default function About() {
             <p>{t('about.storyP2')}</p>
           </div>
           <div className="story-image">
-            <SafeImage src="/assets/cities/chefchaouen/chef (1).jpg" alt="Morocco landscape" />
+            <SafeImage src="/assets/cities/chefchaouen/chef (1).jpg" alt={t('aria.moroccoLandscape')} />
           </div>
         </div>
       </section>

@@ -5,16 +5,16 @@ import './Tours.css';
 
 const WHATSAPP_NUMBER = '972546338757';
 
-function buildWhatsAppUrl(pkg) {
+function buildWhatsAppUrl(pkg, t) {
   const message = [
-    `Hello Morocco Loves You! 🌟`,
-    `I'd like to book the following package:`,
+    t('whatsapp.greeting'),
+    t('whatsapp.bookPackage'),
     ``,
-    `📦 Package: ${pkg.title}`,
-    `⏱️ Duration: ${pkg.duration}`,
-    `💰 Price: ${pkg.price}`,
+    `${t('whatsapp.packageInfo')}${pkg.title}`,
+    `${t('whatsapp.duration')}${pkg.duration}`,
+    `${t('whatsapp.price')}${pkg.price}`,
     ``,
-    `Please let me know the availability and next steps. Thank you!`
+    t('whatsapp.bookingRequest')
   ].join('\n');
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -145,7 +145,7 @@ export default function Tours() {
         arrival: t('tours.pkg3.arrivalText') || "Casablanca or Marrakech",
         route: t('tours.pkg3.routeText') || "Casablanca, Rabat, 2 nights Fes, Tangier, Chefchaouen, Ifrane, 2 nights Marrakech, Agadir, Ouarzazate, final night Marrakech",
         notes: [
-          t('tours.pkg3.note1') || "Minimum: 20 travelers",
+          
           t('tours.pkg3.note2') || "Groups > 40: Special discount of $50 per person",
           t('tours.pkg3.note3') || "International flights & insurance NOT included",
           t('tours.pkg3.note4') || "Tips for driver/guide NOT included"
@@ -168,38 +168,58 @@ export default function Tours() {
       id: "pkg4",
       image: '/assets/packs/pack4.jpeg',
       title: t('tours.pkg4.title') || "Morocco Imperial & Sahara Experience",
-      duration: t('tours.pkg4.duration') || "13 Nights / 14 Days",
+      duration: t('tours.pkg4.duration') || "16 Nights / 17 Days",
       price: t('tours.pkg4.price') || "All Inclusive",
       highlights: [
-        t('tours.pkg4.hl1') || "2 Nights Merzouga Sahara Desert",
-        t('tours.pkg4.hl2') || "Premium AC tents & Jeep excursions",
-        t('tours.pkg4.hl3') || "Visit Atlas Mountains & Ourika Valley",
-        t('tours.pkg4.hl4') || "Ouzoud Waterfalls & Imperial Cities",
-        t('tours.pkg4.hl5') || "Full ground services from A to Z"
+        t('tours.pkg4.hl1') || "Casablanca • Rabat • Fez • Tangier • Chefchaouen",
+        t('tours.pkg4.hl2') || "Ifrane • Merzouga Sahara Desert",
+        t('tours.pkg4.hl3') || "Essaouira • Ourika & Atlas Mountains • Marrakesh",
+        t('tours.pkg4.hl4') || "2 Nights Luxury Desert Camp with Camel & Jeep Tours",
+        t('tours.pkg4.hl5') || "Magical Sunrise & Sunset • Sleep Under The Stars"
       ],
       fullDetails: {
-        subtitle: t('tours.pkg4.subtitle') || "✨ Morocco Imperial & Sahara Experience (Full Ground Services)",
-        route: t('tours.pkg4.routeText') || "2 nights Marrakech, Ourika Valley, Agadir, 2 nights Merzouga, Ouarzazate, Ouzoud Waterfalls, Ifrane, Tangier, Chefchaouen, 2 nights Fes, El Jadida, Casablanca",
-        sahara: [
-          t('tours.pkg4.sahara1') || "Premium air-conditioned desert tents",
-          t('tours.pkg4.sahara2') || "Campfire music atmosphere",
-          t('tours.pkg4.sahara3') || "Jeep excursions & Camel rides",
-          t('tours.pkg4.sahara4') || "Unforgettable sunsets & sunrises"
+        subtitle: t('tours.pkg4.subtitle') || "✨ Morocco Imperial & Sahara Experience - The Complete Journey (16 Nights / 17 Days)",
+        route: t('tours.pkg4.routeText') || "Casablanca (1 night), Rabat, Fez (2 nights), Tangier (1 night), Chefchaouen (1 night), Ifrane (1 night), Merzouga Sahara (2 nights), Essaouira (2 nights), Ourika & Atlas Mountains (1 night), Marrakesh (3 nights)",
+        highlights: [
+          t('tours.pkg4.itinerary1') || "Casablanca - Arrival (1 Night)",
+          t('tours.pkg4.itinerary2') || "Rabat - The Royal Capital",
+          t('tours.pkg4.itinerary3') || "Fez - Spiritual & Cultural Morocco (2 Nights)",
+          t('tours.pkg4.itinerary4') || "Tangier - Where Europe Meets Africa (1 Night)",
+          t('tours.pkg4.itinerary5') || "Chefchaouen - The Blue Pearl (1 Night)",
+          t('tours.pkg4.itinerary6') || "Ifrane - The Moroccan Switzerland (1 Night)",
+          t('tours.pkg4.itinerary7') || "Merzouga Sahara Desert (2 Nights) - Luxury Desert Camp - Camel Experience - Jeep Tours - Magical Sunrise & Sunset - Sleeping Under The Stars",
+          t('tours.pkg4.itinerary8') || "Essaouira - Atlantic Ocean Escape (2 Nights)",
+          t('tours.pkg4.itinerary9') || "Ourika & Atlas Mountains (1 Night)",
+          t('tours.pkg4.itinerary10') || "Marrakesh - The Red City (3 Nights)"
         ],
         included: [
-          t('tours.pkg4.inc1') || "Full premium ground services",
-          t('tours.pkg4.inc2') || "4–5 star hotels (Half board)",
-          t('tours.pkg4.inc3') || "Professional tour guide & Private driver",
-          t('tours.pkg4.inc4') || "Special live performances & dancers",
-          t('tours.pkg4.inc5') || "Traditional spice, carpet & lantern markets",
-          t('tours.pkg4.inc6') || "Traditional Moroccan hammam",
-          t('tours.pkg4.inc7') || "Cooking & art workshops",
-          t('tours.pkg4.inc8') || "Visits with local families",
-          t('tours.pkg4.inc9') || "Special surprises during the journey"
+          t('tours.pkg4.inc1') || "4★ / 5★ Hotels",
+          t('tours.pkg4.inc2') || "Luxury Air-Conditioned Desert Camp",
+          t('tours.pkg4.inc3') || "Full Board / Premium Moroccan Cuisine",
+          t('tours.pkg4.inc4') || "Professional Multilingual Guides",
+          t('tours.pkg4.inc5') || "Private Modern Transportation",
+          t('tours.pkg4.inc6') || "Air-Conditioned Coaches",
+          t('tours.pkg4.inc7') || "WiFi • TV • Refrigerator On Board",
+          t('tours.pkg4.inc8') || "Private Driver Throughout The Tour",
+          t('tours.pkg4.inc9') || "Camel Tours",
+          t('tours.pkg4.inc10') || "Jeep Desert Experience",
+          t('tours.pkg4.inc11') || "Folklore Shows & Live Music",
+          t('tours.pkg4.inc12') || "Moroccan Dance Performances",
+          t('tours.pkg4.inc13') || "Cooking Workshops",
+          t('tours.pkg4.inc14') || "Markets & Souks Experiences",
+          t('tours.pkg4.inc15') || "Carpets • Spices • Flowers • Traditional Crafts",
+          t('tours.pkg4.inc16') || "Lakes • Rivers • Atlas Mountains",
+          t('tours.pkg4.inc17') || "Special Sunrise & Sunset Experiences",
+          t('tours.pkg4.inc18') || "Direct 24/7 Support"
         ],
-        notes: [
-          t('tours.pkg4.note1') || "Minimum: 20 travelers"
-        ]
+        optional: [
+          t('tours.pkg4.optional1') || "Hot Air Balloon Experience",
+          t('tours.pkg4.optional2') || "VIP Upgrades",
+          t('tours.pkg4.optional3') || "Luxury Experiences",
+          t('tours.pkg4.optional4') || "Private Security Services",
+          t('tours.pkg4.optional5') || "Medical Assistance Services"
+        ],
+        optionalNote: t('tours.pkg4.optionalNote') || "Some premium services may require an additional fair supplement."
       }
     }
   ];
@@ -279,7 +299,7 @@ export default function Tours() {
             </button>
 
             <a
-              href={buildWhatsAppUrl(pkg)}
+              href={buildWhatsAppUrl(pkg, t)}
               target="_blank"
               rel="noopener noreferrer"
               className="travel-card-btn"
@@ -302,7 +322,7 @@ export default function Tours() {
             type="button"
             className="tour-modal-close"
             onClick={() => setSelectedPackage(null)}
-            aria-label="Close details"
+            aria-label={t('aria.closeDetails')}
           >
             ×
           </button>
@@ -357,6 +377,32 @@ export default function Tours() {
             <DetailList title={t('tours.foodDining') || "Food & Dining:"} items={pkg.fullDetails.food} />
             <DetailList title={t('tours.whatsIncluded') || "What's Included:"} items={pkg.fullDetails.included} />
             <DetailList title={t('tours.attractionsExperiences') || "Attractions & Experiences:"} items={pkg.fullDetails.experiences} />
+
+            {pkg.fullDetails.highlights && (
+              <div className="details-section highlights-section">
+                <h5>{t('tours.itinerary') || "Itinerary:"}</h5>
+                <ul className="details-list">
+                  {pkg.fullDetails.highlights.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {pkg.fullDetails.optional && (
+              <div className="details-section optional-section">
+                <h5>{t('tours.optionalExperiences') || "Optional Experiences:"}</h5>
+                <p className="optional-intro">{t('tours.availableUponRequest') || "Available Upon Request:"}</p>
+                <ul className="details-list">
+                  {pkg.fullDetails.optional.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                {pkg.fullDetails.optionalNote && (
+                  <p className="optional-note">{pkg.fullDetails.optionalNote}</p>
+                )}
+              </div>
+            )}
 
             {pkg.fullDetails.sahara && (
               <div className="details-section sahara-special">
@@ -414,7 +460,7 @@ export default function Tours() {
 
             <div className="tour-modal-actions">
               <a
-                href={buildWhatsAppUrl(pkg)}
+                href={buildWhatsAppUrl(pkg, t)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="tour-modal-book-btn"

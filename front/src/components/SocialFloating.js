@@ -1,4 +1,5 @@
 import "./SocialFloating.css";
+import { useLanguage } from "../context/LanguageContext";
 
 const InstagramIcon = () => (
   <svg
@@ -47,6 +48,8 @@ const FacebookIcon = () => (
 );
 
 export default function SocialFloating() {
+  const { t } = useLanguage();
+
   return (
     <div className="social-floating">
       <a
@@ -54,9 +57,9 @@ export default function SocialFloating() {
         target="_blank"
         rel="noreferrer"
         className="social-btn instagram"
-        aria-label="Follow us on Instagram"
+        aria-label={t('aria.followInstagram')}
       >
-        <span className="social-label">Instagram</span>
+        <span className="social-label">{t('common.instagram')}</span>
         <span className="social-icon">
           <InstagramIcon />
         </span>
@@ -67,9 +70,9 @@ export default function SocialFloating() {
         target="_blank"
         rel="noreferrer"
         className="social-btn facebook"
-        aria-label="Follow us on Facebook"
+        aria-label={t('aria.followFacebook')}
       >
-        <span className="social-label">Facebook</span>
+        <span className="social-label">{t('common.facebook')}</span>
         <span className="social-icon">
           <FacebookIcon />
         </span>

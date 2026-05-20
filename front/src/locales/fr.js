@@ -13,7 +13,8 @@ const fr = {
     vipFull: "Voyage VIP Affaires",
     worldcup: "Coupe du Monde 2030",
     menu: "Menu",
-    chatWhatsApp: "Discuter sur WhatsApp"
+    chatWhatsApp: "Discuter sur WhatsApp",
+    jewishHeritage: "Voyage Casher"
   },
   hero: {
     welcome: "Bienvenue au Maroc.",
@@ -216,7 +217,6 @@ const fr = {
       subtitle: "✨ Grande Expérience du Maroc (Services Terrestres Uniquement)",
       arrivalText: "Casablanca ou Marrakech",
       routeText: "Casablanca, Rabat, 2 nuits à Fès, Tanger, Chefchaouen, Ifrane, 2 nuits à Marrakech, Agadir, Ouarzazate, dernière nuit à Marrakech",
-      note1: "Minimum : 20 voyageurs",
       note2: "Groupes > 40 : Remise spéciale de 50 $ par personne",
       note3: "Vols internationaux & assurance NON inclus",
       note4: "Pourboires pour chauffeur/guide NON inclus",
@@ -609,6 +609,300 @@ const fr = {
     callMorocco: "Appeler le Maroc : +212 6 63 63 05 79",
     ceoContact: "Parlez directement avec Allan Hatchuel sur WhatsApp",
     exploreBtn: "Explorer les Circuits Casher"
+  },
+  
+  // Accessibility & UI Labels (Étiquettes d'Accessibilité et Interface)
+  aria: {
+    selectLanguage: "Sélectionner la langue",
+    closeDetails: "Fermer les détails",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
+    kosherTravel: "Voyages Casher au Maroc",
+    watchVideo: "Regarder la vidéo Maroc Magique",
+    followInstagram: "Nous suivre sur Instagram",
+    followFacebook: "Nous suivre sur Facebook",
+    ceoMessage: "PDG de Morocco Loves You",
+    whatsappSocial: "WhatsApp",
+    instagramSocial: "Instagram",
+    facebookSocial: "Facebook",
+    jewishHeritageExperience: "Expérience du patrimoine juif",
+    kosherFoodMorocco: "Cuisine casher au Maroc",
+    jewishHeritageMorocco: "Patrimoine juif au Maroc",
+    kosherExperience: "Expérience casher",
+    luxuryHospitality: "Hospitalité de luxe",
+    kosherMoroccanTable: "Table marocaine casher",
+    jewishHeritageArchitecture: "Architecture du patrimoine juif",
+    kosherOptionsAlt: "Options casher",
+    kingAlt: "Roi du Maroc",
+    logoAlt: "Logo MoroccoLovesYou"
+  },
+  
+  // Form Placeholders (Espaces Réservés du Formulaire)
+  forms: {
+    firstName: "ex. Jean",
+    lastName: "ex. Dupont",
+    email: "nom@exemple.com",
+    subject: "Comment pouvons-nous vous aider ?",
+    message: "Parlez-nous davantage de vos plans de voyage...",
+    phone: "Votre numéro de téléphone",
+    date: "Sélectionner une date",
+    guests: "Nombre de clients"
+  },
+  
+  // Common UI Text (Texte Commun de l'Interface)
+  common: {
+    selectLanguage: "Sélectionner la langue",
+    instagram: "Instagram",
+    facebook: "Facebook",
+    loading: "Chargement...",
+    error: "Une erreur s'est produite",
+    success: "Succès !",
+    noResults: "Aucun résultat trouvé",
+    viewMore: "Voir Plus",
+    viewLess: "Voir Moins",
+    bookNow: "Réserver Maintenant",
+    learnMore: "En Savoir Plus",
+    contactUs: "Nous Contacter",
+    close: "Fermer",
+    back: "Retour",
+    next: "Suivant",
+    previous: "Précédent",
+    search: "Rechercher...",
+    filter: "Filtrer",
+    sort: "Trier",
+    price: "Prix",
+    duration: "Durée",
+    languages: {
+      english: "English",
+      american: "American",
+      australia: "Australia",
+      canada: "Canada",
+      french: "Français",
+      spanish: "Español",
+      hebrew: "עברית",
+      arabic: "العربية",
+      german: "Deutsch",
+      italian: "Italiano",
+      japanese: "日本語",
+      chinese: "中文",
+      korean: "한국어",
+      vietnamese: "Tiếng Việt",
+      russian: "Русский"
+    }
+  },
+  
+  // WhatsApp Message Templates (Modèles de Messages WhatsApp)
+  whatsapp: {
+    greeting: "Bonjour Morocco Loves You! 🌟",
+    bookPackage: "J'aimerais réserver le forfait suivant :",
+    packageInfo: "📦 Forfait : ",
+    duration: "⏱️ Durée : ",
+    price: "💰 Prix : ",
+    bookingRequest: "Veuillez me faire savoir la disponibilité et les prochaines étapes. Merci !",
+    cityTrip: "J'aimerais planifier un voyage à {city}. Pouvez-vous m'aider ?",
+    silverPackage: "Je suis intéressé par le forfait Silver de la Coupe du Monde",
+    goldPackage: "Je suis intéressé par le forfait Gold de la Coupe du Monde",
+    diamondPackage: "Je suis intéressé par le forfait Diamond VIP de la Coupe du Monde",
+    worldCupSecure: "Bonjour, je veux sécuriser ma place pour le Maroc 2030.",
+    kosherInquiry: "Je suis intéressé par vos forfaits de voyage casher.",
+    customPackage: "J'aimerais créer un forfait personnalisé pour notre groupe.",
+    businessInquiry: "Je suis intéressé par les services de voyage d'affaires VIP."
+  },
+  
+  // Blog Posts (Articles de Blog)
+  blog_posts: {
+    post1: {
+      title: "10 Joyaux Cachés à Découvrir au Maroc",
+      author: "Fatima Hassan",
+      date: "15 mars 2024",
+      category: "Guide de Voyage",
+      excerpt: "Découvrez les destinations les moins connues et les trésors cachés du Maroc. Des villages secrets en montagne aux zones côtières vierges.",
+      content: "Le Maroc est bien plus que Marrakech et Casablanca. Ce guide complet révèle des joyaux cachés..."
+    },
+    post2: {
+      title: "Meilleure Période pour Visiter le Maroc : Guide Complet",
+      author: "Ahmed Bennani",
+      date: "10 mars 2024",
+      category: "Planification",
+      excerpt: "Planifiez votre voyage au Maroc ? Apprenez les meilleures saisons pour visiter.",
+      content: "Choisir le bon moment pour visiter le Maroc peut impacter significativement votre expérience de voyage..."
+    },
+    post3: {
+      title: "Cuisine Marocaine : Une Aventure Culinaire",
+      author: "Layla Rahim",
+      date: "5 mars 2024",
+      category: "Nourriture et Culture",
+      excerpt: "Embarquez dans un voyage culinaire à travers le Maroc. Découvrez les saveurs riches et les recettes traditionnelles.",
+      content: "La cuisine marocaine est un mélange d'influences arabes, amazighes, andalouses et africaines..."
+    },
+    post4: {
+      title: "Comment Marchander au Maroc Comme un Pro",
+      author: "Youssef Alaoui",
+      date: "28 février 2024",
+      category: "Conseils de Voyage",
+      excerpt: "Maîtrisez l'art de la négociation dans les souks et marchés marocains. Apprenez les tactiques et conseils.",
+      content: "La négociation sur les marchés marocains n'est pas qu'une transaction ; c'est un échange culturel..."
+    },
+    post5: {
+      title: "Randonnée dans les Montagnes de l'Atlas : Ce qu'il Faut Savoir",
+      author: "Ahmed Bennani",
+      date: "20 février 2024",
+      category: "Aventure",
+      excerpt: "Explorez les majestueuses Montagnes de l'Atlas à pied. Obtenez des conseils d'experts sur les itinéraires et l'équipement.",
+      content: "Les Montagnes de l'Atlas offrent certains des paysages les plus spectaculaires du nord de l'Afrique..."
+    },
+    post6: {
+      title: "Safari du Désert : Une Expérience Inoubliable",
+      author: "Fatima Hassan",
+      date: "15 février 2024",
+      category: "Aventure",
+      excerpt: "Expérimentez la magie du désert du Sahara marocain. Promenades à chameau et nuits sous les étoiles.",
+      content: "Le désert du Sahara représente l'âme du Maroc. Un safari au désert est bien plus qu'une aventure..."
+    },
+    post7: {
+      title: "Étiquette Culturelle : Respecter les Traditions Marocaines",
+      author: "Layla Rahim",
+      date: "10 février 2024",
+      category: "Culture",
+      excerpt: "Apprenez les normes culturelles essentielles pour interagir respectueusement avec le peuple marocain.",
+      content: "Comprendre et respecter les coutumes locales est crucial quand on voyage au Maroc..."
+    },
+    post8: {
+      title: "Photographie au Maroc : Capturer la Magie",
+      author: "Youssef Alaoui",
+      date: "5 février 2024",
+      category: "Photographie",
+      excerpt: "Découvrez les endroits les plus photogéniques du Maroc et les conseils professionnels pour capturer des images magnifiques.",
+      content: "Le Maroc est un paradis pour les photographes. Des médinas bleues aux déserts dorés..."
+    }
+  },
+  
+  // Job Listings (Offres d'Emploi)
+  jobs: {
+    title: "Carrières et Opportunités",
+    intro: "Rejoignez l'équipe de MoroccoLovesYou et construisez votre avenir dans les voyages de luxe",
+    workWith: "Travaillez avec Amour, Soin et Excellence",
+    introText: "Nous recherchons des individus passionnés et dédiés qui partagent notre vision d'offrir des expériences de voyage de classe mondiale.",
+    openPositions: "Postes Ouverts",
+    readyJoin: "Prêt à Nous Rejoindre ?",
+    sendCV: "Envoie ton CV à careers@moroccolovesyou.com",
+    instructions: "Inclure une brève lettre de motivation expliquant pourquoi vous souhaitez rejoindre l'équipe Morocco Loves You.",
+    
+    job1: {
+      title: "Guide Touristique Professionnel Multilingue",
+      type: "Temps Plein / Saisonnier",
+      location: "Marrakech / Fès / Maroc",
+      description: "Nous recherchons des guides passionnés et connaisseurs qui peuvent donner vie au Maroc pour nos clients VIP.",
+      req1: "Couramment parlé dans au moins 2 langues (français, espagnol, anglais, hébreu, allemand, russe ou italien préféré)",
+      req2: "Connaissance approfondie de l'histoire, la culture et la géographie marocaines",
+      req3: "Compétences professionnelles, conviviales et excellent service à la clientèle",
+      req4: "Aptitude physique pour le trekking dans le désert et les activités de plein air"
+    },
+    job2: {
+      title: "Chauffeur Exécutif Luxe",
+      type: "Temps Plein",
+      location: "Maroc",
+      description: "Rejoignez notre équipe de transport de luxe en conduisant des véhicules Mercedes haut de gamme.",
+      req1: "Permis de conduire valide avec un excellent dossier de conduite (10+ ans d'expérience préféré)",
+      req2: "Couramment parlé l'anglais (langues supplémentaires, bonus)",
+      req3: "Apparence professionnelle et comportement courtois",
+      req4: "Connaissance des routes et itinéraires du Maroc"
+    },
+    job3: {
+      title: "Coordinateur de l'Expérience Client",
+      type: "Temps Plein",
+      location: "Télétravail / Hybride (Bureau Fès)",
+      description: "Supportez le bureau du PDG en organisant des itinéraires de luxe personnalisés et en gérant les communications avec les clients.",
+      req1: "Excellentes compétences organisationnelles et communicationnelles",
+      req2: "Expérience en voyage, hôtellerie ou service à la clientèle",
+      req3: "Courant anglais ; langues supplémentaires bonus",
+      req4: "Compétence avec les systèmes de réservation et la suite Microsoft Office"
+    }
+  },
+  
+  // Testimonials (Témoignages)
+  testimonials_data: {
+    intro: "Rencontrez nos clients satisfaits qui ont expérimenté le Maroc avec nos services",
+    
+    testi1: {
+      name: "Sarah Johnson",
+      title: "Londres, Royaume-Uni",
+      rating: 5,
+      text: "Morocco Loves You a rendu mon voyage de rêve réalité ! Chaque détail était parfaitement organisé. Le service est incomparable.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    },
+    testi2: {
+      name: "Michael Chen",
+      title: "Singapour",
+      rating: 5,
+      text: "En tant que voyageur d'affaires, j'ai été impressionné par le professionnalisme et la personnalisation. Traitement VIP dès le premier jour.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    },
+    testi3: {
+      name: "Emma Wilson",
+      title: "Sydney, Australie",
+      rating: 5,
+      text: "L'expérience du désert était magique ! Dormir sous les étoiles et la chaleur de l'hospitalité marocaine ont dépassé toutes mes attentes.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+    },
+    testi4: {
+      name: "James Rodriguez",
+      title: "Madrid, Espagne",
+      rating: 5,
+      text: "Planifier un voyage en famille peut être stressant, mais Morocco Loves You a tout géré brillamment. Sûr, éducatif et amusant !",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+    },
+    testi5: {
+      name: "Anna Mueller",
+      title: "Berlin, Allemagne",
+      rating: 5,
+      text: "J'ai apprécié l'authenticité culturelle et le respect des traditions locales. Ce n'était pas juste du tourisme ; c'était une immersion culturelle authentique.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    },
+    testi6: {
+      name: "David Thompson",
+      title: "Toronto, Canada",
+      rating: 5,
+      text: "L'accessibilité pour les personnes âgées était exceptionnelle. Rythme confortable, guides attentionnés et hébergements de luxe.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+    },
+    testi7: {
+      name: "Lisa Anderson",
+      title: "New York, États-Unis",
+      rating: 5,
+      text: "Les amateurs de bonne nourriture trouveront ici leur compte ! Les expériences culinaires étaient exquises. Chaque repas raconte une histoire.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+    },
+    testi8: {
+      name: "Marcus Smith",
+      title: "Los Angeles, États-Unis",
+      rating: 5,
+      text: "Rempli d'aventure mais luxueux - exactement ce que je cherchais. Randonnée dans l'Atlas et safaris au désert avec le confort VIP.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    },
+    testi9: {
+      name: "Sophie Laurent",
+      title: "Paris, France",
+      rating: 5,
+      text: "Voyage romantique extraordinaire ! Coucher de soleil au Sahara, dîners privés surplombant Marrakech. Service attentionné tout au long.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    }
+  },
+  
+  // Gallery Categories (Catégories de Galerie)
+  gallery_categories: {
+    food: "Expérience Culinaire",
+    destinations: "Destinations",
+    kosher: "Casher",
+    transport: "Transport VIP"
+  },
+  
+  // Stats (Statistiques)
+  stats: {
+    happyTravelers: "5000+",
+    yearsExperience: "15+",
+    destinationsCount: "25+",
+    satisfactionRate: "98%"
   }
 };
 

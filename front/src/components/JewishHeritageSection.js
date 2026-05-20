@@ -40,7 +40,7 @@ export default function JewishHeritageSection() {
                 {t('jewishHeritage.exploreBtn')}
               </Link>
               <a href="https://wa.me/972546338757" target="_blank" rel="noreferrer" className="heritage-btn-whatsapp">
-                {t('starBanner.ilanPersonally')} on WhatsApp
+                {t('jewishHeritage.msgAllan')}
               </a>
             </div>
           </div>
@@ -50,21 +50,21 @@ export default function JewishHeritageSection() {
               <div className="main-img-wrapper">
                 <img 
                   src="/assets/kosher/kosher (1).png" 
-                  alt="Jewish Heritage Morocco" 
+                  alt={t('aria.jewishHeritageMorocco')} 
                   className="main-img"
                 />
               </div>
               <div className="side-img-wrapper">
                 <img 
                   src="/assets/kosher/kosher (2).png" 
-                  alt="Kosher Food Morocco" 
+                  alt={t('aria.kosherFoodMorocco')} 
                   className="side-img"
                 />
               </div>
               <div className="third-img-wrapper">
                 <img 
                   src="/assets/kosher/kosher (3).png" 
-                  alt="Jewish Heritage Experience" 
+                  alt={t('aria.jewishHeritageExperience')} 
                   className="third-img"
                 />
               </div>

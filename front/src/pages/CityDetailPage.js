@@ -41,7 +41,8 @@ export default function CityDetailPage() {
     );
   }
 
-  const waLink = `https://wa.me/972546338757?text=I'd like to plan a trip to ${city.name}. Can you help me?`;
+  const cityMessage = (t('whatsapp.cityTrip') || "I'd like to plan a trip to {city}. Can you help me?").replace('{city}', city.name);
+  const waLink = `https://wa.me/972546338757?text=${encodeURIComponent(cityMessage)}`;
 
   return (
     <div className="city-detail-page">

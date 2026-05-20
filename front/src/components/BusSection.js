@@ -56,26 +56,21 @@ export default function BusSection() {
       </div>
 
       <div className="bus-features">
-        <span>Modern VIP buses</span>
-        <span>Luxury minibuses</span>
-        <span>Private cars</span>
-        <span>4x4 Jeeps</span>
-        <span>Airport pickup</span>
-        <span>Multilingual drivers</span>
-        <span>24/7 assistance</span>
-        <span>Safe driving</span>
+        {(t('transportation.featureList') || []).map((feature) => (
+          <span key={feature}>{feature}</span>
+        ))}
       </div>
 
       <div className="bus-cta">
-        <h3>Ready To Explore Morocco In Comfort?</h3>
-        <p>Speak Directly With Allan – CEO & Founder</p>
+        <h3>{t('transportation.ctaTitle')}</h3>
+        <p>{t('transportation.ctaSubtitle')}</p>
 
         <div className="bus-contact">
           <a href="https://wa.me/972546338757" target="_blank" rel="noreferrer">
-            WhatsApp: +972546338757
+            {t('transportation.whatsapp')}
           </a>
 
-          <a href="tel:+212663630579">Morocco Line: +212 6 63 63 05 79</a>
+          <a href="tel:+212663630579">{t('transportation.moroccoLine')}</a>
         </div>
       </div>
     </section>

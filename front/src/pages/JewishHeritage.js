@@ -82,7 +82,7 @@ export default function JewishHeritage() {
               </div>
             </div>
             <div className="intro-image">
-              <img src="/assets/kosher/kosher (5).png" alt="Jewish Heritage Architecture" />
+              <img src="/assets/kosher/kosher (5).png" alt={t('aria.jewishHeritageArchitecture')} />
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function JewishHeritage() {
               <p className="packages-note">{t('jewishHeritage.packagesQuote') || `“We customize every trip according to the needs, traditions, travel style, dates, and expectations of our guests.”`}</p>
             </div>
             <div className="packages-image">
-              <img src="/assets/kosher/kosher (6).png" alt="Kosher Moroccan Table" />
+              <img src="/assets/kosher/kosher (6).png" alt={t('aria.kosherMoroccanTable')} />
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function JewishHeritage() {
         <div className="container">
           <div className="b2b-grid">
             <div className="b2b-image">
-              <img src="/assets/kosher/kosher (7).png" alt="Luxury Hospitality" />
+              <img src="/assets/kosher/kosher (7).png" alt={t('aria.luxuryHospitality')} />
             </div>
             <div className="b2b-content">
               <h2>{t('jewishHeritage.b2bTitle')}</h2>
@@ -162,7 +162,7 @@ export default function JewishHeritage() {
           <div className="heritage-gallery-grid">
             {Array.from({ length: 23 }, (_, i) => i + 8).map(num => (
               <div key={num} className="gallery-item">
-                <img src={`/assets/kosher/kosher (${num}).png`} alt={`Kosher Experience ${num}`} loading="lazy" />
+                <img src={`/assets/kosher/kosher (${num}).png`} alt={`${t('aria.kosherExperience')} ${num}`} loading="lazy" />
               </div>
             ))}
           </div>
