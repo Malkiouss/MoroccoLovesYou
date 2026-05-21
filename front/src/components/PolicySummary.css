@@ -1,0 +1,111 @@
+.policy-summary {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.policy-summary-dark {
+  background: #0d1f17;
+}
+
+.policy-summary-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(219, 159, 70, 0.28);
+  border-left: 5px solid #db9f46;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 18px 48px rgba(13, 31, 23, 0.12);
+}
+
+.policy-summary-dark .policy-summary-inner {
+  background: #12281d;
+  border-color: rgba(219, 159, 70, 0.32);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.policy-summary-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #c0392b, #db9f46);
+  box-shadow: 0 12px 28px rgba(192, 57, 43, 0.22);
+}
+
+.policy-summary-kicker {
+  margin: 0 0 0.45rem;
+  color: #c0392b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-summary-content h2 {
+  color: #0d1f17;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin: 0 0 0.65rem;
+}
+
+.policy-summary-dark .policy-summary-content h2 {
+  color: #ffffff;
+}
+
+.policy-summary-content p:last-child {
+  color: #44514b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.policy-summary-dark .policy-summary-content p:last-child {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.policy-summary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.85rem 1.2rem;
+  background: #1a3a2a;
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.policy-summary-link:hover {
+  background: #db9f46;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(219, 159, 70, 0.28);
+}
+
+@media (max-width: 860px) {
+  .policy-summary {
+    padding: 3rem 1rem;
+  }
+
+  .policy-summary-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    padding: 1.5rem;
+  }
+
+  .policy-summary-link {
+    width: 100%;
+    white-space: normal;
+  }
+}

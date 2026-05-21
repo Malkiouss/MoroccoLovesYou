@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 import CustomVideoPlayer from '../components/CustomVideoPlayer';
+import PolicySummary from '../components/PolicySummary';
 import { getWatermarkedVideoUrl, getVideoThumbnailUrl } from '../utils/imageUtils';
 import './JewishHeritage.css';
 
@@ -70,6 +71,31 @@ export default function JewishHeritage() {
         bgImage="/assets/images/kosher.jpeg"
       />
 
+
+        <section className="flexible-packages">
+        <div className="container">
+          <div className="packages-card">
+            <div className="packages-content">
+              <h2>{t('jewishHeritage.packagesTitle')}</h2>
+              <p className="packages-intro">{t('jewishHeritage.packagesIntro')}</p>
+              <div className="options-grid">
+                {packages.map((opt, index) => (
+                  <div key={index} className="opt-item">
+                    <span className="opt-bullet">✡</span> {opt}
+                  </div>
+                ))}
+              </div>
+              <p className="packages-note">{t('jewishHeritage.packagesQuote') || `“We customize every trip according to the needs, traditions, travel style, dates, and expectations of our guests.”`}</p>
+            </div>
+            <div className="packages-image">
+              <img src="/assets/kosher/kosher (6).png" alt={t('aria.kosherMoroccanTable')} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+   
+
       <section className="heritage-intro-section">
         <div className="container">
           <div className="intro-grid">
@@ -105,27 +131,7 @@ export default function JewishHeritage() {
         </div>
       </section>
 
-      <section className="flexible-packages">
-        <div className="container">
-          <div className="packages-card">
-            <div className="packages-content">
-              <h2>{t('jewishHeritage.packagesTitle')}</h2>
-              <p className="packages-intro">{t('jewishHeritage.packagesIntro')}</p>
-              <div className="options-grid">
-                {packages.map((opt, index) => (
-                  <div key={index} className="opt-item">
-                    <span className="opt-bullet">✡</span> {opt}
-                  </div>
-                ))}
-              </div>
-              <p className="packages-note">{t('jewishHeritage.packagesQuote') || `“We customize every trip according to the needs, traditions, travel style, dates, and expectations of our guests.”`}</p>
-            </div>
-            <div className="packages-image">
-              <img src="/assets/kosher/kosher (6).png" alt={t('aria.kosherMoroccanTable')} />
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <section className="safety-section">
         <div className="container">
@@ -202,6 +208,8 @@ export default function JewishHeritage() {
           </div>
         </div>
       </section>
+
+         <PolicySummary />
 
       {lightboxVideo && (
         <div className="video-lightbox" onClick={() => setLightboxVideo(null)}>

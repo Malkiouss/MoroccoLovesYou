@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
+import PolicySummary from '../components/PolicySummary';
 import './Tours.css';
 
 const WHATSAPP_NUMBER = '972546338757';
@@ -537,6 +538,8 @@ export default function Tours() {
         </div>
       </section>
 
+    
+
       <section className="contact-cta">
         <div className="contact-inner">
           <h2>{t('tours.customTitle')}</h2>
@@ -546,6 +549,8 @@ export default function Tours() {
           </a>
         </div>
       </section>
+      
+        <PolicySummary />
 
       <TourModal pkg={selectedPackage} />
     </div>

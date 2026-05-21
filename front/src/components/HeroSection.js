@@ -66,15 +66,13 @@ export default function HeroSection() {
             <span className="line2">{t('hero.welcomeHome')}</span>
           </h1>
 
-          <a
-            href="https://wa.me/972546338757"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/jewish-heritage"
             className="kosher-hero-link"
-            aria-label={t('aria.whatsappSocial')}
+            aria-label={t('nav.jewishHeritage')}
           >
             <img src="/assets/images/kosher1.jpeg" alt={t('aria.kosherOptionsAlt')} className="kosher-hero-img" />
-          </a>
+          </Link>
 
         {/*  <button className="wa-btn">
             <MessageCircle aria-hidden="true" />

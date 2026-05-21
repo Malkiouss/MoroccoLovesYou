@@ -18,28 +18,35 @@ import th from './th';
 import ko from './ko';
 import ru from './ru';
 import cityDesc from './cityDesc';
+import servicePolicyTranslations from './servicePolicyTranslations';
+
+const withServicePolicy = (lang, base, city) => ({
+  ...base,
+  cityDesc: city,
+  servicePolicy: servicePolicyTranslations[lang] || servicePolicyTranslations.en
+});
 
 const translations = {
-  en: { ...en, cityDesc: cityDesc.en },
-  fr: { ...fr, cityDesc: cityDesc.fr },
-  es: { ...es, cityDesc: cityDesc.es },
-  'es-AR': { ...es, cityDesc: cityDesc.es },
-  ar: { ...ar, cityDesc: cityDesc.ar },
-  he: { ...he, cityDesc: cityDesc.he },
-  hi: { ...hi, cityDesc: cityDesc.en },
-  ja: { ...ja, cityDesc: cityDesc.ja },
-  zh: { ...zh, cityDesc: cityDesc.zh },
-  vi: { ...vi, cityDesc: cityDesc.vi },
-  de: { ...de, cityDesc: cityDesc.de },
-  nl: { ...nl, cityDesc: cityDesc.en },
-  it: { ...it, cityDesc: cityDesc.it },
-  pl: { ...pl, cityDesc: cityDesc.en },
-  'pt-BR': { ...ptBR, cityDesc: cityDesc.en },
-  'pt-PT': { ...ptPT, cityDesc: cityDesc.en },
-  ro: { ...ro, cityDesc: cityDesc.en },
-  th: { ...th, cityDesc: cityDesc.en },
-  ko: { ...ko, cityDesc: cityDesc.ko },
-  ru: { ...ru, cityDesc: cityDesc.ru }
+  en: withServicePolicy('en', en, cityDesc.en),
+  fr: withServicePolicy('fr', fr, cityDesc.fr),
+  es: withServicePolicy('es', es, cityDesc.es),
+  'es-AR': withServicePolicy('es', es, cityDesc.es),
+  ar: withServicePolicy('ar', ar, cityDesc.ar),
+  he: withServicePolicy('he', he, cityDesc.he),
+  hi: withServicePolicy('hi', hi, cityDesc.en),
+  ja: withServicePolicy('ja', ja, cityDesc.ja),
+  zh: withServicePolicy('zh', zh, cityDesc.zh),
+  vi: withServicePolicy('vi', vi, cityDesc.vi),
+  de: withServicePolicy('de', de, cityDesc.de),
+  nl: withServicePolicy('nl', nl, cityDesc.en),
+  it: withServicePolicy('it', it, cityDesc.it),
+  pl: withServicePolicy('pl', pl, cityDesc.en),
+  'pt-BR': withServicePolicy('pt-BR', ptBR, cityDesc.en),
+  'pt-PT': withServicePolicy('pt-PT', ptPT, cityDesc.en),
+  ro: withServicePolicy('ro', ro, cityDesc.en),
+  th: withServicePolicy('th', th, cityDesc.en),
+  ko: withServicePolicy('ko', ko, cityDesc.ko),
+  ru: withServicePolicy('ru', ru, cityDesc.ru)
 };
 
 // Regional variants fall back to base English

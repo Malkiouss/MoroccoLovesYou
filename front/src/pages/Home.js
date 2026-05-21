@@ -8,6 +8,7 @@ import VideoSection from '../components/VideoSection';
 import BusSection from '../components/BusSection';
 import CulinarySection from '../components/CulinarySection';
 import JewishHeritageSection from '../components/JewishHeritageSection';
+import PolicySummary from '../components/PolicySummary';
 import './Home.css';
 
 const WHATSAPP_NUMBER = '972546338757';
@@ -266,6 +267,8 @@ export default function Home() {
         </div>
       </section>
 
+    
+
  {/* Video Experience Section */}
       <VideoSection />
       
@@ -343,6 +346,9 @@ export default function Home() {
         </div>
       </section>
       <TourModal pkg={selectedPackage} />
+
+        {/* Policy Summary — white */}
+          <PolicySummary />
     </div>
   );
 }

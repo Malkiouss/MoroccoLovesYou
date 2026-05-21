@@ -25,6 +25,7 @@ import TourMiniBanner from './components/TourMiniBanner';
 import Transportation from './pages/Transportation';
 import UnityBanner from './components/UnityBanner';
 import JewishHeritage from './pages/JewishHeritage';
+import ServicePolicy from './pages/ServicePolicy';
 
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/transportation" element={<Transportation />} />
               <Route path="/jewish-heritage" element={<JewishHeritage />} />
+              <Route path="/service-policy" element={<ServicePolicy />} />
             </Routes>
             <StarBanner />
             <TourMiniBanner />
@@ -98,4 +100,3 @@ function App() {
 }
 
 export default App;
-

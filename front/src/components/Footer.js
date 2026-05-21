@@ -31,6 +31,7 @@ export default function Footer() {
             <li><Link to="/testimonials">{t('nav.testimonials')}</Link></li>
             <li><Link to="/blog">{t('nav.blog')}</Link></li>
             <li><Link to="/contact">{t('nav.contact')}</Link></li>
+            <li><Link to="/service-policy">{t('servicePolicy.meta.footerLink') || "Service Policy"}</Link></li>
           </ul>
         </div>
 

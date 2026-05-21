@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
+import PolicySummary from '../components/PolicySummary';
 import { ArrowRight, Calendar, MapPin, Star, ShieldCheck, MessageCircle, Car } from 'lucide-react';
 import './WorldCup.css';
 
@@ -83,6 +84,8 @@ export default function WorldCup() {
         </div>
       </section>
 
+     
+
       <section className="wc-cta">
         <div className="section-container">
           <div className="wc-cta-box">
@@ -94,6 +97,8 @@ export default function WorldCup() {
           </div>
         </div>
       </section>
+
+       <PolicySummary />
     </div>
   );
 }
